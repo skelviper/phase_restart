@@ -1,0 +1,314 @@
+{
+  "condition": "G-original",
+  "fit_id": "G-original-seed560101",
+  "initialization_replicate_semantics": "optimization initialization only; not biological replication",
+  "outer_fg_actual": 1502,
+  "outer_fg_cap": 1502,
+  "phase_opened": false,
+  "reference_opened": false,
+  "seed": 560101,
+  "stages": [
+    {
+      "bin_size": 5000000,
+      "canonical_gradient_max_abs": 0.0007489601711383495,
+      "fg_cap": 612,
+      "fit_wall_seconds": 33.638041098602116,
+      "immutable_artifacts": {
+        "export": {
+          "bin_size": 5000000,
+          "by_track": {
+            "c01a": 40,
+            "c01b": 40,
+            "c02a": 37,
+            "c02b": 37,
+            "c03a": 33,
+            "c03b": 33,
+            "c04a": 32,
+            "c04b": 32,
+            "c05a": 31,
+            "c05b": 31,
+            "c06a": 30,
+            "c06b": 30,
+            "c07a": 30,
+            "c07b": 30,
+            "c08a": 26,
+            "c08b": 26,
+            "c09a": 25,
+            "c09b": 25,
+            "c10a": 27,
+            "c10b": 27,
+            "c11a": 25,
+            "c11b": 25,
+            "c12a": 25,
+            "c12b": 25,
+            "c13a": 25,
+            "c13b": 25,
+            "c14a": 25,
+            "c14b": 25,
+            "c15a": 21,
+            "c15b": 21,
+            "c16a": 20,
+            "c16b": 20,
+            "c17a": 19,
+            "c17b": 19,
+            "c18a": 19,
+            "c18b": 19,
+            "c19a": 13,
+            "c19b": 13,
+            "c20a": 35,
+            "c20b": 35
+          },
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560101/5Mb.3dg",
+          "rows": 1076,
+          "sha256": "9fca64b677ad95af58e5d9bc2c3a4553dd894f4b663b85d1916e7495d8f2cfcd",
+          "track_count": 40
+        },
+        "presence_mask": {
+          "absent": 0,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/5Mb/presence_mask.npz",
+          "present": 1076,
+          "sha256": "5f27a94ec0d85eb87e8564913231816e74a4411375dcce1bfe02a4a5f99966df",
+          "shape": [
+            2,
+            538
+          ]
+        },
+        "solver_sha_unchanged_after_export": true,
+        "solver_state": {
+          "consistency_atol": 1e-12,
+          "finite": true,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/5Mb/solver_state.npz",
+          "q_p_abs": 0.0,
+          "readback": {
+            "consistency_atol": 1e-12,
+            "finite": true,
+            "q_p_abs": 0.0,
+            "shape": [
+              2,
+              538,
+              3
+            ],
+            "sphere_coordinate_max_abs": 2.220446049250313e-16,
+            "theta_q_abs": 0.0,
+            "theta_raw_y_max_abs": 0.0
+          },
+          "sha256": "d8bd9595140e30df4cbeee037f51af741edb726402ff327dc050be343dd84419",
+          "shape": [
+            2,
+            538,
+            3
+          ],
+          "sphere_coordinate_max_abs": 2.220446049250313e-16,
+          "theta_q_abs": 0.0,
+          "theta_raw_y_max_abs": 0.0
+        }
+      },
+      "outer_fg_actual": 612,
+      "stage": "5Mb",
+      "status": "budget_not_converged",
+      "terminal_reason": "fg_budget_exhausted"
+    },
+    {
+      "bin_size": 2000000,
+      "canonical_gradient_max_abs": 0.0004079749135433434,
+      "fg_cap": 404,
+      "fit_wall_seconds": 43.776766864582896,
+      "immutable_artifacts": {
+        "export": {
+          "bin_size": 2000000,
+          "by_track": {
+            "c01a": 98,
+            "c01b": 98,
+            "c02a": 92,
+            "c02b": 92,
+            "c03a": 81,
+            "c03b": 81,
+            "c04a": 79,
+            "c04b": 79,
+            "c05a": 76,
+            "c05b": 76,
+            "c06a": 75,
+            "c06b": 75,
+            "c07a": 73,
+            "c07b": 73,
+            "c08a": 65,
+            "c08b": 65,
+            "c09a": 63,
+            "c09b": 63,
+            "c10a": 66,
+            "c10b": 66,
+            "c11a": 62,
+            "c11b": 62,
+            "c12a": 61,
+            "c12b": 61,
+            "c13a": 61,
+            "c13b": 61,
+            "c14a": 63,
+            "c14b": 63,
+            "c15a": 53,
+            "c15b": 53,
+            "c16a": 50,
+            "c16b": 50,
+            "c17a": 48,
+            "c17b": 48,
+            "c18a": 46,
+            "c18b": 46,
+            "c19a": 31,
+            "c19b": 31,
+            "c20a": 86,
+            "c20b": 86
+          },
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560101/2Mb.3dg",
+          "rows": 2658,
+          "sha256": "8922bcd74b100a1fdc41b6657561d1acf735cc9d902dc6b565dabf05bc623a8f",
+          "track_count": 40
+        },
+        "presence_mask": {
+          "absent": 0,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/2Mb/presence_mask.npz",
+          "present": 2658,
+          "sha256": "2001e1530dc44f68662425a4f265839843bfa02207319fd593874bac4756b6b0",
+          "shape": [
+            2,
+            1329
+          ]
+        },
+        "solver_sha_unchanged_after_export": true,
+        "solver_state": {
+          "consistency_atol": 1e-12,
+          "finite": true,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/2Mb/solver_state.npz",
+          "q_p_abs": 0.0,
+          "readback": {
+            "consistency_atol": 1e-12,
+            "finite": true,
+            "q_p_abs": 0.0,
+            "shape": [
+              2,
+              1329,
+              3
+            ],
+            "sphere_coordinate_max_abs": 2.220446049250313e-16,
+            "theta_q_abs": 0.0,
+            "theta_raw_y_max_abs": 0.0
+          },
+          "sha256": "4baaaa15139c5a4c801536a146bcf982a31bb8f966b721e5d0febcf75dbe6dbd",
+          "shape": [
+            2,
+            1329,
+            3
+          ],
+          "sphere_coordinate_max_abs": 2.220446049250313e-16,
+          "theta_q_abs": 0.0,
+          "theta_raw_y_max_abs": 0.0
+        }
+      },
+      "outer_fg_actual": 404,
+      "stage": "2Mb",
+      "status": "budget_not_converged",
+      "terminal_reason": "fg_budget_exhausted"
+    },
+    {
+      "bin_size": 1000000,
+      "canonical_gradient_max_abs": 0.0004320050208665738,
+      "fg_cap": 486,
+      "fit_wall_seconds": 108.7924454761669,
+      "immutable_artifacts": {
+        "export": {
+          "bin_size": 1000000,
+          "by_track": {
+            "c01a": 196,
+            "c01b": 196,
+            "c02a": 183,
+            "c02b": 183,
+            "c03a": 161,
+            "c03b": 161,
+            "c04a": 157,
+            "c04b": 157,
+            "c05a": 152,
+            "c05b": 152,
+            "c06a": 150,
+            "c06b": 150,
+            "c07a": 146,
+            "c07b": 146,
+            "c08a": 130,
+            "c08b": 130,
+            "c09a": 125,
+            "c09b": 125,
+            "c10a": 131,
+            "c10b": 131,
+            "c11a": 123,
+            "c11b": 123,
+            "c12a": 121,
+            "c12b": 121,
+            "c13a": 121,
+            "c13b": 121,
+            "c14a": 125,
+            "c14b": 125,
+            "c15a": 105,
+            "c15b": 105,
+            "c16a": 99,
+            "c16b": 99,
+            "c17a": 95,
+            "c17b": 95,
+            "c18a": 91,
+            "c18b": 91,
+            "c19a": 62,
+            "c19b": 62,
+            "c20a": 172,
+            "c20b": 172
+          },
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560101/1Mb.3dg",
+          "rows": 5290,
+          "sha256": "ae7494970125389a1105cb0d3491c0da3680e26de006942964f2dc8ee79c39d2",
+          "track_count": 40
+        },
+        "presence_mask": {
+          "absent": 0,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/presence_mask.npz",
+          "present": 5290,
+          "sha256": "7fbba3c5be944d89d517995e44b1f8c7ab00be6d39bafae467a347df78f46454",
+          "shape": [
+            2,
+            2645
+          ]
+        },
+        "solver_sha_unchanged_after_export": true,
+        "solver_state": {
+          "consistency_atol": 1e-12,
+          "finite": true,
+          "path": "/mnt/ssd/zliu/phase_restart/test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/solver_state.npz",
+          "q_p_abs": 0.0,
+          "readback": {
+            "consistency_atol": 1e-12,
+            "finite": true,
+            "q_p_abs": 0.0,
+            "shape": [
+              2,
+              2645,
+              3
+            ],
+            "sphere_coordinate_max_abs": 2.220446049250313e-16,
+            "theta_q_abs": 0.0,
+            "theta_raw_y_max_abs": 0.0
+          },
+          "sha256": "c54021db76793e0751ecfef63c1e4204a39003521e33f84e30bbd41af9d8413e",
+          "shape": [
+            2,
+            2645,
+            3
+          ],
+          "sphere_coordinate_max_abs": 2.220446049250313e-16,
+          "theta_q_abs": 0.0,
+          "theta_raw_y_max_abs": 0.0
+        }
+      },
+      "outer_fg_actual": 486,
+      "stage": "1Mb",
+      "status": "budget_not_converged",
+      "terminal_reason": "fg_budget_exhausted"
+    }
+  ],
+  "status": "complete",
+  "wall_seconds": 186.98393713589758
+}

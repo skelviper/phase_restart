@@ -1,0 +1,630 @@
+{
+  "checks": [
+    {
+      "check": "lock:test_res/056-20260916T152353Z-pro-review-experiments/PROTOCOL.md",
+      "detail": {
+        "actual": "a71a4b7436f905a982b5babc1a8808235d8f25df1ecefd25b36d25582f268b24",
+        "expected": "a71a4b7436f905a982b5babc1a8808235d8f25df1ecefd25b36d25582f268b24"
+      },
+      "pass": true
+    },
+    {
+      "check": "lock:test_res/056-20260916T152353Z-pro-review-experiments/config.json",
+      "detail": {
+        "actual": "49f8100ea86f87467191a08e19428cf7c3f75bda6a9b139e69a045fc54ab9804",
+        "expected": "49f8100ea86f87467191a08e19428cf7c3f75bda6a9b139e69a045fc54ab9804"
+      },
+      "pass": true
+    },
+    {
+      "check": "lock:test_res/056-20260916T152353Z-pro-review-experiments/PROTOCOL_CLARIFICATIONS.md",
+      "detail": {
+        "actual": "651a11604f0c155e7d0922bf94198503b6d3019c9b341792263513ef95d9e8e4",
+        "expected": "651a11604f0c155e7d0922bf94198503b6d3019c9b341792263513ef95d9e8e4"
+      },
+      "pass": true
+    },
+    {
+      "check": "experiment1_hard_gate",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "experiment2_hard_gate",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "training_budget",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "all_stages_explicit_status",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "auxiliary_sweep_exact",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "pre_reference_gate_inventory",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/original.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr1.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr2.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr3.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr4.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr5.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr6.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr7.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr8.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr9.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr10.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr11.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr12.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr13.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr14.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr15.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr16.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr17.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr18.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr19.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chrX.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr1-065.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr1-130.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr8-043.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr8-086.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr19-020.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr19-041.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chrX-057.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chrX-114.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/u0.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450500.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450501.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450502.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450503.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450504.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450505.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450506.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450507.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450508.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450509.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450510.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450511.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450512.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450513.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450514.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450515.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/solver_state.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/presence_mask.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560101/1Mb.3dg",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560101/1Mb/solver_state.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560101/1Mb/presence_mask.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-offdiag-e-seed560101/1Mb.3dg",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560102/1Mb/solver_state.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560102/1Mb/presence_mask.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560102/1Mb.3dg",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560102/1Mb/solver_state.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560102/1Mb/presence_mask.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-offdiag-e-seed560102/1Mb.3dg",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr1-065.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr1-130.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr8-043.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr8-086.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr19-020.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr19-041.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chrX-057.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chrX-114.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr1-065.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr1-130.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr8-043.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr8-086.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr19-020.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr19-041.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chrX-057.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chrX-114.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr1-065.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr1-130.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr8-043.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr8-086.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr19-020.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr19-041.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chrX-057.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chrX-114.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr1-065.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr1-130.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr8-043.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr8-086.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr19-020.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr19-041.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chrX-057.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "artifact_gate:test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chrX-114.npz",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "reference_gate",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "reference_support",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "reference_baseline_regression",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "final_adoption_decision",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "final_claim_scope",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "optimization_alarm_complete_rule",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "reference_tie_branch_no_affected_exp3_rows",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "four_endpoint_absolute_summary",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "experiment2_gradient_shapes",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "check": "plot:experiment1_data_regularizer.png",
+      "detail": {
+        "mode": "RGBA",
+        "nonblank": true,
+        "size": [
+          1800,
+          900
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "plot:experiment2_gradient_response.png",
+      "detail": {
+        "mode": "RGBA",
+        "nonblank": true,
+        "size": [
+          1800,
+          900
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "plot:experiment3_paired_outcomes.png",
+      "detail": {
+        "mode": "RGBA",
+        "nonblank": true,
+        "size": [
+          2700,
+          900
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "strict_json_files",
+      "detail": {
+        "count": 58
+      },
+      "pass": true
+    }
+  ],
+  "locks": {
+    "test_res/056-20260916T152353Z-pro-review-experiments/PROTOCOL.md": "a71a4b7436f905a982b5babc1a8808235d8f25df1ecefd25b36d25582f268b24",
+    "test_res/056-20260916T152353Z-pro-review-experiments/PROTOCOL_CLARIFICATIONS.md": "651a11604f0c155e7d0922bf94198503b6d3019c9b341792263513ef95d9e8e4",
+    "test_res/056-20260916T152353Z-pro-review-experiments/config.json": "49f8100ea86f87467191a08e19428cf7c3f75bda6a9b139e69a045fc54ab9804"
+  },
+  "plots": {
+    "experiment1_data_regularizer.png": {
+      "mode": "RGBA",
+      "nonblank": true,
+      "size": [
+        1800,
+        900
+      ]
+    },
+    "experiment2_gradient_response.png": {
+      "mode": "RGBA",
+      "nonblank": true,
+      "size": [
+        1800,
+        900
+      ]
+    },
+    "experiment3_paired_outcomes.png": {
+      "mode": "RGBA",
+      "nonblank": true,
+      "size": [
+        2700,
+        900
+      ]
+    }
+  },
+  "schema": "p9016-056-final-validation-v1",
+  "status": "PASS",
+  "strict_json_count": 58
+}

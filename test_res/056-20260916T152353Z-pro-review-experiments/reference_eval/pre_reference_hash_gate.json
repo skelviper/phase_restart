@@ -1,0 +1,15 @@
+{
+  "all_90_candidate_state_mask_export_artifacts_rechecked": true,
+  "candidate_count": 82,
+  "candidate_hashes_checked": true,
+  "deviations": [],
+  "fixed_hashes": {
+    "baseline_npz": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "mask": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "reference": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+  },
+  "nonreference_gate_sha256": "a7f4a75cd718d88909ef8b9b9238f44f532d8a35bd928f8b1a0135f33042c16d",
+  "reference_opened": false,
+  "schema": "p9016-056-reference-hash-gate-v1",
+  "status": "PASS"
+}

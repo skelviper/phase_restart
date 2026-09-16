@@ -1,0 +1,44 @@
+{
+  "experiment1": {
+    "contact_forward_sweeps": 46,
+    "fg_safety_cap": 48,
+    "note": "Each FG computed contact outputs and one separate physics/repulsion pair sweep.",
+    "objective_fg": 46,
+    "repulsion_physics_sweeps": 46
+  },
+  "experiment2": {
+    "contact_forward_backward_sweeps": 24,
+    "value_gradient_fg": 12
+  },
+  "experiment3_auxiliary": {
+    "actual_full_pair_sweeps": 40,
+    "cap": 64,
+    "contact_forward": 40,
+    "regularizer": 0
+  },
+  "experiment3_training": {
+    "contact_forward_backward_sweeps": 12016,
+    "fg_actual": 6008,
+    "fg_cap": 6008,
+    "fine_fg_actual": 1944,
+    "fine_fg_cap": 1944,
+    "launcher_field_scope_note": "estimated_training_pair_kernel_sweeps is contact-only; final ledger adds one repulsion sweep per FG",
+    "outside_auxiliary_cap": true,
+    "repulsion_full_pair_sweeps": 6008,
+    "total_physical_full_pair_sweeps": 18024
+  },
+  "reference": {
+    "candidate_states": 82,
+    "chromosomes_per_state": 20,
+    "count_basis": "existing evaluator code computes candidate A/B and reference mat/pat distance arrays, then four Pearson correlations, per chromosome and state",
+    "cpu_distance_work_separately_accounted": true,
+    "distance_array_computations": 6560,
+    "distance_arrays_per_chromosome": 4,
+    "pairs_per_state": 157529,
+    "pearson_correlations": 6560,
+    "pearson_correlations_per_chromosome": 4,
+    "process_cpu_seconds": null,
+    "timing_status": "not_recorded; no rerun performed",
+    "wall_seconds": null
+  }
+}

@@ -1,0 +1,3695 @@
+{
+  "cap": 48,
+  "full_grid_evaluations": 46,
+  "hard_failures": [],
+  "hard_invariance_atol": 1e-10,
+  "phase_opened": false,
+  "reference_opened": false,
+  "rows": [
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "all_zero_by_definition": true
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "original",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "original",
+      "state_index": 0,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr1",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr1",
+      "state_index": 1,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr2",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr2",
+      "state_index": 2,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr3",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr3",
+      "state_index": 3,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr4",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 2.220446049250313e-16,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 3.469446951953614e-18,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392557,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392557,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr4",
+      "state_index": 4,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr5",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr5",
+      "state_index": 5,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr6",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 2.220446049250313e-16,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 3.469446951953614e-18,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392557,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392557,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr6",
+      "state_index": 6,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr7",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr7",
+      "state_index": 7,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr8",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 2.168404344971009e-19,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 2.168404344971009e-19,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.0017491724565504819,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.0017491724565504819,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr8",
+      "state_index": 8,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr9",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr9",
+      "state_index": 9,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr10",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr10",
+      "state_index": 10,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr11",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr11",
+      "state_index": 11,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr12",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr12",
+      "state_index": 12,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr13",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 5.421010862427522e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 5.421010862427522e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr13",
+      "state_index": 13,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr14",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr14",
+      "state_index": 14,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr15",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 2.168404344971009e-19,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 2.168404344971009e-19,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.0017491724565504819,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.0017491724565504819,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr15",
+      "state_index": 15,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr16",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr16",
+      "state_index": 16,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr17",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr17",
+      "state_index": 17,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr18",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645768
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr18",
+      "state_index": 18,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr19",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 5.421010862427522e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 5.421010862427522e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chr19",
+      "state_index": 19,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30973.959054405008,
+      "Zcis": 17411.77737513007,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chrX",
+      "conditional_no_K0_raw": 17100097.842760794,
+      "conditional_with_K0_raw": 16229699.038562031,
+      "count_nll_per_raw_record": 9.530296140559141,
+      "count_nll_raw": 16238557.230345033,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.0,
+        "penalties_raw:bend_abs": 0.0,
+        "penalties_raw:bond_abs": 0.0,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 8.131516293641283e-20,
+        "penalties_weighted:bend_abs": 0.0,
+        "penalties_weighted:bond_abs": 0.0,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 8.131516293641283e-20,
+        "total_normalized_abs": 0.0
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "whole",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4017677.823496187,
+      "offdiag_data_nat_per_contact": 12.828645512232123,
+      "offdiag_data_no_K0_nat_per_contact": 13.516645806433882,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645757
+      },
+      "penalties_weighted": {
+        "bend": 0.010583840935392554,
+        "bond": 0.001749172456550482,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645757
+      },
+      "pointset_conserved": true,
+      "state_id": "whole-chrX",
+      "state_index": 20,
+      "strict": true,
+      "total_normalized": 9.543177933658338
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 31331.405239420572,
+      "Zcis": 17769.22356014563,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr1",
+      "conditional_no_K0_raw": 17127982.912048254,
+      "conditional_with_K0_raw": 16257584.107849492,
+      "count_nll_per_raw_record": 9.54666169351066,
+      "count_nll_raw": 16266442.299632493,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.016365552951519646,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.022041546680743096,
+        "penalties_raw:bend_abs": 0.0704116327609674,
+        "penalties_raw:bond_abs": 0.02505551211026856,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0007041163276096749,
+        "penalties_weighted:bond_abs": 0.02505551211026856,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.042125181389398136
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4031046.8028974836,
+      "offdiag_data_nat_per_contact": 12.850687058912866,
+      "offdiag_data_no_K0_nat_per_contact": 13.538687353114623,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.1287957263002228,
+        "bond": 0.026804684566819042,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.011287957263002229,
+        "bond": 0.026804684566819042,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "splice_bp": 65000000,
+      "splice_index": 65,
+      "state_id": "splice-chr1-065",
+      "state_index": 21,
+      "strict": true,
+      "total_normalized": 9.585303115047736
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 31361.648099413913,
+      "Zcis": 17799.466420138975,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr1",
+      "conditional_no_K0_raw": 17126801.955527775,
+      "conditional_with_K0_raw": 16256403.151329013,
+      "count_nll_per_raw_record": 9.545968598353891,
+      "count_nll_raw": 16265261.343112014,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.015672457794750017,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.021108068337701624,
+        "penalties_raw:bend_abs": 0.03746351987245,
+        "penalties_raw:bond_abs": 0.011633087054876694,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.0003746351987245003,
+        "penalties_weighted:bond_abs": 0.011633087054876694,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.027680180048351488
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4028645.2751491615,
+      "offdiag_data_nat_per_contact": 12.849753580569825,
+      "offdiag_data_no_K0_nat_per_contact": 13.537753874771582,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.0958476134117054,
+        "bond": 0.013382259511427175,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.010958476134117054,
+        "bond": 0.013382259511427175,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "splice_bp": 130000000,
+      "splice_index": 130,
+      "state_id": "splice-chr1-130",
+      "state_index": 22,
+      "strict": true,
+      "total_normalized": 9.57085811370669
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30755.800776927077,
+      "Zcis": 17193.619097652136,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr8",
+      "conditional_no_K0_raw": 17118587.46972305,
+      "conditional_with_K0_raw": 16248188.665524287,
+      "count_nll_per_raw_record": 9.541147573847159,
+      "count_nll_raw": 16257046.857307289,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.010851433288017631,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.014614988817021057,
+        "penalties_raw:bend_abs": 0.32391366870576843,
+        "penalties_raw:bond_abs": 0.13939470356329517,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.003239136687057685,
+        "penalties_weighted:bond_abs": 0.13939470356329517,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.1534852735383705
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4045109.5309348167,
+      "offdiag_data_nat_per_contact": 12.843260501049144,
+      "offdiag_data_no_K0_nat_per_contact": 13.531260795250901,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.3822977622450239,
+        "bond": 0.14114387601984565,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.013822977622450239,
+        "bond": 0.14114387601984565,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "splice_bp": 43000000,
+      "splice_index": 43,
+      "state_id": "splice-chr8-043",
+      "state_index": 23,
+      "strict": true,
+      "total_normalized": 9.696663207196709
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30757.97441130387,
+      "Zcis": 17195.792732028927,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr8",
+      "conditional_no_K0_raw": 17119667.662818506,
+      "conditional_with_K0_raw": 16249268.858619744,
+      "count_nll_per_raw_record": 9.541781531651578,
+      "count_nll_raw": 16258127.050402746,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.01148539109243707,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.015468819456360805,
+        "penalties_raw:bend_abs": 0.12902013465655604,
+        "penalties_raw:bond_abs": 0.055569779414718426,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0012902013465655605,
+        "penalties_weighted:bond_abs": 0.055569779414718426,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.06834537185372191
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4046100.316567518,
+      "offdiag_data_nat_per_contact": 12.844114331688484,
+      "offdiag_data_no_K0_nat_per_contact": 13.532114625890241,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.1874042281958115,
+        "bond": 0.05731895187126891,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.011874042281958114,
+        "bond": 0.05731895187126891,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "splice_bp": 86000000,
+      "splice_index": 86,
+      "state_id": "splice-chr8-086",
+      "state_index": 24,
+      "strict": true,
+      "total_normalized": 9.61152330551206
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30870.115336990893,
+      "Zcis": 17307.933657715956,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr19",
+      "conditional_no_K0_raw": 17108776.595304634,
+      "conditional_with_K0_raw": 16238377.791105872,
+      "count_nll_per_raw_record": 9.535389639981544,
+      "count_nll_raw": 16247235.982888874,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.005093499422402559,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.006860055729239534,
+        "penalties_raw:bend_abs": 0.15331380874336564,
+        "penalties_raw:bond_abs": 0.06650446960782964,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0,
+        "penalties_weighted:bend_abs": 0.0015331380874336574,
+        "penalties_weighted:bond_abs": 0.06650446960782964,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0,
+        "total_normalized_abs": 0.0731311071176659
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4030605.14036808,
+      "offdiag_data_nat_per_contact": 12.835505567961363,
+      "offdiag_data_no_K0_nat_per_contact": 13.523505862163121,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.211697902282621,
+        "bond": 0.06825364206438013,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "penalties_weighted": {
+        "bend": 0.012116979022826211,
+        "bond": 0.06825364206438013,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645765
+      },
+      "pointset_conserved": true,
+      "splice_bp": 20000000,
+      "splice_index": 20,
+      "state_id": "splice-chr19-020",
+      "state_index": 25,
+      "strict": true,
+      "total_normalized": 9.616309040776004
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30866.002749333027,
+      "Zcis": 17303.821070058086,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chr19",
+      "conditional_no_K0_raw": 17109505.358755186,
+      "conditional_with_K0_raw": 16239106.554556424,
+      "count_nll_per_raw_record": 9.535817346174998,
+      "count_nll_raw": 16247964.746339425,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.0055212056158566725,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.007436101406192108,
+        "penalties_raw:bend_abs": 0.09978453014743405,
+        "penalties_raw:bond_abs": 0.04020344911062173,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.000997845301474341,
+        "penalties_weighted:bond_abs": 0.04020344911062173,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.04672250002795231
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4031502.4564387565,
+      "offdiag_data_nat_per_contact": 12.836081613638315,
+      "offdiag_data_no_K0_nat_per_contact": 13.524081907840072,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.1581686236866895,
+        "bond": 0.041952621567172214,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.011581686236866895,
+        "bond": 0.041952621567172214,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "splice_bp": 41000000,
+      "splice_index": 41,
+      "state_id": "splice-chr19-041",
+      "state_index": 26,
+      "strict": true,
+      "total_normalized": 9.58990043368629
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30820.018781313207,
+      "Zcis": 17257.837102038266,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chrX",
+      "conditional_no_K0_raw": 17112965.113903426,
+      "conditional_with_K0_raw": 16242566.309704663,
+      "count_nll_per_raw_record": 9.537847852375076,
+      "count_nll_raw": 16251424.501487665,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.007551711815935391,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.010170839262416465,
+        "penalties_raw:bend_abs": 0.1278802317193417,
+        "penalties_raw:bond_abs": 0.05092190876840839,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 5.421010862427522e-20,
+        "penalties_weighted:bend_abs": 0.0012788023171934181,
+        "penalties_weighted:bond_abs": 0.05092190876840839,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 5.421010862427522e-20,
+        "total_normalized_abs": 0.05975242290153737
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4036848.375455239,
+      "offdiag_data_nat_per_contact": 12.83881635149454,
+      "offdiag_data_no_K0_nat_per_contact": 13.526816645696297,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.1862643252585972,
+        "bond": 0.05267108122495887,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "penalties_weighted": {
+        "bend": 0.011862643252585972,
+        "bond": 0.05267108122495887,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0001750780248064576
+      },
+      "pointset_conserved": true,
+      "splice_bp": 57000000,
+      "splice_index": 57,
+      "state_id": "splice-chrX-057",
+      "state_index": 27,
+      "strict": true,
+      "total_normalized": 9.602930356559876
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30723.48457079621,
+      "Zcis": 17161.302891521267,
+      "Zinter": 13562.18167927494,
+      "chromosome": "chrX",
+      "conditional_no_K0_raw": 17122586.740307447,
+      "conditional_with_K0_raw": 16252187.936108684,
+      "count_nll_per_raw_record": 9.543494717899113,
+      "count_nll_raw": 16261046.127891686,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 0.0,
+        "Zinter_relative": 0.0,
+        "count_nll_per_raw_record_abs": 0.013198577339972317,
+        "inter_mixture_rate_max_abs": 0.0,
+        "inter_normalized_rate_max_abs": 0.0,
+        "inter_sorted_four_distances_max_abs": 0.0,
+        "offdiag_data_nat_per_contact_abs": 0.01777618265757397,
+        "penalties_raw:bend_abs": 0.15158223595506848,
+        "penalties_raw:bond_abs": 0.06357098569751107,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 2.710505431213761e-20,
+        "penalties_weighted:bend_abs": 0.001515822359550686,
+        "penalties_weighted:bond_abs": 0.06357098569751107,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 2.710505431213761e-20,
+        "total_normalized_abs": 0.07828538539703445
+      },
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9d112522f5460c1fdda05935f94a0340f452c581cb9ecc6a5355154958b90268",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "eedcc0c6f49362756ac48b9d73c0e2ddb02a160aa6a72741a2ee242afce37741",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "baddec20716dcdb0965781e40b5d5954c98fc567ad59d01adae7ebd9206efb6d",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "splice",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4050438.800341982,
+      "offdiag_data_nat_per_contact": 12.846421694889697,
+      "offdiag_data_no_K0_nat_per_contact": 13.534421989091454,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 1.209966329494324,
+        "bond": 0.06532015815406156,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "penalties_weighted": {
+        "bend": 0.01209966329494324,
+        "bond": 0.06532015815406156,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.00017507802480645762
+      },
+      "pointset_conserved": true,
+      "splice_bp": 114000000,
+      "splice_index": 114,
+      "state_id": "splice-chrX-114",
+      "state_index": 28,
+      "strict": true,
+      "total_normalized": 9.621463319055373
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 87100.32652595072,
+      "Zcis": 35552.50880325397,
+      "Zinter": 51547.81772269674,
+      "conditional_no_K0_raw": 18212522.709157113,
+      "conditional_with_K0_raw": 17342123.904958352,
+      "count_nll_per_raw_record": 10.183170546855987,
+      "count_nll_raw": 17350982.096741352,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 37985.6360434218,
+        "Zinter_relative": 2.80084996217604,
+        "count_nll_per_raw_record_abs": 0.6528744062968457,
+        "inter_mixture_rate_max_abs": 1.3517799059648237,
+        "inter_normalized_rate_max_abs": 2.5938727779827354e-05,
+        "inter_sorted_four_distances_max_abs": 1.384877133963488,
+        "offdiag_data_nat_per_contact_abs": 0.8793080041769539,
+        "penalties_raw:bend_abs": 0.5230105079961959,
+        "penalties_raw:bond_abs": 0.05156943802863256,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 1.0767879278930415,
+        "penalties_weighted:bend_abs": 0.005230105079961958,
+        "penalties_weighted:bond_abs": 0.05156943802863256,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 1.0767879278930415,
+        "total_normalized_abs": 1.7760016671385586
+      },
+      "global_scale": 1.0,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "3d2cbb08282d3c500958b73347a4e4f67407e88e332a18573b82cff68781af73",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "c044e65cb4cd8755395c66dcba2a183ab1d9398f02171fc99d8bd451f3fe9152",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "a2d545fdc797f2f2ef34edbcc53af9b2fb5c1febdd3cf4a2b841b930829ef6b3",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "u0",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -3822083.851847262,
+      "offdiag_data_nat_per_contact": 13.707953516409077,
+      "offdiag_data_no_K0_nat_per_contact": 14.395953810610832,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 0.5353735855430596,
+        "bond": 0.05331861048518304,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 1.0769630059178479
+      },
+      "penalties_weighted": {
+        "bend": 0.005353735855430596,
+        "bond": 0.05331861048518304,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 1.0769630059178479
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 0.7367900665691477,
+      "state_id": "u0",
+      "state_index": 29,
+      "strict": false,
+      "total_normalized": 11.319179600796897
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 31429.542085138593,
+      "Zcis": 14391.409261031575,
+      "Zinter": 17038.13282410702,
+      "conditional_no_K0_raw": 18309920.162868377,
+      "conditional_with_K0_raw": 17439521.358669616,
+      "count_nll_per_raw_record": 10.240332434087579,
+      "count_nll_raw": 17448379.550452616,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 3475.951144832079,
+        "Zinter_relative": 0.2562973441171236,
+        "count_nll_per_raw_record_abs": 0.7100362935284377,
+        "inter_mixture_rate_max_abs": 0.3916420287347843,
+        "inter_normalized_rate_max_abs": 2.8374647525156043e-05,
+        "inter_sorted_four_distances_max_abs": 0.8238666036071255,
+        "offdiag_data_nat_per_contact_abs": 0.9562951007637146,
+        "penalties_raw:bend_abs": 48.11058607271953,
+        "penalties_raw:bond_abs": 9.26125935707418,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0603671628091906,
+        "penalties_weighted:bend_abs": 0.48110586072719524,
+        "penalties_weighted:bond_abs": 9.26125935707418,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0603671628091906,
+        "total_normalized_abs": 10.512768674139004
+      },
+      "global_scale": 0.9734485747926217,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "c02853279e14897c84e0208ae1da83c10b0ed8fdb77c5092f86a980ddbc07422",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "80312b8a3210b225421cd4baaac0618e05a03ed44b3f268620f59860a204f66d",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "4da26ee27ff573cf390cc6b5ed10d883b5938984679309173199995aa6fc3b2e",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5209027.631645802,
+      "offdiag_data_nat_per_contact": 13.784940612995838,
+      "offdiag_data_no_K0_nat_per_contact": 14.472940907197595,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 49.16897016625878,
+        "bond": 9.263008529530731,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.060542240833997056
+      },
+      "penalties_weighted": {
+        "bend": 0.4916897016625878,
+        "bond": 9.263008529530731,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.060542240833997056
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0272746048377897,
+      "seed": 450500,
+      "state_id": "random-u-450500",
+      "state_index": 30,
+      "strict": false,
+      "total_normalized": 20.055946607797342
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 31796.720515357396,
+      "Zcis": 14558.810218316055,
+      "Zinter": 17237.91029704134,
+      "conditional_no_K0_raw": 18300698.483483844,
+      "conditional_with_K0_raw": 17430299.679285083,
+      "count_nll_per_raw_record": 10.234920294683736,
+      "count_nll_raw": 17439157.871068083,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 3675.728617766401,
+        "Zinter_relative": 0.27102782610437,
+        "count_nll_per_raw_record_abs": 0.7046241541245948,
+        "inter_mixture_rate_max_abs": 0.4745774381609432,
+        "inter_normalized_rate_max_abs": 2.8355701797087094e-05,
+        "inter_sorted_four_distances_max_abs": 0.8645762140397073,
+        "offdiag_data_nat_per_contact_abs": 0.9490058925306748,
+        "penalties_raw:bend_abs": 47.24409227251,
+        "penalties_raw:bond_abs": 9.145859293393073,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06318123131903798,
+        "penalties_weighted:bend_abs": 0.4724409227251,
+        "penalties_weighted:bond_abs": 9.145859293393073,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06318123131903798,
+        "total_normalized_abs": 10.386105601561805
+      },
+      "global_scale": 0.9693462877333048,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "3eb862ca7b533fa146e57d50f76735447147393d043098a921326d6b27ad79e7",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "721e46bb8aaf490730e46baf79f23de15289753868d30b5d7492ce0429364a5f",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "ec1b1858dc1128353e5566c4a0c130ec1725f648970d86ea130e372187918616",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5185111.8117043665,
+      "offdiag_data_nat_per_contact": 13.777651404762798,
+      "offdiag_data_no_K0_nat_per_contact": 14.465651698964555,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 48.302476366049255,
+        "bond": 9.147608465849624,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06335630934384444
+      },
+      "penalties_weighted": {
+        "bend": 0.4830247636604926,
+        "bond": 9.147608465849624,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06335630934384444
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0316220453460163,
+      "seed": 450501,
+      "state_id": "random-u-450501",
+      "state_index": 31,
+      "strict": false,
+      "total_normalized": 19.929283535220144
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 32235.14726421871,
+      "Zcis": 14720.728422941844,
+      "Zinter": 17514.418841276867,
+      "conditional_no_K0_raw": 18302591.322510205,
+      "conditional_with_K0_raw": 17432192.518311445,
+      "count_nll_per_raw_record": 10.236031188725107,
+      "count_nll_raw": 17441050.710094444,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 3952.2371620019276,
+        "Zinter_relative": 0.291416031392762,
+        "count_nll_per_raw_record_abs": 0.7057350481659661,
+        "inter_mixture_rate_max_abs": 0.39024166467338334,
+        "inter_normalized_rate_max_abs": 2.8704447762402563e-05,
+        "inter_sorted_four_distances_max_abs": 0.7815924675546888,
+        "offdiag_data_nat_per_contact_abs": 0.950502073132867,
+        "penalties_raw:bend_abs": 46.133984153654694,
+        "penalties_raw:bond_abs": 8.876811722279331,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0625358307701749,
+        "penalties_weighted:bend_abs": 0.46133984153654695,
+        "penalties_weighted:bond_abs": 8.876811722279331,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0625358307701749,
+        "total_normalized_abs": 10.10642244275202
+      },
+      "global_scale": 0.9620750238844367,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "b9921bda84c70dd366679c00612e6b117c7f52efdeb0305e5ff890ab02c7f2d8",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "c7b4aa1fa33b39ac292e34520fde7bb724708c5efa82ac15e7bbf0f57673c174",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "70314eec0da6cc3425a702863da1b4312d09aadf41d13487101c70afe7789130",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5169679.887133999,
+      "offdiag_data_nat_per_contact": 13.77914758536499,
+      "offdiag_data_no_K0_nat_per_contact": 14.467147879566747,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 47.19236824719395,
+        "bond": 8.878560894735882,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06271090879498135
+      },
+      "penalties_weighted": {
+        "bend": 0.4719236824719395,
+        "bond": 8.878560894735882,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06271090879498135
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.039418938413392,
+      "seed": 450502,
+      "state_id": "random-u-450502",
+      "state_index": 32,
+      "strict": false,
+      "total_normalized": 19.64960037641036
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33949.88527155778,
+      "Zcis": 15482.470962032827,
+      "Zinter": 18467.414309524953,
+      "conditional_no_K0_raw": 18285873.90936801,
+      "conditional_with_K0_raw": 17415475.105169248,
+      "count_nll_per_raw_record": 10.226219855385006,
+      "count_nll_raw": 17424333.296952248,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4905.232630250013,
+        "Zinter_relative": 0.361684627610169,
+        "count_nll_per_raw_record_abs": 0.6959237148258648,
+        "inter_mixture_rate_max_abs": 0.4260960767878793,
+        "inter_normalized_rate_max_abs": 2.8330528586412482e-05,
+        "inter_sorted_four_distances_max_abs": 0.8954311900598848,
+        "offdiag_data_nat_per_contact_abs": 0.9372879176162918,
+        "penalties_raw:bend_abs": 46.08021540416103,
+        "penalties_raw:bond_abs": 8.645686441277885,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06517938126837187,
+        "penalties_weighted:bend_abs": 0.4608021540416103,
+        "penalties_weighted:bond_abs": 8.645686441277885,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06517938126837187,
+        "total_normalized_abs": 9.867591691413732
+      },
+      "global_scale": 0.9435138395817427,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "d50d5806798b8d31b8e8dfd5b60843e9edefec2d0aafbbcca353b9fafb227c9b",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "f58dd9a34a5b1a6a935bd936e7b55f292605f00c93b18f8710b0f50f52300c3d",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "3539260819a596910b27871b87d36fe93873bb2b16c9ff4f11f151363482d8ea",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5087394.034960441,
+      "offdiag_data_nat_per_contact": 13.765933429848415,
+      "offdiag_data_no_K0_nat_per_contact": 14.453933724050172,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 47.138599497700284,
+        "bond": 8.647435613734435,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06535445929317833
+      },
+      "penalties_weighted": {
+        "bend": 0.47138599497700284,
+        "bond": 8.647435613734435,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06535445929317833
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0598668064511878,
+      "seed": 450503,
+      "state_id": "random-u-450503",
+      "state_index": 33,
+      "strict": false,
+      "total_normalized": 19.41076962507207
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 35931.37954675355,
+      "Zcis": 16041.800862814674,
+      "Zinter": 19889.57868393888,
+      "conditional_no_K0_raw": 18274544.483934596,
+      "conditional_with_K0_raw": 17404145.679735836,
+      "count_nll_per_raw_record": 10.219570694505059,
+      "count_nll_raw": 17413003.871518835,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 6327.397004663939,
+        "Zinter_relative": 0.46654713484137705,
+        "count_nll_per_raw_record_abs": 0.6892745539459177,
+        "inter_mixture_rate_max_abs": 0.42598445116986183,
+        "inter_normalized_rate_max_abs": 2.836974520507062e-05,
+        "inter_sorted_four_distances_max_abs": 0.8231791548662255,
+        "offdiag_data_nat_per_contact_abs": 0.9283326571153321,
+        "penalties_raw:bend_abs": 42.56339487429876,
+        "penalties_raw:bond_abs": 7.9311577725389215,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.07008747785566881,
+        "penalties_weighted:bend_abs": 0.42563394874298754,
+        "penalties_weighted:bond_abs": 7.9311577725389215,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.07008747785566881,
+        "total_normalized_abs": 9.116153753083495
+      },
+      "global_scale": 0.9221847933354171,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "2deb9c9cb31b405700a9cbeca343596062c70c230a13b76447df8e5993ecf272",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "34efbb2de1afaf55b430c3df4829b84692d5d9c41c22b58310d4d4c201fed3f6",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "ea7fd22cf7d23234fff96b3824ed2735cb1d33a9b82b646b0b434ae4f0b726e2",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5004300.358593505,
+      "offdiag_data_nat_per_contact": 13.756978169347455,
+      "offdiag_data_no_K0_nat_per_contact": 14.44497846354921,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 43.62177896783801,
+        "bond": 7.932906944995472,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07026255588047527
+      },
+      "penalties_weighted": {
+        "bend": 0.4362177896783801,
+        "bond": 7.932906944995472,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07026255588047527
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0843802752191776,
+      "seed": 450504,
+      "state_id": "random-u-450504",
+      "state_index": 34,
+      "strict": false,
+      "total_normalized": 18.659331686741833
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33207.47731102968,
+      "Zcis": 15032.491967151109,
+      "Zinter": 18174.98534387857,
+      "conditional_no_K0_raw": 18307234.905592225,
+      "conditional_with_K0_raw": 17436836.101393465,
+      "count_nll_per_raw_record": 10.238756475294423,
+      "count_nll_raw": 17445694.293176465,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4612.803664603629,
+        "Zinter_relative": 0.3401225388134041,
+        "count_nll_per_raw_record_abs": 0.7084603347352818,
+        "inter_mixture_rate_max_abs": 0.448694839614578,
+        "inter_normalized_rate_max_abs": 2.8352976925807976e-05,
+        "inter_sorted_four_distances_max_abs": 0.828037067359038,
+        "offdiag_data_nat_per_contact_abs": 0.9541725590195309,
+        "penalties_raw:bend_abs": 46.25174112466775,
+        "penalties_raw:bond_abs": 8.714778304531386,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06257502692616208,
+        "penalties_weighted:bend_abs": 0.4625174112466775,
+        "penalties_weighted:bond_abs": 8.714778304531386,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06257502692616208,
+        "total_normalized_abs": 9.948331077439509
+      },
+      "global_scale": 0.9517827895792281,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "1798f00063740813ce3cbeb3fe9239b46c6b0ec515fddda5db44074f8d04684e",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "a18fe39266eb9e97ea085d500382dffce55e9b43443ff8891df5a5eba5971ca8",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "434dbfc8a31f18f30178980c98d1d2e5b5a8b01d5466776094a1124095c8e46c",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5136727.212688417,
+      "offdiag_data_nat_per_contact": 13.782818071251654,
+      "offdiag_data_no_K0_nat_per_contact": 14.47081836545341,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 47.310125218207006,
+        "bond": 8.716527476987936,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06275010495096854
+      },
+      "penalties_weighted": {
+        "bend": 0.47310125218207005,
+        "bond": 8.716527476987936,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06275010495096854
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0506588382860838,
+      "seed": 450505,
+      "state_id": "random-u-450505",
+      "state_index": 35,
+      "strict": false,
+      "total_normalized": 19.491509011097847
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 32912.30485880586,
+      "Zcis": 15038.129602381461,
+      "Zinter": 17874.175256424398,
+      "conditional_no_K0_raw": 18294600.30400084,
+      "conditional_with_K0_raw": 17424201.49980208,
+      "count_nll_per_raw_record": 10.231341315617621,
+      "count_nll_raw": 17433059.69158508,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4311.993577149458,
+        "Zinter_relative": 0.31794247261403635,
+        "count_nll_per_raw_record_abs": 0.7010451750584803,
+        "inter_mixture_rate_max_abs": 0.3785140110731286,
+        "inter_normalized_rate_max_abs": 2.8050077062280074e-05,
+        "inter_sorted_four_distances_max_abs": 0.8758377463317386,
+        "offdiag_data_nat_per_contact_abs": 0.9441856316822435,
+        "penalties_raw:bend_abs": 45.99572134555528,
+        "penalties_raw:bond_abs": 8.787842493854567,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06689414214058854,
+        "penalties_weighted:bend_abs": 0.4599572134555528,
+        "penalties_weighted:bond_abs": 8.787842493854567,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06689414214058854,
+        "total_normalized_abs": 10.015739024509191
+      },
+      "global_scale": 0.9560892726614296,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "9947bd78dda47a2b08e59e7410fd85b01514a8e0ba70fae410106c29c84ba1b1",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "5c09838e76af50c580185b9c22982e83a7c254eabba2c636067bd4caf6ececf6",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "61fc712bb61ad516833db4d1c725fe914d2ad4c60d5decad1b25d1a8b1ec5899",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5135388.149896185,
+      "offdiag_data_nat_per_contact": 13.772831143914367,
+      "offdiag_data_no_K0_nat_per_contact": 14.460831438116122,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 47.054105439094535,
+        "bond": 8.789591666311118,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.067069220165395
+      },
+      "penalties_weighted": {
+        "bend": 0.47054105439094535,
+        "bond": 8.789591666311118,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.067069220165395
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0459263884598773,
+      "seed": 450506,
+      "state_id": "random-u-450506",
+      "state_index": 36,
+      "strict": false,
+      "total_normalized": 19.55891695816753
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 36247.14869801892,
+      "Zcis": 16246.481512179167,
+      "Zinter": 20000.667185839757,
+      "conditional_no_K0_raw": 18273148.541032035,
+      "conditional_with_K0_raw": 17402749.736833274,
+      "count_nll_per_raw_record": 10.218751425337976,
+      "count_nll_raw": 17411607.928616274,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 6438.485506564817,
+        "Zinter_relative": 0.4747381843736686,
+        "count_nll_per_raw_record_abs": 0.6884552847788346,
+        "inter_mixture_rate_max_abs": 0.5082390810430262,
+        "inter_normalized_rate_max_abs": 2.8857891435043703e-05,
+        "inter_sorted_four_distances_max_abs": 0.8378128205955789,
+        "offdiag_data_nat_per_contact_abs": 0.9272292443773793,
+        "penalties_raw:bend_abs": 43.23000279205392,
+        "penalties_raw:bond_abs": 8.006164308639947,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.07146174057463266,
+        "penalties_weighted:bend_abs": 0.4323000279205392,
+        "penalties_weighted:bond_abs": 8.006164308639947,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.07146174057463266,
+        "total_normalized_abs": 9.198381361913956
+      },
+      "global_scale": 0.9177822361672178,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "33fa43a7bd68aaa6a780400ea5143be10fcf8b0989f7d50c47f65d5b2e6e0a57",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "a490d6364d562f6d97ff4b5a8401fa44041ec7eea56c1648894dfbdcb61366b3",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "29a05fcb23b5f3d72074ed3221e64251e01af54de0e7a3696f5461f2937994c5",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4991835.015070659,
+      "offdiag_data_nat_per_contact": 13.755874756609503,
+      "offdiag_data_no_K0_nat_per_contact": 14.44387505081126,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 44.28838688559317,
+        "bond": 8.007913481096498,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07163681859943911
+      },
+      "penalties_weighted": {
+        "bend": 0.44288386885593173,
+        "bond": 8.007913481096498,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07163681859943911
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0895819951540253,
+      "seed": 450507,
+      "state_id": "random-u-450507",
+      "state_index": 37,
+      "strict": false,
+      "total_normalized": 18.741559295572294
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 36176.14800665238,
+      "Zcis": 16188.280305490816,
+      "Zinter": 19987.867701161562,
+      "conditional_no_K0_raw": 18256748.48992862,
+      "conditional_with_K0_raw": 17386349.68572986,
+      "count_nll_per_raw_record": 10.209126349568082,
+      "count_nll_raw": 17395207.87751286,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 6425.686021886622,
+        "Zinter_relative": 0.47379442141717065,
+        "count_nll_per_raw_record_abs": 0.6788302090089413,
+        "inter_mixture_rate_max_abs": 0.5170113170992392,
+        "inter_normalized_rate_max_abs": 2.8189674766345173e-05,
+        "inter_sorted_four_distances_max_abs": 0.83647267441778,
+        "offdiag_data_nat_per_contact_abs": 0.9142659453360178,
+        "penalties_raw:bend_abs": 42.50949887710068,
+        "penalties_raw:bond_abs": 7.885089649140678,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.07106662336454835,
+        "penalties_weighted:bend_abs": 0.4250949887710068,
+        "penalties_weighted:bond_abs": 7.885089649140678,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.07106662336454835,
+        "total_normalized_abs": 9.060081470285173
+      },
+      "global_scale": 0.9186586245997326,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "1014f45c3ba6b20d8e71fbc083b75c38edac2654fe23c7ff0c192aa1f2dc6c44",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "c2ddc43f241cc8e7eee02b74d44e6c6f1b630c4bb3e54c67cafbb92a674b8359",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "2c2247bda394ce42e7a57bcf0ff86b22dcf3c557e8147e7968010aa3d6652639",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -4977915.491684741,
+      "offdiag_data_nat_per_contact": 13.742911457568141,
+      "offdiag_data_no_K0_nat_per_contact": 14.430911751769898,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 43.567882970639936,
+        "bond": 7.8868388215972285,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0712417013893548
+      },
+      "penalties_weighted": {
+        "bend": 0.4356788297063994,
+        "bond": 7.8868388215972285,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.0712417013893548
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.088542548039222,
+      "seed": 450508,
+      "state_id": "random-u-450508",
+      "state_index": 38,
+      "strict": false,
+      "total_normalized": 18.60325940394351
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 30335.576801219162,
+      "Zcis": 13986.16092111459,
+      "Zinter": 16349.415880104574,
+      "conditional_no_K0_raw": 18319258.077657,
+      "conditional_with_K0_raw": 17448859.27345824,
+      "count_nll_per_raw_record": 10.245812791240526,
+      "count_nll_raw": 17457717.46524124,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 2787.2342008296346,
+        "Zinter_relative": 0.205515179396907,
+        "count_nll_per_raw_record_abs": 0.7155166506813853,
+        "inter_mixture_rate_max_abs": 0.3869782200379465,
+        "inter_normalized_rate_max_abs": 2.849956840581026e-05,
+        "inter_sorted_four_distances_max_abs": 0.8033939823850824,
+        "offdiag_data_nat_per_contact_abs": 0.9636761864118242,
+        "penalties_raw:bend_abs": 48.78608076851806,
+        "penalties_raw:bond_abs": 9.46317082379656,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.056057743519822664,
+        "penalties_weighted:bend_abs": 0.4878608076851806,
+        "penalties_weighted:bond_abs": 9.46317082379656,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.056057743519822664,
+        "total_normalized_abs": 10.722606025682946
+      },
+      "global_scale": 0.9865805732396133,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "368f576092dc3591949c35352b97789c2a2bb15ab2a61aa6ccf76a69e232e811",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "688f1f69727d0ae4af9be7f2ab33f3093f4d8efa7267798baa36f6128a13148c",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "4ca65df6fa46b804b075ea1a6e667056e6cd705502b20fd4b8f108ea41f90268",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5263184.873902932,
+      "offdiag_data_nat_per_contact": 13.792321698643947,
+      "offdiag_data_no_K0_nat_per_contact": 14.480321992845703,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 49.844464862057315,
+        "bond": 9.46491999625311,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.05623282154462912
+      },
+      "penalties_weighted": {
+        "bend": 0.49844464862057314,
+        "bond": 9.46491999625311,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.05623282154462912
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0136009436272648,
+      "seed": 450509,
+      "state_id": "random-u-450509",
+      "state_index": 39,
+      "strict": false,
+      "total_normalized": 20.265783959341285
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 35274.4576675355,
+      "Zcis": 15870.533250845278,
+      "Zinter": 19403.92441669022,
+      "conditional_no_K0_raw": 18269724.662355028,
+      "conditional_with_K0_raw": 17399325.858156268,
+      "count_nll_per_raw_record": 10.216741974788993,
+      "count_nll_raw": 17408184.049939267,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 5841.742737415281,
+        "Zinter_relative": 0.43073768480349633,
+        "count_nll_per_raw_record_abs": 0.6864458342298523,
+        "inter_mixture_rate_max_abs": 0.4778607532907882,
+        "inter_normalized_rate_max_abs": 2.9577157044774017e-05,
+        "inter_sorted_four_distances_max_abs": 0.8009079443088857,
+        "offdiag_data_nat_per_contact_abs": 0.9245228648123707,
+        "penalties_raw:bend_abs": 42.646363333352106,
+        "penalties_raw:bond_abs": 8.012095620556662,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.07276128092703371,
+        "penalties_weighted:bend_abs": 0.42646363333352105,
+        "penalties_weighted:bond_abs": 8.012095620556662,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.07276128092703371,
+        "total_normalized_abs": 9.19776636904707
+      },
+      "global_scale": 0.9297685060869526,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "fdda71d9abf5c777ae37e62618af9c2784af1ebf3bfc873d5f4250a8ce22cf22",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "a844a8ee03aca20715139c8f76d3515923029d4ff352849efab10cc6e3edd08a",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "897d8b74cb1108660a95453facd3a080b5838e8336de70e7caf25a8dcd0a3822",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5022824.259344693,
+      "offdiag_data_nat_per_contact": 13.753168377044494,
+      "offdiag_data_no_K0_nat_per_contact": 14.441168671246249,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 43.70474742689136,
+        "bond": 8.013844793013213,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07293635895184017
+      },
+      "penalties_weighted": {
+        "bend": 0.4370474742689136,
+        "bond": 8.013844793013213,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.07293635895184017
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0755354622718092,
+      "seed": 450510,
+      "state_id": "random-u-450510",
+      "state_index": 40,
+      "strict": false,
+      "total_normalized": 18.740944302705408
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33900.537623831566,
+      "Zcis": 15312.634087770784,
+      "Zinter": 18587.903536060778,
+      "conditional_no_K0_raw": 18282604.479191467,
+      "conditional_with_K0_raw": 17412205.674992707,
+      "count_nll_per_raw_record": 10.224301049585247,
+      "count_nll_raw": 17421063.866775706,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 5025.721856785838,
+        "Zinter_relative": 0.3705688343982222,
+        "count_nll_per_raw_record_abs": 0.6940049090261056,
+        "inter_mixture_rate_max_abs": 0.40578166550113237,
+        "inter_normalized_rate_max_abs": 2.838558780700596e-05,
+        "inter_sorted_four_distances_max_abs": 0.8232416826685551,
+        "offdiag_data_nat_per_contact_abs": 0.9347036207256227,
+        "penalties_raw:bend_abs": 43.42498068984299,
+        "penalties_raw:bond_abs": 8.137449745058657,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06481360067232121,
+        "penalties_weighted:bend_abs": 0.4342498068984299,
+        "penalties_weighted:bond_abs": 8.137449745058657,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06481360067232121,
+        "total_normalized_abs": 9.330518061655514
+      },
+      "global_scale": 0.9447727429324863,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "8d0308e9a920e5fb45c39aaf30ca0c8610d2ca1e4d7299d08c4ada7c44a9f6d6",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "05cf2cbedde96bd6abebb79d2ffe575ad2384fb296d018f184b589904caeddba",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "328a554ab6ac5dd9cdebbb1f7429af8406549d4093997846f0a4c96533914616",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5085964.841243729,
+      "offdiag_data_nat_per_contact": 13.763349132957746,
+      "offdiag_data_no_K0_nat_per_contact": 14.451349427159503,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 44.48336478338224,
+        "bond": 8.139198917515207,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06498867869712767
+      },
+      "penalties_weighted": {
+        "bend": 0.44483364783382245,
+        "bond": 8.139198917515207,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06498867869712767
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0584545410318429,
+      "seed": 450511,
+      "state_id": "random-u-450511",
+      "state_index": 41,
+      "strict": false,
+      "total_normalized": 18.873695995313852
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 31286.462583183147,
+      "Zcis": 14404.594157154512,
+      "Zinter": 16881.868426028635,
+      "conditional_no_K0_raw": 18313823.57661373,
+      "conditional_with_K0_raw": 17443424.77241497,
+      "count_nll_per_raw_record": 10.24262332042832,
+      "count_nll_raw": 17452282.96419797,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 3319.686746753696,
+        "Zinter_relative": 0.244775274749982,
+        "count_nll_per_raw_record_abs": 0.7123271798691793,
+        "inter_mixture_rate_max_abs": 0.38572094138095997,
+        "inter_normalized_rate_max_abs": 2.834944922983165e-05,
+        "inter_sorted_four_distances_max_abs": 0.7650879018990637,
+        "offdiag_data_nat_per_contact_abs": 0.9593805252751455,
+        "penalties_raw:bend_abs": 49.10527411952354,
+        "penalties_raw:bond_abs": 9.4554426397834,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.05871468363068097,
+        "penalties_weighted:bend_abs": 0.49105274119523545,
+        "penalties_weighted:bond_abs": 9.4554426397834,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.05871468363068097,
+        "total_normalized_abs": 10.717537244478496
+      },
+      "global_scale": 0.9742532976623035,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "ef088f050883ad7d1a67868036b805e49db4dd890cb536230d458cc0a3bbc403",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "9a04caf9dd2070a683b0a3040ba2fd84bea6d269c7114fd93ee314fb88eb88ea",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "44144e40d15df539c231bcf1a872c59d5ba8e7bfa26773052ce0d9f715c3bb53",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5218703.485648929,
+      "offdiag_data_nat_per_contact": 13.788026037507269,
+      "offdiag_data_no_K0_nat_per_contact": 14.476026331709026,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 50.163658213062796,
+        "bond": 9.45719181223995,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.05888976165548743
+      },
+      "penalties_weighted": {
+        "bend": 0.501636582130628,
+        "bond": 9.45719181223995,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.05888976165548743
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0264260869318818,
+      "seed": 450512,
+      "state_id": "random-u-450512",
+      "state_index": 42,
+      "strict": false,
+      "total_normalized": 20.260715178136834
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33934.425614041895,
+      "Zcis": 15467.559133060986,
+      "Zinter": 18466.86648098091,
+      "conditional_no_K0_raw": 18287548.085440062,
+      "conditional_with_K0_raw": 17417149.2812413,
+      "count_nll_per_raw_record": 10.227202417661431,
+      "count_nll_raw": 17426007.4730243,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4904.684801705969,
+        "Zinter_relative": 0.3616442337740592,
+        "count_nll_per_raw_record_abs": 0.6969062771022898,
+        "inter_mixture_rate_max_abs": 0.4228868669743206,
+        "inter_normalized_rate_max_abs": 2.8433562427489222e-05,
+        "inter_sorted_four_distances_max_abs": 0.8317067319387854,
+        "offdiag_data_nat_per_contact_abs": 0.9386112577042631,
+        "penalties_raw:bend_abs": 44.94747085590508,
+        "penalties_raw:bond_abs": 8.49075412748808,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06708180456745295,
+        "penalties_weighted:bend_abs": 0.4494747085590508,
+        "penalties_weighted:bond_abs": 8.49075412748808,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06708180456745295,
+        "total_normalized_abs": 9.704216917716874
+      },
+      "global_scale": 0.9451642958687875,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "857780b37e555611a9d8054d10c5d186f7d8ea35e8b2ef4ba5f549b70e920553",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "bb3790331f7837202d2761cd466ce31a8d4b09dd745f075ada57bce59c5414bc",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "cac9d1bcc572c4e3d007c242cc035b4e6b7131245be8f82a99a59029ad8e0dcd",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5089644.433409699,
+      "offdiag_data_nat_per_contact": 13.767256769936386,
+      "offdiag_data_no_K0_nat_per_contact": 14.455257064138143,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 46.005854949444334,
+        "bond": 8.49250329994463,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06725688259225941
+      },
+      "penalties_weighted": {
+        "bend": 0.46005854949444336,
+        "bond": 8.49250329994463,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06725688259225941
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0580160553788258,
+      "seed": 450513,
+      "state_id": "random-u-450513",
+      "state_index": 43,
+      "strict": false,
+      "total_normalized": 19.247394851375212
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33353.89857071382,
+      "Zcis": 15041.415633543242,
+      "Zinter": 18312.482937170575,
+      "conditional_no_K0_raw": 18305883.68385516,
+      "conditional_with_K0_raw": 17435484.8796564,
+      "count_nll_per_raw_record": 10.237963452667898,
+      "count_nll_raw": 17444343.0714394,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4750.301257895635,
+        "Zinter_relative": 0.35026084816094244,
+        "count_nll_per_raw_record_abs": 0.7076673121087573,
+        "inter_mixture_rate_max_abs": 0.46476149375120507,
+        "inter_normalized_rate_max_abs": 2.8892606163028087e-05,
+        "inter_sorted_four_distances_max_abs": 0.8322594902691978,
+        "offdiag_data_nat_per_contact_abs": 0.9531044957959285,
+        "penalties_raw:bend_abs": 44.863945127639994,
+        "penalties_raw:bond_abs": 8.494177075651525,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.06394146518881832,
+        "penalties_weighted:bend_abs": 0.4486394512763999,
+        "penalties_weighted:bond_abs": 8.494177075651525,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.06394146518881832,
+        "total_normalized_abs": 9.7144253042255
+      },
+      "global_scale": 0.9503026406952638,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "1c7196e2061cd4efa15a9a1ba1169e4aa7aad14d3924c1a0cf01c0f00f85e705",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "a915ce4f0c2e3fdda83104334b77b6a0e59bff2f5c8423514e807eab620d4a1d",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "8e0dde87eb81d52081083a735a1d40799c109958b63e51eff7aa8cee5ee7b25e",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5129810.003714218,
+      "offdiag_data_nat_per_contact": 13.781750008028052,
+      "offdiag_data_no_K0_nat_per_contact": 14.469750302229809,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 45.92232922117925,
+        "bond": 8.495926248108075,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06411654321362478
+      },
+      "penalties_weighted": {
+        "bend": 0.4592232922117925,
+        "bond": 8.495926248108075,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06411654321362478
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0522952974942563,
+      "seed": 450514,
+      "state_id": "random-u-450514",
+      "state_index": 44,
+      "strict": false,
+      "total_normalized": 19.25760323788384
+    },
+    {
+      "K0": -870398.8041987622,
+      "Ncis": 696680.0,
+      "Ninter": 568434.0,
+      "Noff": 1265114.0,
+      "Nraw": 1703888.0,
+      "Zall": 33911.01764127315,
+      "Zcis": 15439.019125934425,
+      "Zinter": 18471.998515338728,
+      "conditional_no_K0_raw": 18285782.01351869,
+      "conditional_with_K0_raw": 17415383.20931993,
+      "count_nll_per_raw_record": 10.226165922351075,
+      "count_nll_raw": 17424241.40110293,
+      "diag_profiled_nll_raw": 8858.191783000764,
+      "differences_from_original": {
+        "Zinter_abs": 4909.816836063788,
+        "Zinter_relative": 0.362022641502195,
+        "count_nll_per_raw_record_abs": 0.6958697817919344,
+        "inter_mixture_rate_max_abs": 0.42063934204573167,
+        "inter_normalized_rate_max_abs": 2.8623860524857036e-05,
+        "inter_sorted_four_distances_max_abs": 0.8072491527071749,
+        "offdiag_data_nat_per_contact_abs": 0.9372152792221886,
+        "penalties_raw:bend_abs": 43.8147397320974,
+        "penalties_raw:bond_abs": 8.353783753384748,
+        "penalties_raw:p_prior_abs": 0.0,
+        "penalties_raw:repulsion_abs": 0.0643352360325288,
+        "penalties_weighted:bend_abs": 0.438147397320974,
+        "penalties_weighted:bond_abs": 8.353783753384748,
+        "penalties_weighted:p_prior_abs": 0.0,
+        "penalties_weighted:repulsion_abs": 0.0643352360325288,
+        "total_normalized_abs": 9.552136168530186
+      },
+      "global_scale": 0.9447727429324863,
+      "inter_arrays": {
+        "inter_mixture_rate": {
+          "sha256": "d59ba85423c1e4e98e7fe82b937aa5770df504b4dfd8c25113486d7508e74104",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_normalized_rate": {
+          "sha256": "05cd793b5b68491412908883f273269d17b863dc74c3be476b0ede02aef3f572",
+          "shape": [
+            3312674
+          ]
+        },
+        "inter_sorted_four_distances": {
+          "sha256": "b1dcdc1e5ae8efbda3fe7e21ec40edaa2480a6c5a51e0a66565e9774ba660aa6",
+          "shape": [
+            4,
+            3312674
+          ]
+        }
+      },
+      "kind": "random_u",
+      "objective_fg_calls": 1,
+      "observed_log_rate_offdiag": -5088751.338472944,
+      "offdiag_data_nat_per_contact": 13.765860791454312,
+      "offdiag_data_no_K0_nat_per_contact": 14.453861085656069,
+      "p": 0.9755785197068777,
+      "pair_kernel_forward_passes": 1,
+      "penalties_raw": {
+        "bend": 44.873123825636654,
+        "bond": 8.355532925841299,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06451031405733526
+      },
+      "penalties_weighted": {
+        "bend": 0.44873123825636657,
+        "bond": 8.355532925841299,
+        "p_prior": 0.0003737016824476189,
+        "repulsion": 0.06451031405733526
+      },
+      "pointset_conserved": null,
+      "pre_scale_radius": 1.0584545410318429,
+      "seed": 450515,
+      "state_id": "random-u-450515",
+      "state_index": 45,
+      "strict": false,
+      "total_normalized": 19.095314102188524
+    }
+  ],
+  "schema": "p9016-056-experiment1-v1",
+  "scientific_gate": {
+    "deltas": [
+      0.022041546680743096,
+      0.021108068337701624,
+      0.014614988817021057,
+      0.015468819456360805,
+      0.006860055729239534,
+      0.007436101406192108,
+      0.010170839262416465,
+      0.01777618265757397
+    ],
+    "median_delta_nat_per_offdiag": 0.015041904136690931,
+    "pass": true,
+    "positive_count": 8
+  },
+  "state_count": 46,
+  "status": "PASS"
+}

@@ -1,0 +1,153 @@
+{
+  "artifact_hash_manifest": "results/artifact_hashes.json",
+  "github_pushed": false,
+  "independent_parent_acceptance_pending": true,
+  "schema": "p9016-056-final-terminal-v1",
+  "scientific_status": {
+    "adoption_failure_reasons": [
+      "heldout_gain_both_seeds",
+      "matched_delta_both_seeds",
+      "no_consistent_min_margin_degradation",
+      "no_consistent_splice_degradation"
+    ],
+    "adoption_gates": {
+      "heldout_gain_both_seeds": false,
+      "matched_delta_both_seeds": false,
+      "no_consistent_min_margin_degradation": false,
+      "no_consistent_splice_degradation": false,
+      "no_preregistered_optimization_imbalance_alarm": true
+    },
+    "adoption_recommended": false,
+    "comparisons": [
+      {
+        "canonical_gradient_imbalance": false,
+        "canonical_gradient_ratio": 1.4705612871690632,
+        "heldout_gain_nat_per_contact": -0.0071376901762327805,
+        "heldout_gate_ge_0_01": false,
+        "matched_delta_offdiag_minus_original": -0.0289855265138097,
+        "matched_gate_ge_minus_0_02": false,
+        "min_margin_delta_offdiag_minus_original": -0.046398138451484494,
+        "offdiag_1Mb_status": "budget_not_converged",
+        "offdiag_splice_median": 0.007372446480197858,
+        "offdiag_splice_positive_count": 8,
+        "one_converged_other_not": false,
+        "optimization_imbalance_alarm": false,
+        "original_1Mb_status": "budget_not_converged",
+        "original_splice_median": 0.00916178115686872,
+        "original_splice_positive_count": 8,
+        "seed": 560101
+      },
+      {
+        "canonical_gradient_imbalance": false,
+        "canonical_gradient_ratio": 1.1240922340877828,
+        "heldout_gain_nat_per_contact": 0.002277176779047707,
+        "heldout_gate_ge_0_01": false,
+        "matched_delta_offdiag_minus_original": -0.02072111716721492,
+        "matched_gate_ge_minus_0_02": false,
+        "min_margin_delta_offdiag_minus_original": -0.027016560821515698,
+        "offdiag_1Mb_status": "budget_not_converged",
+        "offdiag_splice_median": 0.007785331300028453,
+        "offdiag_splice_positive_count": 8,
+        "one_converged_other_not": false,
+        "optimization_imbalance_alarm": false,
+        "original_1Mb_status": "budget_not_converged",
+        "original_splice_median": 0.00948635806784548,
+        "original_splice_positive_count": 8,
+        "seed": 560102
+      }
+    ],
+    "consistent_min_margin_degradation": true,
+    "consistent_splice_degradation": true,
+    "endpoint_absolute_results": [
+      {
+        "canonical_gradient_max_abs_1Mb": 0.0004320050208665738,
+        "condition": "G-original",
+        "fit_id": "G-original-seed560101",
+        "heldout_test_Noff": 253067,
+        "heldout_test_nll_nat_per_offdiag": 13.489889352096878,
+        "mean_margin_A": 0.22010214934769037,
+        "mean_margin_B": 0.23052773906942292,
+        "mean_min_margin": 0.1655479037965822,
+        "pearson_cross_macro": 0.3726973729643732,
+        "pearson_same_macro": 0.5980123171729299,
+        "seed": 560101,
+        "terminal_1Mb": "budget_not_converged",
+        "terminal_reason_1Mb": "fg_budget_exhausted",
+        "training_fraction": 0.8
+      },
+      {
+        "canonical_gradient_max_abs_1Mb": 0.00029376879742170736,
+        "condition": "G-offdiag-e",
+        "fit_id": "G-offdiag-e-seed560101",
+        "heldout_test_Noff": 253067,
+        "heldout_test_nll_nat_per_offdiag": 13.49702704227311,
+        "mean_margin_A": 0.1837056283745829,
+        "mean_margin_B": 0.1923868255036087,
+        "mean_min_margin": 0.11914976534509772,
+        "pearson_cross_macro": 0.3809805637200244,
+        "pearson_same_macro": 0.5690267906591202,
+        "seed": 560101,
+        "terminal_1Mb": "budget_not_converged",
+        "terminal_reason_1Mb": "fg_budget_exhausted",
+        "training_fraction": 0.8
+      },
+      {
+        "canonical_gradient_max_abs_1Mb": 0.00039255934712124023,
+        "condition": "G-original",
+        "fit_id": "G-original-seed560102",
+        "heldout_test_Noff": 253067,
+        "heldout_test_nll_nat_per_offdiag": 13.505433893856448,
+        "mean_margin_A": 0.17441218519352922,
+        "mean_margin_B": 0.2310116939852776,
+        "mean_min_margin": 0.11816662168433059,
+        "pearson_cross_macro": 0.3917966336761591,
+        "pearson_same_macro": 0.5945085732655624,
+        "seed": 560102,
+        "terminal_1Mb": "budget_not_converged",
+        "terminal_reason_1Mb": "fg_budget_exhausted",
+        "training_fraction": 0.8
+      },
+      {
+        "canonical_gradient_max_abs_1Mb": 0.00034922343133151154,
+        "condition": "G-offdiag-e",
+        "fit_id": "G-offdiag-e-seed560102",
+        "heldout_test_Noff": 253067,
+        "heldout_test_nll_nat_per_offdiag": 13.5031567170774,
+        "mean_margin_A": 0.1324287339199976,
+        "mean_margin_B": 0.22395385771708765,
+        "mean_min_margin": 0.0911500608628149,
+        "pearson_cross_macro": 0.3955961602798047,
+        "pearson_same_macro": 0.5737874560983475,
+        "seed": 560102,
+        "terminal_1Mb": "budget_not_converged",
+        "terminal_reason_1Mb": "fg_budget_exhausted",
+        "training_fraction": 0.8
+      }
+    ],
+    "experiment1": "PASS",
+    "experiment2": "PASS",
+    "experiment3_training": "complete",
+    "global_method_falsification_claimed": false,
+    "heldout_prediction_interpretation": "uncertain_threshold_not_met",
+    "historical_l1_status": "pre-existing evidence supports chr1; chrX evidence is marginal",
+    "l2_supported_by_this_round": false,
+    "l3_claimed": false,
+    "method_status": "offdiag_e_not_adopted_prespecified_gates_failed",
+    "new_l1_claim": false,
+    "reference_tie_branch_audit": {
+      "best_orientation_tie_rows": 20,
+      "existing_reference_metrics_changed": false,
+      "experiment3_endpoint_or_splice_rows_affected": 0,
+      "reason": "all existing ties are exp1/u0 evaluated along the frozen baseline fixed mapping",
+      "tie_rows_by_candidate": {
+        "exp1/u0": 20
+      }
+    },
+    "schema": "p9016-056-final-status-v2"
+  },
+  "status": "complete",
+  "validation": {
+    "path": "results/validation.json",
+    "status": "PASS"
+  }
+}

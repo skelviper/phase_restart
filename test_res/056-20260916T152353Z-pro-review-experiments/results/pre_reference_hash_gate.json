@@ -1,0 +1,596 @@
+{
+  "all_actual_artifact_hashes_matched": true,
+  "all_pending_states_hashed": true,
+  "artifact_count": 90,
+  "artifacts": [
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/original.npz",
+      "role": "experiment1_state",
+      "sha256": "df4e2d578d007702f02ee776faad97df531556b97d85f7f17e8eb3cfcd7b6c86",
+      "state_id": "original"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr1.npz",
+      "role": "experiment1_state",
+      "sha256": "0b1c52b0c8f9c3316b32b8da7f2cc1abdabce6f20bf8935600e83d64030228e1",
+      "state_id": "whole-chr1"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr2.npz",
+      "role": "experiment1_state",
+      "sha256": "47ac04aa34c4efd818f52b727b2e193718f731eff5a2a380128a30a2984afbbf",
+      "state_id": "whole-chr2"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr3.npz",
+      "role": "experiment1_state",
+      "sha256": "c9d286518d4e1109b73b5523181cab91897acf4f8afa79259f5c168c30fe50b3",
+      "state_id": "whole-chr3"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr4.npz",
+      "role": "experiment1_state",
+      "sha256": "7b9ebf9e296c97e60ff3cf365453d4fcbae50181dee6972c64d026362d49f401",
+      "state_id": "whole-chr4"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr5.npz",
+      "role": "experiment1_state",
+      "sha256": "7309c254acb872ee2a546982c87573b51c54d271a3c4edfef7f5fb8b32736426",
+      "state_id": "whole-chr5"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr6.npz",
+      "role": "experiment1_state",
+      "sha256": "3e571123f48068e06d1bb24d2ffdb451ded45a7b3f49a4cc08d44bc324e7544f",
+      "state_id": "whole-chr6"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr7.npz",
+      "role": "experiment1_state",
+      "sha256": "ab459f62a22bd9dccb015de55c06a34fdab2af476d35e981e8d5e17a0ff267b1",
+      "state_id": "whole-chr7"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr8.npz",
+      "role": "experiment1_state",
+      "sha256": "dcdbe2cf7125447d278de550517d13578137185d1988b407b8eddef8a40d57b3",
+      "state_id": "whole-chr8"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr9.npz",
+      "role": "experiment1_state",
+      "sha256": "f7030788382ce6740d344a6cf7c0a894a56d1e4fdcbf610bfcc29e26b872624d",
+      "state_id": "whole-chr9"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr10.npz",
+      "role": "experiment1_state",
+      "sha256": "00a763415e7cee9f6db8b223e421420f113bee4d8ef82d000450cc56f53f97cb",
+      "state_id": "whole-chr10"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr11.npz",
+      "role": "experiment1_state",
+      "sha256": "55c425b7f57251e49458945466e4212ed9d4484278ca32a023d55cb84ca2dd5d",
+      "state_id": "whole-chr11"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr12.npz",
+      "role": "experiment1_state",
+      "sha256": "83bd29993927b996a2a8b8c08676f4c631880bc7d2afa564f7420607237f2f40",
+      "state_id": "whole-chr12"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr13.npz",
+      "role": "experiment1_state",
+      "sha256": "920ce800b46c1a7608a3b679a926d2a8928db61fa531e0d12ff5904fe19875eb",
+      "state_id": "whole-chr13"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr14.npz",
+      "role": "experiment1_state",
+      "sha256": "c14fbae6949a619e3fa3aa30cc41016c0e5439f6326bd7f70bf76ab2297f0849",
+      "state_id": "whole-chr14"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr15.npz",
+      "role": "experiment1_state",
+      "sha256": "95fe7d27f905985d91b718529a61d5269be2b3accc51ed9930601c3e9995f774",
+      "state_id": "whole-chr15"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr16.npz",
+      "role": "experiment1_state",
+      "sha256": "84e4a59f96ae6a6ce38903de4c9d5a770664b03b9d4a15892ff8f97ff1b520b7",
+      "state_id": "whole-chr16"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr17.npz",
+      "role": "experiment1_state",
+      "sha256": "cc6cc26b3486ebb945354bf1def2b6f95ba712f9bdf371be10b40e3ac77c3bc2",
+      "state_id": "whole-chr17"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr18.npz",
+      "role": "experiment1_state",
+      "sha256": "b947fc9e38a0ba9e5f5de7fd72eb55e9b437b91991ee1e265f1a78feebcc06b9",
+      "state_id": "whole-chr18"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chr19.npz",
+      "role": "experiment1_state",
+      "sha256": "dcc8870be004a2b7805877c218adfbf29f0b3ed600321a4139f4e41291313c44",
+      "state_id": "whole-chr19"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/whole-chrX.npz",
+      "role": "experiment1_state",
+      "sha256": "2dc70da09a40eb4c4dcd7221cc5f041f8ab8ffb1b56a36cf28e507887ee394d5",
+      "state_id": "whole-chrX"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr1-065.npz",
+      "role": "experiment1_state",
+      "sha256": "7cf96f31ae67e6afb707015ebb793dc09317f895b6ae921bb09a6552c71ae3ff",
+      "state_id": "splice-chr1-065"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr1-130.npz",
+      "role": "experiment1_state",
+      "sha256": "40ca81c85d6f1f4bf749dc7fe7be03ccfaabb15b9d585908d9f2c229ac3e8b3d",
+      "state_id": "splice-chr1-130"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr8-043.npz",
+      "role": "experiment1_state",
+      "sha256": "18e1d1b4a77bfa6262c5d9010ff8183167ceb6c8849be0a81b2149b4be6f4a62",
+      "state_id": "splice-chr8-043"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr8-086.npz",
+      "role": "experiment1_state",
+      "sha256": "2d3b6bd0f30d1af9567455302607bb756eca68efe17d09d8bf7ca66966585115",
+      "state_id": "splice-chr8-086"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr19-020.npz",
+      "role": "experiment1_state",
+      "sha256": "7d03729c8789b65b899f66bba5c52b7f7afe251c522603955415d36d6cd416cc",
+      "state_id": "splice-chr19-020"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chr19-041.npz",
+      "role": "experiment1_state",
+      "sha256": "18459ac09a532b9de1f1417b1f6847e4c71ed843d7570246570ac6e86f16e8c8",
+      "state_id": "splice-chr19-041"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chrX-057.npz",
+      "role": "experiment1_state",
+      "sha256": "0dd62f2b4764e81343204900fabec2b2963f1057a72231f1dd70c95e8d0a592d",
+      "state_id": "splice-chrX-057"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/splice-chrX-114.npz",
+      "role": "experiment1_state",
+      "sha256": "d7f2be3600819e78b47032a8cc325a40a26d106afe38c31f61371d111a252f80",
+      "state_id": "splice-chrX-114"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/u0.npz",
+      "role": "experiment1_state",
+      "sha256": "9c195e3838ea647169132825018ca32b1b7963e47fbc60773f8d301e088c4639",
+      "state_id": "u0"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450500.npz",
+      "role": "experiment1_state",
+      "sha256": "4e2d4eba1972845b3e5c6c6b12962a55b7a4ed179065d9d981277cb242eb3a96",
+      "state_id": "random-u-450500"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450501.npz",
+      "role": "experiment1_state",
+      "sha256": "78cfdb9cc6827ed549584dbd04d071d73592b2830536d289801ec4f5c181410f",
+      "state_id": "random-u-450501"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450502.npz",
+      "role": "experiment1_state",
+      "sha256": "3419f4bc4dc4169261c229e9fc7314b1805e2e0cb59447bcf9e2613a40056e88",
+      "state_id": "random-u-450502"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450503.npz",
+      "role": "experiment1_state",
+      "sha256": "365fc563aa9675dee31cce001a0457691fe64f6155033cab4eb0eb8f2a89551b",
+      "state_id": "random-u-450503"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450504.npz",
+      "role": "experiment1_state",
+      "sha256": "02aca3d273221aaa7efeb9288d14bbec588b6e88df492269cdb709b5c9e2c4ba",
+      "state_id": "random-u-450504"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450505.npz",
+      "role": "experiment1_state",
+      "sha256": "429cdd10d5c17e83e0e184ef490f4f970031ac93f4cca7403b1d2e1c33ceab49",
+      "state_id": "random-u-450505"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450506.npz",
+      "role": "experiment1_state",
+      "sha256": "79c93e1ecfeb5c5dde5a5c7bcc158337a9aeb7cfb8262a247faead25bad3f5f0",
+      "state_id": "random-u-450506"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450507.npz",
+      "role": "experiment1_state",
+      "sha256": "b001a5bd438aca9441330c82685517ce29b8564b1cafb3e3167d4f32fc47bfc1",
+      "state_id": "random-u-450507"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450508.npz",
+      "role": "experiment1_state",
+      "sha256": "27201c2204c2ab1f2f3552e41452c89a6a0fd514ec1915160ff608fc8e33da38",
+      "state_id": "random-u-450508"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450509.npz",
+      "role": "experiment1_state",
+      "sha256": "b7097188be02a26149da056bdbb84918c88a96ce9c8b548c025fd202c4a98630",
+      "state_id": "random-u-450509"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450510.npz",
+      "role": "experiment1_state",
+      "sha256": "7840abe50b8eec731dd35456a31c021f6448c6148ab08c1002d4a4d297fda953",
+      "state_id": "random-u-450510"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450511.npz",
+      "role": "experiment1_state",
+      "sha256": "4ae2f4b9a19fcc7eb015c3a4e6d69effa4a5fa72bcd067b37719e2681107b648",
+      "state_id": "random-u-450511"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450512.npz",
+      "role": "experiment1_state",
+      "sha256": "d746c1a62043c31a724b5eb6cbec1b5b950bcb1bda63e0de621a68eacc787e95",
+      "state_id": "random-u-450512"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450513.npz",
+      "role": "experiment1_state",
+      "sha256": "5060c92fff523a24c355fe9455522414a6e50396b0d3534df732adda7102e625",
+      "state_id": "random-u-450513"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450514.npz",
+      "role": "experiment1_state",
+      "sha256": "ff5a1d337022690abbd1f1c657fd055cf9fea880800289efb49088ad48a92a45",
+      "state_id": "random-u-450514"
+    },
+    {
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/random-u-450515.npz",
+      "role": "experiment1_state",
+      "sha256": "56b992ea8e763cc0efe9b7ab5d00f0de61ea32186848c94477823553083f2d83",
+      "state_id": "random-u-450515"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/solver_state.npz",
+      "role": "experiment3_solver_state",
+      "sha256": "c54021db76793e0751ecfef63c1e4204a39003521e33f84e30bbd41af9d8413e"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560101/1Mb/presence_mask.npz",
+      "role": "experiment3_presence_mask",
+      "sha256": "7fbba3c5be944d89d517995e44b1f8c7ab00be6d39bafae467a347df78f46454"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560101/1Mb.3dg",
+      "role": "experiment3_export",
+      "sha256": "ae7494970125389a1105cb0d3491c0da3680e26de006942964f2dc8ee79c39d2"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560101/1Mb/solver_state.npz",
+      "role": "experiment3_solver_state",
+      "sha256": "d40909f22175fbb261021a58ba0f8f6104c15f5a566e82a0b065a343bf2dcf9e"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560101/1Mb/presence_mask.npz",
+      "role": "experiment3_presence_mask",
+      "sha256": "7fbba3c5be944d89d517995e44b1f8c7ab00be6d39bafae467a347df78f46454"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-offdiag-e-seed560101/1Mb.3dg",
+      "role": "experiment3_export",
+      "sha256": "fe126a477224c84d47c05d3f61b582304320f837a5e41ef7f53a5772356c2e31"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560102/1Mb/solver_state.npz",
+      "role": "experiment3_solver_state",
+      "sha256": "2440641f208f0460bb6e12a757aec2c8ea1d71be694ca963b21d0179d9e6983b"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-original-seed560102/1Mb/presence_mask.npz",
+      "role": "experiment3_presence_mask",
+      "sha256": "7fbba3c5be944d89d517995e44b1f8c7ab00be6d39bafae467a347df78f46454"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-original-seed560102/1Mb.3dg",
+      "role": "experiment3_export",
+      "sha256": "d85400a68b51c78625625e95e60f1754d458d2e93a7a05ea9bd0aaa242ed0371"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560102/1Mb/solver_state.npz",
+      "role": "experiment3_solver_state",
+      "sha256": "62ccbb8a35ece2d3169ce13e5ff767c575f8aead350d5a65693662960d95d6dc"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3/G-offdiag-e-seed560102/1Mb/presence_mask.npz",
+      "role": "experiment3_presence_mask",
+      "sha256": "7fbba3c5be944d89d517995e44b1f8c7ab00be6d39bafae467a347df78f46454"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/exports/experiment3/G-offdiag-e-seed560102/1Mb.3dg",
+      "role": "experiment3_export",
+      "sha256": "91dd189ee00adf020db3f36e06831962180a685dcf24481a41d64540b3d45b12"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr1-065.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "e79b7639b51af93dc98c07b7f3c00363d6c0db559f177efe2d3a87e0c1c7ab3f",
+      "state_id": "splice-chr1-065"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr1-130.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "4b7000fe917130a3be67de58dd73e42f830b589f609bd51fdd777a0368faf6e4",
+      "state_id": "splice-chr1-130"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr8-043.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "ea71c8ec0638015d2a7d5e58c2abc8aaff6279829f9087dbefaac70f110004d7",
+      "state_id": "splice-chr8-043"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr8-086.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "d73777c3064408359f3af9bfe4cd58b1ab84d4185a3e3dcf1ba3157c03565755",
+      "state_id": "splice-chr8-086"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr19-020.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "7f294edc8f8b3c5fb85eae58a3ae246594b35d272068219867d8f510259d7ce8",
+      "state_id": "splice-chr19-020"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chr19-041.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "1f086587ef96c01cd4ef218cb6902fec0a1190a4fb44c0c4c3a5134f49bf292d",
+      "state_id": "splice-chr19-041"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chrX-057.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "cbdaff4466828dca2c07c347704de7c556082d227e082d9875214875905c6898",
+      "state_id": "splice-chrX-057"
+    },
+    {
+      "fit_id": "G-original-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560101/splice-chrX-114.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "03d4c898fc28769b3a42418f4b291475f2f5147fb7f4ffa1b1067472deb67b0c",
+      "state_id": "splice-chrX-114"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr1-065.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "9a481709aaa9cfbad903592a31cd1148740b841108626ab5dd9993cc4d311b18",
+      "state_id": "splice-chr1-065"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr1-130.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "f81cce9e53676855f1cd8d4bd78c2ec3c128b1aefd64ed84a32c1d2b5f80ce76",
+      "state_id": "splice-chr1-130"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr8-043.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "675b4c025f9583f9132fea9d6b4566c3d8a58b1bcc6203305db1e6a7699a0e3d",
+      "state_id": "splice-chr8-043"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr8-086.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "efd64f16be42b302935f3b86baf9651297330e48c57e86bad8c94e098722e9dd",
+      "state_id": "splice-chr8-086"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr19-020.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "5b19ccfa49aa1bd3557b4525eaecf4483e166d35bd15ed618bfe2641c54848ea",
+      "state_id": "splice-chr19-020"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chr19-041.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "d49a10714bd4c2b1df8d02c52eb592bfd34a88a5a13e661f50f6af2de56ac6d6",
+      "state_id": "splice-chr19-041"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chrX-057.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "7f733dbbcc1b29342f240e5a71d4005a26dd280527c397b48933d165b33078e0",
+      "state_id": "splice-chrX-057"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560101",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560101/splice-chrX-114.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "8ca32d038bba6e930abb58a2cbea9c82cfe52fc30c2c2cd6b63de828e2b04118",
+      "state_id": "splice-chrX-114"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr1-065.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "81fd12e822c576a45b71870d32869eed3342d41ba495d715002961682b261811",
+      "state_id": "splice-chr1-065"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr1-130.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "ea85155242025342f58f5ff611574d8a540826285cc56b9619485c31db3352a7",
+      "state_id": "splice-chr1-130"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr8-043.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "7b550deb063d887151581d8a64928075891210dd164df89f9c33445907b9385a",
+      "state_id": "splice-chr8-043"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr8-086.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "ccc8e62faf26c30c5d89f961cf93f863947ab0b0b516b80d3ca7268116bdaf94",
+      "state_id": "splice-chr8-086"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr19-020.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "c3cfad7f3afae5606a87ee219da6bbc00966813edf36a43a021ee9efd350f68f",
+      "state_id": "splice-chr19-020"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chr19-041.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "2c63a87978ceef72bf5a2aca112ac4b7a6ae48d00177dd78ef8bafdd3a3a430c",
+      "state_id": "splice-chr19-041"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chrX-057.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "79536b580f482362472e4b1a56ded865cf417e4fb5a2591d5d9b30b1d766be35",
+      "state_id": "splice-chrX-057"
+    },
+    {
+      "fit_id": "G-original-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-original-seed560102/splice-chrX-114.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "b89f22fbf8a792f4dda5d3ba2f293b3ad0bc9ffe9f4858f9710d0609cb4511aa",
+      "state_id": "splice-chrX-114"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr1-065.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "ba082c5d15c0c72d4ef621953d4f63eac5e81fa58c34b80d2f2c25a5c2868eff",
+      "state_id": "splice-chr1-065"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr1-130.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "d454535be155c7fe4b5afd991bd083c80f22c024efbc824dccffdac582790f50",
+      "state_id": "splice-chr1-130"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr8-043.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "c803b8f7486a96f5629d8cbc9ef1aac3981efeab524caf625cdb11723510e98b",
+      "state_id": "splice-chr8-043"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr8-086.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "7d4069f1a55fe862826f7c7f832176a9d19cf5ec9bdd8448062c80fb5ddcbb97",
+      "state_id": "splice-chr8-086"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr19-020.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "d2238158d16ddb2fc2af0713e03bd75a53329aead40a0790133fee44a9cf1f2f",
+      "state_id": "splice-chr19-020"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chr19-041.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "b39821c0474c9470732267dead283ecf68aa98ba73697ef9db987ec89b94fbc2",
+      "state_id": "splice-chr19-041"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chrX-057.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "b2b9de3129d34872d241e31dd920b2412c43edcd9dbec4588a99b6fd4a6f6b25",
+      "state_id": "splice-chrX-057"
+    },
+    {
+      "fit_id": "G-offdiag-e-seed560102",
+      "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/G-offdiag-e-seed560102/splice-chrX-114.npz",
+      "role": "experiment3_splice_state",
+      "sha256": "2b1c3b77de32c448dddea1ff17563aed3f7e4e7923d35157cfcd61b57449d49d",
+      "state_id": "splice-chrX-114"
+    }
+  ],
+  "expected_decomposition": {
+    "experiment1_states": 46,
+    "experiment3_exports": 4,
+    "experiment3_presence_masks": 4,
+    "experiment3_solver_states": 4,
+    "experiment3_splice_states": 32
+  },
+  "experiment1_manifest": {
+    "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment1/manifest.json",
+    "sha256": "f50000d1f5a06a91fc93a590e4a34bc41d7d5b404fe0ead553a107c528fe6896"
+  },
+  "experiment3_splice_manifest": {
+    "path": "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/manifest.json",
+    "sha256": "9c218a0d5185c3ac115f3bdadc42cafcd54597597d6ea7a11e461a7b9eaf346d"
+  },
+  "reference_opened": false,
+  "schema": "p9016-056-all-candidate-artifact-hash-gate-v2"
+}

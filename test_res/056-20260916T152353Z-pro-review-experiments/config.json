@@ -1,0 +1,69 @@
+{
+  "schema": "p9016-pro-review-experiments-056-v1",
+  "status": "protocol_frozen_precompute",
+  "cohort": {
+    "cell_id": "P9016",
+    "biological_replicates": 1,
+    "chromosomes": 20,
+    "copies": 2,
+    "raw_records": 1703888,
+    "observation_unit": "contact record for split; aggregated unordered locus pair count for objective"
+  },
+  "inputs": {
+    "pairs7": {
+      "path": "inputs/P9016.snpfree.pairs.gz",
+      "sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa"
+    },
+    "baseline_npz": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+      "sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752"
+    },
+    "baseline_3dg": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+      "sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b"
+    }
+  },
+  "numeric": {
+    "dtype": "float64",
+    "hard_invariance_atol": 1e-10,
+    "canonical_gtol": 1e-6,
+    "ftol": 0.0,
+    "maxls": 20,
+    "weights": {"count": 1.0, "bond": 1.0, "repulsion": 1.0, "bend": 0.01, "p_prior": 1.0}
+  },
+  "experiment1": {
+    "states": 46,
+    "full_grid_evaluations_cap": 48,
+    "whole_chromosome_swaps": 20,
+    "splice_indices_0based_inclusive": {"chr1": [65, 130], "chr8": [43, 86], "chr19": [20, 41], "chrX": [57, 114]},
+    "random_u_seeds": [450500, 450501, 450502, 450503, 450504, 450505, 450506, 450507, 450508, 450509, 450510, 450511, 450512, 450513, 450514, 450515],
+    "scientific_gate": {"positive_splices_min": 7, "median_delta_nat_per_offdiag_min": 0.001}
+  },
+  "experiment2": {
+    "evaluations": 12,
+    "diag_states": ["original", "all_chromosome_roll_floor_third", "doubled"],
+    "shift_by_header_order": [65, 61, 53, 52, 50, 50, 48, 43, 41, 43, 41, 40, 40, 41, 35, 33, 31, 30, 20, 57],
+    "exposure_modes": ["locked_original", "production_recomputed"],
+    "normalizers": ["Nraw_variant", "Noff"],
+    "primary_gradient_space": "count_only_physical_x",
+    "primary_relative_norm": "L2"
+  },
+  "experiment3": {
+    "fold_hash": "BLAKE2b-64",
+    "fold_domain": "P9016-contact-fold-v1\\0",
+    "fold_seed": 560301,
+    "train_threshold_uint64": "14757395258967642112",
+    "unknown_molecule_isolation": false,
+    "init_seeds": [560101, 560102],
+    "p_init": 0.75,
+    "same_shape": false,
+    "conditions": ["G-original", "G-offdiag-e"],
+    "stage_fg_caps": {"5Mb": 612, "2Mb": 404, "1Mb": 486},
+    "training_fg_cap_total": 6008,
+    "training_fg_cap_1Mb": 1944,
+    "auxiliary_full_grid_traversal_cap": 64,
+    "auxiliary_planned": 52
+  },
+  "reference_policy": "open only after hashes of every evaluated state and endpoint are frozen",
+  "github_policy": "do not push before independent parent acceptance"
+}

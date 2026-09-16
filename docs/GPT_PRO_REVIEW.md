@@ -5,6 +5,7 @@ denominator, under which controls, and what is *not* established — then gives 
 (§8) for a code-grounded review.
 
 - **Repository:** https://github.com/skelviper/phase_restart
+- **Latest round-056 report:** [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md)
 - **Snapshot entry point:** [`../README.md`](../README.md)
 
 Everything below is quoted from files in this snapshot. Where a number comes from a run readout, the
@@ -20,8 +21,8 @@ fitted jointly in one shared nuclear volume, genome-wide (intra- and inter-chrom
 
 - **Cohort / replicate level:** one cell. The 20 chromosomes are **associated measurements within
   that single cell**, not biological replicates. No result here supports a population claim.
-- **Training uses the full contact set** (no train/test split in the current Reconstruction V1);
-  hyperparameters are chosen by label-free count likelihood only.
+- **The registered Reconstruction V1 baseline uses the full contact set.** Round 056 is a later,
+  separate preregistered comparison using one fixed 80/20 record split; it does not replace that baseline.
 - **Reference-structure usage is per-experiment, not repo-wide.** On the blind path the reference is
   used post-hoc only: not for source selection, fitting, regularisation, hyperparameter choice,
   stopping or candidate selection, and it is read only after candidate coordinates are written and
@@ -43,9 +44,11 @@ the round they were written for. **Their wording is not the current state of the
 | `docs/legacy_workspace_README.md` | The workspace README at snapshot time; names the `real-extension-G-full-J` endpoint as the working baseline | **Stale baseline.** The registered baseline is `P9016-046-G-random-base-1Mb` (`docs/CURRENT_BASELINE.md`). |
 | `docs/legacy_workspace_AGENTS.md`, `docs/MEASURED_FACTS.md`, `docs/POST020_*`, `docs/PLAN-*`, `docs/RECONSTRUCTION_V1_*` | Round-anchored rules, evidence logs and plans | Historical context; where they conflict with a current round's `config.json`, the round wins. |
 
-**The current focus is rounds 045 / 046 / 049** (fit and evaluation implementations, including the
-loss variants A/B/C) **and 051 / 055** (baseline readouts and the latest frozen comparison). The
-registered baseline is in `docs/CURRENT_BASELINE.md` and `docs/current_baseline.json`.
+**The latest result is round 056** (`docs/PRO_REVIEW_RESULTS_056.md`), a frozen exposure-definition
+comparison that leaves the registered baseline unchanged. Rounds 045 / 046 / 049 remain the relevant
+fit/evaluation implementations, and 051 / 055 remain historical baseline readouts and comparisons in
+their original time scope. The registered baseline is in `docs/CURRENT_BASELINE.md` and
+`docs/current_baseline.json`.
 
 This snapshot is provided **for reading only**. Neither the reference structure nor any baseline
 coordinate file is included, and none is needed to review the code, the objective definitions or the
@@ -166,6 +169,19 @@ Do not apply a repo-wide "reference is never used" rule. Two different things ar
 
 Report the blind/non-blind label per experiment, not for the repository as a whole.
 
+### 4.2 Latest preregistered comparison: round 056
+
+Round 056 compares the original all-training-endpoint exposure against an off-diagonal-training-
+endpoint exposure on one fixed 80/20 record split. All four fits used the same multiresolution FG
+budget and all ended `budget_not_converged / fg_budget_exhausted`. Neither seed met the held-out gain
+or matched-structure gate; minimum copy margin and splice median were lower under the off-diagonal
+exposure for both seeds. The preregistered decision is therefore **not to adopt** that exposure variant.
+
+This is not a new L1 proof and not a global method falsification. Unknown molecule identity could not
+be isolated because every read identifier is `.`, and the two seeds are optimization initializations,
+not biological replicates. Read [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md) before the
+round-056 code and machine results.
+
 Reproduction status: `055/eval/validation.json` records **12/12 PASS**, including value-by-value
 agreement (max abs diff `< 1e-9`) with the frozen 049 `r2_per_chromosome.tsv`, the frozen 051
 `per_chromosome.tsv`, and the 053 Spearman table, using a **independently written evaluation script**
@@ -184,9 +200,9 @@ Read this section before drawing any conclusion from §4.
 2. **L3 is retracted and must not be restated.** "No SNP-free method can work" is not supported. The
    existing evidence rejects specific methods in the current loop, not the class of nonlinear
    solvers.
-3. **No endpoint converged.** All endpoints in the 049/055 comparison are `budget_not_converged`
-   with the reason `fg_budget_exhausted`; the final gradients are far above `1e-6`. **Exit code 0 is
-   not scientific success.**
+3. **No compared endpoint converged.** All endpoints in the 049/055 comparison and all four round-056
+   fits are `budget_not_converged` with the reason `fg_budget_exhausted`; final gradients remain above
+   `1e-6`. **Exit code 0 is not scientific success.**
 4. **The B/C-vs-baseline comparison is not equal-cost and not single-factor.** Baseline is a
    `5 → 2 → 1 Mb` multiscale extension (1502 FG including coarse layers); B is a consensus start
    with the raw solver on the full 1 Mb grid (1502 FG); C is a random start with the
@@ -232,14 +248,14 @@ From `test_res/055-.../README.md` §7 and `test_res/049-.../README.md` §6.4:
 
 | Check | Result |
 | --- | --- |
-| Byte identity of copied sources | manifest lists **754 copied files**; **753 hash-verified byte-identical** to their workspace originals; **1 excluded from the byte check because it was rebuilt at an existing path** (`docs/current_baseline.json`). `mismatch = 0`, `missing = 0`, `unexpected = 0`. The two renamed legacy copies are additionally verified byte-identical to the workspace `README.md` / `AGENTS.md`, outside the manifest count. |
+| Byte identity of copied sources | Original snapshot: 754 workspace-derived files (753 byte-identical, one rebuilt review record). Round 056 adds **42 byte-identical workspace files**, verified after the final annotation revision; mismatch = 0. |
 | Forbidden data files | no `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, `*.gz`, `*.pairs*`, checkpoint or raw-data file present; no file exceeds 1.2 MB |
-| Binary exceptions | exactly 2 PNG figures, both from round 055 |
+| Binary exceptions | exactly 5 PNG figures: two from round 055 and three from round 056 |
 | Credential scan | 0 hits: no `ghp_`/`gho_`/`ghs_`/`github_pat_`, no private keys, no cloud keys, no `.env`/`.netrc`/`*.pem`, no secret assignments; no credential value was printed at any point |
-| Python syntax | 494 files parsed with `ast.parse` — **no training, fitting or evaluation was executed** |
-| Import closure | 494 files parsed; **0 unresolved local imports**. Every import that is neither stdlib nor a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`, `threadpoolctl`) resolves inside the snapshot |
+| Python syntax | 507 files parsed with `ast.parse`; three lightweight CPU fixture modules passed — **no training, fitting or scientific evaluation was executed** |
+| Import closure | 507 files parsed; **0 unresolved local imports** after accounting for the declared `frozen_037` and retained `scratch` dynamic roots. Every other import is stdlib, a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`, `threadpoolctl`), or resolves inside the snapshot. |
 | Dynamic `sys.path` chain | `049/source/frozen_imports.py` present, and all 12 modules it injects (`045/source/frozen_035`, `frozen_037`, `frozen_pr`, root `pr`) are present |
-| Absolute paths | 125 files contain `/mnt/ssd/zliu/...` or `/work/phase...`; retained deliberately (see README §8) — provenance, not runnable configuration |
+| Absolute paths | 128 files contain `/mnt/ssd/zliu/...` or `/work/phase...`; retained deliberately (see README §8) — provenance, not runnable configuration |
 
 Reproducing any *number* from this snapshot additionally requires the data listed in README §4, which
 is not distributed here.
@@ -288,10 +304,11 @@ is not distributed here.
 > - **Documentation tense:** historical documents are frozen and some open with stale framing —
 >   `docs/REVIEW-s2-observation-model.md` says there is no S2 and the latest run is 017, and
 >   `docs/PROJECT_CONTEXT.md` covers mainly up to round 022. Do **not** treat those "current"
->   sentences as present state. The current focus is rounds **045 / 046 / 049** (fit and evaluation
->   implementations) and **051 / 055** (baseline readouts and the latest comparison); the registered
->   baseline is in `docs/CURRENT_BASELINE.md`. Where an old document conflicts with a current round's
->   frozen `config.json`, the round wins.
+>   sentences as present state. The latest result is round **056**; read
+>   `docs/PRO_REVIEW_RESULTS_056.md`. It does not replace the registered 046 baseline. Rounds
+>   **045 / 046 / 049** remain fit/evaluation implementations and **051 / 055** remain historical
+>   baseline readouts/comparisons. Where an old document conflicts with a current round's frozen
+>   `config.json`, the round wins.
 >
 > **Your task.**
 > A. Identify the **most consequential concrete problems** in the current approach, with evidence from

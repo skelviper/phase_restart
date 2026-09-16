@@ -66,6 +66,9 @@ native/hickit/.fdg_gpu_backend.*
 *.docx
 *.pptx
 
-# --- Exceptions: the two figures intentionally shipped with this snapshot ---
+# --- Exceptions: the five figures intentionally shipped with this snapshot ---
 !test_res/055-20260916_112451-max-contact-vs-baseline-review/plots/chr1_distance_matrices.png
 !test_res/055-20260916_112451-max-contact-vs-baseline-review/plots/same_cross_contrast_boxplot.png
+!test_res/056-20260916T152353Z-pro-review-experiments/plots/experiment1_data_regularizer.png
+!test_res/056-20260916T152353Z-pro-review-experiments/plots/experiment2_gradient_response.png
+!test_res/056-20260916T152353Z-pro-review-experiments/plots/experiment3_paired_outcomes.png
