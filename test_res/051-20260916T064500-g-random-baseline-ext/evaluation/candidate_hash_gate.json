@@ -1,0 +1,24 @@
+{
+  "candidates": {
+    "baseline": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+      "sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b"
+    },
+    "extra-levels": {
+      "path": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.3dg",
+      "sha256": "d8f779e7c85271fca2df89512645b2ddcd9d79134839e6b62e656cc1b74aa29f"
+    },
+    "no-bend": {
+      "path": "test_res/051-20260916T064500-g-random-baseline-ext/coords/B-no-bend/1Mb.3dg",
+      "sha256": "e463cede991bd7f7ec666139e721579dad8f29fb2b7d6f2d14b88f6268b874d4"
+    },
+    "reference-beads": {
+      "path": "test_res/051-20260916T064500-g-random-baseline-ext/coords/C-reference-beads/1Mb.3dg",
+      "sha256": "9c60d02aca38e595d27e753984c92b6428ad3c9731bf45f2c1803398b4c8bc92"
+    }
+  },
+  "hashed_before_reference_read": true,
+  "reference_path": "data/P9016.1m.3dg.gz",
+  "reference_sha256_expected": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+  "schema": "p9016-round051-candidate-hash-gate-v1"
+}

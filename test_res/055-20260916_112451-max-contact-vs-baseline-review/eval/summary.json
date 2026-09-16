@@ -1,0 +1,1306 @@
+{
+  "schema": "p9016-round055-summary-v1",
+  "run_id": "055-20260916_112451-max-contact-vs-baseline-review",
+  "metric": "signed Pearson of pairwise Euclidean distances; same = max(direct, swapped), cross = min(direct, swapped), contrast = same - cross",
+  "group_order": [
+    "Reference",
+    "Baseline-046-G-random",
+    "B-hard-observed",
+    "C-max-rate"
+  ],
+  "support": {
+    "mask": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "mask_sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "denominator": "per-chromosome legacy mask common pairs intersected with finite beads in all four datasets and both copies",
+    "pairs_total": 157529,
+    "mask_common_total": 157529,
+    "pairs_dropped": 0,
+    "chromosomes": 20
+  },
+  "whole_cell_rg": {
+    "Reference": 3.4414679534567796,
+    "Baseline-046-G-random": 0.547140328004117,
+    "B-hard-observed": 0.5866249354848381,
+    "C-max-rate": 0.4755185579673956
+  },
+  "bead_counts": {
+    "Reference": 4947,
+    "Baseline-046-G-random": 5290,
+    "B-hard-observed": 5290,
+    "C-max-rate": 5290
+  },
+  "per_group_pearson": {
+    "Reference": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.2617840692368945,
+        "median": 0.2862167441241969,
+        "min": 0.031032652028828427,
+        "max": 0.4508165630340253
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.7382159307631054,
+        "median": 0.713783255875803,
+        "min": 0.5491834369659747,
+        "max": 0.9689673479711716
+      }
+    },
+    "Baseline-046-G-random": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.6023605799695413,
+        "median": 0.6175250694202874,
+        "min": 0.39662455101014277,
+        "max": 0.7992377512706811
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.3656172546788986,
+        "median": 0.3487830411253543,
+        "min": 0.16177382907108245,
+        "max": 0.6064782155591122
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.23674332529064257,
+        "median": 0.25747530425544063,
+        "min": 0.006262013727740767,
+        "max": 0.4649895182658592
+      }
+    },
+    "B-hard-observed": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.45234585363517493,
+        "median": 0.42602558241409594,
+        "min": 0.2950925180811601,
+        "max": 0.6371890210891222
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.3537710032221611,
+        "median": 0.35038800949388327,
+        "min": 0.15541841583488575,
+        "max": 0.5592297113555661
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.09857485041301385,
+        "median": 0.06603959622158787,
+        "min": 0.010505019564773899,
+        "max": 0.310472082894493
+      }
+    },
+    "C-max-rate": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.5427213744183425,
+        "median": 0.5184485184385959,
+        "min": 0.38381573099380345,
+        "max": 0.7128848880513657
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.3931740875600681,
+        "median": 0.4147056598385355,
+        "min": 0.14187873841051074,
+        "max": 0.5843425283675844
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.1495472868582742,
+        "median": 0.15547912770888933,
+        "min": 0.008647293266395628,
+        "max": 0.3260427970613184
+      }
+    }
+  },
+  "per_group_spearman": {
+    "Reference": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.2510465063984108,
+        "median": 0.26937704354059366,
+        "min": 0.042747017482617715,
+        "max": 0.4316550037441288
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.7489534936015892,
+        "median": 0.7306229564594063,
+        "min": 0.5683449962558712,
+        "max": 0.9572529825173823
+      }
+    },
+    "Baseline-046-G-random": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.6048764784390889,
+        "median": 0.6212638287229683,
+        "min": 0.4221982672779342,
+        "max": 0.7924466574412432
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.3776082995623037,
+        "median": 0.3742247638296841,
+        "min": 0.19157013847070808,
+        "max": 0.6423573882141811
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.2272681788767852,
+        "median": 0.23747556525923438,
+        "min": 0.005953624373081778,
+        "max": 0.480757729835784
+      }
+    },
+    "B-hard-observed": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.4599015473183634,
+        "median": 0.4339467262112234,
+        "min": 0.32418455516383454,
+        "max": 0.6267665068058393
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.37174930200717204,
+        "median": 0.37886514486317385,
+        "min": 0.2057350597058258,
+        "max": 0.5527592610766447
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.08815224531119145,
+        "median": 0.0661434771668992,
+        "min": 0.0008954220771171251,
+        "max": 0.2251540343003489
+      }
+    },
+    "C-max-rate": {
+      "same": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.5497438791402925,
+        "median": 0.5415047259396859,
+        "min": 0.39078520422474494,
+        "max": 0.7144429911482522
+      },
+      "cross": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.41254504982586654,
+        "median": 0.438224045615885,
+        "min": 0.15920427416834967,
+        "max": 0.6035961231046132
+      },
+      "contrast": {
+        "n_defined": 20,
+        "n_total": 20,
+        "mean": 0.137198829314426,
+        "median": 0.14476543426331076,
+        "min": 0.005492048283292528,
+        "max": 0.3170314375046761
+      }
+    }
+  },
+  "chr1_readout": {
+    "Reference": {
+      "same": 1.0,
+      "cross": 0.3417788376503507,
+      "contrast": 0.6582211623496492,
+      "orientation": "direct",
+      "n_pairs": 17578
+    },
+    "Baseline-046-G-random": {
+      "same": 0.6998450643255116,
+      "cross": 0.3962389254714091,
+      "contrast": 0.30360613885410254,
+      "orientation": "swapped",
+      "n_pairs": 17578
+    },
+    "B-hard-observed": {
+      "same": 0.5527304318730165,
+      "cross": 0.431603802318155,
+      "contrast": 0.12112662955486153,
+      "orientation": "direct",
+      "n_pairs": 17578
+    },
+    "C-max-rate": {
+      "same": 0.7128848880513657,
+      "cross": 0.4872980800607342,
+      "contrast": 0.22558680799063152,
+      "orientation": "swapped",
+      "n_pairs": 17578
+    }
+  },
+  "chr1_panels": {
+    "bins": 193,
+    "unified_vmax": 5.492822844213373,
+    "nan_counts": {
+      "Reference": [
+        1528,
+        1149
+      ],
+      "Baseline-046-G-random": [
+        0,
+        0
+      ],
+      "B-hard-observed": [
+        0,
+        0
+      ],
+      "C-max-rate": [
+        0,
+        0
+      ]
+    },
+    "panel_scale_raw_median": {
+      "Reference": 1.421527990617571,
+      "Baseline-046-G-random": 0.2785023201415906,
+      "B-hard-observed": 0.2809912673173043,
+      "C-max-rate": 0.25096521346976997
+    },
+    "whole_cell_rg_secondary": {
+      "Reference": 3.4414679534567796,
+      "Baseline-046-G-random": 0.547140328004117,
+      "B-hard-observed": 0.5866249354848381,
+      "C-max-rate": 0.4755185579673956
+    },
+    "normalization": "each dataset's chr1 two copies combined, one raw median over their shared common-pair distances (historical build_matrix convention in scripts/plot_3dg_comparison.py); whole-cell Rg is kept only as a secondary scatter readout and is not the heatmap scale",
+    "columns": "column 0 = copy mapped to reference mat, column 1 = copy mapped to reference pat (whole-chromosome orientation for candidates)"
+  },
+  "support_audit": [
+    {
+      "chr": "chr1",
+      "n_pairs_legacy_common": 17578,
+      "n_pairs_shared": 17578,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr1(mat)",
+          "chr1(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c01a",
+          "c01b"
+        ],
+        "B-hard-observed": [
+          "c01a",
+          "c01b"
+        ],
+        "C-max-rate": [
+          "c01a",
+          "c01b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          189,
+          190
+        ],
+        "Baseline-046-G-random": [
+          193,
+          193
+        ],
+        "B-hard-observed": [
+          193,
+          193
+        ],
+        "C-max-rate": [
+          193,
+          193
+        ]
+      },
+      "n_positions": 193
+    },
+    {
+      "chr": "chr2",
+      "n_pairs_legacy_common": 14878,
+      "n_pairs_shared": 14878,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr2(mat)",
+          "chr2(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c02a",
+          "c02b"
+        ],
+        "B-hard-observed": [
+          "c02a",
+          "c02b"
+        ],
+        "C-max-rate": [
+          "c02a",
+          "c02b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          175,
+          174
+        ],
+        "Baseline-046-G-random": [
+          180,
+          180
+        ],
+        "B-hard-observed": [
+          180,
+          180
+        ],
+        "C-max-rate": [
+          180,
+          180
+        ]
+      },
+      "n_positions": 180
+    },
+    {
+      "chr": "chr3",
+      "n_pairs_legacy_common": 12090,
+      "n_pairs_shared": 12090,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr3(mat)",
+          "chr3(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c03a",
+          "c03b"
+        ],
+        "B-hard-observed": [
+          "c03a",
+          "c03b"
+        ],
+        "C-max-rate": [
+          "c03a",
+          "c03b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          156,
+          157
+        ],
+        "Baseline-046-G-random": [
+          158,
+          158
+        ],
+        "B-hard-observed": [
+          158,
+          158
+        ],
+        "C-max-rate": [
+          158,
+          158
+        ]
+      },
+      "n_positions": 158
+    },
+    {
+      "chr": "chr4",
+      "n_pairs_legacy_common": 10731,
+      "n_pairs_shared": 10731,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr4(mat)",
+          "chr4(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c04a",
+          "c04b"
+        ],
+        "B-hard-observed": [
+          "c04a",
+          "c04b"
+        ],
+        "C-max-rate": [
+          "c04a",
+          "c04b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          148,
+          148
+        ],
+        "Baseline-046-G-random": [
+          154,
+          154
+        ],
+        "B-hard-observed": [
+          154,
+          154
+        ],
+        "C-max-rate": [
+          154,
+          154
+        ]
+      },
+      "n_positions": 154
+    },
+    {
+      "chr": "chr5",
+      "n_pairs_legacy_common": 10296,
+      "n_pairs_shared": 10296,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr5(mat)",
+          "chr5(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c05a",
+          "c05b"
+        ],
+        "B-hard-observed": [
+          "c05a",
+          "c05b"
+        ],
+        "C-max-rate": [
+          "c05a",
+          "c05b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          144,
+          145
+        ],
+        "Baseline-046-G-random": [
+          149,
+          149
+        ],
+        "B-hard-observed": [
+          149,
+          149
+        ],
+        "C-max-rate": [
+          149,
+          149
+        ]
+      },
+      "n_positions": 149
+    },
+    {
+      "chr": "chr6",
+      "n_pairs_legacy_common": 10585,
+      "n_pairs_shared": 10585,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr6(mat)",
+          "chr6(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c06a",
+          "c06b"
+        ],
+        "B-hard-observed": [
+          "c06a",
+          "c06b"
+        ],
+        "C-max-rate": [
+          "c06a",
+          "c06b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          146,
+          147
+        ],
+        "Baseline-046-G-random": [
+          147,
+          147
+        ],
+        "B-hard-observed": [
+          147,
+          147
+        ],
+        "C-max-rate": [
+          147,
+          147
+        ]
+      },
+      "n_positions": 147
+    },
+    {
+      "chr": "chr7",
+      "n_pairs_legacy_common": 8128,
+      "n_pairs_shared": 8128,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr7(mat)",
+          "chr7(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c07a",
+          "c07b"
+        ],
+        "B-hard-observed": [
+          "c07a",
+          "c07b"
+        ],
+        "C-max-rate": [
+          "c07a",
+          "c07b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          129,
+          131
+        ],
+        "Baseline-046-G-random": [
+          143,
+          143
+        ],
+        "B-hard-observed": [
+          143,
+          143
+        ],
+        "C-max-rate": [
+          143,
+          143
+        ]
+      },
+      "n_positions": 143
+    },
+    {
+      "chr": "chr8",
+      "n_pairs_legacy_common": 7503,
+      "n_pairs_shared": 7503,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr8(mat)",
+          "chr8(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c08a",
+          "c08b"
+        ],
+        "B-hard-observed": [
+          "c08a",
+          "c08b"
+        ],
+        "C-max-rate": [
+          "c08a",
+          "c08b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          124,
+          123
+        ],
+        "Baseline-046-G-random": [
+          127,
+          127
+        ],
+        "B-hard-observed": [
+          127,
+          127
+        ],
+        "C-max-rate": [
+          127,
+          127
+        ]
+      },
+      "n_positions": 127
+    },
+    {
+      "chr": "chr9",
+      "n_pairs_legacy_common": 7021,
+      "n_pairs_shared": 7021,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr9(mat)",
+          "chr9(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c09a",
+          "c09b"
+        ],
+        "B-hard-observed": [
+          "c09a",
+          "c09b"
+        ],
+        "C-max-rate": [
+          "c09a",
+          "c09b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          120,
+          120
+        ],
+        "Baseline-046-G-random": [
+          122,
+          122
+        ],
+        "B-hard-observed": [
+          122,
+          122
+        ],
+        "C-max-rate": [
+          122,
+          122
+        ]
+      },
+      "n_positions": 122
+    },
+    {
+      "chr": "chr10",
+      "n_pairs_legacy_common": 7875,
+      "n_pairs_shared": 7875,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr10(mat)",
+          "chr10(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c10a",
+          "c10b"
+        ],
+        "B-hard-observed": [
+          "c10a",
+          "c10b"
+        ],
+        "C-max-rate": [
+          "c10a",
+          "c10b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          127,
+          127
+        ],
+        "Baseline-046-G-random": [
+          128,
+          128
+        ],
+        "B-hard-observed": [
+          128,
+          128
+        ],
+        "C-max-rate": [
+          128,
+          128
+        ]
+      },
+      "n_positions": 128
+    },
+    {
+      "chr": "chr11",
+      "n_pairs_legacy_common": 7021,
+      "n_pairs_shared": 7021,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr11(mat)",
+          "chr11(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c11a",
+          "c11b"
+        ],
+        "B-hard-observed": [
+          "c11a",
+          "c11b"
+        ],
+        "C-max-rate": [
+          "c11a",
+          "c11b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          119,
+          119
+        ],
+        "Baseline-046-G-random": [
+          120,
+          120
+        ],
+        "B-hard-observed": [
+          120,
+          120
+        ],
+        "C-max-rate": [
+          120,
+          120
+        ]
+      },
+      "n_positions": 120
+    },
+    {
+      "chr": "chr12",
+      "n_pairs_legacy_common": 5995,
+      "n_pairs_shared": 5995,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr12(mat)",
+          "chr12(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c12a",
+          "c12b"
+        ],
+        "B-hard-observed": [
+          "c12a",
+          "c12b"
+        ],
+        "C-max-rate": [
+          "c12a",
+          "c12b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          110,
+          115
+        ],
+        "Baseline-046-G-random": [
+          118,
+          118
+        ],
+        "B-hard-observed": [
+          118,
+          118
+        ],
+        "C-max-rate": [
+          118,
+          118
+        ]
+      },
+      "n_positions": 118
+    },
+    {
+      "chr": "chr13",
+      "n_pairs_legacy_common": 6328,
+      "n_pairs_shared": 6328,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr13(mat)",
+          "chr13(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c13a",
+          "c13b"
+        ],
+        "B-hard-observed": [
+          "c13a",
+          "c13b"
+        ],
+        "C-max-rate": [
+          "c13a",
+          "c13b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          113,
+          115
+        ],
+        "Baseline-046-G-random": [
+          118,
+          118
+        ],
+        "B-hard-observed": [
+          118,
+          118
+        ],
+        "C-max-rate": [
+          118,
+          118
+        ]
+      },
+      "n_positions": 118
+    },
+    {
+      "chr": "chr14",
+      "n_pairs_legacy_common": 5778,
+      "n_pairs_shared": 5778,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr14(mat)",
+          "chr14(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c14a",
+          "c14b"
+        ],
+        "B-hard-observed": [
+          "c14a",
+          "c14b"
+        ],
+        "C-max-rate": [
+          "c14a",
+          "c14b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          109,
+          112
+        ],
+        "Baseline-046-G-random": [
+          122,
+          122
+        ],
+        "B-hard-observed": [
+          122,
+          122
+        ],
+        "C-max-rate": [
+          122,
+          122
+        ]
+      },
+      "n_positions": 122
+    },
+    {
+      "chr": "chr15",
+      "n_pairs_legacy_common": 4753,
+      "n_pairs_shared": 4753,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr15(mat)",
+          "chr15(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c15a",
+          "c15b"
+        ],
+        "B-hard-observed": [
+          "c15a",
+          "c15b"
+        ],
+        "C-max-rate": [
+          "c15a",
+          "c15b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          98,
+          101
+        ],
+        "Baseline-046-G-random": [
+          102,
+          102
+        ],
+        "B-hard-observed": [
+          102,
+          102
+        ],
+        "C-max-rate": [
+          102,
+          102
+        ]
+      },
+      "n_positions": 102
+    },
+    {
+      "chr": "chr16",
+      "n_pairs_legacy_common": 4278,
+      "n_pairs_shared": 4278,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr16(mat)",
+          "chr16(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c16a",
+          "c16b"
+        ],
+        "B-hard-observed": [
+          "c16a",
+          "c16b"
+        ],
+        "C-max-rate": [
+          "c16a",
+          "c16b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          93,
+          94
+        ],
+        "Baseline-046-G-random": [
+          96,
+          96
+        ],
+        "B-hard-observed": [
+          96,
+          96
+        ],
+        "C-max-rate": [
+          96,
+          96
+        ]
+      },
+      "n_positions": 96
+    },
+    {
+      "chr": "chr17",
+      "n_pairs_legacy_common": 3916,
+      "n_pairs_shared": 3916,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr17(mat)",
+          "chr17(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c17a",
+          "c17b"
+        ],
+        "B-hard-observed": [
+          "c17a",
+          "c17b"
+        ],
+        "C-max-rate": [
+          "c17a",
+          "c17b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          89,
+          92
+        ],
+        "Baseline-046-G-random": [
+          92,
+          92
+        ],
+        "B-hard-observed": [
+          92,
+          92
+        ],
+        "C-max-rate": [
+          92,
+          92
+        ]
+      },
+      "n_positions": 92
+    },
+    {
+      "chr": "chr18",
+      "n_pairs_legacy_common": 3741,
+      "n_pairs_shared": 3741,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr18(mat)",
+          "chr18(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c18a",
+          "c18b"
+        ],
+        "B-hard-observed": [
+          "c18a",
+          "c18b"
+        ],
+        "C-max-rate": [
+          "c18a",
+          "c18b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          87,
+          87
+        ],
+        "Baseline-046-G-random": [
+          88,
+          88
+        ],
+        "B-hard-observed": [
+          88,
+          88
+        ],
+        "C-max-rate": [
+          88,
+          88
+        ]
+      },
+      "n_positions": 88
+    },
+    {
+      "chr": "chr19",
+      "n_pairs_legacy_common": 1653,
+      "n_pairs_shared": 1653,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chr19(mat)",
+          "chr19(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c19a",
+          "c19b"
+        ],
+        "B-hard-observed": [
+          "c19a",
+          "c19b"
+        ],
+        "C-max-rate": [
+          "c19a",
+          "c19b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          58,
+          58
+        ],
+        "Baseline-046-G-random": [
+          59,
+          59
+        ],
+        "B-hard-observed": [
+          59,
+          59
+        ],
+        "C-max-rate": [
+          59,
+          59
+        ]
+      },
+      "n_positions": 59
+    },
+    {
+      "chr": "chrX",
+      "n_pairs_legacy_common": 7381,
+      "n_pairs_shared": 7381,
+      "n_pairs_dropped": 0,
+      "dropped_by_dataset": {
+        "Reference": 0,
+        "Baseline-046-G-random": 0,
+        "B-hard-observed": 0,
+        "C-max-rate": 0
+      },
+      "track_names": {
+        "Reference": [
+          "chrX(mat)",
+          "chrX(pat)"
+        ],
+        "Baseline-046-G-random": [
+          "c20a",
+          "c20b"
+        ],
+        "B-hard-observed": [
+          "c20a",
+          "c20b"
+        ],
+        "C-max-rate": [
+          "c20a",
+          "c20b"
+        ]
+      },
+      "position_coverage": {
+        "Reference": [
+          126,
+          132
+        ],
+        "Baseline-046-G-random": [
+          169,
+          169
+        ],
+        "B-hard-observed": [
+          169,
+          169
+        ],
+        "C-max-rate": [
+          169,
+          169
+        ]
+      },
+      "n_positions": 169
+    }
+  ],
+  "scientific_boundary": {
+    "refit": false,
+    "bootstrap": false,
+    "R1_R3": false,
+    "terminal_states": {
+      "Reference": null,
+      "Baseline-046-G-random": "budget_not_converged / fg_budget_exhausted (stages/real-G-random/1Mb.json, last_accepted_endpoint=true)",
+      "B-hard-observed": "budget_not_converged / fg_budget_exhausted (stages/B-raw-consensus/1Mb.json, last_accepted_endpoint=true)",
+      "C-max-rate": "budget_not_converged / fg_budget_exhausted (stages/C-ms-random/1Mb.json, last_accepted_endpoint=true)"
+    },
+    "n_biological_replicates": 1,
+    "l2_proven": false,
+    "note": "descriptive endpoint comparison on one cell; 20 chromosomes are correlated measurements, not biological replicates; all endpoints are budget_not_converged"
+  }
+}

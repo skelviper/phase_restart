@@ -1,0 +1,146 @@
+{
+  "schema_version": "p9016-next-step-r2-protocol-v1",
+  "status": "frozen_preparation_pending_parent_release",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one linked cell; chromosome rows are not biological replicates",
+    "real_endpoints": 8,
+    "real_methods": ["M0", "M1"],
+    "real_budgets": ["B1", "B2"],
+    "real_sources": ["consensus_joint_base1103", "random_joint_base2207"],
+    "synthetic_endpoints": 6,
+    "synthetic_fixtures": ["P2", "N2"],
+    "synthetic_arms": ["M0-production-e", "M1-production-e", "M0-known-e"]
+  },
+  "training_definition": {
+    "input_record_count": 1703888,
+    "chromosomes": 20,
+    "tracks": 40,
+    "origin_bp": 0,
+    "final_resolution_bp": 1000000,
+    "physical_beads": 5290,
+    "backend": "GPU",
+    "source_order": ["consensus_joint_base1103", "random_joint_base2207"],
+    "scale2": true,
+    "budgets": {
+      "B1": {"5mb_nfev": 306, "2mb_nfev": 202, "1mb_nfev": 243, "stop_policy": "accepted callback or actual FG cap/numeric stop"},
+      "B2": {"5mb_nfev": 612, "2mb_nfev": 404, "1mb_nfev": 486, "stop_policy": "accepted callback or actual FG cap/numeric stop"}
+    },
+    "synthetic_1mb_fgcap": 243,
+    "canonical_stop_rule": {
+      "model": "M0",
+      "parameterization": "raw-y/q",
+      "scipy_gtol": 0.0,
+      "accepted_callback_gradient_inf_max": 1e-6,
+      "common_ftol": 1e-10,
+      "common_maxls": 20,
+      "terminal_reason": "record accepted callback, FG cap, or numerical stop as observed"
+    },
+    "M0": {
+      "parameterization": "raw-y/q",
+      "target": "original C0 physical objective"
+    },
+    "M1": {
+      "parameterization": "a=(yA+yB)/sqrt(2), b=(yA-yB)/sqrt(2), optimize a,b/2,q, then invert to yA,yB",
+      "target": "same original C0 physical objective",
+      "forced_separation": false
+    },
+    "real_selection": {
+      "criterion": "final count_nll_per_record",
+      "scope": "each method x budget, compare two sources only",
+      "tie_tolerance": 1e-9,
+      "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+      "reference_read": false,
+      "r2_read": false,
+      "phase_read": false,
+      "selection_not_recomputed_by_evaluator": true
+    }
+  },
+  "synthetic_definition": {
+    "source_run": "test_res/026-20260913_221709-allele-calibration-prepare",
+    "same_fixture_x0": true,
+    "p0": 0.75,
+    "p_policy": "profiled p throughout; do not fix p for known-e",
+    "production_e": "reuse the existing 026 P2/N2 C0 1Mb production-e layer/counts for M0 and M1",
+    "known_e": "only M0; use the separately exported generation exposure; no extra experiment",
+    "truth_coordinates": "evaluator-only and opened only after candidate/release hash gate",
+    "positive_readout": "per-chromosome whole-swap R2 for P2",
+    "N2_null_readout": {
+      "truth_policy": "common mean truth distance matrix duplicated across both reference columns",
+      "contrast": "algebraically zero for every candidate; not evidence against a false split",
+      "N_only_copy_difference_rms": "diagnostic only; report same-x0 initial and each final, plus M1-M0 final change",
+      "shape_error": "internal implementation calibration only; never the primary R2 result"
+    }
+  },
+  "evaluation_definition": {
+    "metric_name": "Spearman-derived R2 geometry readout; not statistical R-squared",
+    "real_grid": "range(3000000, chromosome_length_bp, 1000000)",
+    "synthetic_grid": "026 full 1Mb from-zero grid with 2645 loci",
+    "numeric_join": true,
+    "distance_dtype": "float64",
+    "pair_scope": "unordered upper-triangle off-diagonal",
+    "real_common_mask": {
+      "source": "old21condition published mask",
+      "manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+      "lock_sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+      "new_endpoint_inclusion": false,
+      "expected_summary": "157529 common pairs / 176201 total non-diagonal pairs",
+      "rebuild": "independently reconstruct and exact-compare positions, pair_i, pair_j, common per chromosome",
+      "scope_reselection": false
+    },
+    "reference_columns": ["chrN(mat)", "chrN(pat)"],
+    "two_copy_policy": {
+      "direct": ["A_mat", "A_pat", "B_mat", "B_pat"],
+      "swapped": ["B_mat", "B_pat", "A_mat", "A_pat"],
+      "selection": "one candidate-only whole-chromosome best swap",
+      "tie_tolerance": 1e-12,
+      "tie_action": "unresolved; contrast=0; named margins n/a",
+      "missing_copy": "all four rho metrics n/a; never average one valid copy"
+    },
+    "derived_metrics": {
+      "matched": "(a+d)/2",
+      "cross": "(b+c)/2",
+      "contrast": "matched-cross",
+      "margin_mat": "a-b",
+      "margin_pat": "d-c",
+      "minmargin": "min(margin_mat, margin_pat)"
+    },
+    "prohibited_outputs": ["R1", "R3", "p-values", "confidence intervals", "R2-based model/endpoint/hyperparameter selection"]
+  },
+  "plot_definition": {
+    "main_conditions": ["M0-B1", "M0-B2", "M1-B1", "M1-B2", "036 C0 historical anchor"],
+    "source_supplement_conditions": ["M0-B1", "M0-B2", "M1-B1", "M1-B2"],
+    "metrics": ["matched", "cross", "contrast", "minmargin"],
+    "base_panel_inches": 3.0,
+    "layout": "2x2",
+    "dpi": 300,
+    "font_size_pt": 7,
+    "main_anchor_style": "gray",
+    "linked_measurement_note": "20 chromosome rows are one-cell linked measurements",
+    "source_delta_tables": ["M1-M0 within each source and budget", "B2-B1 (double-base) within each source and method"],
+    "no_new_heatmap_required": true
+  },
+  "release_gate": {
+    "release_schema": "p9016-next-step-r2-release-v1",
+    "required_candidate_count": 14,
+    "required_real_count": 8,
+    "required_synthetic_count": 6,
+    "required_real_selected_count": 4,
+    "required_source_count": 2,
+    "required_terminal_evidence": "all 14 fits terminal, no active jobs, actual nfev/FG accounting present",
+    "required_parent_evidence": ["training terminal_evidence.json", "training provenance/source_hashes.json", "training selection.json"],
+    "coordinate_gate": "hash every real and synthetic candidate before opening truth/reference; full shape/finite coverage required",
+    "reference_path": "data/P9016.1m.3dg.gz",
+    "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "read_order": ["release metadata", "all evidence/source/selection hashes", "all 14 candidate hashes and shape checks", "all old21 mask input hashes", "reference hash/open", "synthetic truth hash/open"],
+    "training_reference_and_phase": false
+  },
+  "implementation": {
+    "synthetic_adapter": "bind pr.allele_calibration_evaluator.chromosome_metrics; do not call historical pooled-swap evaluate_run",
+    "real_adapter": "bind frozen multires_r2 mask/evaluate_endpoint_chromosome and pr.r2comparison exact mask comparator",
+    "old_cli_warning": "pr.allele_calibration evaluate remains 4x5 and pooled/legacy entry; never invoke it for this 2x3 synthetic scope",
+    "new_wrapper_isolated": true,
+    "old_files_modified": false
+  }
+}

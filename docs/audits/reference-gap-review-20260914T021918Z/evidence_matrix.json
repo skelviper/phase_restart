@@ -1,0 +1,218 @@
+{
+  "schema": "reference-gap-review-evidence-matrix-v1",
+  "generated_utc": "2026-09-14T02:19:18Z",
+  "scope": {
+    "read_only": true,
+    "fit_started": false,
+    "large_analysis_started": false,
+    "source_or_existing_report_modified": false,
+    "external_literature_used_as_evidence": false,
+    "cohort": "one P9016 cell; 20 linked chromosomes; 40 tracks; 1,703,888 SNP-free records",
+    "evaluation_boundary": "R2 is evaluation-only after coordinate hash lock; no reference-driven selection; R1/R3 are outside this review"
+  },
+  "columns": [
+    "id",
+    "priority",
+    "claim_zh",
+    "known_evidence",
+    "counterevidence_limitation",
+    "prediction",
+    "smallest_discriminating_experiment",
+    "references"
+  ],
+  "rows": [
+    {
+      "id": "C01",
+      "priority": "P0",
+      "claim_zh": "029 C0 与 020 的差异首先是已确认的设计偏离：029 更换了 source/native preprocessing 并取消多分辨率；主验证必须先严格复现 full 020 pipeline，旧 source geometry x schedule pilot 只能作为后续可选诊断",
+      "known_evidence": "020 1 Mb 从 5m->2m->1m warm start，initial count NLL 9.6767139712、total 9.8442660571、p 0.9618223300；029 是 1 Mb-only native x0，iter20 count NLL 9.8761862880、total 10.0181210634、p 0.8284313506；两者 final 也不同；x0 自身 best-swap 审计显示 C0 bundle1/2/3 endpoint-x0 macro matched/contrast 分别 +0.27911733/+0.08666839、+0.26150224/+0.08319607、+0.23176664/+0.06722237，matched 均 20/20 wins；030 training/native audit 确认 014/025 `max_nei` 初始化管线差异且未发现 Python objective/grid/bridge regression",
+      "counterevidence_limitation": "没有保存的同 source `init x schedule` factorial；029 bundle2 只是 variant 内按 count NLL 选出的代表，且 029 同时改变 source/native preprocessing、resolution path、p/q path 与 budget；x0 audit 只证明各自 endpoint 相对自身 x0 改善，不比较 025 native x0 与 020 的 014 source 谁更好，也不能说优化把 025 起点搞坏",
+      "prediction": "若严格 C0 gate 逐层复现 020 的数值/状态与原 count selection，则代码回归假设进一步下降；随后 C1/C2-map/C2-free/C3 的差异才可归因于各自登记变量。若 gate 失败，先定位 source、adapter、p/q、objective、数组、packing 或 stop-state，不能拿 029 结果外推",
+      "smallest_discriminating_experiment": "严格 020-derived C0 gate：用原始 014 consensus/random source，保留 full-grid adapter、linear interpolation/endpoint-fill/jitter、5m->2m->1m schedule、p=.75 首层与 raw q carry、`.7*l0`（按层更新）、020 budgets/options；先跑 2 sources x 3 layers=6 stages，比较 source/data arrays、entry/exit、p/q、components、J、gradient-L2/inf、stop、selection，不用 R2 gate；通过后才跑 4 variants 的 24 stages，旧 source-geometry x schedule 四臂降为 gate 后可选诊断",
+      "references": [
+        "test_res/020-20260913_071841-v1-p9016-joint/config.json:161-282",
+        "test_res/030-20260914_c0-020-training-audit/REPORT.zh-CN.md:15-21,30-49",
+        "docs/POST020_CONTROL_DESIGN_CORRECTION.md:96-163",
+        "docs/audits/c0-020-display-20260914_021033/AUDIT.md:81-105"
+      ]
+    },
+    {
+      "id": "C02",
+      "priority": "P0",
+      "claim_zh": "029 C0 相对 020 的差异没有已确认的 Python objective/grid/bridge regression；030 training/native audit 已完成并确认 014/025 native `max_nei` 初始化管线差异",
+      "known_evidence": "020 manifest 与 029 source snapshot 中 contact_model.py、genome.py hash 一致；只读 diff 显示 joint_fit.py 只增加梯度审计记录，reconstruct.py 改进 budget 分类，未见 contact objective 公式变化；030 进一步核对 source contact_model byte-identical、020/022/029 锁定状态 objective/components/gradient/coords 最大绝对差 0、5m/2m/1m data arrays exact、native bridge/backbone/actual-call checks 全通过",
+      "counterevidence_limitation": "029 使用 paired_run/allele_models 包装路径，hash/锁定状态审计仍不等于未来主设计已复现；已证实的 `max_nei` 差异属于 025 native initialization pipeline，不能反推 Python V1 objective 回归；若 C0 gate 仍失败，才升级为 runner/provenance/packing 定位",
+      "prediction": "若严格 C0 reproduction gate 在同一物理 source、同一 V1 objective 与同一 options 下复现 020 的逐层 endpoint/状态，则 code regression 假设保持下降；若 gate 失败，按 source/adapter/p-q/packing/runner provenance 顺序定位，不把 029 C1/C2 先解释成 020 消融因果",
+      "smallest_discriminating_experiment": "先跑严格 C0 gate：两个原始 014 source（consensus/random）各自独立通过 5m->2m->1m，共 6 stages，沿用 full-grid adapter/interpolation/jitter、p/q carry、`.7*l0`、020 optimizer budgets/options；逐层比较 data arrays、entry/exit、components、J、gradient-L2/inf、stop、hash 和原 count selection，不读 reference/R2。只在 6 stages 全部通过后跑其他 4 variants 的 24 stages；若 gate 失败，先做同一物理 x0/数据/objective/options 的 deterministic replay，不启动新 variant",
+      "references": [
+        "test_res/020-20260913_071841-v1-p9016-joint/provenance/training-code-manifest.json:14-21",
+        "test_res/030-20260914_c0-020-training-audit/REPORT.zh-CN.md:15-21,30-60",
+        "test_res/030-20260914_c0-020-training-audit/verification.json:1-16",
+        "test_res/030-20260914_c0-020-training-audit/native_audit.json:1-41",
+        "docs/POST020_CONTROL_DESIGN_CORRECTION.md:113-163"
+      ]
+    },
+    {
+      "id": "C03",
+      "priority": "P0",
+      "claim_zh": "020 与 029 都是有限预算终点，不能把 endpoint 差异写成收敛后的方法差异",
+      "known_evidence": "020 六个 stage 都 hit iteration limit，success=false；029 15 个 real fits 都是 nit=480、budget_not_converged_maxiter；C0 iter480 保存 gradient_norm=0.0083992485 仅为 L2 诊断，不能与 SciPy 使用 infinity-norm 的 gtol=1e-6 直接比较；未收敛证据来自 maxiter status",
+      "counterevidence_limitation": "更长 continuation 可能仍改变 shared geometry；但 022 从 240 延到累计 480 只小幅降低 J，R2 matched/contrast 几乎不变，不能证明再跑就会一样或再跑一定无效",
+      "prediction": "若统一预算后 J 继续下降但 R2/difference 不变，问题不只是未跑够；若统一 start 下 schedule 仍改变结果，路径效应成立",
+      "smallest_discriminating_experiment": "先严格 C0 两个原始 014 source 各走 5m->2m->1m 三层复现 gate，checkpoint 每 10 accepted steps，比较 J、p/q、components、gradient-L2/inf、stop 和 hash；C0 gate 通过后再做其他 sensitivity，均不扩入主 `30 stage attempts`，没有 solver_converged 时只报告 finite-path sensitivity",
+      "references": [
+        "test_res/020-20260913_071841-v1-p9016-joint/termination_audit.json:11-15,16-166,186-193",
+        "test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle2/attempts/attempt-001/final.json:13325-13377",
+        "test_res/022-20260913_111031-v1-continuation-fdg-r2/continuation_summary.json:1-34,63-134"
+      ]
+    },
+    {
+      "id": "C04",
+      "priority": "P0",
+      "claim_zh": "029 bundle2 代表选择不能与 020 candidate selection 直接比较；主控制须先复现 020 两个 source 的全三层，再按原 final 1 Mb count rule 选择 C0",
+      "known_evidence": "020 在 consensus_joint/random_joint 两个 candidate 间按 final 1 Mb count NLL 选 random_joint；029 在每个 variant 的三个 025 bundle 内按 count NLL 选 bundle2，budget_not_converged 仍可进入 selection；030/主设计要求 C0 先使用两个 014 source 完整走 020 三层，再应用原 selection rule",
+      "counterevidence_limitation": "选择都 label-free 且未用 R2，但 selection universe、start family、resolution path 和 terminal budget 不同；029 bundle2 不能解读为同一 selection rule 的重复。主 C0 gate 通过后才对其他 variant 做同 source paired interpretation",
+      "prediction": "严格执行 C0 gate：两个原始 014 source 各走 5m->2m->1m 共 6 stages，按 final 1 Mb count NLL 选择，整个 gate 不读 reference/R2；通过后再执行 C1/C2-map/C2-free/C3 各自两个 source x 三层的 24 stages，保留所有 endpoint。旧三 bundle 仅作 exploratory selection sensitivity，旧 source-geometry x schedule 四臂降为另行授权的可选诊断，不并入主预算",
+      "smallest_discriminating_experiment": "C0 gate 是最小主验证：2 sources x 3 layers=6 stages，逐层比较 arrays/components/gradients/stop/selection；C0 通过后再执行其余 4 variants 的 24 stages。所有 variant 从相同 014 source 独立走完整 schedule；C2-map vs C0 只解释球内 parameterization，C2-free vs C2-map 解释域限制相关变化，C2-free vs C0 只能解释 parameterization+domain 联合变化；physical interpolation/pack/domain preflight 必须先过",
+      "references": [
+        "test_res/020-20260913_071841-v1-p9016-joint/selection.json:622-642",
+        "test_res/029-20260913_161713-post020-allele-ablation-real/selection.json:1-56,100-263",
+        "test_res/030-20260914_c0-020-training-audit/REPORT.zh-CN.md:15-21,76-81",
+        "docs/POST020_CONTROL_DESIGN_CORRECTION.md:133-163"
+      ]
+    },
+    {
+      "id": "C05",
+      "priority": "P0",
+      "claim_zh": "V1 bounded kernel 与 native FDG contact target 的不同是模型差异，不是已经证明的 reference-gap 原因",
+      "known_evidence": "V1 明确使用 K=epsilon+(1-epsilon)(1+d^2/r0^2)^-2、r0=2*l0 和 profiled conditional count NLL；native fdg.c 对 contact 先算 n_eff，再用 d_scale=pow(n_eff,-1/3) 进入 force target；代码的 conditional count 实现按两个 group 使用 M_g log(sum rate_g)-sum Cij log rate_ij，fractional expected 模式明确不定义 integer factorial constants",
+      "counterevidence_limitation": "native d_scale 是 force/energy target，不是已定义好的 count-generating probability law；029 C0 的 fit 用 V1 continuous objective，native FDG 只用于 025 x0；不能从代码差异单独推出 R2 gap 因果",
+      "prediction": "若在 synthetic_expected 层用 C*=M_g rate_true/S_true 构造的 law-matched V1 truth 具有 count-only gradient=0、excess loss=0，而 native-like generating law出现系统偏差，则支持 observation mismatch；两者均失败则先查 objective implementation、optimizer/basin/prior",
+      "smallest_discriminating_experiment": "先在同一 full-grid truth、true exposure、true p 和 group totals 下构造 synthetic_expected C*=M_g rate_true/S_true，验证 truth count-gradient=0、candidate excess count loss的KL方向；该层是 conditional cross-entropy，不是raw-integer实数据。通过后固定同一 x0/optimizer 比较 V1 K 与预先定义的 native-like count adapter；报告 truth contrast/shape、count-only loss/gradient、total J 和 pooled RMS/raw-distance diagnostics（非物理尺度），不以 real R2 选 kernel",
+      "references": [
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md:108-189,292-323",
+        "native/hickit/fdg.c:390-399",
+        "pr/contact_model.py:671-684,802-851",
+        "test_res/029-20260913_161713-post020-allele-ablation-real/config.json:88-110"
+      ]
+    },
+    {
+      "id": "C06",
+      "priority": "P1",
+      "claim_zh": "不能把 epsilon floor 作为当前主因",
+      "known_evidence": "V1 只规定 epsilon=1e-6；没有已保存的 rate-contribution audit 证明尾部都被 floor 主导，且球内最大 pair distance 约为 2、r0 约 0.115，距离区间仍需实际积分比较",
+      "counterevidence_limitation": "当前没有把 epsilon sweep 与 optimizer、exposure、scale、truth recovery 交叉控制；仅凭数值大小不能判断 floor 是否支配所有 pair",
+      "prediction": "若只改变 epsilon 在 known-V1 synthetic 上显著改变 rate ranking/shape，而其他因素固定，才支持 floor 机制；若 readout 稳健，则将其降级",
+      "smallest_discriminating_experiment": "在固定 truth/counts/exposure/x0 下做一个预注册的两点 epsilon control，例如 frozen 1e-6 与一个明确数量级；先检查 rate contribution/rank，再看 known-truth metrics，不碰 real reference 选择",
+      "references": [
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md:123-133",
+        "pr/contact_model.py:671-684",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:79-89"
+      ]
+    },
+    {
+      "id": "C07",
+      "priority": "P0",
+      "claim_zh": "observed-endpoint exposure 与 profiled likelihood 可能影响 shared geometry，但 C3 尚未证明 allele-specific gain",
+      "known_evidence": "协议固定 exposure=sqrt(endpoint_count+10)/mean，并承认它会混合 capture、mappability、visibility、bin capacity 与 geometry；029 C3-C0 matched +0.013042 的 CI 不跨 0，但 contrast +0.006934 的 CI 跨 0",
+      "counterevidence_limitation": "C3 是 real finite-budget ablation；026 实际是 N1/N2/P1/P2，四类均为 synthetic_integer 且固定 maxiter=80；其中 P1/P2 使用独立 truth 和独立 observation/exposure fixture，不能把 P1/P2 差异当纯 exposure effect，N1/N2 又是 duplicated common truth 的 negative controls。这里不应声称不同 exposure 下的 count NLL 在数学上不可比：在相同 counts C、相同 group totals M_g 和同一个 conditional expression 下，三个 exposure view 的 count NLL 本身可以比较；029 不跨 variant 选 representative 是冻结的 selection rule，而不是数学不可比",
+      "prediction": "同一 counts/truth/x0 下，known exposure 相对 observed/uniform 若稳定改善 difference contrast 则 exposure 是中介；只改善 matched 则主要是 shared geometry",
+      "smallest_discriminating_experiment": "从同一 exact-V1 synthetic counts 派生 known-generating、observed-endpoint、uniform 三个 exposure views；固定相同 C/M、truth、x0、kernel/objective/budget，P positive 与 N negative 同时 fit；truth 只用于 evaluation",
+      "references": [
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md:108-121,172-214",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:222-249",
+        "pr/v1_calibration.py:434-438",
+        "test_res/026-20260913_221709-allele-calibration-prepare/reports/026_synthetic_allele_calibration_zh.md:5-18"
+      ]
+    },
+    {
+      "id": "C08",
+      "priority": "P0",
+      "claim_zh": "shared structure 与 half-difference 的信息结构使 blind recovery 依赖 basin，但 u=0 偶函数驻点不等于稳定",
+      "known_evidence": "V1 两 copy jointly move、无 frozen consensus；count objective 对每条 chromosome 的 u_c->-u_c 精确不变；F6 random hard-EM 近 collapse、oracle basin 保持 signal；F12 linear retrieval 的 |delta|/dbar=0.51、relative error=1.40；026 N1/N2 N-only copy-difference RMS=0.5384-0.5631 仅为未校准诊断",
+      "counterevidence_limitation": "F6/F10 是 hard-EM/native-FDG diagnostics，不是 029 continuous V1 stability theorem；偶性只保证一阶驻点，不能推出 local minimum 或 universal collapse；026 N RMS 尚未对数值容差和 sampling-noise baseline 校准，不能用现有分布上界作 pass/fail",
+      "prediction": "P 中 truth-informed nonzero u 若保持 contrast 而 zero/random u collapse，支持 basin；truth-informed 也退回则优先查 observation/prior；N false split 增大则 start/regularizer 不可用",
+      "smallest_discriminating_experiment": "这是 synthetic calibration-only oracle/warm-start diagnostic：generation side 读取并锁定 known truth，构造 shared-Z 的 u=0、small random、medium nonzero、truth-informed starts；worker 只收序列化 start 和无标签 counts，blind random arm 不读 truth，real reference 不作 init。先以 true exposure/true p 为合成上界，再单独比较 observed-endpoint exposure；记录 u、contrast、N false-split RMS、count NLL、gradient；若 baseline 未校准只报数值，不设 passflag",
+      "references": [
+        "AGENTS.md:63-77",
+        "docs/PLAN-genome-allele-split.md:35-60,120-150",
+        "docs/MEASURED_FACTS.md:511-539,556-580,626-650",
+        "test_res/026-20260913_221709-allele-calibration-prepare/reports/026_synthetic_allele_calibration_zh.md:5-18"
+      ]
+    },
+    {
+      "id": "C09",
+      "priority": "P0",
+      "claim_zh": "不能把 synthetic truth 泛称为 bond-prior 失配；bend、跨轨 repulsion、exposure/profiled likelihood 是不同假设",
+      "known_evidence": "生成器 chain step 明确为 Uniform(0.85,1.15)*l0，并拒绝 territory/unit-ball 外和同链 nonadjacent <0.25*l0；V1 bond 无惩罚区间为 0.75-1.25*l0；metadata 为 prior_equilibrium_claim=false",
+      "counterevidence_limitation": "生成器没有声明 bend、all-bead cross-track repulsion 或 profiled likelihood 的平衡分布；C1/C2 real ablation 都是 finite endpoints，不能分离这些因素；若不能在同一 fixture 中固定 truth、counts、x0 和 observation law，就不对 prior 变化作因果归因",
+      "prediction": "若只改 bend 或只改 cross-track repulsion，在 P/N exact-V1 controls 上出现可重复且方向一致的 difference/false-split 改变，才支持对应 prior mechanism",
+      "smallest_discriminating_experiment": "固定 exact-V1 truth/counts/exposure/x0，做 bend={0,0.01} x cross-track-repulsion={off,on} factorial，bond/kernel 不变；同时报告 P truth contrast 与 N false-split RMS",
+      "references": [
+        "pr/v1_calibration.py:248-343",
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md:216-239",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:143-175"
+      ]
+    },
+    {
+      "id": "C10",
+      "priority": "P0",
+      "claim_zh": "reference gap 还包含 pipeline、phase imputation 与 raw-distance/display scale mismatch，reference 不是物理真值",
+      "known_evidence": "保存证据显示 reference 使用 hickit-derived geometry、multi-resolution/different defaults；docs/MEASURED_FACTS.md 的 'Reference is a noisy target' 历史 simple single-`-b1m` oracle split（源脚本 `docs/exploration/pilot_oracle.py`）曾记录 ours Rg 约 2.5、reference 约 1.1，但该数值不是 029 V1；当前 020/029 展示审计的 pooled RMS 为 reference 1.5529545301005403、020 candidate 0.3766542939、C0-bundle2 candidate 0.2942922368，均是显示归一化尺度而非物理单位；相同 common mask 的 shape comparison 为 020 vs 022 两个 ref-aligned matrix rho 0.99430/0.99180、020 vs C0-bundle2 0.36735/0.62807；色标归一化坐标变化仅约 0.7%-3.7%，不能造成后者的真实 shape difference；reference pipeline 先以 hk_impute 传播 phase，native provenance 与 phase3 FDG byte-identical；chr1 020 best-swapped matched/cross/contrast=0.6699297451/0.5336508647/0.1362788804，而 C0-bundle2=0.5038604957/0.4564611074/0.0473993883，且两者均有一条 margin 为负",
+      "counterevidence_limitation": "相同 native ancestry 不代表相同输入、phase imputation、resolution、contact target 或 scale；正比例尺度不改变 Spearman R2，pooled RMS/颜色只能解释 raw distance/显示位置，不能单独解释 R2 gap；单一 reference/单 cell 不能分离 pipeline bias、candidate endpoint error 和 model mismatch；chr1 的高 matched mean 由一条强 copy 主导时，不能外推为两 copy identity 已解决",
+      "prediction": "若 fixed 同一 mask 和正比例尺度后 raw distance/pooled-RMS/颜色不同但 Spearman R2 不变，只支持显示尺度差异；若 R2 也不同，必须另从 shape、pipeline、mask 或 endpoint 解释，不能归因为 scale。只有在 law-matched 条件下某一 pipeline 的 known-truth agreement 更好，才支持对应 observation/prior mismatch",
+      "smallest_discriminating_experiment": "同一 known two-copy truth 仅作末端评价；主 pipeline 生成并共享同一份无标签 synthetic counts，双方使用同一 allowed information、input record budget、full-grid inventory 和 initialization source geometry，分别跑 native-like 40-track pipeline 与 V1 C0；双方都不得读取真实 assignment。若额外做带真实 assignment 的 native oracle，只列 independent ceiling，不能拿它与 blind V1 的差值归因于纯 pipeline；evaluation 侧使用同一 mask、同一 rank/Spearman R2 和同一 raw-distance/pooled-RMS 报告，reference 只作末端 display",
+      "references": [
+        "docs/MEASURED_FACTS.md:686-717",
+        "native/hickit/PROVENANCE.md:3-14",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:202-249",
+        "test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/metrics/metrics.json:5580-5604",
+        "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.json:59-90",
+        "docs/audits/c0-020-display-20260914_021033/AUDIT.md:42-52,72-79,95-105"
+      ]
+    },
+    {
+      "id": "C11",
+      "priority": "P0",
+      "claim_zh": "当前支持 L1，不支持 L2；inter geometry 与 haplotype label signal 必须分开",
+      "known_evidence": "corrected label-free oracle=0.5856、random=0.5127、consensus=0.5087，oracle-random +0.0729 +/- 0.0520、19/20；inter label counts 近似 1:1；one cell 无 molecule linkage",
+      "counterevidence_limitation": "oracle predictive signal 不能证明 blind whole-chromosome coherent u；029 positive contrast 受 best-swap bias，20 chromosomes 是 one-cell linked measurements",
+      "prediction": "若方法在本次已授权的 locked R2 与 label-free training diagnostics 上表现稳定，仍只能支持局部/结构敏感性；whole-chromosome fragment consistency 需要另行授权的 L2 任务；只提高 matched 或分开两条 tracks 不够",
+      "smallest_discriminating_experiment": "所有新 solver 先在 exact-V1 P/N synthetic 做 known-truth calibration；real candidate 严格沿原 020 final count NLL/count-per-record selection rule 选择，convergence、u-coherence 和 coordinate hash 后的 locked R2 只作诊断/评价，不新增 selection 条件；当前不新增 R1/R3 或 fragment-consistency task",
+      "references": [
+        "AGENTS.md:18-32,54-77",
+        "docs/MEASURED_FACTS.md:16-40,626-684",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:204-249"
+      ]
+    },
+    {
+      "id": "C12",
+      "priority": "P0",
+      "claim_zh": "单独增加迭代或调整 learning rate 不能识别差异来源",
+      "known_evidence": "022 continuation 从 240 到累计 480 使 count/total 小幅下降但 R2 基本不变；029 C0 仍 budget stop，保存 gradient_norm L2=0.008399；SciPy gtol 是 infinity-norm，不能与该 L2 直接比较；不同 x0/schedule/p path 已同时改变",
+      "counterevidence_limitation": "更长运行可继续改变当前 basin；步长/line-search 同时改变 accepted trajectory 和 basin，且此流程没有可独立解释全部行为的单一 learning-rate 参数",
+      "prediction": "若固定 x0/schedule/objective 后调整 solver options 才可估计 optimizer sensitivity；若未固定这些因素，任何 R2/J 改变都不可归因",
+      "smallest_discriminating_experiment": "先严格 C0 两个原始 014 source 各走 5m->2m->1m 三层复现，checkpoint 每 10 accepted steps，保留全部 trajectory；C0 gate 通过后再做预注册 solver-options sensitivity 或其他 sensitivity，均不扩入主 `30 stage attempts`；没有 solver_converged 时只报告 finite-path sensitivity",
+      "references": [
+        "test_res/022-20260913_111031-v1-continuation-fdg-r2/continuation_summary.json:19-34,118-134",
+        "test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle2/attempts/attempt-001/final.json:13361-13377",
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md:241-282"
+      ]
+    },
+    {
+      "id": "C13",
+      "priority": "P0",
+      "claim_zh": "最小下一步应先严格复现 full 020 C0 gate，再做同一三层合同下的 observation/prior isolation；旧 crossed init x schedule 仅为 gate 后可选诊断",
+      "known_evidence": "020/029 的 observed differences 同时包含 source/native preprocessing、init、multiresolution、p/q carry、budget 和 selected representative；现有 C3/C1/C2 不能替代严格 C0 reproduction gate，029 结果不能外推为 020 受控消融",
+      "counterevidence_limitation": "没有预先锁定的严格 C0 source/adapter/parameterization/stop gate 时，主消融仍会混杂；任何 reference-driven choice 都违反 frozen boundary；C2-map/free 还必须先通过 physical interpolation、legal pack/unpack 和 free 隐式 sphere writer/clip 检查",
+      "prediction": "若严格 C0 gate 通过并复现 020 的逐层状态，后续 C1/C2-map/C2-free/C3 的差异才可归因于各自登记处理；若 gate 失败，先定位 source/adapter/p-q/objective/packing/stop，不直接增加预算或使用 reference 返选",
+      "smallest_discriminating_experiment": "执行顺序：C0 两 source x 三 layer reproduction gate（6 stages） -> gate 通过后 C1/C2-map/C2-free/C3 各 6 stages（24 stages） -> hash-gated R2；每个 variant 从原始 014 source 独立走完整 schedule，C2-map vs C0 只比较球内 parameterization，C2-free vs C2-map 比较域限制相关变化，C2-free vs C0 只作 parameterization+domain 联合解释；expected-count/known-law/prior diagnostics 另按授权执行",
+      "references": [
+        "docs/POST020_CONTROL_DESIGN_CORRECTION.md:96-163",
+        "test_res/030-20260914_c0-020-training-audit/REPORT.zh-CN.md:15-21,30-49",
+        "test_res/020-20260913_071841-v1-p9016-joint/config.json:161-282",
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md:65-83"
+      ]
+    }
+  ]
+}

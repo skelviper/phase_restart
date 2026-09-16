@@ -1,0 +1,1 @@
+source /mnt/ssd/zliu/miniforge3/etc/profile.d/conda.sh && conda activate analysis && export MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 && python scripts/run_model_preflight.py

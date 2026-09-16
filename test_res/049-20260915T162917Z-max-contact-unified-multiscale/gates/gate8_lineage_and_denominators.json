@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-09-15T16:39:12.782932+00:00",
+  "evidence": {
+    "budget": {
+      "aggregate_cis_offdiag": 696680,
+      "aggregate_conserved": true,
+      "aggregate_inter": 568434,
+      "aggregate_same_bin": 438774,
+      "budget_unit": "raw_records",
+      "conditional_count_factorial_constant_omitted": -13851948.33851454,
+      "count_mode": "raw_integer",
+      "diag_count_factorial_sum_included": 1850545.0149510931,
+      "diag_nuisance_parameters": 2645,
+      "diag_profile": "per_bin_saturated_poisson",
+      "endpoint_conserved": true,
+      "endpoint_total": 3407776,
+      "exposure_mode": "observed_endpoint",
+      "factorial_constant_status": "integer_count_constants_recorded",
+      "n_chromosomes": 20,
+      "n_diag_bins": 2645,
+      "n_eligible_cis_offdiag_pairs": 184016,
+      "n_eligible_inter_pairs": 3312674,
+      "n_eligible_pairs": 3496690,
+      "n_loci": 2645,
+      "n_zero_eligible_pairs": 3009436,
+      "raw_cis_offdiag": 696680,
+      "raw_conserved": true,
+      "raw_inter": 568434,
+      "raw_records": 1703888,
+      "raw_same_bin": 438774
+    },
+    "denominators": {
+      "Noff": 1265114.0,
+      "counts_cis": 696680.0,
+      "counts_inter": 568434.0,
+      "diag_counts_total": 438774.0,
+      "n_loci": 2645,
+      "n_pairs_full_grid": 3496690,
+      "raw_cis_offdiag": 696680.0,
+      "raw_inter": 568434.0,
+      "raw_records": 1703888.0,
+      "raw_same_bin": 438774.0
+    },
+    "denominators_ok": true,
+    "lineage": [
+      {
+        "five_mb_gate_stage": "blind",
+        "five_mb_no_optimization": true,
+        "five_mb_source_sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "one_mb_raw_y_sha256": "a3f11b6830ae8c147e5d23d01b42616235be44b52ae05f4c58d450fd63468e3c",
+        "prolongation_2to1_max_abs_error": 0.0,
+        "prolongation_5to2_max_abs_error": 0.0,
+        "raw_y_vs_sphere_inverse_max_abs_error": 0.0,
+        "reference_opened": false,
+        "seed": 1103,
+        "source": "consensus"
+      },
+      {
+        "five_mb_gate_stage": "blind",
+        "five_mb_no_optimization": true,
+        "five_mb_source_sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "one_mb_raw_y_sha256": "d9a9b480d5a34ccc786ef538051931c8c0d0524292681f7fdc428de1f8942c08",
+        "prolongation_2to1_max_abs_error": 0.0,
+        "prolongation_5to2_max_abs_error": 0.0,
+        "raw_y_vs_sphere_inverse_max_abs_error": 0.0,
+        "reference_opened": false,
+        "seed": 2207,
+        "source": "random"
+      }
+    ]
+  },
+  "gate": "gate8_lineage_and_denominators",
+  "status": "PASS"
+}

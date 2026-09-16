@@ -1,0 +1,201 @@
+{
+  "schema_version": "p9016-c0-020-display-independent-audit-v1",
+  "status": "config_frozen_before_reference_read",
+  "created_utc": "2026-09-14T02:10:33Z",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one linked cell; 20 chromosome measurements; not biological replicates",
+    "r2_only": true,
+    "fit_called": false,
+    "selection_called": false,
+    "phase_opened": false,
+    "reference_read_before_config": false,
+    "original_inputs_modified": false,
+    "new_outputs_only": true,
+    "threads": 1,
+    "blas_threads": 1,
+    "omp_threads": 1,
+    "posthoc_diagnostic": "025 x0 to C0 endpoint comparison; exploratory and outside registered 21-condition primary comparison"
+  },
+  "cohort_freeze": {
+    "raw_records": 1703888,
+    "training_tracks": 40,
+    "physical_beads": 5290,
+    "bin_size_bp": 1000000,
+    "training_origin_bp": 0,
+    "metric_origin_bp": 3000000,
+    "genomic_join": "numeric chromosome plus integer base-pair coordinate",
+    "same_bin": "excluded from structural R2 pairs; retained only in training provenance",
+    "metric": "Spearman rho of Euclidean distance vectors on shared unordered non-diagonal genomic bin pairs",
+    "tie_tolerance": 1e-12,
+    "minimum_rho_pairs": 20,
+    "no_local_swap": true,
+    "mapping_policy": "whole-chromosome R2 geometry orientation locked from existing 029 R2 rows; no visual reselection",
+    "primary_existing_mask": {
+      "condition_count": 21,
+      "condition_ids": [
+        "C0-bundle1", "C0-bundle2", "C0-bundle3",
+        "C1-bundle1", "C1-bundle2", "C1-bundle3",
+        "C2-map-bundle1", "C2-map-bundle2", "C2-map-bundle3",
+        "C2-free-bundle1", "C2-free-bundle2", "C2-free-bundle3",
+        "C3-bundle1", "C3-bundle2", "C3-bundle3",
+        "softall_seed124101", "v1_original_random_joint", "v1_continuation", "fdg_proposal", "random014", "consensus014"
+      ],
+      "source_manifest": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+      "source_manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+      "must_not_expand_for_025_x0": true
+    }
+  },
+  "locked_candidates": {
+    "v1_original_020": {
+      "condition_id": "v1_original_random_joint",
+      "label": "020 historical selected",
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/selected.3dg",
+      "sha256": "afb2d52ae11e342e9b43b3c8042c5581760d177c5e563f2478646ab36b3e7078",
+      "role": "historical_control"
+    },
+    "v1_continuation_022": {
+      "condition_id": "v1_continuation",
+      "label": "022 continuation",
+      "path": "test_res/022-20260913_111031-v1-continuation-fdg-r2/coords/random_joint/final-1m-continuation-61da99669694b822.3dg",
+      "sha256": "49501f5b38d699fb2c9c8849616edd02b70fccd5ae39e1efe6036e17f5f620e7",
+      "role": "historical_control"
+    },
+    "C0_bundle1": {
+      "condition_id": "C0-bundle1",
+      "label": "029 C0 bundle1",
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "629c8af30a5b924c3a661368874ca000e6f119c60f62f48af1278d4184288d5a",
+      "role": "new_endpoint_seed"
+    },
+    "C0_bundle2": {
+      "condition_id": "C0-bundle2",
+      "label": "029 C0 bundle2",
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "6a8b249c1b6bde046183740d5591ae5ee185676991bafdba152827d1581db68f",
+      "role": "new_endpoint_seed_count_selected_in_original_029"
+    },
+    "C0_bundle3": {
+      "condition_id": "C0-bundle3",
+      "label": "029 C0 bundle3",
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "65b27356b43d0271fbd8c3167f198a584822f08d99462ab47418437e2fc2c66f",
+      "role": "new_endpoint_seed"
+    }
+  },
+  "locked_025_x0_diagnostic": {
+    "status": "posthoc_exploratory_not_in_primary_mask",
+    "source_cohort": "same full cohort; 5290 points and 40 tracks",
+    "bundle1": {
+      "path": "test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle1/x0_normalized.3dg",
+      "sha256": "2c55a6d8d3eba202c6de138ca79264d281900a74a806be935bdfb7389ea9fdd4",
+      "paired_endpoint": "C0-bundle1"
+    },
+    "bundle2": {
+      "path": "test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle2/x0_normalized.3dg",
+      "sha256": "d74f97dbdd8e0fe7701906e12061ddcf0351c566c9648890e540b28feb620358",
+      "paired_endpoint": "C0-bundle2"
+    },
+    "bundle3": {
+      "path": "test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle3/x0_normalized.3dg",
+      "sha256": "f3a951e28c41152c630208241b99a5f18094475842e1ab9a6c8591824ca99a94",
+      "paired_endpoint": "C0-bundle3"
+    },
+    "comparison": "same fixed 21-condition common mask; four rho, locked whole-chromosome pairing, matched, cross, contrast, margin_mat, margin_pat, minmargin; all three seeds retained; no CI or p-value"
+  },
+  "reference": {
+    "path": "data/P9016.1m.3dg.gz",
+    "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "role": "evaluation_only",
+    "read_rule": "read only after all five locked endpoint coordinate hashes and three 025 x0 hashes pass"
+  },
+  "existing_evidence": {
+    "release_manifest": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/release_manifest_r2.json",
+      "sha256": "aa3b729e81f745b23b3267f2011fe556ed61c235ff722e78d28a6fc25f2da16b"
+    },
+    "r2_per_chromosome": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.json",
+      "sha256": "ae29cf14b213c5652d10d90cf57fc5d3c8865902c7b78147fe7bfae8adaa4c16"
+    },
+    "r2_summary": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_summary.json",
+      "sha256": "877cbee683c3a31b007eefd8a363b8630e817ff6e9faafc7b28e7c30c46f4896"
+    },
+    "evaluation_r2_config": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/config.json",
+      "sha256": "e3aa22d11be91d82a9f4a847ac9662f2cf7c834ae99e963bfd851c6698798b83"
+    },
+    "020_metrics": {
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/metrics/metrics.json",
+      "sha256": "4eac0661698043bc15442fabbec9bec67f262f0a682fd23640fa063e6dcd9f70"
+    },
+    "022_r2_per_chromosome": {
+      "path": "test_res/022-20260913_111031-v1-continuation-fdg-r2/evaluation-r2/results/r2_per_chromosome.tsv",
+      "sha256": null
+    }
+  },
+  "display_inputs": {
+    "old_020_npz": {
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/supplement-chr1-distance-matrices-20260913_091650/distance_matrices_chr1.npz",
+      "sha256": "ff8022d3cbfd9df663d78e0d09c0d4b941be3e8d1608cf822543f68a5f118d44"
+    },
+    "old_020_script": {
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/supplement-chr1-distance-matrices-20260913_091650/run_supplemental_chr1_distance_matrices.py",
+      "sha256": "92d3152e47d5f24cb93aa947398a010ee50161cf63d406660b2d3c8fc3961efe"
+    },
+    "old_022_npz": {
+      "path": "test_res/022-20260913_111031-v1-continuation-fdg-r2/supplement-chr1-distance-matrices-20260913_130101/distance_matrices_chr1_continuation.npz",
+      "sha256": "3290b0b9dba372ae90db69d6acb1d44b0923e7d1b95218ddfb794c9dff34eae6"
+    },
+    "old_022_script": {
+      "path": "test_res/022-20260913_111031-v1-continuation-fdg-r2/supplement-chr1-distance-matrices-20260913_130101/run_supplemental_chr1_distance_matrices_022.py",
+      "sha256": "22f26e3cb978248c757d6270ace88c8e8fbc11e1b01025c6b6d8eccf00b8e6cd"
+    },
+    "old_029_C0_bundle2_npz": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/supplements/chr1-contrast-display-20260914_011528/C0_chr1_distance_matrices.npz",
+      "sha256": "43efe01866b53ee1d45d55a5597d060273da4ed3b4462bb48bad183280eff295"
+    },
+    "old_029_script": {
+      "path": "test_res/029-20260913_161713-post020-allele-ablation-real/supplements/chr1-contrast-display-20260914_011528/run_chr1_contrast_display.py",
+      "sha256": "bda82f5c065f4ca24efafcbf02559ca260fc8a515c6452fc7559a8edf4d60f0c"
+    }
+  },
+  "chr1_display": {
+    "positions_rule": "range(3000000,195471971,1000000)",
+    "n_positions": 193,
+    "expected_common_bins": 188,
+    "expected_common_unordered_pairs": 17578,
+    "expected_total_unordered_pairs": 18528,
+    "excluded_bins_from_existing_mask": [27, 30, 31, 85, 195],
+    "distance_dtype": "float64",
+    "distance": "3D Euclidean",
+    "normalization": "one pooled reference RMS over two reference panels and one pooled candidate RMS over candidate A/B, each on the same common non-diagonal pairs",
+    "fixed_panel_order": "reference_mat, reference_pat, candidate_to_mat, candidate_to_pat",
+    "color": {"colormap": "coolwarm_r", "vmin": 0.0, "vmax_rule": "one maximum over all unified panels", "clip": false, "missing": "#bdbdbd"},
+    "render": {"dpi": 300, "font_size_pt": 7, "base_panel_inches": 3.0, "axes_origin": "lower", "axis_extent_mb": [2.5, 195.5, 2.5, 195.5], "axis_is_absolute_and_uncompressed": true}
+  },
+  "tolerances": {
+    "hash_exact": true,
+    "matrix_absdiff": 1e-12,
+    "rho_absdiff": 1e-12,
+    "scale_absdiff": 1e-12,
+    "coordinate_absdiff": 1e-12,
+    "tie": 1e-12
+  },
+  "outputs": {
+    "independent_script": "audit_c0_020_display.py",
+    "validation": "validation.json",
+    "provenance": "provenance.json",
+    "report": "AUDIT.md",
+    "r2_table": "r2_independent_vs_locked.tsv",
+    "seed_table": "c0_seed_and_x0_diagnostic.tsv",
+    "chr1_table": "chr1_display_index.tsv",
+    "unified_npz": "unified_chr1_distance_matrices.npz",
+    "unified_png": "unified_chr1_distance_matrices.png",
+    "unified_pdf": "unified_chr1_distance_matrices.pdf",
+    "x0_bundle2_png": "x0_bundle2_chr1_distance_matrices.png",
+    "x0_bundle2_pdf": "x0_bundle2_chr1_distance_matrices.pdf"
+  }
+}

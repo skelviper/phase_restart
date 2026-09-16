@@ -1,0 +1,81 @@
+{
+  "baseline_regression": {
+    "atol": 1e-12,
+    "checked_values": 166,
+    "definition": "046 frozen baseline (real-extension-G-full-J) re-measured under the 049 evaluation code",
+    "expected_path": "evaluation/results/baseline_regression_expected.json",
+    "expected_source": {
+      "per_chromosome_tsv": "/mnt/ssd/zliu/phase_restart/test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/r2_per_chromosome.tsv",
+      "summary_tsv": "/mnt/ssd/zliu/phase_restart/test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/r2_summary.tsv"
+    },
+    "mismatch_count": 0,
+    "mismatches": [],
+    "status": "PASS"
+  },
+  "checks": {
+    "baseline_regression": "PASS",
+    "baseline_regression_checked_values": 166,
+    "bootstrap_index_matrix_matches_046": true,
+    "comparison_count": 28,
+    "dataset_count": 15,
+    "global_index_rule": "global = chromosome_offset + positions // 1Mb (mask local index is never used as 0-origin)",
+    "mask_audit_status": "PASS",
+    "mask_config_sha256_typo_recorded": true,
+    "mask_sha256_matches_046_creation_record": true,
+    "mask_snapshot_sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "mask_totals_frozen": {
+      "n_common_pairs": 157529,
+      "n_total_non_diagonal_pairs": 176201,
+      "valid_bins": 2447
+    },
+    "null_draws_evaluated": 153,
+    "phase_columns_read": false,
+    "reference_opened_after_gate": true,
+    "reference_sha256_verified": true,
+    "smoke": false
+  },
+  "created_utc": "2026-09-15T17:42:11.914563+00:00",
+  "deviations": [
+    {
+      "disclosed_by": "评价执行方主动记录，未补造额外审计",
+      "impact": "positions 由 range(3_000_000, chr_len, 1_000_000) 与染色体长度唯一确定，未参与训练、候选选择或任何指标计算；该提前读取不改变任何评价数值，但确实偏离了“整个 mask gate 后 load”的操作要求",
+      "item": "pre-gate read of frozen mask snapshot metadata",
+      "requirement": "PLAN/task 要求 mask snapshot 只在评估侧（gate 之后）加载",
+      "what_was_not_read_before_gate": "chr*_common（参考有限性衍生的布尔位）、pair_i/pair_j 的数值、任何参考坐标或 phase 列；mask 本身只在 evaluate 阶段（gate 之后）由 load_real_masks 加载",
+      "what_was_read_before_gate": "046/evaluation_final/results/frozen_legacy_mask_snapshot.npz 的 keys、各数组 dtype/shape（chr0..chr4 的 positions/pair_i/pair_j/common 仅 shape），以及 chr{c}_positions 的数值（c=0,1,2：数组长度与前两个/末一个元素），用于核对 old21 数值规则的 bin 数"
+    },
+    {
+      "detail": "config.json 记为 9c551c6a4586a9221541f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9，文件实际为 9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9；文件哈希与 046 evaluation_final/results/mask_validation.json 中创建时记录（frozen_legacy_mask_worker.output_sha256）一致，文件未被修改。评价侧只记录、不改 config（不在写范围）。",
+      "impact": "mask 内容与冻结计数（176201/157529/2447/2835152）一致，评价数值不受影响",
+      "item": "049/config.json mask sha256 transcription typo"
+    }
+  ],
+  "path_repair": {
+    "fixed_fields": {
+      "endpoint_common_g[*].npz_path": 12,
+      "evaluation.datasets[*].npz_path": 12,
+      "terminal.datasets[*].npz_path": 12
+    },
+    "numeric_or_other_fields_changed": 0,
+    "path_check": {
+      "checked": 348,
+      "missing": 0,
+      "report": "evaluation/results/path_check.json",
+      "status": "PASS"
+    },
+    "reason": "早期版本对已经是仓库相对形式的 manifest npz_path 直接 lib.rel()，产生 evaluation/test_res/049-.../coords/... 错误路径；现改为 resolve_path 后再 rel",
+    "recomputed_metrics": false,
+    "sha256_after": {
+      "evaluation.json": "145ff1636f5d99adf80d7bc95b8e984d74a83cfdc4029554358c02db69208224",
+      "terminal.json": "361e4703f90764acd03c7b31a7e94628572076186e0227840885123005317ea0"
+    },
+    "sha256_before": {
+      "evaluation.json": "244eb7eafdf5f99d23277414908191b5496005303a57015aee35b933c78b6f54",
+      "terminal.json": "0f9ba1c6fbd9c0f0ea0fabe6ed366942d7a74cb4978faa869bcc2b62c17f31f3"
+    },
+    "verified_by": "strip_paths 深比较（排除 _path 字段）在写入前断言完全相等"
+  },
+  "schema": "p9016-049-evaluation-validation-v1",
+  "smoke_note": null,
+  "status": "PASS"
+}

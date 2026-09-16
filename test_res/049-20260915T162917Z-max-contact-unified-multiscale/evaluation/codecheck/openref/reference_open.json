@@ -1,0 +1,189 @@
+{
+  "authorization": "code selfcheck",
+  "expected_sha256": "496d409d5359c7fb0fabcabde8b348984c9ed9849e9b824a297db3d2be508e16",
+  "finite_loci": 5290,
+  "gate_path": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/codecheck/openref/gate.json",
+  "gate_sha256_at_open": "ad44ef057bf93dd6b4c71afc69d61ddf662cc892e17d8341fac0ad21f4bc52fa",
+  "nonfinite_loci": 0,
+  "per_chromosome_finite": [
+    {
+      "chromosome": "chr1",
+      "finite_copy_a_or_mat": 196,
+      "finite_copy_b_or_pat": 196,
+      "positions": 196
+    },
+    {
+      "chromosome": "chr2",
+      "finite_copy_a_or_mat": 183,
+      "finite_copy_b_or_pat": 183,
+      "positions": 183
+    },
+    {
+      "chromosome": "chr3",
+      "finite_copy_a_or_mat": 161,
+      "finite_copy_b_or_pat": 161,
+      "positions": 161
+    },
+    {
+      "chromosome": "chr4",
+      "finite_copy_a_or_mat": 157,
+      "finite_copy_b_or_pat": 157,
+      "positions": 157
+    },
+    {
+      "chromosome": "chr5",
+      "finite_copy_a_or_mat": 152,
+      "finite_copy_b_or_pat": 152,
+      "positions": 152
+    },
+    {
+      "chromosome": "chr6",
+      "finite_copy_a_or_mat": 150,
+      "finite_copy_b_or_pat": 150,
+      "positions": 150
+    },
+    {
+      "chromosome": "chr7",
+      "finite_copy_a_or_mat": 146,
+      "finite_copy_b_or_pat": 146,
+      "positions": 146
+    },
+    {
+      "chromosome": "chr8",
+      "finite_copy_a_or_mat": 130,
+      "finite_copy_b_or_pat": 130,
+      "positions": 130
+    },
+    {
+      "chromosome": "chr9",
+      "finite_copy_a_or_mat": 125,
+      "finite_copy_b_or_pat": 125,
+      "positions": 125
+    },
+    {
+      "chromosome": "chr10",
+      "finite_copy_a_or_mat": 131,
+      "finite_copy_b_or_pat": 131,
+      "positions": 131
+    },
+    {
+      "chromosome": "chr11",
+      "finite_copy_a_or_mat": 123,
+      "finite_copy_b_or_pat": 123,
+      "positions": 123
+    },
+    {
+      "chromosome": "chr12",
+      "finite_copy_a_or_mat": 121,
+      "finite_copy_b_or_pat": 121,
+      "positions": 121
+    },
+    {
+      "chromosome": "chr13",
+      "finite_copy_a_or_mat": 121,
+      "finite_copy_b_or_pat": 121,
+      "positions": 121
+    },
+    {
+      "chromosome": "chr14",
+      "finite_copy_a_or_mat": 125,
+      "finite_copy_b_or_pat": 125,
+      "positions": 125
+    },
+    {
+      "chromosome": "chr15",
+      "finite_copy_a_or_mat": 105,
+      "finite_copy_b_or_pat": 105,
+      "positions": 105
+    },
+    {
+      "chromosome": "chr16",
+      "finite_copy_a_or_mat": 99,
+      "finite_copy_b_or_pat": 99,
+      "positions": 99
+    },
+    {
+      "chromosome": "chr17",
+      "finite_copy_a_or_mat": 95,
+      "finite_copy_b_or_pat": 95,
+      "positions": 95
+    },
+    {
+      "chromosome": "chr18",
+      "finite_copy_a_or_mat": 91,
+      "finite_copy_b_or_pat": 91,
+      "positions": 91
+    },
+    {
+      "chromosome": "chr19",
+      "finite_copy_a_or_mat": 62,
+      "finite_copy_b_or_pat": 62,
+      "positions": 62
+    },
+    {
+      "chromosome": "chrX",
+      "finite_copy_a_or_mat": 172,
+      "finite_copy_b_or_pat": 172,
+      "positions": 172
+    }
+  ],
+  "phase_columns_read": false,
+  "reference_first_opened_utc": "2026-09-15T17:18:03.852888+00:00",
+  "reference_path": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/codecheck/openref/reference_naming.3dg.gz",
+  "reference_sha256": "496d409d5359c7fb0fabcabde8b348984c9ed9849e9b824a297db3d2be508e16",
+  "rows": 5290,
+  "schema": "p9016-049-reference-open-record-v1",
+  "status": "opened",
+  "track_audit": {
+    "found_track_count": 40,
+    "found_tracks": [
+      "chr1(mat)",
+      "chr1(pat)",
+      "chr2(mat)",
+      "chr2(pat)",
+      "chr3(mat)",
+      "chr3(pat)",
+      "chr4(mat)",
+      "chr4(pat)",
+      "chr5(mat)",
+      "chr5(pat)",
+      "chr6(mat)",
+      "chr6(pat)",
+      "chr7(mat)",
+      "chr7(pat)",
+      "chr8(mat)",
+      "chr8(pat)",
+      "chr9(mat)",
+      "chr9(pat)",
+      "chr10(mat)",
+      "chr10(pat)",
+      "chr11(mat)",
+      "chr11(pat)",
+      "chr12(mat)",
+      "chr12(pat)",
+      "chr13(mat)",
+      "chr13(pat)",
+      "chr14(mat)",
+      "chr14(pat)",
+      "chr15(mat)",
+      "chr15(pat)",
+      "chr16(mat)",
+      "chr16(pat)",
+      "chr17(mat)",
+      "chr17(pat)",
+      "chr18(mat)",
+      "chr18(pat)",
+      "chr19(mat)",
+      "chr19(pat)",
+      "chrX(mat)",
+      "chrX(pat)"
+    ],
+    "missing_track_count": 0,
+    "missing_tracks": [],
+    "nonfinite_loci": 0,
+    "total_loci": 5290,
+    "track_mode": "reference"
+  },
+  "track_mode": "reference",
+  "tracks": 40
+}

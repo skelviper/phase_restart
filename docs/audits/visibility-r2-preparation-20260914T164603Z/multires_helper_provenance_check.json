@@ -1,0 +1,18 @@
+{
+  "schema_version": "p9016-multires-helper-provenance-check-v1",
+  "status": "PASS",
+  "source_path": "docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py",
+  "source_sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3",
+  "original_provenance_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+  "preserved_runtime_pyc_path": "docs/audits/multires-r2-preparation-20260914_041826/__pycache__/multires_r2.cpython-313.pyc",
+  "preserved_runtime_pyc_sha256": "ca3983b8b46434ddedaf3ddf380b0b6e688d76ccdba9579c19df3a544c87c9ab",
+  "python_version": "3.13.12",
+  "comparison": {
+    "code_object_bytecode": "equal for module and all nested code objects",
+    "code_object_names": "equal",
+    "code_object_varnames_and_arities": "equal",
+    "non_code_differences": "localized docstrings only",
+    "source_equivalence_claim": false
+  },
+  "note": "运行时使用当前中文 source；原始 source hash 与 preserved pyc hash 分别保留为 provenance，不以 source hash 宣称字节等价。"
+}

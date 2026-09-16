@@ -1,0 +1,111 @@
+{
+  "coordinates_payload_read": false,
+  "evaluator_provenance": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/exposure_provenance.json",
+  "evaluator_provenance_sha256": "984480f25172f0850d884f536e61e13a18889b83d4356f841eea7ab63e1f2bb7",
+  "fixtures": {
+    "N2": {
+      "audit": {
+        "array_sha256": "e2e903d8f9d8d4347897c7ac6bc01e4e65f24d5821ffb6e9e2739da3eb65b34c",
+        "dtype": "<f8",
+        "finite": true,
+        "length": 2645,
+        "matches_frozen_truth_manifest_exposure_sha256": true,
+        "matches_generation_metadata": true,
+        "max": 4.1349721558347845,
+        "mean": 1.0,
+        "mean_one_atol": 1e-12,
+        "min": 0.2104629030479043,
+        "shape": [
+          2645
+        ],
+        "strictly_positive": true
+      },
+      "exposure_label": "0.4",
+      "fixture_id": "N2",
+      "output_array_sha256": "e2e903d8f9d8d4347897c7ac6bc01e4e65f24d5821ffb6e9e2739da3eb65b34c",
+      "outputs": {
+        "json": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.json",
+          "sha256": "66942ed3b356a2479d814215e33a679cebf7d7b2d4c3d36d85af04285e7b215d"
+        },
+        "npy": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.npy",
+          "sha256": "bc98c739d7bbeff9ffe355700df4e2a31b3b55300e2bbe84e0d89937fb7cc172"
+        },
+        "npz": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.npz",
+          "sha256": "ca77e1b4f2f7957bc2c3898b9bdd8fbd99a884c62166918a3bd82777ff99c7c9"
+        }
+      },
+      "source": {
+        "archive_members_listed_without_payload_read": [
+          "coordinates.npy",
+          "exposure.npy"
+        ],
+        "coordinates_payload_read": false,
+        "metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json",
+        "metadata_sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9",
+        "read_npz_key": "exposure",
+        "truth_npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz",
+        "truth_npz_sha256_declared": "f5478f0fd918782ecea7cd53019c08542308bcfe2abadc22c645940358d8d561"
+      }
+    },
+    "P2": {
+      "audit": {
+        "array_sha256": "12b34ae791e0face4fd2d69f36b61de7435f0f91eee584589f4f20cfb15c165f",
+        "dtype": "<f8",
+        "finite": true,
+        "length": 2645,
+        "matches_frozen_truth_manifest_exposure_sha256": true,
+        "matches_generation_metadata": true,
+        "max": 4.016490384008715,
+        "mean": 1.0,
+        "mean_one_atol": 1e-12,
+        "min": 0.22440875049961767,
+        "shape": [
+          2645
+        ],
+        "strictly_positive": true
+      },
+      "exposure_label": "0.4",
+      "fixture_id": "P2",
+      "output_array_sha256": "12b34ae791e0face4fd2d69f36b61de7435f0f91eee584589f4f20cfb15c165f",
+      "outputs": {
+        "json": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.json",
+          "sha256": "fe79c8e606cda6805206bb4637172b2d57ad576855a3042e3307e24f8debedba"
+        },
+        "npy": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.npy",
+          "sha256": "66fcf1f86bca8f7d09295f156be7ba7fee26eaed694393968423b124ba660279"
+        },
+        "npz": {
+          "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.npz",
+          "sha256": "cd2443191826008385911e9008a0b43deae46fde5322fa13f5d5582c927c73b6"
+        }
+      },
+      "source": {
+        "archive_members_listed_without_payload_read": [
+          "coordinates.npy",
+          "exposure.npy"
+        ],
+        "coordinates_payload_read": false,
+        "metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json",
+        "metadata_sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9",
+        "read_npz_key": "exposure",
+        "truth_npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz",
+        "truth_npz_sha256_declared": "f92d2f2f03102778da384fc9f9f196700321cfcdb38ecfab439ec40250735d63"
+      }
+    }
+  },
+  "manifest_sha256": "180ed148667b16e789d0eaba365695c0bdf3b3ba930808f9c5558ee68968071a",
+  "n_loci": 2645,
+  "native_called": false,
+  "optimizer_started": false,
+  "reference_payload_read": false,
+  "schema_version": "p9016-next-step-exposure-manifest-v1",
+  "source_scope": "026 P2/N2 generation exposure only",
+  "status": "prepared_only",
+  "worker_manifest": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/known_e_worker_input_manifest.json",
+  "worker_manifest_sha256": "eb1d6901059f0daf6512c8f4609bb667ff79bc408713336eb243ccdf2fbbbb1d"
+}

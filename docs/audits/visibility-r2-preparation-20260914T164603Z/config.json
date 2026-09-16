@@ -1,0 +1,211 @@
+{
+  "schema_version": "p9016-visibility-r2-config-v1",
+  "status_at_freeze": "prepared_only_pending_parent_release",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one linked cell; 20 chromosome measurements; not biological replicates",
+    "raw_contact_count": 1703888,
+    "chromosome_count": 20,
+    "track_count": 40,
+    "physical_beads_1mb": 5290,
+    "training_origin_bp": 0,
+    "final_resolution_bp": 1000000,
+    "real_endpoint_count": 6,
+    "real_selected_endpoint_count": 3,
+    "synthetic_endpoint_count": 6,
+    "total_endpoint_count": 12,
+    "r2_metrics": ["matched", "cross", "contrast", "minmargin"],
+    "prohibited_metrics": ["R1", "R3", "p-values", "confidence intervals"]
+  },
+  "runtime": {
+    "conda_environment": "analysis",
+    "python_required": true,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "evaluator_fit_called": false,
+    "evaluator_native_called": false,
+    "evaluation_requires_parent_release": true
+  },
+  "real_training_release": {
+    "backend": "GPU",
+    "method_ids": ["V0", "VZ", "V1"],
+    "source_ids": ["consensus_joint_base1103", "random_joint_base2207"],
+    "source_order": ["consensus_joint_base1103", "random_joint_base2207"],
+    "endpoint_id_template": "{method}-{source}",
+    "endpoint_ids": [
+      "V0-consensus_joint_base1103",
+      "V0-random_joint_base2207",
+      "VZ-consensus_joint_base1103",
+      "VZ-random_joint_base2207",
+      "V1-consensus_joint_base1103",
+      "V1-random_joint_base2207"
+    ],
+    "real_endpoint_count": 6,
+    "real_endpoint_copies": 2,
+    "all_contacts_in_training": true,
+    "includes_inter_contacts": true,
+    "track_count": 40,
+    "resolution_schedule": [5000000, 2000000, 1000000],
+    "B1_historical_reference_only_nfev_by_layer": {"5mb": 306, "2mb": 202, "1mb": 243},
+    "B2_required_nfev_by_layer": {"5mb": 612, "2mb": 404, "1mb": 486},
+    "required_real_budget_id": "B2",
+    "maximum_total_outer_fg": 10470,
+    "early_stop_allowed": true,
+    "actual_outer_fg_must_be_reported": true,
+    "v1_inner_profile_must_converge": true,
+    "B2_from_scratch": true,
+    "scale2": true,
+    "original_K_p_priors_sphere": true,
+    "source_selection": {
+      "criterion": "final count_nll_per_record",
+      "scope": "within each method, compare the two source endpoints only",
+      "tie_tolerance": 1e-9,
+      "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+      "cross_method_selection": false,
+      "reference_read": false,
+      "r2_read": false,
+      "phase_read": false
+    },
+    "methods": {
+      "V0": {
+        "baseline": "original C0 fixed exposure",
+        "coordinate_parameterization": "raw-y/q",
+        "exposure_policy": "sqrt(endpoint_count+10), normalized to full-grid mean one",
+        "physical_target": "original C0 physical objective"
+      },
+      "VZ": {
+        "baseline": "V0 with observed offdiag degree-zero exposure set to zero",
+        "coordinate_parameterization": "raw-y/q",
+        "exposure_policy": "V0 exposure except e=0 where observed offdiag degree is zero",
+        "active_mask": "offdiag_degree > 0",
+        "zero_degree_is_not_true_visibility": true,
+        "synthetic_zero_degree_precheck": {"P2": 0, "N2": 0},
+        "synthetic_equivalent_to_V0": true,
+        "synthetic_extra_fit_count": 0,
+        "real_zero_degree_bins": 64,
+        "real_active_degree_positive_bins": 2581,
+        "boundary_effect_comparison": "VZ-V0 is the zero-coverage boundary control"
+      },
+      "V1": {
+        "profile": "one shared e=exp(eta) per genomic bin for both copies",
+        "coordinate_parameterization": "raw-y/q plus one eta per genomic bin",
+        "profile_likelihood": "group-total Poisson/multinomial likelihood conditional on geometry",
+        "same_bin_policy": "saturated nuisance; excluded from eta profiling",
+        "e_vector_length": 2645,
+        "eta_active_count_real": 2581,
+        "eta_free_dimension_real": 2580,
+        "eta_active_count_synthetic": 2645,
+        "eta_free_dimension_synthetic": 2644,
+        "eta_gauge": "active-bin mean-zero gauge; one active scale degree removed",
+        "zero_degree_policy": "zero-degree bins are outside eta active set and have e=0; endpoint sidecar must bind this explicitly",
+        "physical_target": "same K/p/prior/sphere count objective with profile e"
+      }
+    }
+  },
+  "synthetic_training_release": {
+    "fixtures": ["P2", "N2"],
+    "arms": ["V0-production", "V1-profile", "V0-known-generating-e"],
+    "endpoint_ids": [
+      "P2-V0-production", "P2-V1-profile", "P2-V0-known-generating-e",
+      "N2-V0-production", "N2-V1-profile", "N2-V0-known-generating-e"
+    ],
+    "endpoint_count": 6,
+    "same_x0": true,
+    "same_p0": 0.75,
+    "profiled_p_throughout": true,
+    "one_mb_fg_cap": 243,
+    "same_bin_policy": "saturated nuisance; excluded from eta profiling",
+    "known_e_only_synthetic": true,
+    "zero_degree_precheck": {
+      "P2_offdiag_zero_degree_bins": 0,
+      "N2_offdiag_zero_degree_bins": 0,
+      "P2_active_bins": 2645,
+      "N2_active_bins": 2645,
+      "P2_degree0_diagpositive_bins": 0,
+      "N2_degree0_diagpositive_bins": 0,
+      "status": "PASS; no extra synthetic VZ fits"
+    }
+  },
+  "evaluation_policy": {
+    "real_rows": 120,
+    "synthetic_rows": 120,
+    "real_source_selection": "select one source per method from final count NLL, then report V0/VZ/V1",
+    "main_comparisons": ["VZ-V0 boundary", "V1-VZ active profile", "V1-V0 overall"],
+    "all_source_comparisons_retained": true,
+    "twenty_chromosomes_are_linked_measurements": true,
+    "no_biological_replicate_interpretation": true,
+    "candidate_only_per_chromosome_best_swap": true,
+    "reference_columns_fixed": true,
+    "selection_does_not_use_profile_nll": true,
+    "fixed_e_rescore_is_auxiliary_only": true,
+    "sidecar_schema": {
+      "name": "p9016-visibility-profile-sidecars-v1",
+      "alignment_fields": ["numeric_position", "chromosome_index"],
+      "full_template_order_required": true,
+      "v1_degree_fields": ["degree", "predicted_degree"],
+      "v1_degree_residual_tolerance": 1e-10,
+      "non_profile_degree_prediction": "NA_or_omitted",
+      "p_from_q_tolerance": 1e-12
+    },
+    "historical_comparison": {
+      "new_v0_same_torch_backend": true,
+      "same_backend_causal_comparison": ["V0", "VZ", "V1"],
+      "old_038_m0_b2_same_source_r2_is_historical_reference_only": true,
+      "old_038_table_recomputed": false,
+      "old_038_regression_gate_registered": true,
+      "old_038_regression_gate_id": "old038-m0-b2-random-r2-regression-v1",
+      "old_038_regression_gate_is_not_new_metric_or_selection": true,
+      "old_038_regression_gate_failure_policy": "pause_new_metric_interpretation_and_diagnose",
+      "old_038_regression_gate_runtime_artifact": "frozen_pr/r2comparison.pyc with explicit Python and source provenance; no source-equivalence claim",
+      "old_038_regression_gate_run_after_all_12_hashes": true,
+      "old_038_reference_used_for_selection": false,
+      "interpretation": "new V0 may differ from old 038 fused M0/B2 on a long nonconvex path; a win over new V0 is not automatically a win over old 038 C0"
+    },
+    "failed_attempts": {
+      "excluded_from_release_matrix": true,
+      "known_040_visibility_formal": "failed after only V0-consensus first 5 Mb at 612 FG; not an endpoint and not included in 10470 maximum accounting",
+      "failed_attempts_are_not_rescored": true
+    }
+  },
+  "source_snapshot": {
+    "entity_snapshot_dir": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr",
+    "import_package": "visibility_frozen_pr",
+    "live_pr_imports_for_formal_evaluation": false,
+    "old_frozen_helpers_keep_original_paths": true,
+    "virtual_file_root": "repository/pr/<module>.py",
+    "absolute_contract_required": true
+  },
+  "grid": {
+    "chromosome_bin_size_bp": 1000000,
+    "chromosome_offset_bp_for_r2": 3000000,
+    "chromosomes": [
+      {"name": "chr1", "length_bp": 195471971}, {"name": "chr2", "length_bp": 182113224},
+      {"name": "chr3", "length_bp": 160039680}, {"name": "chr4", "length_bp": 156508116},
+      {"name": "chr5", "length_bp": 151834684}, {"name": "chr6", "length_bp": 149736546},
+      {"name": "chr7", "length_bp": 145441459}, {"name": "chr8", "length_bp": 129401213},
+      {"name": "chr9", "length_bp": 124595110}, {"name": "chr10", "length_bp": 130694993},
+      {"name": "chr11", "length_bp": 122082543}, {"name": "chr12", "length_bp": 120129022},
+      {"name": "chr13", "length_bp": 120421639}, {"name": "chr14", "length_bp": 124902244},
+      {"name": "chr15", "length_bp": 104043685}, {"name": "chr16", "length_bp": 98207768},
+      {"name": "chr17", "length_bp": 94987271}, {"name": "chr18", "length_bp": 90702639},
+      {"name": "chr19", "length_bp": 61431566}, {"name": "chrX", "length_bp": 171031299}
+    ],
+    "n_loci_1mb_full_grid": 2645,
+    "n_eligible_cis_offdiag_pairs": 184016,
+    "n_eligible_inter_pairs": 3312674
+  },
+  "outputs": {
+    "preparation_validation": "preparation_validation.json",
+    "preparation_terminal_evidence": "preparation_terminal_evidence.json",
+    "source_snapshot": "source_snapshot.json",
+    "population_kl_feasibility": "population_kl_feasibility.json",
+    "release_contract_template": "release_contract.template.json",
+    "future_evaluation_output_template": "release/evaluation-r2-<UTC>",
+    "real_full_tsv": "r2_visibility_real_6endpoint_x20chr.tsv",
+    "synthetic_full_tsv": "r2_visibility_synthetic_6endpoint_x20chr.tsv",
+    "population_kl_tsv": "synthetic_population_predictive_kl.tsv",
+    "main_plot": "plots/visibility_r2_main_four_panel.png"
+  }
+}

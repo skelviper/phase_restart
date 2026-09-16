@@ -1,0 +1,13 @@
+{
+  "authorized_by_parent": "code selfcheck",
+  "fits": [],
+  "manifest": {},
+  "nulls_new": [],
+  "nulls_reused_baseline": [],
+  "reference_first_opened_utc": "2026-09-15T17:18:03.852888+00:00",
+  "reference_open_record": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/codecheck/openref/reference_open.json",
+  "reference_open_status": "opened",
+  "reference_opened": false,
+  "selection": {},
+  "status": "PASS"
+}

@@ -1,0 +1,178 @@
+{
+  "schema": "p9016-docs-localization-cumulative-audit-v1",
+  "audit_time": "2026-09-15T02:34:42+08:00",
+  "scope": {
+    "workspace": "/mnt/ssd/zliu/phase_restart",
+    "localization_scope": "项目自有 Markdown 与 native/hickit/PROVENANCE.md；根目录 AGENTS.md、根目录 README.md、docs/PROJECT_CONTEXT.md、冻结原件、溯源源快照、test_res 活动报告、deliverables、scratch、临时基线和代码均不在编辑范围内",
+    "scientific_work": "无；未启动重建、原生 FDG 长时运行、参数搜索或指标重算"
+  },
+  "cumulative_files_touched_or_revised": {
+    "count": 28,
+    "in_place_localized_or_revised": [
+      "docs/MEASURED_FACTS.md",
+      "docs/POST020_ALLELE_ABLATION_RESULTS.md",
+      "docs/RECONSTRUCTION_V1_CALIBRATION.md",
+      "docs/RECONSTRUCTION_V1_INITIALIZATION.md",
+      "docs/RECONSTRUCTION_V1_RUN.md",
+      "docs/POST020_CONTROL_DESIGN_CORRECTION.md",
+      "docs/STAGE1_PREREGISTRATION.md",
+      "docs/exploration/README.md",
+      "docs/audit/stage1-independent-audit/report.md",
+      "docs/audits/multires-variant-preflight-20260914_052737/SUPERSEDED.md",
+      "native/hickit/PROVENANCE.md",
+      "docs/audits/c0-020-display-20260914_021033/AUDIT.md",
+      "docs/audits/multires-r2-preparation-20260914_041826/README.md",
+      "docs/audits/multires-variant-preflight-20260914_052737/README.zh-CN.md",
+      "docs/audits/multires-variant-preflight-20260914_053514/README.zh-CN.md",
+      "docs/audits/visibility-r2-preparation-20260914T164603Z/README.md",
+      "docs/audits/next-step-r2-preparation-20260914T143656Z/README.md",
+      "docs/audits/reference-gap-review-20260914T021918Z/review_zh.md"
+    ],
+    "zh_archive_created_or_revised": [
+      "docs/zh_archive/README.md",
+      "docs/zh_archive/RECONSTRUCTION_V1_PROTOCOL.zh-CN.md",
+      "docs/zh_archive/POST020_ALLELE_ABLATION_PROTOCOL.zh-CN.md",
+      "docs/zh_archive/PLAN-post020-allele-signal.zh-CN.md",
+      "docs/zh_archive/RECONSTRUCTION_V1_INITIALIZATION.zh-CN.md",
+      "docs/zh_archive/RECONSTRUCTION_V1_CALIBRATION.zh-CN.md",
+      "docs/zh_archive/AGENTS-022-v1-continuation-fdg-r2.zh-CN.md",
+      "docs/zh_archive/release-020-v1-p9016-joint.zh-CN.md",
+      "docs/zh_archive/revision_v2_impact.zh-CN.md",
+      "docs/zh_archive/FUSED_KERNEL_DESIGN.zh-CN.md"
+    ],
+    "frozen_or_locked_originals": {
+      "attempted_then_byte_restored": [
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md"
+      ],
+      "explicitly_not_edited": [
+        "docs/POST020_ALLELE_ABLATION_PROTOCOL.md",
+        "docs/PLAN-post020-allele-signal.md",
+        "docs/PROJECT_CONTEXT.md",
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    "not_claimed_as_subagent_edits": [
+      "docs/PLAN-genome-allele-split.md",
+      "docs/REVIEW-s2-observation-model.md",
+      "docs/RECONSTRUCTION_FUTURE_APPLICATIONS.md",
+      "未列出的其他 docs/audits 文件",
+      "docs/exploration/*.py 和其他所有代码"
+    ]
+  },
+  "docs_inventory_and_scan": {
+    "all_docs_markdown_current": 35,
+    "excluded_from_processable_scan": {
+      "count": 5,
+      "paths": [
+        "docs/PROJECT_CONTEXT.md",
+        "docs/RECONSTRUCTION_V1_PROTOCOL.md",
+        "docs/POST020_ALLELE_ABLATION_PROTOCOL.md",
+        "docs/PLAN-post020-allele-signal.md",
+        "docs/archive/PLAN-post020-allele-signal.prefit-3d85720a.md"
+      ]
+    },
+    "processable_markdown": 30,
+    "processable_with_chinese_prose_outside_code": 30,
+    "ordinary_english_sentence_flags": {
+      "files": 0,
+      "lines": 0,
+      "method": "在围栏代码和行内代码之外扫描常见英文词；其余机器字段/标识符另行复核"
+    },
+    "machine_identifier_or_schema_residuals": {
+      "files": 4,
+      "lines": 12,
+      "paths": [
+        "docs/POST020_ALLELE_ABLATION_RESULTS.md",
+        "docs/zh_archive/PLAN-post020-allele-signal.zh-CN.md",
+        "docs/zh_archive/POST020_ALLELE_ABLATION_PROTOCOL.zh-CN.md",
+        "docs/zh_archive/release-020-v1-p9016-joint.zh-CN.md"
+      ],
+      "examples": ["原生随机种子", "C2-map", "cross", "contrast", "minmargin", "status", "sphere", "读取真值前校验"],
+      "disposition": "保留，因为它们是机器字段、标识符、状态或冻结术语；没有普通英文正文残留"
+    }
+  },
+  "frozen_mapping_inventory": {
+    "test_res_source_paths": 47,
+    "sha_groups": 13,
+    "deduplicated_english_sources": 37,
+    "already_chinese_test_res_sources": 10,
+    "docs_archive_historical_source_paths": 1,
+    "actual_runtime_hash_locked_active_docs": 3,
+    "explicit_frozen_protocol_or_archived_snapshot_paths": 29,
+    "preregistration_status_auxiliary_paths": 4,
+    "provenance_or_release_filename_candidates": 14,
+    "test_res_all_markdown_current": 119,
+    "test_res_outside_frozen_mapping_scope": 72,
+    "temporary_baseline_counted": false
+  },
+  "baseline_evidence_and_limits": {
+    "verified_against_pre_edit_evidence": [
+      "3 个活动文档的锁定 SHA256 值",
+      "47 条 test_res 冻结/溯源路径中有 46 条与最终本地化编辑前收集的 SHA256 值一致",
+      "13 组源 SHA",
+      "10 组源/副本数字、链接，以及可执行命令/公式围栏不变量；text 围栏说明文字允许中文化",
+      "20 个 zh_archive 索引链接可解析"
+    ],
+    "not_proven_by_git_HEAD": [
+      "docs/MEASURED_FACTS.md",
+      "docs/exploration/README.md"
+    ],
+    "baseline_gap": "这些文件在本子代理工作开始前已经包含用户未提交的新增内容；无法取得任务开始前的工作区快照。基于 HEAD 的共有 token/链接/可执行命令和公式围栏检查只能作为部分回归检查，不能证明所有用户改动均已保留。本累计报告明确保留这一限制。",
+    "external_drift": {
+      "path": "test_res/036-20260914T064651Z-gpu-multires/release_ready_report.md",
+      "prior_inventory_sha256": "43bdece8410f3fb4ba91814cab19b726a210a98752fa504add218faf32b8ec88",
+      "current_observed_sha256": "260bf5849a28cf83f9c71b8cd14b9d7539f1be441e502818d4f59194a3967860",
+      "handling": "未由本子代理修改；当前报告 SHA 已由运行端校验与冻结发布合同共同确认，并保留此前清单 SHA 的历史差异",
+      "sha_recomputed": true,
+      "runtime_and_frozen_contract_constraints": [
+        "docs/audits/multires-r2-preparation-20260914_041826/build_multires_release.py:306",
+        "docs/audits/multires-r2-preparation-20260914_041826/release_contract.json:596-597",
+        "test_res/036-20260914T064651Z-gpu-multires/evaluation-r2-20260914_072405/terminal_evidence.json:61-62"
+      ],
+      "conclusion": "当前报告 SHA 与三处既有运行端/冻结发布合同约束一致；此前 43bde... 仅作为历史差异保留，不声称报告逐字节从未改过"
+    }
+  },
+  "validation_status": [
+    {
+      "check": "活动锁与预编辑源 SHA 校验",
+      "status": "PASS",
+      "exit_code": 0,
+      "note": "46/47 个源匹配；036 当前报告 SHA 与三处运行端/冻结发布合同约束一致，43bde... 作为历史差异保留"
+    },
+    {
+      "check": "源/副本数字、链接、可执行命令/公式围栏不变量",
+      "status": "PASS",
+      "exit_code": 0,
+      "scope": "10 组副本；text 围栏说明文字的中文化属于明确例外"
+    },
+    {
+      "check": "docs 全范围自然中文扫描",
+      "status": "PASS_WITH_IDENTIFIERS",
+      "exit_code": 0,
+      "scope": "30 个可处理 Markdown 文件；30 个文件在代码之外包含中文正文；普通英文句子残留为 0 行；保留 12 行机器字段残留"
+    },
+    {
+      "check": "zh_archive 链接",
+      "status": "PASS",
+      "exit_code": 0,
+      "links": 20
+    },
+    {
+      "check": "尾部产物文本卫生",
+      "status": "PASS",
+      "exit_code": 0,
+      "note": "UTF-8、无 CRLF、无尾随空白"
+    },
+    {
+      "check": "科学重算",
+      "status": "NOT_RUN",
+      "exit_code": 0,
+      "reason": "仅限文档工作；未请求实验或指标重算"
+    }
+  ],
+  "open_items": [
+    "任务开始前对 MEASURED_FACTS 和 docs/exploration/README 的用户改动仍无法独立恢复溯源/基线",
+    "在整个任务验收前不要删除工作区基线或 .tmp 文件"
+  ]
+}

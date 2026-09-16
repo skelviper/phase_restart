@@ -1,0 +1,1 @@
+source /mnt/ssd/zliu/miniforge3/etc/profile.d/conda.sh && conda activate analysis && export MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/mnt/ssd/zliu/phase_restart/test_res/023-20260913_212541-post020-allele-signal-diagnostics/.mplconfig && python scripts/run_diagnostics.py

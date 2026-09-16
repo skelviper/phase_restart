@@ -1,0 +1,7 @@
+{
+  "forbidden_modules_loaded": [],
+  "note": "training-side process; labels/reference payloads are never opened here",
+  "phase_opened": false,
+  "reference_opened": false,
+  "training_process_clean": true
+}

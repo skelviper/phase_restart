@@ -1,0 +1,315 @@
+{
+  "report": [
+    [
+      "1a chr1 cis records",
+      91703,
+      91703,
+      "AGREE"
+    ],
+    [
+      "1b same-bin records",
+      31827,
+      31827,
+      "AGREE"
+    ],
+    [
+      "1c fully phased (00/11)",
+      "n00+n11=28606",
+      28606,
+      "AGREE"
+    ],
+    [
+      "1d phase-label counts",
+      "n00=15638 n11=12968",
+      "n00=15638 n11=12968",
+      "AGREE"
+    ],
+    [
+      "2a train records",
+      54420,
+      54420,
+      "AGREE"
+    ],
+    [
+      "2b val records",
+      18155,
+      18155,
+      "AGREE"
+    ],
+    [
+      "2c test records",
+      19128,
+      19128,
+      "AGREE"
+    ],
+    [
+      "2d phased train records",
+      16928,
+      16928,
+      "AGREE"
+    ],
+    [
+      "3a val bin pairs",
+      1619,
+      1619,
+      "AGREE"
+    ],
+    [
+      "3b test bin pairs",
+      1622,
+      1622,
+      "AGREE"
+    ],
+    [
+      "4a reference accuracy",
+      "0.7903",
+      "0.790303",
+      "AGREE"
+    ],
+    [
+      "4b tie rate",
+      "0.0000",
+      "0.000000",
+      "AGREE"
+    ],
+    [
+      "4c classification n",
+      18150,
+      18150,
+      "AGREE"
+    ],
+    [
+      "5a oracle alpha",
+      "2.50",
+      "2.50",
+      "AGREE"
+    ],
+    [
+      "5b gauge_all alpha",
+      "2.50",
+      "2.50",
+      "AGREE"
+    ],
+    [
+      "5c oracle held-out rho",
+      "0.6402",
+      "0.638892 (1622) / 0.640232 (1603)",
+      "AGREE*"
+    ],
+    [
+      "5d gauge_all held-out rho",
+      "0.6191",
+      "0.616877 (1622) / 0.619072 (1603)",
+      "AGREE*"
+    ],
+    [
+      "5e gauge asymmetry",
+      "0.0212",
+      "0.022015 (1622) / 0.021160 (1603)",
+      "AGREE*"
+    ],
+    [
+      "5f within-file track order effect",
+      "0 (not reported)",
+      "0.000e+00",
+      "AGREE"
+    ],
+    [
+      "6a splice_wall1 rho",
+      "0.6105",
+      "0.607485 (1622) / 0.610462 (1603)",
+      "AGREE*"
+    ],
+    [
+      "6b procrustes rmsd",
+      "2.301162823",
+      "2.301162823",
+      "AGREE"
+    ],
+    [
+      "6c oracle rho (splice reference)",
+      "0.6402",
+      "0.638892 (1622) / 0.640232 (1603)",
+      "AGREE*"
+    ],
+    [
+      "7 columns clean",
+      "0 violations",
+      "0 violations",
+      "AGREE"
+    ],
+    [
+      "8 gate.json hashes",
+      "sha256 for every .3dg",
+      "37/73 present, 37 match",
+      "DISAGREE"
+    ]
+  ],
+  "detail": {
+    "check1": {
+      "n_records": 91703,
+      "same_bin": 31827,
+      "n_fully_phased": 28606,
+      "n00": 15638,
+      "n11": 12968,
+      "both_filled": 28606,
+      "discordant": 512
+    },
+    "check2": {
+      "train": 54420,
+      "val": 18155,
+      "test": 19128,
+      "phased_train": 16928
+    },
+    "check3": {
+      "val_pairs": 1619,
+      "test_pairs": 1622,
+      "val_contacts": 11755.0,
+      "test_contacts": 12371.0
+    },
+    "samebin_by_fold": {
+      "train": 18670,
+      "val": 6400,
+      "test": 6757
+    },
+    "check4": {
+      "n": 18150,
+      "ties": 0,
+      "tie_rate": 0.0,
+      "acc_orient0": 0.7903030303030303,
+      "acc_orient1": 0.2096969696969697,
+      "run_acc_orient0": 0.7903030303030303,
+      "run_acc_orient1": 0.7903030303030303,
+      "run_orientation": 0
+    },
+    "check5": {
+      "rho_oracle": 0.6388918168625625,
+      "rho_gauge": 0.6168765369827813,
+      "rho_oracle_run_mask": 0.6402315207838114,
+      "rho_gauge_run_mask": 0.6190719928703486,
+      "run_mask_n": 1603,
+      "nan_candidates": {
+        "oracle_half1": 13,
+        "oracle_half2": 6
+      },
+      "within_file_swap": [
+        0.0,
+        0.0
+      ],
+      "cross_file": {
+        "O_a+G_a (same-name)": 0.6190893345248365,
+        "O_a+G_b (matched)": 0.4755256451055174,
+        "O_b+G_a (matched)": 0.45204107191201714,
+        "O_b+G_b (same-name)": 0.6365151900407862
+      },
+      "dist_matched": 0.9891458476366368,
+      "dist_swapped": 0.18882484332583416,
+      "labels_differ_frac": 1.0,
+      "same_keys": true,
+      "gauge_asym_1622": 0.022015279879781136,
+      "gauge_asym_1603": 0.02115952791346276,
+      "single_copy_rho": {
+        "O_cc00a": 0.4741782511426148,
+        "O_cc00b": 0.4522760860882852,
+        "G_cc00a": 0.4306542077291888,
+        "G_cc00b": 0.47481322784129953
+      },
+      "mean_dist": {
+        "O_cc00a": 2.4621644527117854,
+        "O_cc00b": 2.6522092516418954,
+        "G_cc00a": 2.6223970885806636,
+        "G_cc00b": 2.453264590118296
+      },
+      "scipy_rho_oracle": 0.6388918168625624
+    },
+    "check6": {
+      "rmsd": 2.301162823163265,
+      "rmsd_reverse": 2.3011628231632653,
+      "rho_splice_wall1": 0.6074848012069358,
+      "rho_splice_wall1_run_mask": 0.610461539425788,
+      "rho_oracle": 0.6388918168625625,
+      "rho_oracle_run_mask": 0.6402315207838114,
+      "alpha_used": 2.5,
+      "alpha_sweep": {
+        "0.5": 0.6109547541606547,
+        "0.75": 0.6120927800774556,
+        "1.0": 0.6128036271430386,
+        "1.25": 0.6128099637285301,
+        "1.5": 0.6128004043290028,
+        "2.0": 0.6117968445728224,
+        "2.5": 0.610461539425788,
+        "3.0": 0.6088883291150092
+      }
+    },
+    "check7": {
+      "n_work": 73,
+      "n_coords": 73,
+      "violations": []
+    },
+    "check8": {
+      "entries": 37,
+      "files": 73,
+      "ok": 37,
+      "missing": [
+        "alt_gc_relax.3dg",
+        "alt_relax.3dg",
+        "alt_rewire_relax.3dg",
+        "gauge_all_relax.3dg",
+        "island1_gc_relax.3dg",
+        "island1_relax.3dg",
+        "island2_gc_relax.3dg",
+        "island2_relax.3dg",
+        "island3_gc_relax.3dg",
+        "island3_relax.3dg",
+        "micro10_gc_relax.3dg",
+        "micro10_relax.3dg",
+        "micro5_gc_relax.3dg",
+        "micro5_relax.3dg",
+        "oracle_half1_relax.3dg",
+        "oracle_half2_relax.3dg",
+        "oracle_relax.3dg",
+        "random_phased_1_relax.3dg",
+        "random_phased_2_relax.3dg",
+        "random_phased_relax.3dg",
+        "random_relax.3dg",
+        "wall1_gc_relax.3dg",
+        "wall1_relax.3dg",
+        "wall1_rewire_relax.3dg",
+        "wall2_gc_relax.3dg",
+        "wall2_relax.3dg",
+        "wall2_rewire_relax.3dg",
+        "wall3_gc_relax.3dg",
+        "wall3_relax.3dg",
+        "wall3_rewire_relax.3dg",
+        "wall4_gc_relax.3dg",
+        "wall4_relax.3dg",
+        "wall4_rewire_relax.3dg",
+        "wall5_gc_relax.3dg",
+        "wall5_relax.3dg",
+        "wall5_rewire_relax.3dg"
+      ],
+      "mismatch": [],
+      "stale": []
+    }
+  },
+  "claims": {
+    "n_records": 91703,
+    "samebin": 31827,
+    "n_train": 54420,
+    "n_val": 18155,
+    "n_test": 19128,
+    "n_ph_train": 16928,
+    "pairs_val": 1619,
+    "pairs_test": 1622,
+    "acc": 0.7903030303030303,
+    "tie": 0.0,
+    "n_acc": 18150,
+    "rho_oracle": 0.6402315207838114,
+    "alpha_oracle": 2.5,
+    "rho_gauge": 0.6190719928703486,
+    "alpha_gauge": 2.5,
+    "gauge_asym": 0.02115952791346276,
+    "splice_wall1": 0.610461539425788,
+    "splice_rmsd": 2.301162823163265
+  }
+}

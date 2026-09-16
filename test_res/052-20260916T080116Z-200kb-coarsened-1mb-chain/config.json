@@ -1,0 +1,122 @@
+{
+  "schema": "p9016-round052-config-v1",
+  "run_dir": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain",
+  "created_at_utc": "2026-09-16T08:05:00Z",
+  "created_at_utc_note": "written before any aggregate build, before any fitting, and before any reference access",
+  "purpose": "one new free/coarse-to-fine chain 40Mb->10Mb->5Mb->2Mb->1Mb->500kb->200kb; the 200kb physical endpoint is then coarsened to the original 1Mb bins by arithmetic mean and compared with the two existing versions on the frozen old21 evaluation support",
+  "cohort_identity": {
+    "cells": 1,
+    "chromosomes": 20,
+    "copy_tracks": 40,
+    "observation_unit": "chromosome (20 correlated measurements of one cell; the 40 copy tracks are not independent replicates)",
+    "inputs_snpfree": "inputs/P9016.snpfree.pairs.gz",
+    "inputs_snpfree_sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "raw_records": 1703888,
+    "raw_records_note": "all 1703888 records are used; no shrink, no downsample, no reference mask applied to training beads",
+    "phase_read": false,
+    "reference_opened_at_training_time": false
+  },
+  "objective": {
+    "model_id": "G",
+    "variant": "G/full-J/raw fixed-production-e",
+    "visibility_mode": "V0-fixed-production-e",
+    "known_e": null,
+    "pair_block": 262144,
+    "inner_cap": 80,
+    "cg_cap": 80,
+    "profile_warm_start": true,
+    "tile_rows": 32,
+    "weights": {"count": 1.0, "bond": 1.0, "repulsion": 1.0, "bend": 0.01, "p_prior": 1.0},
+    "p_prior_weight_note": "the p_prior term is already multiplied by 1e-4 inside the frozen implementation (P_PRIOR_STRENGTH); the weight itself stays 1.0",
+    "l0": "(2*n_loci)^(-1/3) per layer, r0 = 2*l0 read from the layer data",
+    "grid_policy": "all 20 chromosomes keep their complete header grid at every layer; no reference-mask bead removal; no per-copy support objective (the 051 C branch is not used)"
+  },
+  "optimizer": {
+    "engine": "raw L-BFGS (run_budgeted_lbfgs)",
+    "multiscale": false,
+    "ftol": 0.0,
+    "canonical_gtol": 1e-6,
+    "maxls": 20,
+    "maxiter_policy": "fg_cap + 1",
+    "endpoint": "last callback-confirmed finite accepted state; unaccepted line-search trial discarded"
+  },
+  "initialization": {
+    "root": "014 unlabeled random blind source (seed 2207), expanded to the 40Mb full grid with the frozen 0.025*l0 perturbation and radial clip",
+    "p_init": 0.75,
+    "same_root_as": ["046 baseline G-random", "051 A-extra-levels"],
+    "prolongation_rule": "each later layer is initialized from this chain's own previous-layer endpoint via reconstruction_init.warm_start_from_layer (interpolate + 0.025*l0 noise on new_or_repeated loci + radial clip)",
+    "forbidden": "no reset to a baseline 5Mb/1Mb start anywhere in this chain",
+    "seed_rule": "3301 + bin_size_bp // 1_000_000 + 2207 (frozen rule)"
+  },
+  "layers": [
+    {"stage": "40Mb", "bin_size_bp": 40000000, "fg_cap": 200},
+    {"stage": "10Mb", "bin_size_bp": 10000000, "fg_cap": 200},
+    {"stage": "5Mb", "bin_size_bp": 5000000, "fg_cap": 612},
+    {"stage": "2Mb", "bin_size_bp": 2000000, "fg_cap": 404},
+    {"stage": "1Mb", "bin_size_bp": 1000000, "fg_cap": 486},
+    {"stage": "500kb", "bin_size_bp": 500000, "fg_cap": 200},
+    {"stage": "200kb", "bin_size_bp": 200000, "fg_cap": 100}
+  ],
+  "total_fg_cap": 2202,
+  "one_segment_per_layer": true,
+  "budget_honesty": "every layer is deliberately budget-limited for speed; expect and report status=budget_not_converged. No convergence claim is made.",
+  "input_policy": {
+    "40_10_5_2_1Mb": "reuse the frozen aggregates (045 1Mb aggregate and 051 real_<bin>_aggregate.npz) after SHA verification and after an exact fold-consistency check against the frozen 1Mb aggregate",
+    "500kb_200kb": "must be re-aggregated from the raw 7-column unlabeled pair file at exact bp resolution; coarse 1Mb/500kb counts may never be split into fine bins",
+    "conservation": "every layer must keep raw_records = 1703888 and its diag/cis-offdiag/inter split must fold back exactly to the frozen 1Mb aggregate"
+  },
+  "coarsening": {
+    "input": "chain endpoint 200kb physical coordinates (sphere-mapped unit-ball xyz)",
+    "output": "coarsened 1Mb candidate on the original 1Mb bin grid",
+    "rule": "per chromosome, per copy, arithmetic mean of the 200kb sub-bin coordinates with bin key floor(original_bp / 1000000); every complete 1Mb bin averages 5 sub-bins, a partial terminal bin averages the actual 1..5 sub-bins present",
+    "forbidden": "no every-5th-bead picking, no distance-matrix averaging, no re-optimization, no re-centering, no rescaling",
+    "reporting": "per-bin contributing bead count and total conservation in a small json only"
+  },
+  "evaluation": {
+    "frozen_support": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "frozen_support_sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "reference": "data/P9016.1m.3dg.gz",
+    "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "reference_use": "read only after the 200kb endpoint and the coarsened 1Mb candidate are written and hashed; never used for initialization, training, stopping or selection",
+    "positions_rule": "positions + pair_i/pair_j/common are taken verbatim from the frozen snapshot (positions = arange(3000000, chromosome_length, 1000000))",
+    "candidate_index_rule": "global_index = offset(chromosome) + bp // 1000000 with offset = cumsum of ceil(chromosome_length/1000000)",
+    "support": "fixed 2447 valid loci, 157529 intra pairs, 20 chromosomes, identical for all three versions; a bug may never silently shrink it",
+    "metric": "signed Spearman rho on euclidean distances of the coarsened coordinates; average-tie ranks",
+    "copy_mapping": "per chromosome the best of {direct: A->mat,B->pat ; swapped: A->pat,B->mat} is chosen once by the Spearman same/cross mean; same = mean of the two matched rho, cross = mean of the two crossed rho",
+    "denominator": "20 same and 20 cross values per version; the 40 copy tracks are not independent replicates; NA is preserved and never nanmean-ed into a fake n=20",
+    "scope": "single cell only; no bootstrap, no significance test, no new null, no R1/R3"
+  },
+  "comparison_versions": {
+    "baseline": {
+      "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+      "npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+      "d3g": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+      "d3g_sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b",
+      "lineage": "014 random -> 5Mb 612FG -> 2Mb 404FG -> 1Mb 486FG = 1502FG",
+      "own_budget_fg": 1502
+    },
+    "extra_levels": {
+      "npz": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.npz",
+      "npz_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+      "d3g": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.3dg",
+      "d3g_sha256": "d8f779e7c85271fca2df89512645b2ddcd9d79134839e6b62e656cc1b74aa29f",
+      "lineage": "014 random -> 20Mb 200FG -> 10Mb 200FG -> 5Mb 612FG -> 2Mb 404FG -> 1Mb 486FG = 1902FG",
+      "own_budget_fg": 1902
+    },
+    "new_200kb_to_1Mb": {
+      "npz": "coords/200kb-to-1Mb/coarsened1Mb.npz",
+      "lineage": "014 random -> 40Mb 200FG -> 10Mb 200FG -> 5Mb 612FG -> 2Mb 404FG -> 1Mb 486FG -> 500kb 200FG -> 200kb 100FG = 2202FG",
+      "own_budget_fg": 2202
+    }
+  },
+  "budget_limitation": "the three versions do not share an equal FG budget (1502 vs 1902 vs 2202); this is a coarse-to-fine chain comparison with unequal, deliberately cheap coarse layers, not an equal-cost comparison",
+  "deliverables": [
+    "plots/same_cross_spearman_boxplot.png",
+    "eval/per_chromosome_spearman.tsv",
+    "eval/summary.json",
+    "README.md",
+    "config.json",
+    "logs/*.terminal.json"
+  ],
+  "not_delivered": ["distance matrices", "scatter plots", "PDF/SVG/HTML", "new null distributions", "bootstrap", "extra audit frameworks", "long reports"]
+}

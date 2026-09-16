@@ -1,0 +1,221 @@
+{
+  "appended_candidate": {
+    "label": "New chain 1 Mb",
+    "note": "existing endpoint of the 40 -> 10 -> 5 -> 2 -> 1 Mb chain; not the 20Mb extra chain and not the coarsened 1Mb",
+    "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/1Mb.npz",
+    "npz_sha256": "1eee356d48a67a6a92733e621c98757a0e824245ba65ecb5393c36bc9b21c670"
+  },
+  "budget_limitation": "the four versions do not share an equal FG budget (1502 / 1902 / 1902 / 2202); the comparison is not equal-cost and all endpoints are budget_not_converged",
+  "candidates": {
+    "200 kb -> 1 Mb": {
+      "frozen_expected_sha256": null,
+      "frozen_match": true,
+      "lineage": "014 random -> 40Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486 -> 500kb 200 -> 200kb 100, then arithmetic-mean coarsening to 1Mb",
+      "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/200kb-to-1Mb/coarsened1Mb.npz",
+      "npz_sha256": "ac7f9f47b8fc0c77c0eb86a178031d3e62d78c28bc95867978b68c5a29662b6a",
+      "own_budget_fg": 2202
+    },
+    "Baseline": {
+      "frozen_expected_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+      "frozen_match": true,
+      "lineage": "014 random -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+      "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+      "npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+      "own_budget_fg": 1502
+    },
+    "Extra levels": {
+      "frozen_expected_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+      "frozen_match": true,
+      "lineage": "014 random -> 20Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+      "npz": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.npz",
+      "npz_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+      "own_budget_fg": 1902
+    },
+    "New chain 1 Mb": {
+      "frozen_expected_sha256": null,
+      "frozen_match": true,
+      "lineage": "014 random -> 40Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+      "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/1Mb.npz",
+      "npz_sha256": "1eee356d48a67a6a92733e621c98757a0e824245ba65ecb5393c36bc9b21c670",
+      "own_budget_fg": 1902
+    },
+    "__chr1_matrix_only__/New chain 200 kb": {
+      "frozen_expected_sha256": "c24ba8eabeac722f09ef5c6a4b6137a62984265e31523493fbb6d0c2954ad1b6",
+      "frozen_match": true,
+      "lineage": "new chain continuation to 500kb 200 -> 200kb 100 (native 200kb grid)",
+      "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/200kb.npz",
+      "npz_sha256": "c24ba8eabeac722f09ef5c6a4b6137a62984265e31523493fbb6d0c2954ad1b6",
+      "own_budget_fg": 2202
+    }
+  },
+  "legacy_consistency_check": {
+    "compared_values": 420,
+    "max_abs_diff": {
+      "baseline/summary_mean_median": 0.0,
+      "extra_levels/summary_mean_median": 0.0,
+      "new_200kb_to_1Mb/summary_mean_median": 0.0,
+      "tsv:baseline/A_mat": 0.0,
+      "tsv:baseline/A_pat": 0.0,
+      "tsv:baseline/B_mat": 0.0,
+      "tsv:baseline/B_pat": 0.0,
+      "tsv:baseline/contrast": 0.0,
+      "tsv:baseline/cross": 0.0,
+      "tsv:baseline/same": 0.0,
+      "tsv:extra_levels/A_mat": 0.0,
+      "tsv:extra_levels/A_pat": 0.0,
+      "tsv:extra_levels/B_mat": 0.0,
+      "tsv:extra_levels/B_pat": 0.0,
+      "tsv:extra_levels/contrast": 0.0,
+      "tsv:extra_levels/cross": 0.0,
+      "tsv:extra_levels/same": 0.0,
+      "tsv:new_200kb_to_1Mb/A_mat": 0.0,
+      "tsv:new_200kb_to_1Mb/A_pat": 0.0,
+      "tsv:new_200kb_to_1Mb/B_mat": 0.0,
+      "tsv:new_200kb_to_1Mb/B_pat": 0.0,
+      "tsv:new_200kb_to_1Mb/contrast": 0.0,
+      "tsv:new_200kb_to_1Mb/cross": 0.0,
+      "tsv:new_200kb_to_1Mb/same": 0.0
+    },
+    "status": "three legacy versions reproduce 052/eval exactly",
+    "tolerance": 1e-12
+  },
+  "metric": "signed Spearman rho (average-tie ranks) on euclidean distances of 1Mb coarse coordinates",
+  "per_version": {
+    "baseline": {
+      "cross": {
+        "max": 0.6423573882141811,
+        "mean": 0.3776082995623037,
+        "median": 0.37422476382968417,
+        "min": 0.19157013847070808,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "difference_same_minus_cross": {
+        "max": 0.48075772983578396,
+        "mean": 0.22726817887678524,
+        "median": 0.2374755652592344,
+        "min": 0.005953624373081778,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "label": "Baseline",
+      "n_undefined_chromosomes": [],
+      "own_budget_fg": 1502,
+      "same": {
+        "max": 0.7924466574412431,
+        "mean": 0.6048764784390889,
+        "median": 0.6212638287229684,
+        "min": 0.42219826727793436,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "tick_label": "Baseline\n5 → 2 → 1 Mb  (1502 FG)"
+    },
+    "extra_levels": {
+      "cross": {
+        "max": 0.6285696494022824,
+        "mean": 0.3847369040948677,
+        "median": 0.40924146141007905,
+        "min": 0.18135838571725493,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "difference_same_minus_cross": {
+        "max": 0.4212652711722428,
+        "mean": 0.24188253603799686,
+        "median": 0.2387687250584274,
+        "min": 0.005224880793079145,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "label": "Extra levels",
+      "n_undefined_chromosomes": [],
+      "own_budget_fg": 1902,
+      "same": {
+        "max": 0.8194646841983995,
+        "mean": 0.6266194401328646,
+        "median": 0.6594392683038721,
+        "min": 0.38365700935746744,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "tick_label": "Extra levels\n20 → 10 → 5 → 2 → 1 Mb  (1902 FG)"
+    },
+    "new_200kb_to_1Mb": {
+      "cross": {
+        "max": 0.6029438333095205,
+        "mean": 0.3646294273472722,
+        "median": 0.3461385563450335,
+        "min": 0.1792112609747269,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "difference_same_minus_cross": {
+        "max": 0.5587593930424206,
+        "mean": 0.22048292785580942,
+        "median": 0.18583404842185433,
+        "min": 0.01209500642017658,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "label": "200 kb -> 1 Mb",
+      "n_undefined_chromosomes": [],
+      "own_budget_fg": 2202,
+      "same": {
+        "max": 0.7960344304283233,
+        "mean": 0.5851123552030816,
+        "median": 0.5586662420268603,
+        "min": 0.32633904363822835,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "tick_label": "200 kb → 1 Mb\nfull new chain 2202 FG, coarsened"
+    },
+    "new_chain_1Mb": {
+      "cross": {
+        "max": 0.5966973304830097,
+        "mean": 0.3990118549594508,
+        "median": 0.3929409027400228,
+        "min": 0.24165942519736341,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "difference_same_minus_cross": {
+        "max": 0.48893113760111245,
+        "mean": 0.1889067566451556,
+        "median": 0.15667262567409582,
+        "min": 0.014126056870343018,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "label": "New chain 1 Mb",
+      "n_undefined_chromosomes": [],
+      "own_budget_fg": 1902,
+      "same": {
+        "max": 0.7737106337384569,
+        "mean": 0.5879186116046063,
+        "median": 0.5733632754683115,
+        "min": 0.3339558808100597,
+        "n_defined": 20,
+        "n_na": 0
+      },
+      "tick_label": "New chain 1 Mb\n40 → 10 → 5 → 2 → 1 Mb  (1902 FG)"
+    }
+  },
+  "reference": {
+    "path": "data/P9016.1m.3dg.gz",
+    "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "use": "read once after all candidate hashes were written; never used for initialization, training, stopping or selection"
+  },
+  "schema": "p9016-round053-four-way-spearman-summary-v1",
+  "scope": "one cell, 20 chromosomes as correlated measurements (observation unit = chromosome, not a biological replicate); no new fitting, no re-optimization, no bootstrap, no significance test, no new null, no R1/R3",
+  "support": {
+    "common_denominator": "all four versions use the identical frozen positions / pair_i / pair_j / common mask; no per-version subsetting",
+    "index_rule": "global_index = offset(chromosome) + bp // 1000000, offset = cumsum(ceil(chromosome_length/1000000))",
+    "n_chromosomes": 20,
+    "n_intra_pairs": 157529,
+    "n_valid_loci": 2447,
+    "sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "source": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz"
+  }
+}

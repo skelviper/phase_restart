@@ -1,0 +1,493 @@
+{
+  "budget": {
+    "deviations": [],
+    "frozen_outer_fg_per_fit": 1502
+  },
+  "manifest": {
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "nulls_new": [
+    {
+      "source_candidate_id": "s0"
+    },
+    {
+      "source_candidate_id": "s1"
+    },
+    {
+      "source_candidate_id": "s2"
+    },
+    {
+      "source_candidate_id": "s3"
+    },
+    {
+      "source_candidate_id": "s4"
+    },
+    {
+      "source_candidate_id": "s5"
+    },
+    {
+      "source_candidate_id": "s6"
+    },
+    {
+      "source_candidate_id": "s7"
+    },
+    {
+      "source_candidate_id": "s8"
+    },
+    {
+      "source_candidate_id": "s9"
+    },
+    {
+      "source_candidate_id": "s10"
+    },
+    {
+      "source_candidate_id": "s11"
+    },
+    {
+      "source_candidate_id": "s12"
+    },
+    {
+      "source_candidate_id": "s13"
+    },
+    {
+      "source_candidate_id": "s14"
+    },
+    {
+      "source_candidate_id": "s15"
+    },
+    {
+      "source_candidate_id": "s16"
+    },
+    {
+      "source_candidate_id": "s17"
+    },
+    {
+      "source_candidate_id": "s18"
+    },
+    {
+      "source_candidate_id": "s19"
+    },
+    {
+      "source_candidate_id": "s20"
+    },
+    {
+      "source_candidate_id": "s21"
+    },
+    {
+      "source_candidate_id": "s22"
+    },
+    {
+      "source_candidate_id": "s23"
+    },
+    {
+      "source_candidate_id": "s24"
+    },
+    {
+      "source_candidate_id": "s25"
+    },
+    {
+      "source_candidate_id": "s26"
+    },
+    {
+      "source_candidate_id": "s27"
+    },
+    {
+      "source_candidate_id": "s28"
+    },
+    {
+      "source_candidate_id": "s29"
+    },
+    {
+      "source_candidate_id": "s30"
+    },
+    {
+      "source_candidate_id": "s31"
+    },
+    {
+      "source_candidate_id": "s32"
+    },
+    {
+      "source_candidate_id": "s33"
+    },
+    {
+      "source_candidate_id": "s34"
+    },
+    {
+      "source_candidate_id": "s35"
+    },
+    {
+      "source_candidate_id": "s36"
+    },
+    {
+      "source_candidate_id": "s37"
+    },
+    {
+      "source_candidate_id": "s38"
+    },
+    {
+      "source_candidate_id": "s39"
+    },
+    {
+      "source_candidate_id": "s40"
+    },
+    {
+      "source_candidate_id": "s41"
+    },
+    {
+      "source_candidate_id": "s42"
+    },
+    {
+      "source_candidate_id": "s43"
+    },
+    {
+      "source_candidate_id": "s44"
+    },
+    {
+      "source_candidate_id": "s45"
+    },
+    {
+      "source_candidate_id": "s46"
+    },
+    {
+      "source_candidate_id": "s47"
+    },
+    {
+      "source_candidate_id": "s48"
+    },
+    {
+      "source_candidate_id": "s49"
+    },
+    {
+      "source_candidate_id": "s50"
+    },
+    {
+      "source_candidate_id": "s51"
+    },
+    {
+      "source_candidate_id": "s52"
+    },
+    {
+      "source_candidate_id": "s53"
+    },
+    {
+      "source_candidate_id": "s54"
+    },
+    {
+      "source_candidate_id": "s55"
+    },
+    {
+      "source_candidate_id": "s56"
+    },
+    {
+      "source_candidate_id": "s57"
+    },
+    {
+      "source_candidate_id": "s58"
+    },
+    {
+      "source_candidate_id": "s59"
+    },
+    {
+      "source_candidate_id": "s60"
+    },
+    {
+      "source_candidate_id": "s61"
+    },
+    {
+      "source_candidate_id": "s62"
+    },
+    {
+      "source_candidate_id": "s63"
+    },
+    {
+      "source_candidate_id": "s64"
+    },
+    {
+      "source_candidate_id": "s65"
+    },
+    {
+      "source_candidate_id": "s66"
+    },
+    {
+      "source_candidate_id": "s67"
+    },
+    {
+      "source_candidate_id": "s68"
+    },
+    {
+      "source_candidate_id": "s69"
+    },
+    {
+      "source_candidate_id": "s70"
+    },
+    {
+      "source_candidate_id": "s71"
+    },
+    {
+      "source_candidate_id": "s72"
+    },
+    {
+      "source_candidate_id": "s73"
+    },
+    {
+      "source_candidate_id": "s74"
+    },
+    {
+      "source_candidate_id": "s75"
+    },
+    {
+      "source_candidate_id": "s76"
+    },
+    {
+      "source_candidate_id": "s77"
+    },
+    {
+      "source_candidate_id": "s78"
+    },
+    {
+      "source_candidate_id": "s79"
+    },
+    {
+      "source_candidate_id": "s80"
+    },
+    {
+      "source_candidate_id": "s81"
+    },
+    {
+      "source_candidate_id": "s82"
+    },
+    {
+      "source_candidate_id": "s83"
+    },
+    {
+      "source_candidate_id": "s84"
+    },
+    {
+      "source_candidate_id": "s85"
+    },
+    {
+      "source_candidate_id": "s86"
+    },
+    {
+      "source_candidate_id": "s87"
+    },
+    {
+      "source_candidate_id": "s88"
+    },
+    {
+      "source_candidate_id": "s89"
+    },
+    {
+      "source_candidate_id": "s90"
+    },
+    {
+      "source_candidate_id": "s91"
+    },
+    {
+      "source_candidate_id": "s92"
+    },
+    {
+      "source_candidate_id": "s93"
+    },
+    {
+      "source_candidate_id": "s94"
+    },
+    {
+      "source_candidate_id": "s95"
+    },
+    {
+      "source_candidate_id": "s96"
+    },
+    {
+      "source_candidate_id": "s97"
+    },
+    {
+      "source_candidate_id": "s98"
+    },
+    {
+      "source_candidate_id": "s99"
+    },
+    {
+      "source_candidate_id": "s100"
+    },
+    {
+      "source_candidate_id": "s101"
+    },
+    {
+      "source_candidate_id": "s102"
+    },
+    {
+      "source_candidate_id": "s103"
+    },
+    {
+      "source_candidate_id": "s104"
+    },
+    {
+      "source_candidate_id": "s105"
+    },
+    {
+      "source_candidate_id": "s106"
+    },
+    {
+      "source_candidate_id": "s107"
+    },
+    {
+      "source_candidate_id": "s108"
+    },
+    {
+      "source_candidate_id": "s109"
+    },
+    {
+      "source_candidate_id": "s110"
+    },
+    {
+      "source_candidate_id": "s111"
+    },
+    {
+      "source_candidate_id": "s112"
+    },
+    {
+      "source_candidate_id": "s113"
+    },
+    {
+      "source_candidate_id": "s114"
+    },
+    {
+      "source_candidate_id": "s115"
+    },
+    {
+      "source_candidate_id": "s116"
+    },
+    {
+      "source_candidate_id": "s117"
+    },
+    {
+      "source_candidate_id": "s118"
+    },
+    {
+      "source_candidate_id": "s119"
+    },
+    {
+      "source_candidate_id": "s120"
+    },
+    {
+      "source_candidate_id": "s121"
+    },
+    {
+      "source_candidate_id": "s122"
+    },
+    {
+      "source_candidate_id": "s123"
+    },
+    {
+      "source_candidate_id": "s124"
+    },
+    {
+      "source_candidate_id": "s125"
+    },
+    {
+      "source_candidate_id": "s126"
+    },
+    {
+      "source_candidate_id": "s127"
+    },
+    {
+      "source_candidate_id": "s128"
+    },
+    {
+      "source_candidate_id": "s129"
+    },
+    {
+      "source_candidate_id": "s130"
+    },
+    {
+      "source_candidate_id": "s131"
+    },
+    {
+      "source_candidate_id": "s132"
+    },
+    {
+      "source_candidate_id": "s133"
+    },
+    {
+      "source_candidate_id": "s134"
+    },
+    {
+      "source_candidate_id": "s135"
+    }
+  ],
+  "nulls_reused_baseline": [
+    {
+      "source_candidate_id": "b0"
+    },
+    {
+      "source_candidate_id": "b1"
+    },
+    {
+      "source_candidate_id": "b2"
+    },
+    {
+      "source_candidate_id": "b3"
+    },
+    {
+      "source_candidate_id": "b4"
+    },
+    {
+      "source_candidate_id": "b5"
+    },
+    {
+      "source_candidate_id": "b6"
+    },
+    {
+      "source_candidate_id": "b7"
+    },
+    {
+      "source_candidate_id": "b8"
+    },
+    {
+      "source_candidate_id": "b9"
+    },
+    {
+      "source_candidate_id": "b10"
+    },
+    {
+      "source_candidate_id": "b11"
+    },
+    {
+      "source_candidate_id": "b12"
+    },
+    {
+      "source_candidate_id": "b13"
+    },
+    {
+      "source_candidate_id": "b14"
+    },
+    {
+      "source_candidate_id": "b15"
+    },
+    {
+      "source_candidate_id": "b16"
+    }
+  ],
+  "selection": {
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "selection_checks": {
+    "display": {
+      "A": {
+        "declared_fit_id": "A-raw-consensus",
+        "recomputed_argmin": "A-raw-consensus",
+        "tied_fit_ids": [
+          "A-raw-consensus"
+        ]
+      }
+    },
+    "source_selection": {
+      "A-raw": {
+        "margin": 1e-10,
+        "rule": "min own count",
+        "selected_source": "consensus"
+      }
+    }
+  }
+}

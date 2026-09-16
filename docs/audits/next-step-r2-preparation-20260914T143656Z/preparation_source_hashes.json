@@ -1,0 +1,42 @@
+{
+  "config": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/next-step-r2-preparation-20260914T143656Z/config.json",
+    "sha256": "42ac885527dff73aba4dbd161f4b10d60bd0e2c39948b4408bc336f6f4aabf4c"
+  },
+  "dependencies": {
+    "legacy_coordinate_parser": {
+      "path": "/mnt/ssd/zliu/phase_restart/pr/allele_r2.py",
+      "sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672"
+    },
+    "r2comparison": {
+      "path": "/mnt/ssd/zliu/phase_restart/pr/r2comparison.py",
+      "sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e"
+    },
+    "real_mask_adapter": {
+      "path": "/mnt/ssd/zliu/phase_restart/docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py",
+      "sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18"
+    },
+    "synthetic_evaluator": {
+      "path": "/mnt/ssd/zliu/phase_restart/pr/allele_calibration_evaluator.py",
+      "sha256": "5d52e40e36731a8b06cf694fd27c6f98374be1d56da574ab580901b76f5a21e4"
+    }
+  },
+  "entry": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/next-step-r2-preparation-20260914T143656Z/r2_entry.py",
+    "sha256": "93fe988bc2393791724974b071376c6cf36913dec3b4ca9dec7eaccb29319fb9"
+  },
+  "old_files_modified": false,
+  "plotter": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/next-step-r2-preparation-20260914T143656Z/plot_next_step_r2.py",
+    "sha256": "9f5f8b0e8f72f1f857806b132d03ee107ad050b7f7713f0697cf6a9590764f33"
+  },
+  "protocol": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/next-step-r2-preparation-20260914T143656Z/r2_protocol.json",
+    "sha256": "12a76ea67058691c321933eb342346bbd85d9d204a8c052ac5c421e955facfe6"
+  },
+  "release_contract": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/next-step-r2-preparation-20260914T143656Z/release_contract.json",
+    "sha256": "faaa7ad7bb346f1a4c03a6b190ff453827bc5fe5d4fa4afd3bc5678ac5417b64"
+  },
+  "schema_version": "p9016-next-step-r2-preparation-source-hashes-v1"
+}

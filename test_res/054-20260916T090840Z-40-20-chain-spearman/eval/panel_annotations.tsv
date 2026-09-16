@@ -1,0 +1,7 @@
+column_index	column	candidate_key	row_index	row	displayed_copy	matched_reference_copy	spearman_same_single_copy	spearman_cross_single_copy	chr1_two_copy_mean_same	chr1_two_copy_mean_cross	chr1_best_swap
+2	Extra 20→10→5→2→1 Mb	extra_levels	1	matched to reference mat	copyB	mat	0.770546	0.446602	0.819465	0.418340	swapped
+3	Shared chain 40→20→10→5→2→1 Mb	chain_1Mb	1	matched to reference mat	copyA	mat	0.574769	0.655707	0.602788	0.558673	direct
+4	Full chain 200 kb → 1 Mb	chain_coarse_1Mb	1	matched to reference mat	copyA	mat	0.547184	0.612185	0.584482	0.525920	direct
+2	Extra 20→10→5→2→1 Mb	extra_levels	2	matched to reference pat	copyA	pat	0.868384	0.390077	0.819465	0.418340	swapped
+3	Shared chain 40→20→10→5→2→1 Mb	chain_1Mb	2	matched to reference pat	copyB	pat	0.630806	0.461639	0.602788	0.558673	direct
+4	Full chain 200 kb → 1 Mb	chain_coarse_1Mb	2	matched to reference pat	copyB	pat	0.621781	0.439655	0.584482	0.525920	direct

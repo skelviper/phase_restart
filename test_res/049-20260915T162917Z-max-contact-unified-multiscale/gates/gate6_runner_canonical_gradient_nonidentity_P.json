@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-09-15T16:38:53.890738+00:00",
+  "evidence": {
+    "canonical_fd_directional_analytic": 0.06866281463810903,
+    "canonical_fd_directional_numeric": 0.06866281454520617,
+    "canonical_fd_relative_error": 1.3530300599140784e-09,
+    "checkpoint_count": 4,
+    "checkpoint_optimizer_theta_roundtrip_max_abs": 3.3306690738754696e-16,
+    "checkpoint_raw_y_sphere_vs_coordinates_max_abs": 1.1102230246251565e-16,
+    "history_reported_canonical_max_abs": 0.07941245884191635,
+    "independent_base_gradient_max_abs_diff": 3.469446951953614e-17,
+    "independent_base_value_abs_diff": 0.0,
+    "independent_check": "base.value_and_grad(canonical_raw_theta) at the same physical point",
+    "maxfun": 6,
+    "nfev": 6,
+    "optimizer_gradient_max_abs": 0.10965085553776346,
+    "optimizer_vs_canonical_relative": 0.5732776121646634,
+    "reported_canonical_gradient_max_abs": 0.07941245884191635,
+    "result_y_sphere_vs_coordinates_max_abs": 1.1102230246251565e-16,
+    "result_y_vs_raw_unpack_max_abs": 0.0,
+    "terminal_reason": "fg_budget_exhausted"
+  },
+  "gate": "gate6_runner_canonical_gradient_nonidentity_P",
+  "status": "PASS"
+}

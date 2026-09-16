@@ -1,0 +1,40 @@
+{
+  "schema_version": "p9016-multires-r2-mask-lock-v1",
+  "status": "published_mask_metadata_reference",
+  "manifest_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+  "manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+  "condition_count": 21,
+  "new_endpoint_inclusion": false,
+  "pair_definition": "unordered upper-triangle off-diagonal pairs on numeric bp grid",
+  "position_rule": "range(3000000, chromosome_length_bp, 1000000)",
+  "distance_dtype": "float64",
+  "expected_by_chromosome": [
+    {"chromosome": "chr1", "n_bins": 193, "n_total_non_diagonal_pairs": 18528, "n_common_pairs": 17578},
+    {"chromosome": "chr2", "n_bins": 180, "n_total_non_diagonal_pairs": 16110, "n_common_pairs": 14878},
+    {"chromosome": "chr3", "n_bins": 158, "n_total_non_diagonal_pairs": 12403, "n_common_pairs": 12090},
+    {"chromosome": "chr4", "n_bins": 154, "n_total_non_diagonal_pairs": 11781, "n_common_pairs": 10731},
+    {"chromosome": "chr5", "n_bins": 149, "n_total_non_diagonal_pairs": 11026, "n_common_pairs": 10296},
+    {"chromosome": "chr6", "n_bins": 147, "n_total_non_diagonal_pairs": 10731, "n_common_pairs": 10585},
+    {"chromosome": "chr7", "n_bins": 143, "n_total_non_diagonal_pairs": 10153, "n_common_pairs": 8128},
+    {"chromosome": "chr8", "n_bins": 127, "n_total_non_diagonal_pairs": 8001, "n_common_pairs": 7503},
+    {"chromosome": "chr9", "n_bins": 122, "n_total_non_diagonal_pairs": 7381, "n_common_pairs": 7021},
+    {"chromosome": "chr10", "n_bins": 128, "n_total_non_diagonal_pairs": 8128, "n_common_pairs": 7875},
+    {"chromosome": "chr11", "n_bins": 120, "n_total_non_diagonal_pairs": 7140, "n_common_pairs": 7021},
+    {"chromosome": "chr12", "n_bins": 118, "n_total_non_diagonal_pairs": 6903, "n_common_pairs": 5995},
+    {"chromosome": "chr13", "n_bins": 118, "n_total_non_diagonal_pairs": 6903, "n_common_pairs": 6328},
+    {"chromosome": "chr14", "n_bins": 122, "n_total_non_diagonal_pairs": 7381, "n_common_pairs": 5778},
+    {"chromosome": "chr15", "n_bins": 102, "n_total_non_diagonal_pairs": 5151, "n_common_pairs": 4753},
+    {"chromosome": "chr16", "n_bins": 96, "n_total_non_diagonal_pairs": 4560, "n_common_pairs": 4278},
+    {"chromosome": "chr17", "n_bins": 92, "n_total_non_diagonal_pairs": 4186, "n_common_pairs": 3916},
+    {"chromosome": "chr18", "n_bins": 88, "n_total_non_diagonal_pairs": 3828, "n_common_pairs": 3741},
+    {"chromosome": "chr19", "n_bins": 59, "n_total_non_diagonal_pairs": 1711, "n_common_pairs": 1653},
+    {"chromosome": "chrX", "n_bins": 169, "n_total_non_diagonal_pairs": 14196, "n_common_pairs": 7381}
+  ],
+  "reconstruction_rule": {
+    "historical_inputs_only": true,
+    "new_candidates_are_evaluation_only": true,
+    "reference_columns": ["chrN(mat)", "chrN(pat)"],
+    "compare_expected_counts_before_evaluation": true,
+    "failure_action": "abort rather than silently choose a new mask"
+  }
+}

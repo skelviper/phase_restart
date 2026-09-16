@@ -1,0 +1,203 @@
+{
+  "schema_version": "p9016-multires-r2-protocol-v1",
+  "status": "frozen_preparation_pending_release",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one P9016 cell; 20 linked chromosome measurements; not biological replicates",
+    "endpoint_count": 10,
+    "variant_ids": ["C0", "C1", "C2-map", "C2-free", "C3"],
+    "source_ids": ["consensus_joint_base1103", "random_joint_base2207"],
+    "main_training_backend": "GPU",
+    "main_endpoint_backend": "GPU",
+    "main_endpoint_count": 10,
+    "cpu_anchor_policy": "020 and 033 CPU outputs are historical anchors/diagnostics only; neither is a GPU endpoint or biological replicate",
+    "cpu_034_role": "stopped_or_terminating_legacy_attempt; never a release input for the unified GPU run",
+    "gpu_training_plan": "all 5 variants x 2 sources x 3 layers = 30 stages, each restarted from the original 014 source",
+    "current_status": "GPU_uniform_30_stage_plan_pending_controller_terminal_release",
+    "prepared_only": true,
+    "evaluation_not_run": true,
+    "fit_called": false,
+    "native_called": false
+  },
+  "training_definition": {
+    "main_training_backend": "GPU",
+    "main_endpoint_backend": "GPU",
+    "gpu_training_plan": "all 5 variants x 2 sources x 3 layers = 30 stages, each restarted from the original 014 source",
+    "input_record_count": 1703888,
+    "source_origin": "original 014 consensus_joint(base1103)/random_joint(base2207) raw blind source; both are two-copy initialization sources for 40-track endpoints",
+    "all_new_endpoints_n_copies": 2,
+    "consensus_joint_is_initialization_not_single_copy_baseline": true,
+    "phase_fields_forbidden": ["phase0", "phase1", "phase_prob00", "phase_prob01", "phase_prob10", "phase_prob11"],
+    "reference_forbidden_during_training": true,
+    "tracks": 40,
+    "chromosomes": 20,
+    "origin_bp": 0,
+    "final_resolution_bp": 1000000,
+    "final_physical_beads": 5290,
+    "resolution_schedule": [
+      {"resolution_bp": 5000000, "iterations": 300},
+      {"resolution_bp": 2000000, "iterations": 200},
+      {"resolution_bp": 1000000, "iterations": 240}
+    ],
+    "layer_policy": {
+      "first_layer_p": 0.75,
+      "later_layers": "carryq"
+    },
+    "variant_policy": "each variant runs both original blind sources through all three layers",
+    "c0_gate_policy": "GPU C0 two-track numeric no-reference gate before the remaining 24 GPU stage attempts; CPU 033/020 gates remain independent historical anchors and are not the GPU C0 group",
+    "backend_policy": {
+      "main_backend": "GPU",
+      "all_main_endpoints_same_backend": true,
+      "cpu_033_and_cpu_020_are_historical_anchors": true,
+      "cpu_backend_difference_is_diagnostic_only": true,
+      "cpu_gpu_bitwise_identity_required": false,
+      "decision_reason": "028 historical scoped benchmark was approximately 3504 s on CPU versus 58.9 s on GPU; the main 30-stage experiment therefore uses one GPU backend, while CPU/GPU endpoint differences are diagnosed rather than used as a rejection threshold",
+      "gpu_selection_schema": "gpu-multires-selection-v1",
+      "gpu_terminal_schema": "gpu-multires-terminal-evidence-v1",
+      "gpu_schema_reference": "test_res/035-20260914T060945Z-gpu-multires-preflight/source/gpu_multires_controller.py",
+      "gpu_schema_reference_sha256": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+      "gpu_formal_output_path": "test_res/036-20260914T064651Z-gpu-multires",
+      "gpu_preflight_required_checks": ["cuda_target_visible", "float64_value_gradient_parity", "protocol_consistency", "gpu_c0_training_complete"],
+      "cpu_byte_identity_required": false,
+      "cpu_r2_match_required": false,
+      "gpu_controller_schema": "pending_child_terminal_release"
+    },
+    "endpoint_selection": {
+      "criterion": "count_nll_per_record",
+      "reported_field_alias": "final count_nll_normalized",
+      "scope": "within_variant_between_two_sources_only",
+      "reference_allowed": false,
+      "r2_allowed": false,
+      "sources_are_iid_seeds": false,
+      "sources_are_biological_replicates": false,
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "tie_tolerance_per_record": 1e-9,
+      "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+      "tie_action": "choose the first source in the pre-registered order among values within 1e-9 of the minimum"
+    }
+  },
+  "evaluation_definition": {
+    "metric_name": "Spearman-derived R2 geometry readout; not statistical R-squared",
+    "positions": "range(3000000, chromosome_length_bp, 1000000)",
+    "genomic_join": "numeric chromosome plus integer base-pair coordinate",
+    "dtype": "float64",
+    "pair_scope": "unordered upper-triangle off-diagonal pairs",
+    "common_mask": {
+      "policy": "reuse the published 029 21-condition common mask exactly",
+      "condition_count": 21,
+      "mask_source_manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+      "new_endpoints_enter_mask": false,
+      "scope_can_shrink_for_new_endpoint": false,
+      "mask_reconstruction": "reconstruct pair indices from the locked 21 historical inputs after release hash checks; compare all 20 expected pair counts"
+    },
+    "reference_columns": ["mat", "pat"],
+    "raw_four_rho": ["rho_A_mat", "rho_A_pat", "rho_B_mat", "rho_B_pat"],
+    "orientation": {
+      "direct": ["A_mat", "A_pat", "B_mat", "B_pat"],
+      "swapped": ["B_mat", "B_pat", "A_mat", "A_pat"],
+      "selection": "one whole-chromosome candidate best-swap by larger matched geometry",
+      "tie_tolerance": 1e-12,
+      "tie_result": "unresolved; contrast=0; named margins n/a; no both-positive credit"
+    },
+    "derived_metrics": {
+      "matched": "(a+d)/2",
+      "cross": "(b+c)/2",
+      "contrast": "matched-cross",
+      "margin_mat": "a-b",
+      "margin_pat": "d-c",
+      "minmargin": "min(margin_mat, margin_pat)"
+    },
+    "na_rules": {
+      "minimum_common_pairs": 20,
+      "nonfinite_rho_or_distance": "n/a",
+      "constant_candidate_or_reference_distance": "n/a",
+      "missing_one_copy": "all four-rho two-copy metrics n/a; never average one valid copy",
+      "unresolved_tie": "named margins n/a and no both-positive credit",
+      "n_a_retained_in_tables_and_plot_labels": true
+    },
+    "selection_policy": "R2 reads the locked training count selection; it never recomputes or changes representative selection",
+    "uncertainty_policy": "no p-values, confidence intervals, or new hypothesis tests in this boxplot deliverable"
+  },
+  "plot_definition": {
+    "metrics": ["matched", "cross", "contrast", "minmargin"],
+    "condition_order": ["C0", "C1", "C2-map", "C2-free", "C3"],
+    "main_condition_order": ["C0", "C1", "C2-map", "C2-free", "C3", "020 / C0 CPU"],
+    "source_condition_order": ["C0", "C1", "C2-map", "C2-free", "C3"],
+    "main": "five GPU count-selected representatives plus one gray historical CPU anchor labeled 020 / C0 CPU; the anchor is not a GPU endpoint",
+    "supplement": "consensus_joint_base1103 and random_joint_base2207 strata for the five GPU conditions only",
+    "historical_cpu_anchor": {
+      "label": "020 / C0 CPU",
+      "style": "gray",
+      "role": "historical same-mask diagnostic anchor, not a biological replicate and not a GPU selection input",
+      "source": "published 020 v1_original_random_joint parity plus locked CPU C0 context",
+      "included_in_gpu_source_strata": false
+    },
+    "paired_delta": "within each source and chromosome, variant endpoint minus C0 endpoint for all four metrics",
+    "observation_note": "20 points are linked measurements from one cell, not biological replicates",
+    "figure": {
+      "base_panel_inches": 3.0,
+      "layout": "2x2",
+      "dpi": 300,
+      "font_size_pt": 7,
+      "condition_palette": "Okabe-Ito colorblind-friendly",
+      "zero_line": "draw where applicable",
+      "bbox_policy": "explicit margins; do not crop text; no overlapping labels",
+      "distance_colormap": "not applicable; no new distance heatmap"
+    }
+  },
+  "release_gate": {
+    "reference_path": "data/P9016.1m.3dg.gz",
+    "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "reference_read_rule": "only after every candidate coordinate, historical mask input, selection, terminal, source, code, and protocol hash is locked",
+    "required_proofs": [
+      "all 10 GPU endpoint paths and SHA256 values or explicit terminal failure records",
+      "source identifiers and source input/snapshot hashes for both blind sources",
+      "complete terminal evidence for all 10 GPU training endpoints",
+      "train-only count_nll_per_record (reported as final count_nll_normalized) selection proof for all five GPU variants",
+      "GPU C0 two-track numeric no-reference gate PASS",
+      "source/code/protocol/mask hashes"
+    ],
+    "read_boundary": {
+      "prepare_mode_opens": ["preparation config/protocol/release template and published mask metadata only"],
+      "prepare_mode_does_not_open": ["new coordinates", "reference 3DG", "pairs/rawphase", "native engine"],
+      "evaluation_mode_parses_reference_after_hash_lock": true
+    }
+  },
+  "post_release_acceptance": {
+    "status": "future_after_hash_gate",
+    "purpose": "prove the new GPU implementation preserved the same 029 common mask and historical 020 random R2 readout; compare GPU C0 to CPU history only as a non-blocking diagnostic",
+    "legacy_code_path": "pr/allele_r2.py",
+    "legacy_code_sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672",
+    "legacy_common_mask_path": "pr/r2comparison.py",
+    "legacy_common_mask_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+    "legacy_coordinate_parser": "pr.allele_r2._load_coordinates",
+    "legacy_common_mask_builder": "pr.r2comparison.build_common_mask",
+    "mask_comparison": {
+      "fields": ["positions", "pair_i", "pair_j", "common"],
+      "comparison": "exact array equality per chromosome, not pair-count equality"
+    },
+    "published_r2_parity": {
+      "table_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.tsv",
+      "table_sha256": "5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1",
+      "condition_id": "v1_original_random_joint",
+      "numeric_fields": ["rho_A_mat", "rho_A_pat", "rho_B_mat", "rho_B_pat", "direct_original", "cross_original", "matched", "cross", "contrast", "margin_mat", "margin_pat", "minmargin"],
+      "atol": 1e-12,
+      "raw_020_evaluation_table_allowed": false
+    },
+    "c0_rule": "compare the locked GPU C0 representative to the historical CPU 020 random readout only as a CPU-GPU diagnostic; a numeric difference is non-blocking and must never reject GPU training or GPU label-free selection",
+    "gpu_cpu_diagnostic": {
+      "status": "required_non_blocking_diagnostic",
+      "comparison": "GPU C0 selected representative versus historical CPU 020 / C0 anchor under the same frozen mask",
+      "reject_on_difference": false,
+      "may_affect_gpu_selection": false,
+      "may_affect_gpu_training_acceptance": false
+    }
+  },
+  "provenance_basis": {
+    "audited_allele_r2_sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672",
+    "published_mask_manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+    "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+  }
+}

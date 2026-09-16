@@ -1,0 +1,554 @@
+{
+  "schema": "p9016-3dg-comparison-metrics-v1",
+  "generated_utc": "2026-09-16T06:25:39Z",
+  "wall_time_seconds": 1.001,
+  "command": [
+    "/mnt/ssd/zliu/phase_restart/scripts/plot_3dg_comparison.py",
+    "test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.3dg",
+    "data/P9016.1m.3dg.gz",
+    "--mask",
+    "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "--candidate-id",
+    "baseline-046-G-full-J",
+    "--outdir",
+    "test_res/051-20260916_142401-oracle-vs-baseline-chr1-matrix/baseline_vs_reference"
+  ],
+  "candidate": {
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.3dg",
+    "sha256": "4301d4df6e89c1417690599d6687a9e83b18fa37596de5d6c11a911d867d69ea"
+  },
+  "reference": {
+    "path": "/mnt/ssd/zliu/phase_restart/data/P9016.1m.3dg.gz"
+  },
+  "chromosome": "chr1",
+  "resolution": 1000000,
+  "mask": {
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "n_positions": 193,
+    "n_common_pairs": 17578,
+    "n_total_pairs": 18528
+  },
+  "orientation": {
+    "requested": "auto",
+    "used": "swapped",
+    "direct_score": 0.4011458720949119,
+    "swapped_score": 0.6971567075146266
+  },
+  "alignment": {
+    "aligned": true,
+    "method": "per-chromosome copy correspondence by Pearson of intra-copy distances (direct/swapped mean, tie/unresolved -> direct), then one global Kabsch rotation fitted on all corresponding display coordinates; det=+1, no mirror, no rescale, no per-chromosome or per-copy rotation, no translation (whole-cell origin fixed)",
+    "det_rotation": 1.0000000000000009,
+    "rotation_matrix": [
+      [
+        0.5873500076877531,
+        0.33916849156453716,
+        -0.7348365143343336
+      ],
+      [
+        -0.5149215322380624,
+        0.8570883817723691,
+        -0.015978781819283576
+      ],
+      [
+        0.624400339611377,
+        0.3877682815299091,
+        0.6780560269863685
+      ]
+    ],
+    "total_fit_points": 4947,
+    "chromosomes": [
+      {
+        "chromosome": "chr1",
+        "n_common_positions": 188,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.39795349183280493,
+          "A_pat": 0.7938322624699814,
+          "B_mat": 0.6004811525592716,
+          "B_pat": 0.40433825235701887
+        },
+        "fit_points": 379
+      },
+      {
+        "chromosome": "chr2",
+        "n_common_positions": 173,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.5239612019751361,
+          "A_pat": 0.39186491102170984,
+          "B_mat": 0.5102212272881492,
+          "B_pat": 0.6800436988593865
+        },
+        "fit_points": 349
+      },
+      {
+        "chromosome": "chr3",
+        "n_common_positions": 156,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.38726039136747664,
+          "A_pat": 0.40048255784188364,
+          "B_mat": 0.4954238874949163,
+          "B_pat": 0.5041248092328121
+        },
+        "fit_points": 313
+      },
+      {
+        "chromosome": "chr4",
+        "n_common_positions": 147,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.43391565011934646,
+          "A_pat": 0.5247524569628945,
+          "B_mat": 0.7203996109986311,
+          "B_pat": 0.47642369887792496
+        },
+        "fit_points": 296
+      },
+      {
+        "chromosome": "chr5",
+        "n_common_positions": 144,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.6934041183553693,
+          "A_pat": 0.588630294257955,
+          "B_mat": 0.623383235790559,
+          "B_pat": 0.6270881042666551
+        },
+        "fit_points": 289
+      },
+      {
+        "chromosome": "chr6",
+        "n_common_positions": 146,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.37207334439207496,
+          "A_pat": 0.2829732074183378,
+          "B_mat": 0.5955423703223075,
+          "B_pat": 0.29198922344568434
+        },
+        "fit_points": 293
+      },
+      {
+        "chromosome": "chr7",
+        "n_common_positions": 128,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.22080920333385157,
+          "A_pat": 0.6492796494160944,
+          "B_mat": 0.5662542328329787,
+          "B_pat": 0.34779673444515136
+        },
+        "fit_points": 260
+      },
+      {
+        "chromosome": "chr8",
+        "n_common_positions": 123,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.28630652814889773,
+          "A_pat": 0.7141668898638357,
+          "B_mat": 0.5445633083715435,
+          "B_pat": 0.46071908986123994
+        },
+        "fit_points": 247
+      },
+      {
+        "chromosome": "chr9",
+        "n_common_positions": 119,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.42877285921635044,
+          "A_pat": 0.2809838126731725,
+          "B_mat": 0.33105497676480644,
+          "B_pat": 0.7782323789152026
+        },
+        "fit_points": 240
+      },
+      {
+        "chromosome": "chr10",
+        "n_common_positions": 126,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.3134825321417682,
+          "A_pat": 0.7977963309099355,
+          "B_mat": 0.7139029475666541,
+          "B_pat": 0.404701996392545
+        },
+        "fit_points": 254
+      },
+      {
+        "chromosome": "chr11",
+        "n_common_positions": 119,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.550549546623446,
+          "A_pat": 0.7908218850474101,
+          "B_mat": 0.633974883222367,
+          "B_pat": 0.35810501678379697
+        },
+        "fit_points": 238
+      },
+      {
+        "chromosome": "chr12",
+        "n_common_positions": 110,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.6176101985858663,
+          "A_pat": 0.3358534455385564,
+          "B_mat": 0.2523865380015866,
+          "B_pat": 0.478367199684656
+        },
+        "fit_points": 225
+      },
+      {
+        "chromosome": "chr13",
+        "n_common_positions": 113,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.7456379096538925,
+          "A_pat": 0.47906417551569064,
+          "B_mat": 0.46165674175034516,
+          "B_pat": 0.6450303213744261
+        },
+        "fit_points": 228
+      },
+      {
+        "chromosome": "chr14",
+        "n_common_positions": 108,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.7668739697817482,
+          "A_pat": 0.34039809321332976,
+          "B_mat": 0.3280753147490589,
+          "B_pat": 0.8299959620275065
+        },
+        "fit_points": 221
+      },
+      {
+        "chromosome": "chr15",
+        "n_common_positions": 98,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.404006709809312,
+          "A_pat": 0.6648524101951074,
+          "B_mat": 0.5809134410778171,
+          "B_pat": 0.28078474839550865
+        },
+        "fit_points": 199
+      },
+      {
+        "chromosome": "chr16",
+        "n_common_positions": 93,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.19037110394433396,
+          "A_pat": 0.510569778802122,
+          "B_mat": 0.2898990292294759,
+          "B_pat": 0.4766357083290103
+        },
+        "fit_points": 187
+      },
+      {
+        "chromosome": "chr17",
+        "n_common_positions": 89,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.5126271637351817,
+          "A_pat": 0.1940860989889289,
+          "B_mat": 0.12837910889988596,
+          "B_pat": 0.72314906655048
+        },
+        "fit_points": 181
+      },
+      {
+        "chromosome": "chr18",
+        "n_common_positions": 87,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.5028025162022836,
+          "A_pat": 0.29058775759412875,
+          "B_mat": 0.11082034717088057,
+          "B_pat": 0.3741909682281322
+        },
+        "fit_points": 174
+      },
+      {
+        "chromosome": "chr19",
+        "n_common_positions": 58,
+        "orientation": "swapped",
+        "copy_pairs": [
+          [
+            "copyA",
+            "pat"
+          ],
+          [
+            "copyB",
+            "mat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.25233844245642173,
+          "A_pat": 0.6325286156854101,
+          "B_mat": 0.21616979360430566,
+          "B_pat": 0.21752735818335028
+        },
+        "fit_points": 116
+      },
+      {
+        "chromosome": "chrX",
+        "n_common_positions": 122,
+        "orientation": "direct",
+        "copy_pairs": [
+          [
+            "copyA",
+            "mat"
+          ],
+          [
+            "copyB",
+            "pat"
+          ]
+        ],
+        "computed_pearson_rho": {
+          "A_mat": 0.7869335394990618,
+          "A_pat": 0.4441931145060793,
+          "B_mat": 0.46453104196952044,
+          "B_pat": 0.658940088547176
+        },
+        "fit_points": 258
+      }
+    ]
+  },
+  "paired_pearson": {
+    "matched": 0.6971567075146266,
+    "cross": 0.4011458720949119,
+    "contrast": 0.2960108354197146,
+    "A_mat": 0.39795349183280493,
+    "A_pat": 0.7938322624699814,
+    "B_mat": 0.6004811525592716,
+    "B_pat": 0.40433825235701887
+  },
+  "paired_spearman": {
+    "A_mat": 0.41913897447597237,
+    "A_pat": 0.7836267347801594,
+    "B_mat": 0.6034256806113949,
+    "B_pat": 0.4421568379751021
+  },
+  "matrix": {
+    "n_positions": 193,
+    "n_common_pairs": 17578,
+    "n_total_pairs": 18528,
+    "group_scale_raw_median": [
+      1.421527990617571,
+      0.2806495667161248
+    ],
+    "color_limits": [
+      0.0,
+      2.687499791376202
+    ],
+    "panel_labels": [
+      "Reference mat",
+      "Reference pat",
+      "Candidate copyB -> mat",
+      "Candidate copyA -> pat"
+    ]
+  },
+  "scatter": {
+    "union_grid_per_dataset": 5290,
+    "finite_reference": 4947,
+    "finite_candidate": 5290,
+    "whole_cell_rms": [
+      3.4414679534567796,
+      0.5469217246635067
+    ],
+    "axis_limits": [
+      -1.8867124656916023,
+      1.72421763027705
+    ]
+  },
+  "outputs": {
+    "matrix_png": "/mnt/ssd/zliu/phase_restart/test_res/051-20260916_142401-oracle-vs-baseline-chr1-matrix/baseline_vs_reference/plots/chr1_1Mb_distance_matrix.png",
+    "scatter_png": "/mnt/ssd/zliu/phase_restart/test_res/051-20260916_142401-oracle-vs-baseline-chr1-matrix/baseline_vs_reference/plots/whole_genome_1Mb_3d_scatter.png",
+    "metrics_json": "/mnt/ssd/zliu/phase_restart/test_res/051-20260916_142401-oracle-vs-baseline-chr1-matrix/baseline_vs_reference/metrics.json"
+  }
+}

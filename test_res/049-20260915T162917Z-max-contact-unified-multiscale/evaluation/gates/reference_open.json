@@ -1,0 +1,199 @@
+{
+  "authorization": "父侧授权（原文）：所有正式端点已封存。父侧已独立读formal_terminal/manifest/selection/schema_selfcheck：12/12各1502 FG且budget_not_converged，共18024；15records(12fit+2initial+baseline)齐全，schema problems=[]，reference_opened=false。现在授权执行完整评价阶段 (manifest sha256 9f33395a441adde695c53b57c35ae92f59f6b005f00212376166cd317511c03c, selection sha256 c5d382b374d629da67091f3638336fb591eae73965e74eed11d650b5a084dc2b)",
+  "expected_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+  "finite_loci": 4947,
+  "gate_path": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/gates/pre_reference_gate.json",
+  "gate_sha256_at_open": "76a146221f70a6dd38f0669ccdbd9234b380b0ad3edd66723e14d2a0b6cb71c4",
+  "nonfinite_loci": 343,
+  "open_attempt_count": 2,
+  "per_chromosome_finite": [
+    {
+      "chromosome": "chr1",
+      "finite_copy_a_or_mat": 189,
+      "finite_copy_b_or_pat": 190,
+      "positions": 196
+    },
+    {
+      "chromosome": "chr2",
+      "finite_copy_a_or_mat": 175,
+      "finite_copy_b_or_pat": 174,
+      "positions": 183
+    },
+    {
+      "chromosome": "chr3",
+      "finite_copy_a_or_mat": 156,
+      "finite_copy_b_or_pat": 157,
+      "positions": 161
+    },
+    {
+      "chromosome": "chr4",
+      "finite_copy_a_or_mat": 148,
+      "finite_copy_b_or_pat": 148,
+      "positions": 157
+    },
+    {
+      "chromosome": "chr5",
+      "finite_copy_a_or_mat": 144,
+      "finite_copy_b_or_pat": 145,
+      "positions": 152
+    },
+    {
+      "chromosome": "chr6",
+      "finite_copy_a_or_mat": 146,
+      "finite_copy_b_or_pat": 147,
+      "positions": 150
+    },
+    {
+      "chromosome": "chr7",
+      "finite_copy_a_or_mat": 129,
+      "finite_copy_b_or_pat": 131,
+      "positions": 146
+    },
+    {
+      "chromosome": "chr8",
+      "finite_copy_a_or_mat": 124,
+      "finite_copy_b_or_pat": 123,
+      "positions": 130
+    },
+    {
+      "chromosome": "chr9",
+      "finite_copy_a_or_mat": 120,
+      "finite_copy_b_or_pat": 120,
+      "positions": 125
+    },
+    {
+      "chromosome": "chr10",
+      "finite_copy_a_or_mat": 127,
+      "finite_copy_b_or_pat": 127,
+      "positions": 131
+    },
+    {
+      "chromosome": "chr11",
+      "finite_copy_a_or_mat": 119,
+      "finite_copy_b_or_pat": 119,
+      "positions": 123
+    },
+    {
+      "chromosome": "chr12",
+      "finite_copy_a_or_mat": 110,
+      "finite_copy_b_or_pat": 115,
+      "positions": 121
+    },
+    {
+      "chromosome": "chr13",
+      "finite_copy_a_or_mat": 113,
+      "finite_copy_b_or_pat": 115,
+      "positions": 121
+    },
+    {
+      "chromosome": "chr14",
+      "finite_copy_a_or_mat": 109,
+      "finite_copy_b_or_pat": 112,
+      "positions": 125
+    },
+    {
+      "chromosome": "chr15",
+      "finite_copy_a_or_mat": 98,
+      "finite_copy_b_or_pat": 101,
+      "positions": 105
+    },
+    {
+      "chromosome": "chr16",
+      "finite_copy_a_or_mat": 93,
+      "finite_copy_b_or_pat": 94,
+      "positions": 99
+    },
+    {
+      "chromosome": "chr17",
+      "finite_copy_a_or_mat": 89,
+      "finite_copy_b_or_pat": 92,
+      "positions": 95
+    },
+    {
+      "chromosome": "chr18",
+      "finite_copy_a_or_mat": 87,
+      "finite_copy_b_or_pat": 87,
+      "positions": 91
+    },
+    {
+      "chromosome": "chr19",
+      "finite_copy_a_or_mat": 58,
+      "finite_copy_b_or_pat": 58,
+      "positions": 62
+    },
+    {
+      "chromosome": "chrX",
+      "finite_copy_a_or_mat": 126,
+      "finite_copy_b_or_pat": 132,
+      "positions": 172
+    }
+  ],
+  "phase_columns_read": false,
+  "previous_attempts": [
+    {
+      "attempt": null,
+      "error": null,
+      "started_utc": null,
+      "status": "opened"
+    }
+  ],
+  "reference_first_opened_utc": "2026-09-15T17:30:15.548703+00:00",
+  "reference_path": "/mnt/ssd/zliu/phase_restart/data/P9016.1m.3dg.gz",
+  "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+  "rows": 5290,
+  "schema": "p9016-049-reference-open-record-v1",
+  "status": "opened",
+  "this_attempt_started_utc": "2026-09-15T17:31:59.191378+00:00",
+  "track_audit": {
+    "found_track_count": 40,
+    "found_tracks": [
+      "chr1(mat)",
+      "chr1(pat)",
+      "chr2(mat)",
+      "chr2(pat)",
+      "chr3(mat)",
+      "chr3(pat)",
+      "chr4(mat)",
+      "chr4(pat)",
+      "chr5(mat)",
+      "chr5(pat)",
+      "chr6(mat)",
+      "chr6(pat)",
+      "chr7(mat)",
+      "chr7(pat)",
+      "chr8(mat)",
+      "chr8(pat)",
+      "chr9(mat)",
+      "chr9(pat)",
+      "chr10(mat)",
+      "chr10(pat)",
+      "chr11(mat)",
+      "chr11(pat)",
+      "chr12(mat)",
+      "chr12(pat)",
+      "chr13(mat)",
+      "chr13(pat)",
+      "chr14(mat)",
+      "chr14(pat)",
+      "chr15(mat)",
+      "chr15(pat)",
+      "chr16(mat)",
+      "chr16(pat)",
+      "chr17(mat)",
+      "chr17(pat)",
+      "chr18(mat)",
+      "chr18(pat)",
+      "chr19(mat)",
+      "chr19(pat)",
+      "chrX(mat)",
+      "chrX(pat)"
+    ],
+    "missing_track_count": 0,
+    "missing_tracks": [],
+    "nonfinite_loci": 343,
+    "total_loci": 5290,
+    "track_mode": "reference"
+  },
+  "track_mode": "reference",
+  "tracks": 40
+}

@@ -1,0 +1,234 @@
+{
+  "all_visible_text_inside": true,
+  "all_visible_text_nonoverlap": true,
+  "coordinates_reopened": false,
+  "figures": [
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "v1_original_random_joint",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "v1_original_random_joint",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/020_historical_selected_chr1_distance_matrices.pdf",
+      "pdf_sha256": "2ed33b8430e78326805fb4720702d7b5775dfcd6697b3ada847e2abdefcc8449",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/020_historical_selected_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "cfb874fdfe7daae0310653f5ba2e1e4b01209ea153839699e22940f5a3c97469",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "v1_continuation",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "v1_continuation",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/022_historical_continuation_chr1_distance_matrices.pdf",
+      "pdf_sha256": "544d2cf821f3b295145b8703010bed2dd899929296bc7bee8d2de1f209b9bf3d",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/022_historical_continuation_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "aa446e79a0f1fe954d0a9b90f353996a4a085d6b092670e39f30e79d98fde497",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "C0_bundle1",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "C0_bundle1",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle1_seed_chr1_distance_matrices.pdf",
+      "pdf_sha256": "86054f0eef6449b594a10aeaa73b7c7f899049c064e271d7ad29b4f3d960caa7",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle1_seed_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "4366fdac9f874bc06081e594a6116bb69fdf547ae39d9f9fec4af2120f753fc0",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "C0_bundle2",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "C0_bundle2",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle2_seed_chr1_distance_matrices.pdf",
+      "pdf_sha256": "b6eb13138ae4cd83b306bfb8d19ca5b3bde98bc67de804c6def78cbe16d2ada3",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle2_seed_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "27c4d69caa32d8eb372d603422c23e3076703c3b12fb50051d7d481bea37fe92",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "C0_bundle3",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "C0_bundle3",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle3_seed_chr1_distance_matrices.pdf",
+      "pdf_sha256": "8774c477f8609d4f33e2dcaed8e18c85ad36ab7364c891dc6c56d65781b45663",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/C0_bundle3_seed_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "851f5d33545e610493bdd77b45a12e2928ab231081f92e496f69ddee4c554810",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "x0_bundle2",
+      "figure_inches": [
+        6.0,
+        6.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; x0 best-swap (chr1 agrees with endpoint)",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          1800
+        ],
+        "label": "x0_bundle2",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 61,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/x0_bundle2_chr1_distance_matrices.pdf",
+      "pdf_sha256": "e0aa4340b6347e6190ebe78cccbe88d8b55b832c90710b17ce86da91e5b0a830",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/x0_bundle2_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        1800
+      ],
+      "png_sha256": "1e91ba5b46b9c9332d431b9c90c1258231b77edfa3d2986c0a3fc2d5394139db",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    },
+    {
+      "colormap": "coolwarm_r",
+      "condition_id": "unified_index",
+      "figure_inches": [
+        6.0,
+        18.0
+      ],
+      "footer": "Pooled two-copy RMS; common mask; near=red, far=blue, missing=gray\nShared color scale: 0-2.4182; whole-chromosome R2 alignment",
+      "layout": {
+        "all_visible_text_inside": true,
+        "canvas_px": [
+          1800,
+          5400
+        ],
+        "label": "unified_index",
+        "outside_canvas": [],
+        "text_overlaps": [],
+        "visible_text_count": 165,
+        "visible_text_nonoverlap": true
+      },
+      "pdf": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/unified_chr1_distance_matrices.pdf",
+      "pdf_sha256": "97c857f3802ed03de15f090f7ddf045020cabd18c2d9aab4a54bab34b2b376c3",
+      "png": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/unified_chr1_distance_matrices.png",
+      "png_dimensions": [
+        1800,
+        5400
+      ],
+      "png_sha256": "bc2e2a6e216c4bc8fbbb7c6e27bb05efb56971cf613bf76b372fde671f953720",
+      "vmax": 2.418206822915286,
+      "vmin": 0.0
+    }
+  ],
+  "global_vmax": 2.418206822915286,
+  "input_npz": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/unified_chr1_distance_matrices.npz",
+  "input_npz_sha256_after": "3c44729a9b27425b27cc4e3c05ad139b4046728333d4b7a2b35fa6f2cc2a6496",
+  "input_npz_sha256_before": "3c44729a9b27425b27cc4e3c05ad139b4046728333d4b7a2b35fa6f2cc2a6496",
+  "mode": "render_only_from_frozen_unified_npz",
+  "r2_recomputed": false,
+  "reference_reopened": false,
+  "rho_recomputed": false,
+  "schema": "p9016-render-revision-short-footer-v1",
+  "status": "PASS"
+}

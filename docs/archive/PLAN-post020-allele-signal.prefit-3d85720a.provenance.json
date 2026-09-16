@@ -1,0 +1,12 @@
+{
+  "schema": "post020-prefit-plan-archive-provenance-v1",
+  "source": "docs/PLAN-post020-allele-signal.md",
+  "destination": "docs/archive/PLAN-post020-allele-signal.prefit-3d85720a.md",
+  "sha256": "3d85720af477b4a87cffdd4e19780a2e9b3e0937f04579bfca2bea2516cb2215",
+  "source_sha256": "3d85720af477b4a87cffdd4e19780a2e9b3e0937f04579bfca2bea2516cb2215",
+  "destination_sha256": "3d85720af477b4a87cffdd4e19780a2e9b3e0937f04579bfca2bea2516cb2215",
+  "byte_identical": true,
+  "current_utc": "2026-09-13T17:04:19Z",
+  "archive_purpose": "Preserve the current prefit plan before a later final-results update; the source plan was not modified.",
+  "verification": "sha256sum source and destination matched after byte-for-byte copy."
+}

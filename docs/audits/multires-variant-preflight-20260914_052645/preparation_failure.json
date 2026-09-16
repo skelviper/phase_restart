@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-09-14T05:27:01+00:00",
+  "error": "name '_archived_transfer_probe' is not defined",
+  "error_type": "NameError",
+  "prepared_not_launched": true,
+  "schema": "multires-variant-preparation-failure-v1",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/ssd/zliu/phase_restart/pr/multires_variant_runner.py\", line 1722, in prepare\n    preflight = run_preflight(context, root)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/ssd/zliu/phase_restart/pr/multires_variant_runner.py\", line 1664, in run_preflight\n    archived = _archived_transfer_probe(context)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name '_archived_transfer_probe' is not defined\n"
+}

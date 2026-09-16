@@ -1,0 +1,300 @@
+{
+  "baseline": {
+    "coords_npz_path": "test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.npz",
+    "coords_npz_sha256": "116e906e790493afa956445c527b38da11b2fdcaed482fd225f578f188df699d",
+    "count_A": 9.529134634154618,
+    "count_B": 9.783897014754949,
+    "count_C": 9.611809043476066,
+    "endpoint_id": "baseline-046-G-full-J",
+    "fit_id": "baseline-046-G-full-J",
+    "fullJ": 9.542018998907453
+  },
+  "created_at_utc": "2026-09-15T17:26:49.411289+00:00",
+  "initials": [
+    {
+      "coords_npz_path": "test_res/045-20260915T073310Z-shared-capture-round/coords/initial/real_consensus_1Mb.npz",
+      "coords_npz_sha256": "3b3e30925f33459804d95b3ba3636b24f85978eb62ba3e8143a6c763ec4b2c81",
+      "count_A": 10.110235075375009,
+      "count_B": 10.700506551008393,
+      "count_C": 10.131246857196556,
+      "endpoint_id": "initial-consensus",
+      "fit_id": "initial-consensus",
+      "fullJ": 11.417024544786987,
+      "three_dg_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/initial-consensus/1Mb.3dg",
+      "three_dg_sha256": "9b12e4a51999360c5204cd7304baa4f4b389ae3aab510ea36ae658749b538f24"
+    },
+    {
+      "coords_npz_path": "test_res/045-20260915T073310Z-shared-capture-round/coords/initial/real_random_1Mb.npz",
+      "coords_npz_sha256": "524e6df323899a0549e9e07a6d4a202c09c2d2778a6a4d283dcca11a2c38cc7d",
+      "count_A": 10.100333167111136,
+      "count_B": 10.717910473252227,
+      "count_C": 10.150421367376934,
+      "endpoint_id": "initial-random",
+      "fit_id": "initial-random",
+      "fullJ": 11.94354644474106,
+      "three_dg_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/initial-random/1Mb.3dg",
+      "three_dg_sha256": "df0b6d91baa623739f6691c391cd9ffe2ea74830813f2f6e304823695d473a42"
+    }
+  ],
+  "manifest": "endpoint_manifest_pre_reference.json",
+  "per_loss": {
+    "A": {
+      "cross_loss_warning": "A/B/C are different objectives and must not be ranked against each other; use the common count_A / fullJ_A rescore for interpretation",
+      "display_endpoint": {
+        "coordsSHA": "414eda654e727f8c0efb86dd4a0a0b2839f411c5ecd8430a569e7e232ad3b92a",
+        "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/A-ms-random/1Mb.npz",
+        "count": 9.563900523396718,
+        "fit_id": "A-ms-random",
+        "selection": "minimum own count objective over the four endpoints of this loss, frozen before the reference is opened",
+        "solver": "ms",
+        "source": "random"
+      },
+      "loss_name": "marginal_G",
+      "source_selection": {
+        "ms": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/A-ms-consensus/1Mb.npz",
+              "coords_npz_sha256": "2748466784053278087374f63a940a4ad7bc09b5666ffd7e7fca3ff153d36b55",
+              "count_nll_by_loss": {
+                "A": 9.572251232362701,
+                "B": 9.847852808046085,
+                "C": 9.660295464593062
+              },
+              "fit_id": "A-ms-consensus",
+              "own_count": 9.572251232362701,
+              "own_fullJ": 9.585451453644513,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/A-ms-random/1Mb.npz",
+              "coords_npz_sha256": "414eda654e727f8c0efb86dd4a0a0b2839f411c5ecd8430a569e7e232ad3b92a",
+              "count_nll_by_loss": {
+                "A": 9.563900523396718,
+                "B": 9.843195487168481,
+                "C": 9.6497993155214
+              },
+              "fit_id": "A-ms-random",
+              "own_count": 9.563900523396718,
+              "own_fullJ": 9.577054209733197,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": 0.00835070896598289,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "A-ms-random",
+          "selected_source": "random",
+          "tie_tolerance": 1e-09
+        },
+        "raw": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/A-raw-consensus/1Mb.npz",
+              "coords_npz_sha256": "770fdfc9609f3858e46dd9d4390a9f4b9c42e0ab7de2cbda3d970733d6faa7cd",
+              "count_nll_by_loss": {
+                "A": 9.579651130556762,
+                "B": 9.859848375736705,
+                "C": 9.668363111092276
+              },
+              "fit_id": "A-raw-consensus",
+              "own_count": 9.579651130556762,
+              "own_fullJ": 9.592575866778807,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/A-raw-random/1Mb.npz",
+              "coords_npz_sha256": "2bbf704e596a319daf244d51e856cc09d417b22f3b238fd9ebdce9ee1a9f67b0",
+              "count_nll_by_loss": {
+                "A": 9.581205124289339,
+                "B": 9.86685360407225,
+                "C": 9.668467457824375
+              },
+              "fit_id": "A-raw-random",
+              "own_count": 9.581205124289339,
+              "own_fullJ": 9.594413671806217,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": -0.0015539937325765862,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "A-raw-consensus",
+          "selected_source": "consensus",
+          "tie_tolerance": 1e-09
+        }
+      }
+    },
+    "B": {
+      "cross_loss_warning": "A/B/C are different objectives and must not be ranked against each other; use the common count_A / fullJ_A rescore for interpretation",
+      "display_endpoint": {
+        "coordsSHA": "749892025a094e5b7886be3ac52d6d70e8daab1762ad08657ad3f2f352731d7e",
+        "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-consensus/1Mb.npz",
+        "count": 9.787837327668186,
+        "fit_id": "B-raw-consensus",
+        "selection": "minimum own count objective over the four endpoints of this loss, frozen before the reference is opened",
+        "solver": "raw",
+        "source": "consensus"
+      },
+      "loss_name": "hard_observed",
+      "source_selection": {
+        "ms": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-ms-consensus/1Mb.npz",
+              "coords_npz_sha256": "6b1ed04131d5c612c87accb0c0e68e8edc5931b3e3541a4185882e0fad06a534",
+              "count_nll_by_loss": {
+                "A": 9.622445457097244,
+                "B": 9.79551801102018,
+                "C": 9.693933216565526
+              },
+              "fit_id": "B-ms-consensus",
+              "own_count": 9.79551801102018,
+              "own_fullJ": 9.810756602950145,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-ms-random/1Mb.npz",
+              "coords_npz_sha256": "0d51caa2b95d65d0d9702243a760e5d05cab08b553fa606caefc58f5edd2fee2",
+              "count_nll_by_loss": {
+                "A": 9.616823453926242,
+                "B": 9.789638281878409,
+                "C": 9.686692627259108
+              },
+              "fit_id": "B-ms-random",
+              "own_count": 9.789638281878409,
+              "own_fullJ": 9.804915178740579,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": 0.005879729141771151,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "B-ms-random",
+          "selected_source": "random",
+          "tie_tolerance": 1e-09
+        },
+        "raw": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-consensus/1Mb.npz",
+              "coords_npz_sha256": "749892025a094e5b7886be3ac52d6d70e8daab1762ad08657ad3f2f352731d7e",
+              "count_nll_by_loss": {
+                "A": 9.61511140997463,
+                "B": 9.787837327668186,
+                "C": 9.683613900065545
+              },
+              "fit_id": "B-raw-consensus",
+              "own_count": 9.787837327668186,
+              "own_fullJ": 9.803466119906409,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-random/1Mb.npz",
+              "coords_npz_sha256": "c5fe7d82d72efbfdf3cbb5ebd79a12b1d3b389567d34d635e5656713e562e41a",
+              "count_nll_by_loss": {
+                "A": 9.621340579540863,
+                "B": 9.819899416801563,
+                "C": 9.695451512886029
+              },
+              "fit_id": "B-raw-random",
+              "own_count": 9.819899416801563,
+              "own_fullJ": 9.835803912803003,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": -0.032062089133377825,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "B-raw-consensus",
+          "selected_source": "consensus",
+          "tie_tolerance": 1e-09
+        }
+      }
+    },
+    "C": {
+      "cross_loss_warning": "A/B/C are different objectives and must not be ranked against each other; use the common count_A / fullJ_A rescore for interpretation",
+      "display_endpoint": {
+        "coordsSHA": "86b3065f22719f3ff1573a290b2cb8eeea628bc82f0c4b3e58da90c44ce87aaa",
+        "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-random/1Mb.npz",
+        "count": 9.671565037529469,
+        "fit_id": "C-ms-random",
+        "selection": "minimum own count objective over the four endpoints of this loss, frozen before the reference is opened",
+        "solver": "ms",
+        "source": "random"
+      },
+      "loss_name": "max_rate",
+      "source_selection": {
+        "ms": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-consensus/1Mb.npz",
+              "coords_npz_sha256": "e364a615e787986eb23d0c6766f5fe98ce71996051ea43c9069e203fb55b9cec",
+              "count_nll_by_loss": {
+                "A": 9.659670067168983,
+                "B": 9.961493383084438,
+                "C": 9.700377987424412
+              },
+              "fit_id": "C-ms-consensus",
+              "own_count": 9.700377987424412,
+              "own_fullJ": 9.715766500304582,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-random/1Mb.npz",
+              "coords_npz_sha256": "86b3065f22719f3ff1573a290b2cb8eeea628bc82f0c4b3e58da90c44ce87aaa",
+              "count_nll_by_loss": {
+                "A": 9.632386469566821,
+                "B": 9.947808191741128,
+                "C": 9.671565037529469
+              },
+              "fit_id": "C-ms-random",
+              "own_count": 9.671565037529469,
+              "own_fullJ": 9.68704223463045,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": 0.02881294989494343,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "C-ms-random",
+          "selected_source": "random",
+          "tie_tolerance": 1e-09
+        },
+        "raw": {
+          "candidates": [
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-raw-consensus/1Mb.npz",
+              "coords_npz_sha256": "3b93577df1e58afe5955005b949e51b23408c3f01a872c81f7c8501ea4b4a721",
+              "count_nll_by_loss": {
+                "A": 9.677078866533776,
+                "B": 9.988949572924865,
+                "C": 9.716184700791926
+              },
+              "fit_id": "C-raw-consensus",
+              "own_count": 9.716184700791926,
+              "own_fullJ": 9.732217334577122,
+              "source": "consensus"
+            },
+            {
+              "coords_npz_path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-raw-random/1Mb.npz",
+              "coords_npz_sha256": "f3a28607c099d82f9a8d442d99a48e577444ea1996ca11fd030642add47935d6",
+              "count_nll_by_loss": {
+                "A": 9.662855874904235,
+                "B": 9.993046749588002,
+                "C": 9.694232058624378
+              },
+              "fit_id": "C-raw-random",
+              "own_count": 9.694232058624378,
+              "own_fullJ": 9.71052675104451,
+              "source": "random"
+            }
+          ],
+          "margin_consensus_minus_random": 0.02195264216754822,
+          "rule": "minimum own final count objective",
+          "selected_fit_id": "C-raw-random",
+          "selected_source": "random",
+          "tie_tolerance": 1e-09
+        }
+      }
+    }
+  },
+  "phase_opened": false,
+  "reference_opened": false,
+  "schema": "p9016-max-contact-selection-pre-reference-v2"
+}

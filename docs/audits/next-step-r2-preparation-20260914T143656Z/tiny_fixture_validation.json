@@ -1,0 +1,59 @@
+{
+  "N2_null": {
+    "N_only_is_not_a_positive_score": true,
+    "contrast_zero": true,
+    "different_structure_diagnostic": true,
+    "final_N_only": 0.21566554640687685,
+    "rho_columns_equal": true,
+    "same_x0_initial_N_only": [
+      0.0,
+      0.0
+    ]
+  },
+  "candidate_only_shape_error_zero": true,
+  "independent_per_chromosome_swap": [
+    {
+      "checks": {
+        "candidate_only_shape_error_zero": true,
+        "contrast": true,
+        "cross": true,
+        "matched": true,
+        "minmargin": true
+      },
+      "chromosome": "chr1"
+    },
+    {
+      "checks": {
+        "candidate_only_shape_error_zero": true,
+        "contrast": true,
+        "cross": true,
+        "matched": true,
+        "minmargin": true
+      },
+      "chromosome": "chr2"
+    }
+  ],
+  "metric_contract": {
+    "fixed_reference_columns": [
+      "mat",
+      "pat"
+    ],
+    "minimum_rho_pairs": 20,
+    "tie_tolerance": 1e-12,
+    "whole_chromosome_swap": true
+  },
+  "n_a": {
+    "left_count": 2,
+    "right_count": 2,
+    "symmetric": true
+  },
+  "project_payloads_opened": [],
+  "real_reference_opened": false,
+  "schema_version": "p9016-next-step-r2-tiny-fixture-v1",
+  "status": "PASS",
+  "synthetic_truth_coordinates_opened": false,
+  "tie": {
+    "orientation": "unresolved_tie",
+    "symmetric": true
+  }
+}

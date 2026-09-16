@@ -1,0 +1,28 @@
+{
+  "schema": "multires-variant-release-authorization-v1",
+  "status": "released_for_execution",
+  "authorized_at_utc": "2026-09-14T05:40:32Z",
+  "authorized_by_parent_agent": "session-65ebfa81-c352-437a-8093-7796bb0209ba",
+  "authorization_scope": "execute exactly the frozen 24 C1/C2-map/C2-free/C3 stages; no evaluation",
+  "c0_gate": {
+    "path": "test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json",
+    "sha256": "790fd2725c420f5a388798b4bb504a99491019ed9dddf0b81c5a94c1aaa43ab5",
+    "status": "passed"
+  },
+  "c0_terminal": {
+    "path": "test_res/033-20260914_044246-c0-controlled-reproduction/terminal_evidence.json",
+    "sha256": "103dfdded712d56115df607c1be1f8e87822930e180801ac45406a8fb8c2444d",
+    "status": "passed"
+  },
+  "frozen_inputs": {
+    "controller_sha256": "20974e14b03ac39e7be2f6b7d9c8a63d361464a06926af903c42d3b5c7ba2ac9",
+    "protocol_sha256": "c319b0cc0380b3a5ae65ce7e2fe7c3f8b1230a4e6bc25e822c0baab2fbf4e413",
+    "preflight_sha256": "55615bbc7e1c18c0b94c578947c7b8525909caa562bfb29c8399ae31714b2037",
+    "test_evidence_sha256": "f649a81a1ddc703506b252059e79a1eda684cf29eff066bcfd84b9a6a3db62c5"
+  },
+  "launch_command_path": "docs/audits/multires-variant-preflight-20260914_053514/launch_command.txt",
+  "launch_command": "source /mnt/ssd/zliu/miniforge3/etc/profile.d/conda.sh && conda activate analysis && OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python -m pr.multires_variant_runner run-variants --out /mnt/ssd/zliu/phase_restart/test_res/034-20260914_053514-multires-variants --c0-gate /mnt/ssd/zliu/phase_restart/test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json --protocol /mnt/ssd/zliu/phase_restart/docs/audits/multires-variant-preflight-20260914_053514/variant_protocol.json --preflight /mnt/ssd/zliu/phase_restart/docs/audits/multires-variant-preflight-20260914_053514/preflight.json --workers 4 --threads 1",
+  "planned_stage_attempts": 24,
+  "evaluation_started": false,
+  "reference_or_phase_read": false
+}

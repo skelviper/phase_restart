@@ -1,0 +1,61 @@
+{
+  "candidate_coordinate_payloads_opened": 0,
+  "evaluation_started": false,
+  "exit_code": 0,
+  "fit_called": false,
+  "hashes": {
+    "adapter": "1599f71730e37d4464ef6816afbc81f40bc46863a65695f32949511d251e2175",
+    "config": "abde826163aa72bbccd8109bf953d7f8a8b71e033984332344ffcde4b747f11a",
+    "contract_template": "1b8cb0b1f5afb3292f1fbdf38770b3461ce836fa6b81e99c634343fd09bb1e81",
+    "protocol": "9ca4d1dbbdebb436101eb02e2830cb82dd46f46375e9f22fcf1aba8a4da03ff0",
+    "source_snapshot": "cf0575476334b87b346405864e3d19ba4b9ff742790446627468ee1a009f280e"
+  },
+  "historical_regression_gate": {
+    "exact_frozen_mask_required": [
+      "positions",
+      "pair_i",
+      "pair_j",
+      "common"
+    ],
+    "executed": false,
+    "failure_policy": "pause_new_metric_interpretation_and_diagnose",
+    "fixed_historical_condition_id": "v1_original_random_joint",
+    "fixed_historical_label": "old 038 M0/B2 random",
+    "gate_id": "old038-m0-b2-random-r2-regression-v1",
+    "historical_coordinate_opened": false,
+    "new_science_metric": false,
+    "note": "Registration only; execute after all 12 endpoint/terminal/source/selection/mask hashes and before interpreting new R2/KL metrics.",
+    "passed": null,
+    "published_table_opened": false,
+    "reference_opened": false,
+    "run_after_hash_gate": true,
+    "runtime_provenance": {
+      "artifact_type": "CPython pyc",
+      "bytecode_path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+      "bytecode_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+      "python_version": "3.13.12",
+      "source_equivalence_claim": false,
+      "source_provenance_path": "pr/r2comparison.py",
+      "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e"
+    },
+    "schema_version": "p9016-old038-r2-regression-gate-registration-v1",
+    "selection_input": false,
+    "status": "registered_pending_12_endpoint_hashes"
+  },
+  "native_called": false,
+  "prepared_artifacts": {
+    "adapter": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/visibility_r2_entry.py",
+    "config": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/config.json",
+    "frozen_pr_directory": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr",
+    "integration_schema_validation": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/integration_schema_validation.json",
+    "integration_v2_real_vz_schema_validation": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/integration_v2_real_vz_schema_validation.json",
+    "population_kl_feasibility": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/population_kl_feasibility.json",
+    "protocol": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/visibility_protocol.json",
+    "release_contract_template": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/release_contract.template.json",
+    "source_snapshot": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/source_snapshot.json"
+  },
+  "reference_opened": false,
+  "schema_version": "p9016-visibility-preparation-terminal-evidence-v1",
+  "status": "PASS",
+  "truth_coordinate_payloads_opened": false
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "p9016-multires-r2-preparation-terminal-evidence-v1",
+  "status": "preparation_checks_complete",
+  "training_release_status": "pending_gpu_036_terminal_10_endpoint_30_stage_release",
+  "evaluation_status": "prepared_only_evaluation_not_run",
+  "main_backend": "GPU",
+  "gpu_stage_count": 30,
+  "gpu_selection_schema": "gpu-multires-selection-v1",
+  "gpu_terminal_schema": "gpu-multires-terminal-evidence-v1",
+  "gpu_schema_reference": "test_res/035-20260914T060945Z-gpu-multires-preflight/source/gpu_multires_controller.py",
+  "gpu_schema_reference_sha256": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+  "gpu_formal_output_path": "test_res/036-20260914T064651Z-gpu-multires",
+  "gpu_preflight_status": "PASS",
+  "gpu_preflight_evidence_path": "test_res/035-20260914T060945Z-gpu-multires-preflight/terminal_prep.json",
+  "gpu_preflight_evidence_sha256": "709d5531be45e5ecc1f48b8e8b2ba8bc835773a0889d965d829bad0418568c03",
+  "historical_cpu_anchor": "020 / C0 CPU",
+  "gpu_cpu_c0_diagnostic_nonblocking": true,
+  "gpu_preflight_required_checks": ["cuda_target_visible", "float64_value_gradient_parity", "protocol_consistency", "gpu_c0_training_complete"],
+  "cpu_byte_identity_required": false,
+  "cpu_r2_match_required": false,
+  "commands": [
+    {
+      "command": "source /mnt/ssd/zliu/miniforge3/etc/profile.d/conda.sh && conda activate analysis && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m py_compile docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py docs/audits/multires-r2-preparation-20260914_041826/plot_multires_r2.py docs/audits/multires-r2-preparation-20260914_041826/test_multires_r2.py docs/audits/multires-r2-preparation-20260914_041826/build_multires_release.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python docs/audits/multires-r2-preparation-20260914_041826/build_multires_release.py --build",
+      "environment": "analysis; metadata-only deferred release gate",
+      "exit_code": 2,
+      "result": "PASS; blocked_incomplete with reason=build_deferred_until_final_gpu_schema_parent_evidence_and_release_locks; formal_output_path=036; coordinate_files_opened=false; reference_opened=false"
+    },
+    {
+      "command": "python docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py --validate-preparation",
+      "environment": "analysis; OMP_NUM_THREADS=1; OPENBLAS_NUM_THREADS=1; MKL_NUM_THREADS=1",
+      "exit_code": 0,
+      "result": "PASS; candidate_coordinates_opened=0; reference_opened=false; mask_condition_count=21; pending_endpoint_paths=10"
+    },
+    {
+      "command": "python docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py --synthetic-check",
+      "environment": "analysis; OMP_NUM_THREADS=1; OPENBLAS_NUM_THREADS=1; MKL_NUM_THREADS=1",
+      "exit_code": 0,
+      "result": "PASS; orientation_tie=1e-12; selection_tie_per_record=1e-9"
+    },
+    {
+      "command": "python docs/audits/multires-r2-preparation-20260914_041826/test_multires_r2.py",
+      "environment": "analysis; OMP_NUM_THREADS=1; OPENBLAS_NUM_THREADS=1; MKL_NUM_THREADS=1",
+      "exit_code": 0,
+      "result": "PASS; 10 tests"
+    },
+    {
+      "command": "python metadata-only JSON parse/hash synchronization check for preparation manifest, release contract, validation, terminal evidence, and method artifacts",
+      "environment": "analysis; OMP_NUM_THREADS=1; OPENBLAS_NUM_THREADS=1; MKL_NUM_THREADS=1",
+      "exit_code": 0,
+      "result": "PASS; all preparation JSON parsed; prepared/release/evaluator/plotter/test/adapter/mask/legacy/table SHA locks match"
+    },
+    {
+      "command": "python read 029 r2_per_chromosome.tsv header and v1_original_random_joint rows, then SHA256",
+      "environment": "analysis; OMP_NUM_THREADS=1; OPENBLAS_NUM_THREADS=1; no coordinate/reference read",
+      "exit_code": 0,
+      "result": "PASS; 20 published rows and 12 numeric parity fields; SHA256=5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1"
+    }
+  ],
+  "hashes": {
+    "r2_protocol.json": "c3a661d272c44d8171b3ed421d2c73a1135b602c1130ed6daa939ea0df927c23",
+    "multires_r2.py": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+    "plot_multires_r2.py": "a6f230666ee3e9a1fce8edbd6d0aa76dbd2e7d24bd06da0d2f804f7ecc10d1b8",
+    "test_multires_r2.py": "ffa08a0c7898af3e07eae32efde78fa79497d47a9926d1211f5d4a0793b05822",
+    "config.json": "94225f68b98fdf064038f6f84d425bb081c90988730f642370cbf4ba9e322b17",
+    "release_contract.json": "c50249387abccd466a0a39d3e88056c0e2c371a400089aea53f6704f00981981",
+    "mask_lock.json": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+    "build_multires_release.py": "d1ceb870ba4c273252917073beffec802913f698c2296460ebab2a1af9daa12c"
+  },
+  "read_boundary": {
+    "new_endpoint_coordinates_opened": false,
+    "reference_3dg_opened": false,
+    "published_029_r2_table_read_for_field_schema_and_frozen_sha": true,
+    "raw_020_evaluation_values_used": false,
+    "post_release_acceptance_hook_executed": false,
+    "pairs_or_rawphase_opened": false,
+    "native_called": false,
+    "fit_called": false
+  },
+  "final_evaluation": {
+    "evaluation_path": "test_res/036-20260914T064651Z-gpu-multires/evaluation-r2-20260914_072405",
+    "evaluation_manifest": "test_res/036-20260914T064651Z-gpu-multires/evaluation-r2-20260914_072405/evaluation_manifest.json",
+    "evaluation_manifest_sha256": "efd2e8b3c078603530daa6e4846bb1083af37f17fb528bf8ac242f72acd6c0db",
+    "status": "evaluation_complete",
+    "managed_job": "bash-298",
+    "exit_code": 0,
+    "post_release_acceptance": "PASS",
+    "validation": "PASS; row_count=200; endpoint_count=10; chromosome_count=20; n_a=0",
+    "reference_loaded_after_all_hashes": true,
+    "evaluator_fit_called": false,
+    "native_called": false,
+    "metadata_correction": "evaluation_not_run_before_release original=false retained; corrected=true in final validation"
+  },
+  "unresolved": [
+    "GPU C0 versus CPU 020 differences remain a non-blocking diagnostic only; no GPU/CPU equality claim is made",
+    "All formal GPU stages ended at fixed budgets with terminal status not_converged; this release does not claim numerical convergence"
+  ]
+}

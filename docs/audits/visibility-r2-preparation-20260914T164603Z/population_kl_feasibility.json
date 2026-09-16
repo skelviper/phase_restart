@@ -1,0 +1,88 @@
+{
+  "definition": {
+    "eta_improvement_and_zero_coverage_are_separate": true,
+    "kl": "sum(pi_true*log(pi_true/pi_fit)) over every eligible pair, including observed count-zero pairs",
+    "not_current_sampled_counts_training_nll": true,
+    "pi_fit": "normalize the same rate formula at locked candidate X, locked p, and model final e separately over the same groups",
+    "pi_true": "normalize exact generation_rates(truth X, generating e, p_gen=0.8, kernel=v1) separately over cis_offdiag and inter",
+    "refit_or_sampling": "neither",
+    "same_bin": "excluded as saturated nuisance",
+    "scope": "synthetic-only",
+    "weighted": "(696680*KL_cis + 568434*KL_inter)/1265114",
+    "zero_fit_support": "pi_true>0 and pi_fit=0 is +inf; no clipping"
+  },
+  "eligible_pair_denominators": {
+    "cis_offdiag": 184016,
+    "inter": 3312674
+  },
+  "exact": true,
+  "group_totals": {
+    "cis_offdiag": 696680,
+    "inter": 568434
+  },
+  "limitations": [
+    "truth coordinate and generation exposure arrays are bound only by the future release hash gate",
+    "candidate final e sidecars must expose one full-grid value per genomic bin",
+    "VZ e=0 support is handled by the visibility adapter's nonnegative-rate path, not by changing the frozen generator"
+  ],
+  "metadata": {
+    "N2": {
+      "fixture_id": "N2",
+      "generation_epsilon": 1e-06,
+      "generation_exposure_metadata": {
+        "capture_drop": false,
+        "capture_drop_multiplier": null,
+        "max": 4.1349721558347845,
+        "mean": 1.0,
+        "min": 0.2104629030479043,
+        "n_capture_drop_bins": 0,
+        "seed": 260302,
+        "sigma": 0.4
+      },
+      "generation_kernel": "v1",
+      "generation_r0": "2*l0",
+      "p_gen": 0.8,
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json",
+      "sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9"
+    },
+    "P2": {
+      "fixture_id": "P2",
+      "generation_epsilon": 1e-06,
+      "generation_exposure_metadata": {
+        "capture_drop": false,
+        "capture_drop_multiplier": null,
+        "max": 4.016490384008715,
+        "mean": 1.0,
+        "min": 0.22440875049961767,
+        "n_capture_drop_bins": 0,
+        "seed": 260304,
+        "sigma": 0.4
+      },
+      "generation_kernel": "v1",
+      "generation_r0": "2*l0",
+      "p_gen": 0.8,
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json",
+      "sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9"
+    }
+  },
+  "missing_or_failed_checks": [],
+  "preparation_did_not_open_coordinate_payloads": true,
+  "schema_version": "p9016-visibility-population-kl-feasibility-v1",
+  "source_checks": {
+    "cis_and_inter_group_rates": true,
+    "epsilon_kernel_is_finite": true,
+    "full_grid_denominators": true,
+    "no_sampling_needed": true,
+    "required_functions_present": true,
+    "same_bin_separate_nuisance": true,
+    "v1_kernel_branch": true
+  },
+  "source_functions": {
+    "_kernel_values": true,
+    "expected_counts": true,
+    "generation_rates": true
+  },
+  "source_path": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/v1_calibration.py",
+  "status": "FEASIBLE_EXACT_GENERATION_RATES",
+  "weighted_denominator": 1265114
+}

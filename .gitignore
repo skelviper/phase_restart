@@ -1,0 +1,71 @@
+# Review snapshot: source code, configuration, protocol text and a small set of
+# result readouts only. No data, coordinates, logs, or archives.
+#
+# The upstream workspace excluded all of test_res/ and inputs/ wholesale, which
+# also dropped source code. This snapshot does the opposite: it keeps the source
+# and excludes data by extension/size instead.
+
+# --- Python / build detritus ---
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.so
+*.egg-info/
+
+# --- Native build products (hickit sources are kept, binaries are not) ---
+native/hickit/*.o
+native/hickit/hickit
+native/hickit/.fdg_gpu_backend.*
+
+# --- Coordinates, structures and numeric arrays ---
+*.3dg
+*.3dg.gz
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.pt
+*.ckpt
+*.coords.tsv
+
+# --- Raw / derived contact data and archives ---
+*.pairs
+*.pairs.gz
+*.gz
+*.bz2
+*.xz
+*.zip
+*.tar
+*.tgz
+*.7z
+
+# --- Logs, run histories and caches ---
+*.log
+*.out
+*.err
+*.stdout
+*.stderr
+*.accepted_history.json
+*/mplcache/
+
+# --- Documents / media (binary) ---
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.eps
+*.ps
+*.xlsx
+*.docx
+*.pptx
+
+# --- Exceptions: the two figures intentionally shipped with this snapshot ---
+!test_res/055-20260916_112451-max-contact-vs-baseline-review/plots/chr1_distance_matrices.png
+!test_res/055-20260916_112451-max-contact-vs-baseline-review/plots/same_cross_contrast_boxplot.png

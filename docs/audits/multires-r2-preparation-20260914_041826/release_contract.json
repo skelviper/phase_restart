@@ -1,0 +1,611 @@
+{
+  "c0_numeric_gate": {
+    "backend": "GPU",
+    "endpoint_ids": [
+      "C0-consensus_joint_base1103",
+      "C0-random_joint_base2207"
+    ],
+    "evidence_path": "test_res/035-20260914T060945Z-gpu-multires-preflight/terminal_prep.json",
+    "evidence_sha256": "709d5531be45e5ecc1f48b8e8b2ba8bc835773a0889d965d829bad0418568c03",
+    "gate_basis": "035 GPU preflight CUDA/gradient/protocol/budget/no-reference selection gate; formal 036 C0 endpoint terminal remains required for complete release",
+    "gate_name": "GPU_C0_numeric_no_reference_gate",
+    "historical_cpu_033_gate_is_not_gpu_c0": true,
+    "phase_read": false,
+    "record_count": 1703888,
+    "reference_read": false,
+    "status": "PASS",
+    "track_count": 40
+  },
+  "code_hashes": {
+    "config_path": "config.json",
+    "config_sha256": "94225f68b98fdf064038f6f84d425bb081c90988730f642370cbf4ba9e322b17",
+    "evaluator_path": "multires_r2.py",
+    "evaluator_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+    "mask_lock_path": "mask_lock.json",
+    "mask_lock_sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+    "plotter_path": "plot_multires_r2.py",
+    "plotter_sha256": "a6f230666ee3e9a1fce8edbd6d0aa76dbd2e7d24bd06da0d2f804f7ecc10d1b8",
+    "protocol_path": "r2_protocol.json",
+    "protocol_sha256": "c3a661d272c44d8171b3ed421d2c73a1135b602c1130ed6daa939ea0df927c23"
+  },
+  "endpoints": [
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C0/consensus_joint/final-1m.3dg",
+      "coordinate_sha256": "224540398d0674211e3772696105092db74582994ae8353372bce23d14d0908c",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.596633849931353,
+      "count_nll_per_record": 9.596633849931353,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C0-consensus_joint_base1103",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "consensus_joint_base1103",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C0/consensus_joint/1m.json",
+      "terminal_record_sha256": "55c8e53346153bcf87a32dbca522a6a4ebb06fa8b7df815d897dfef56a0a464c",
+      "terminal_status": "not_converged",
+      "variant_id": "C0"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C0/random_joint/final-1m.3dg",
+      "coordinate_sha256": "18c06860f78525e55045e911db05981dd431a86c3bf9ee3ebb5046845b0ccc55",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.595057363743543,
+      "count_nll_per_record": 9.595057363743543,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C0-random_joint_base2207",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "random_joint_base2207",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C0/random_joint/1m.json",
+      "terminal_record_sha256": "f86b366ee70997e96fd855fd4cae7ec25bd66c891af7329c0e1a8a462425b1d2",
+      "terminal_status": "not_converged",
+      "variant_id": "C0"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C1/consensus_joint/final-1m.3dg",
+      "coordinate_sha256": "a9e820b06d05b635e3cbb014bc24025dcbd652f7ee067be43c786a1386e94eb2",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.597565113589125,
+      "count_nll_per_record": 9.597565113589125,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C1-consensus_joint_base1103",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "consensus_joint_base1103",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C1/consensus_joint/1m.json",
+      "terminal_record_sha256": "4fbb185dd38d990b1ad2174d4d0cacd23fef7c70ea99d76ce97a203cf8ca63bf",
+      "terminal_status": "not_converged",
+      "variant_id": "C1"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C1/random_joint/final-1m.3dg",
+      "coordinate_sha256": "5fa5fb66d3d616d9ac3f0d52b81dabc9fa13cb649bd8f4e531f360637b38d353",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.591594209383533,
+      "count_nll_per_record": 9.591594209383533,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C1-random_joint_base2207",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "random_joint_base2207",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C1/random_joint/1m.json",
+      "terminal_record_sha256": "6a321e932cd944df4a300dbe3ac450b19d10339f044bd1bb50cad56bee2ca00a",
+      "terminal_status": "not_converged",
+      "variant_id": "C1"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C2-map/consensus_joint/final-1m.3dg",
+      "coordinate_sha256": "1e03dc2da47e5697abd1b180dfa86889696acb5dce9f883810d78eba16e71827",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.592880173229371,
+      "count_nll_per_record": 9.592880173229371,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C2-map-consensus_joint_base1103",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "consensus_joint_base1103",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C2-map/consensus_joint/1m.json",
+      "terminal_record_sha256": "041748955df04bd112a5794e628c20882c3268457e1ac47fc30a57e99bb3bf6f",
+      "terminal_status": "not_converged",
+      "variant_id": "C2-map"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C2-map/random_joint/final-1m.3dg",
+      "coordinate_sha256": "cd0342aad8d7fd1185814363ca4b73b139f560362c42a4e6c4781a783e7505aa",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.586670135724146,
+      "count_nll_per_record": 9.586670135724146,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C2-map-random_joint_base2207",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "random_joint_base2207",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C2-map/random_joint/1m.json",
+      "terminal_record_sha256": "7cc59736c7749270fce0d6e19599c2f5d70d71e721e7cf64e1c63bda9799eedd",
+      "terminal_status": "not_converged",
+      "variant_id": "C2-map"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "finite_unbounded",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C2-free/consensus_joint/final-1m.3dg",
+      "coordinate_sha256": "1e03dc2da47e5697abd1b180dfa86889696acb5dce9f883810d78eba16e71827",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.592880173229371,
+      "count_nll_per_record": 9.592880173229371,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C2-free-consensus_joint_base1103",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "consensus_joint_base1103",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C2-free/consensus_joint/1m.json",
+      "terminal_record_sha256": "cb88d42c17f176c4b5a13c6e0fa5809ea90595f27c0f761480a55a33f81c3b69",
+      "terminal_status": "not_converged",
+      "variant_id": "C2-free"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "finite_unbounded",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C2-free/random_joint/final-1m.3dg",
+      "coordinate_sha256": "cd0342aad8d7fd1185814363ca4b73b139f560362c42a4e6c4781a783e7505aa",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.586670135724146,
+      "count_nll_per_record": 9.586670135724146,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C2-free-random_joint_base2207",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "random_joint_base2207",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C2-free/random_joint/1m.json",
+      "terminal_record_sha256": "900fbb17f6ad3478f38de2e7f409b590725064f99720f71cdf8c87bf83bfc1a0",
+      "terminal_status": "not_converged",
+      "variant_id": "C2-free"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C3/consensus_joint/final-1m.3dg",
+      "coordinate_sha256": "c8dcceb5ee7be56e2486c7a355a876e3e828a79e3ff4adc805ef57347a266f37",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.613440467001654,
+      "count_nll_per_record": 9.613440467001654,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C3-consensus_joint_base1103",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "consensus_joint_base1103",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C3/consensus_joint/1m.json",
+      "terminal_record_sha256": "df18557d93dabe878116f936bbf3a78a994ee6157974efc82cf4c37492794d45",
+      "terminal_status": "not_converged",
+      "variant_id": "C3"
+    },
+    {
+      "backend": "GPU",
+      "coordinate_domain": "strict_unit_ball",
+      "coordinate_path": "test_res/036-20260914T064651Z-gpu-multires/coords/C3/random_joint/final-1m.3dg",
+      "coordinate_sha256": "687918d32776b02ee75ebb8be83f2b86a817fea489adf61d59f357b9d2b1c1aa",
+      "coordinate_status": "available",
+      "count_nll_normalized": 9.610811303099757,
+      "count_nll_per_record": 9.610811303099757,
+      "endpoint_status": "complete",
+      "fit_called": true,
+      "id": "C3-random_joint_base2207",
+      "n_copies": 2,
+      "source_hashes": {
+        "approved_014_source": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+        "config": "1cc54be925b88957158b69ed9bf3190ddfc1ff891a06aebacc47c2ce6c715a04",
+        "input": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+        "protocol": "2ef0d2682786cc0379bd96e1be8d211472637203a1c3ef3ab21e2d2376143354",
+        "source_code_controller": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+        "source_code_gpu_backend": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f"
+      },
+      "source_hashes_complete": true,
+      "source_id": "random_joint_base2207",
+      "terminal_record_path": "test_res/036-20260914T064651Z-gpu-multires/stages/C3/random_joint/1m.json",
+      "terminal_record_sha256": "3f9deba2e0182628f212600fa23575d050d77f23144733a5b84e0882d9d86555",
+      "terminal_status": "not_converged",
+      "variant_id": "C3"
+    }
+  ],
+  "gpu_preflight_gate": {
+    "cpu_byte_identity_required": false,
+    "cpu_r2_match_required": false,
+    "evidence_path": "test_res/035-20260914T060945Z-gpu-multires-preflight/terminal_prep.json",
+    "evidence_sha256": "709d5531be45e5ecc1f48b8e8b2ba8bc835773a0889d965d829bad0418568c03",
+    "required_checks": [
+      "cuda_target_visible",
+      "float64_value_gradient_parity",
+      "protocol_consistency",
+      "gpu_c0_training_complete"
+    ],
+    "status": "PASS"
+  },
+  "mask_lock": {
+    "path": "mask_lock.json",
+    "published_manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+    "sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e"
+  },
+  "post_release_acceptance": {
+    "c0_cpu_gpu_diagnostic_nonblocking": true,
+    "c0_cpu_gpu_diagnostic_reject_on_difference": false,
+    "c0_selected_cpu_gpu_diagnostic": true,
+    "gpu_main_endpoints_same_backend": true,
+    "historical_cpu_anchor_is_not_gpu_endpoint": true,
+    "historical_cpu_anchor_label": "020 / C0 CPU",
+    "legacy_common_mask_builder": "pr.r2comparison.build_common_mask",
+    "legacy_common_mask_builder_path": "pr/r2comparison.py",
+    "legacy_common_mask_builder_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+    "legacy_coordinate_parser": "pr.allele_r2._load_coordinates",
+    "legacy_mask_builder_path": "pr/allele_r2.py",
+    "legacy_mask_builder_sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672",
+    "mask_compare_fields": [
+      "positions",
+      "pair_i",
+      "pair_j",
+      "common"
+    ],
+    "mask_compare_mode": "exact_array_equality_per_chromosome",
+    "output": "post_release_acceptance.json",
+    "published_condition_id": "v1_original_random_joint",
+    "published_numeric_atol": 1e-12,
+    "published_r2_table_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.tsv",
+    "published_r2_table_sha256": "5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1",
+    "status": "required_after_hash_gate",
+    "use_020_raw_evaluation": false
+  },
+  "prepared_config": {
+    "path": "config.json",
+    "sha256": "94225f68b98fdf064038f6f84d425bb081c90988730f642370cbf4ba9e322b17"
+  },
+  "protocol": {
+    "path": "r2_protocol.json",
+    "sha256": "c3a661d272c44d8171b3ed421d2c73a1135b602c1130ed6daa939ea0df927c23"
+  },
+  "purpose": "Complete unified-GPU 30-stage training release; CPU 020/033 remain historical anchor/diagnostic only",
+  "reference": {
+    "path": "data/P9016.1m.3dg.gz",
+    "read_after_all_locks": true,
+    "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+  },
+  "release_flags": {
+    "all_candidate_hashes_locked": true,
+    "all_candidate_paths_locked": true,
+    "all_selection_hashes_locked": true,
+    "all_source_hashes_locked": true,
+    "all_terminal_hashes_locked": true,
+    "c0_numeric_gate_pass": true,
+    "gpu_backend_locked": true,
+    "prepared_only": false,
+    "reference_read_allowed": true
+  },
+  "schema_version": "p9016-multires-r2-release-contract-v1",
+  "selection_by_variant": {
+    "C0": {
+      "candidates": [
+        {
+          "count_nll_normalized": 9.596633849931353,
+          "count_nll_per_record": 9.596633849931353,
+          "endpoint_id": "C0-consensus_joint_base1103",
+          "selection_eligible": true,
+          "source_id": "consensus_joint_base1103"
+        },
+        {
+          "count_nll_normalized": 9.595057363743543,
+          "count_nll_per_record": 9.595057363743543,
+          "endpoint_id": "C0-random_joint_base2207",
+          "selection_eligible": true,
+          "source_id": "random_joint_base2207"
+        }
+      ],
+      "criterion": "count_nll_per_record",
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "reported_field_alias": "final count_nll_normalized",
+      "selected_endpoint_id": "C0-random_joint_base2207",
+      "selected_source_id": "random_joint_base2207",
+      "tie_order": [
+        "consensus_joint_base1103",
+        "random_joint_base2207"
+      ],
+      "tie_status": "unique_minimum",
+      "tie_tolerance_per_record": 1e-09
+    },
+    "C1": {
+      "candidates": [
+        {
+          "count_nll_normalized": 9.597565113589125,
+          "count_nll_per_record": 9.597565113589125,
+          "endpoint_id": "C1-consensus_joint_base1103",
+          "selection_eligible": true,
+          "source_id": "consensus_joint_base1103"
+        },
+        {
+          "count_nll_normalized": 9.591594209383533,
+          "count_nll_per_record": 9.591594209383533,
+          "endpoint_id": "C1-random_joint_base2207",
+          "selection_eligible": true,
+          "source_id": "random_joint_base2207"
+        }
+      ],
+      "criterion": "count_nll_per_record",
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "reported_field_alias": "final count_nll_normalized",
+      "selected_endpoint_id": "C1-random_joint_base2207",
+      "selected_source_id": "random_joint_base2207",
+      "tie_order": [
+        "consensus_joint_base1103",
+        "random_joint_base2207"
+      ],
+      "tie_status": "unique_minimum",
+      "tie_tolerance_per_record": 1e-09
+    },
+    "C2-free": {
+      "candidates": [
+        {
+          "count_nll_normalized": 9.592880173229371,
+          "count_nll_per_record": 9.592880173229371,
+          "endpoint_id": "C2-free-consensus_joint_base1103",
+          "selection_eligible": true,
+          "source_id": "consensus_joint_base1103"
+        },
+        {
+          "count_nll_normalized": 9.586670135724146,
+          "count_nll_per_record": 9.586670135724146,
+          "endpoint_id": "C2-free-random_joint_base2207",
+          "selection_eligible": true,
+          "source_id": "random_joint_base2207"
+        }
+      ],
+      "criterion": "count_nll_per_record",
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "reported_field_alias": "final count_nll_normalized",
+      "selected_endpoint_id": "C2-free-random_joint_base2207",
+      "selected_source_id": "random_joint_base2207",
+      "tie_order": [
+        "consensus_joint_base1103",
+        "random_joint_base2207"
+      ],
+      "tie_status": "unique_minimum",
+      "tie_tolerance_per_record": 1e-09
+    },
+    "C2-map": {
+      "candidates": [
+        {
+          "count_nll_normalized": 9.592880173229371,
+          "count_nll_per_record": 9.592880173229371,
+          "endpoint_id": "C2-map-consensus_joint_base1103",
+          "selection_eligible": true,
+          "source_id": "consensus_joint_base1103"
+        },
+        {
+          "count_nll_normalized": 9.586670135724146,
+          "count_nll_per_record": 9.586670135724146,
+          "endpoint_id": "C2-map-random_joint_base2207",
+          "selection_eligible": true,
+          "source_id": "random_joint_base2207"
+        }
+      ],
+      "criterion": "count_nll_per_record",
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "reported_field_alias": "final count_nll_normalized",
+      "selected_endpoint_id": "C2-map-random_joint_base2207",
+      "selected_source_id": "random_joint_base2207",
+      "tie_order": [
+        "consensus_joint_base1103",
+        "random_joint_base2207"
+      ],
+      "tie_status": "unique_minimum",
+      "tie_tolerance_per_record": 1e-09
+    },
+    "C3": {
+      "candidates": [
+        {
+          "count_nll_normalized": 9.613440467001654,
+          "count_nll_per_record": 9.613440467001654,
+          "endpoint_id": "C3-consensus_joint_base1103",
+          "selection_eligible": true,
+          "source_id": "consensus_joint_base1103"
+        },
+        {
+          "count_nll_normalized": 9.610811303099757,
+          "count_nll_per_record": 9.610811303099757,
+          "endpoint_id": "C3-random_joint_base2207",
+          "selection_eligible": true,
+          "source_id": "random_joint_base2207"
+        }
+      ],
+      "criterion": "count_nll_per_record",
+      "includes_diag_constants": true,
+      "includes_priors": false,
+      "reported_field_alias": "final count_nll_normalized",
+      "selected_endpoint_id": "C3-random_joint_base2207",
+      "selected_source_id": "random_joint_base2207",
+      "tie_order": [
+        "consensus_joint_base1103",
+        "random_joint_base2207"
+      ],
+      "tie_status": "unique_minimum",
+      "tie_tolerance_per_record": 1e-09
+    }
+  },
+  "source_locks": [
+    {
+      "display_name": "consensus-derived initialization (014 base1103; 40-track two-copy endpoint)",
+      "gate_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/gate.json",
+      "gate_sha256": "cef694b899039aed36cc26b169f1ba2b9df170b40249742ddd2f28b38cd35f19",
+      "raw_source_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/coords/consensus.3dg",
+      "raw_source_sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "snapshot_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/coords/consensus.3dg",
+      "snapshot_sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "source_id": "consensus_joint_base1103",
+      "status": "locked"
+    },
+    {
+      "display_name": "random-derived initialization (014 base2207; 40-track two-copy endpoint)",
+      "gate_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/gate.json",
+      "gate_sha256": "cef694b899039aed36cc26b169f1ba2b9df170b40249742ddd2f28b38cd35f19",
+      "raw_source_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/coords/random.3dg",
+      "raw_source_sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+      "snapshot_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/coords/random.3dg",
+      "snapshot_sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+      "source_id": "random_joint_base2207",
+      "status": "locked"
+    }
+  ],
+  "status": "locked_for_evaluation",
+  "train_only_selection_proof": {
+    "criterion": "count_nll_per_record",
+    "evidence_path": "test_res/036-20260914T064651Z-gpu-multires/selection.json",
+    "evidence_sha256": "619258f1d8d27fb1c39a3137f28f06f6db519d43b8de5c73f5f52b5162267d38",
+    "includes_diag_constants": true,
+    "includes_priors": false,
+    "phase_payload_read": false,
+    "r2_read": false,
+    "reference_read": false,
+    "reported_field_alias": "final count_nll_normalized",
+    "scope": "within_variant_between_two_sources_only",
+    "selection_path": "test_res/036-20260914T064651Z-gpu-multires/selection.json",
+    "selection_recomputed_by_evaluator": false,
+    "status": "complete",
+    "tie_order": [
+      "consensus_joint_base1103",
+      "random_joint_base2207"
+    ],
+    "tie_tolerance_per_record": 1e-09
+  },
+  "training_controller": {
+    "active_jobs": [],
+    "actual_stage_attempt_count": 30,
+    "all_endpoint_terminal": true,
+    "checkpoint_count": 740,
+    "completed_stage_attempt_count": 30,
+    "cpu_020_033_are_historical_anchors": true,
+    "cpu_034_excluded_from_release": true,
+    "expected_endpoint_count": 10,
+    "expected_stage_count": 30,
+    "failed_or_not_run_stage_attempt_count": 0,
+    "formal_output_path": "test_res/036-20260914T064651Z-gpu-multires",
+    "fresh_run_required": true,
+    "gpu_controller_schema": "gpu-multires-controller-v1",
+    "gpu_schema_reference": "test_res/035-20260914T060945Z-gpu-multires-preflight/source/gpu_multires_controller.py",
+    "gpu_schema_reference_sha256": "376857b4888e8d3cc093d911cd2fbbdfe6688294a58fa272e29ea1743a9c5346",
+    "gpu_selection_schema": "gpu-multires-selection-v1",
+    "gpu_terminal_schema": "gpu-multires-terminal-evidence-v1",
+    "main_backend": "GPU",
+    "main_endpoint_backend": "GPU",
+    "manifest_path": "test_res/036-20260914T064651Z-gpu-multires/release_ready_manifest.json",
+    "manifest_sha256": "6327c6d85e7f4736a2796174475a41541002dd1764fa3281a5cb386c59c5e14c",
+    "phase_used": false,
+    "reference_used": false,
+    "release_report_path": "test_res/036-20260914T064651Z-gpu-multires/release_ready_report.md",
+    "release_report_sha256": "260bf5849a28cf83f9c71b8cd14b9d7539f1be441e502818d4f59194a3967860",
+    "runtime_probe_path": "test_res/036-20260914T064651Z-gpu-multires/runtime_probe.json",
+    "runtime_probe_sha256": "66be71ad92fe83db9e6255f0964a4d2391915e6e3d78a0525928f459be8ba984",
+    "selection_path": "test_res/036-20260914T064651Z-gpu-multires/selection.json",
+    "selection_sha256": "619258f1d8d27fb1c39a3137f28f06f6db519d43b8de5c73f5f52b5162267d38",
+    "selection_status": "training_complete",
+    "source_manifest_path": "test_res/036-20260914T064651Z-gpu-multires/provenance/source_hashes.json",
+    "source_manifest_sha256": "82ff5504ef83c9471d738dae02a1e59d7600e66044baec537a34eb49c3e115ba",
+    "status": "complete",
+    "terminal_endpoint_count": 10,
+    "terminal_status": "training_complete",
+    "termination_path": "test_res/036-20260914T064651Z-gpu-multires/terminal_evidence.json",
+    "termination_sha256": "3d3b05fe68d92196871ba37476dbe90126cf66ecb6a5d1f05da8e7435a54c3b1"
+  }
+}

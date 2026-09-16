@@ -1,0 +1,776 @@
+{
+  "schema_version": "post020-allele-ablation-protocol-v1",
+  "protocol_version": "1.0",
+  "status": "frozen_before_fit",
+  "document_role": "authoritative_machine_readable_protocol",
+  "scope": "P9016 post-020 SNP-free allele-signal ablation and synthetic calibration",
+  "execution_status": {
+    "real_joint_fits": "not_started",
+    "synthetic_calibration_fits": "not_started",
+    "real_r2_evaluation": "not_started",
+    "native_025": "prepare_only_no_hk_fdg",
+    "new_reference_or_phase_read": false,
+    "new_coordinate_read": false,
+    "new_fit_started": false
+  },
+  "freeze": {
+    "state": "frozen_before_fit",
+    "freeze_is_required_before_any_new_fit": true,
+    "protocol_documents": [
+      "docs/PLAN-post020-allele-signal.md",
+      "docs/POST020_ALLELE_ABLATION_PROTOCOL.md",
+      "docs/POST020_ALLELE_ABLATION_PROTOCOL.json"
+    ],
+    "run_freeze_path_pattern": "test_res/{NNN}-{YYYYMMDD_HHMMSS}-post020-allele-ablation-{real|synthetic}/freeze/POST020_ALLELE_ABLATION_FREEZE.json",
+    "append_only_artifact_registry": "test_res/POST020_ALLELE_ABLATION_ARTIFACT_REGISTRY.jsonl",
+    "prefit_hash_rule": "Before any native or joint fit, write one freeze record containing sha256 of the exact protocol JSON, input manifest, source snapshot, and the stage-available prepared graph or locked x0 artifacts. Companion protocol MD/plan hashes and true mtimes are appended when those documents are available; if completed later, record them without backdating and do not block native preparation.",
+    "native_prepare_release_rule": "Native preparation may start once the protocol JSON, input/source hashes, and prepared graph hashes for that stage are in the freeze record; MD/plan completion is not a native-start blocker.",
+    "later_artifact_hash_rule": "Before any later joint-fit/evaluation release, append the actual MD/plan mtime and hash if they were not present earlier; never describe a later document as pre-fit.",
+    "superseded_snapshot": {
+      "path": "docs/POST020_ALLELE_ABLATION_PROTOCOL.json",
+      "sha256": "6fa2f833ac4a915614b04c85577d1b7ef5528105553c4c8be69c6327af2eec92",
+      "status": "prefit_superseded_snapshot"
+    },
+    "document_hashes_are_reported_outside_this_self_hashing_json": true,
+    "hash_command": "sha256sum docs/PLAN-post020-allele-signal.md docs/POST020_ALLELE_ABLATION_PROTOCOL.md docs/POST020_ALLELE_ABLATION_PROTOCOL.json"
+  },
+  "read_boundary_for_this_freeze": {
+    "scope": "The no-reference/no-phase rule here describes this documentation pass; the future phase-free training pipeline may read its own newly generated x0 and candidate coordinates.",
+    "allowed_inputs_read": [
+      "AGENTS.md",
+      "docs/PLAN-post020-allele-signal.md",
+      "test_res/023-20260913_212541-post020-allele-signal-diagnostics/README.md",
+      "test_res/024-20260913_133109-r2-allele-signal-derived/README.md",
+      "test_res/025-20260913_135100-random-native-fullgrid-preflight/ textual manifests and receipts"
+    ],
+    "forbidden_before_endpoint_hash_lock": [
+      "data/P9016.1m.3dg.gz",
+      "real phase columns or phase pairs"
+    ],
+    "documentation_pass_did_not_read": [
+      "new real coordinates"
+    ],
+    "future_training_may_read": [
+      "new phase-free native x0",
+      "phase-free candidate coordinates",
+      "phase-free synthetic truth only in isolated post-hash evaluator"
+    ],
+    "training_must_not_use": [
+      "phase0",
+      "phase1",
+      "phase_prob00..11",
+      "reference 3DG",
+      "p_gen",
+      "014 coordinates as an independent initializer"
+    ]
+  },
+  "historical_evidence_and_actual_progress": {
+    "022_continuation": {
+      "path": "test_res/022-20260913_111031-v1-continuation-fdg-r2/",
+      "status": "complete_fixed_warm_continuation",
+      "interpretation": "Plan-B budget diagnostic; same 020 random endpoint, not an independent initialization repeat",
+      "accepted_steps": "240_to_480_cumulative",
+      "termination": "budget_not_converged",
+      "total_j": {
+        "v1_original_1mb": 9.61001577125,
+        "continuation_480": 9.60361804197
+      },
+      "count_nll": {
+        "v1_original_1mb": 9.59358593129,
+        "continuation_480": 9.58710105238
+      },
+      "fdg_1000full_proposal": "rejected_no_label_free_improvement"
+    },
+    "023_fixed_endpoint_diagnostics": {
+      "path": "test_res/023-20260913_212541-post020-allele-signal-diagnostics/",
+      "status": "complete_no_fit_no_reference_phase",
+      "terminal_validation": {
+        "diagnostic_bash_exit": 0,
+        "validator_exit": 0,
+        "final_job": "bash-75"
+      },
+      "020_random_endpoint": {
+        "max_radius": 0.65161710,
+        "beads_at_or_above_0.90": 0,
+        "beads_at_or_above_0.95": 0,
+        "beads_at_or_above_0.99": 0,
+        "sphere_radial_attenuation_min": 0.43646488,
+        "sphere_tangential_attenuation_min": 0.75854806,
+        "weighted_bend_y_gradient_l2": 0.01216713,
+        "count_y_gradient_l2": 0.03243707,
+        "weighted_bend_to_count_y_gradient_ratio": 0.375,
+        "total_gradient_l2": 0.00620367,
+        "last_20_accepted_total_j_decrease": 0.00091717
+      },
+      "022_continuation_endpoint": {
+        "max_radius": 0.68574970,
+        "beads_at_or_above_0.90": 0,
+        "beads_at_or_above_0.95": 0,
+        "beads_at_or_above_0.99": 0,
+        "sphere_radial_attenuation_min": 0.38556995,
+        "sphere_tangential_attenuation_min": 0.72783744,
+        "weighted_bend_y_gradient_l2": 0.01206299,
+        "count_y_gradient_l2": 0.03234493,
+        "weighted_bend_to_count_y_gradient_ratio": 0.373,
+        "total_gradient_l2": 0.00514436,
+        "last_20_accepted_total_j_decrease": 0.0003898645
+      },
+      "semantic_corrections": {
+        "active_boundary": "No endpoint bead is at 0.90/0.95/0.99, but boundary inactivity does not prove that sphere parameterization has no optimization effect.",
+        "repulsion_threshold": "0.7*l0 = 0.04017409936",
+        "legacy_config_repulsion_radius_l0": 2.0,
+        "native_d_r2.0": "different unit; do not mix with the repulsion hinge threshold",
+        "source_vs_current_pr": "Saved-source numerical results are authoritative for historical reproduction when saved source and current pr differ.",
+        "budget_claim": "All 020 stages and 022 stopped at fixed budgets; none is called sufficiently converged. The fixed 480 accepted-step real budget is retained without automatic extension."
+      }
+    },
+    "024_r2_derived": {
+      "path": "test_res/024-20260913_133109-r2-allele-signal-derived/",
+      "status": "complete_derived_only_no_fit_no_reference_phase_contacts",
+      "orientation_bug_status": "024 v2 has corrected the fixed-reference anchor by swapping candidate rows only in the swapped case. Historical v1 matched/cross/contrast/minmargin/counts are unchanged; historical v1 absolute per-reference margins and contribution shares remain withheld unless regenerated under v2.",
+      "v1_original_minus_softall": {
+        "contrast_mean": 0.044957,
+        "contrast_ci95": [-0.007420, 0.096044],
+        "contrast_ci_crosses_zero": true,
+        "matched_delta": -0.055800
+      },
+      "v1_original_pattern_counts": {
+        "both_positive": 13,
+        "one_negative": 7,
+        "n_chromosomes": 20,
+        "minmargin": 0.049677
+      },
+      "continuation_pattern_counts": {
+        "both_positive": 13,
+        "one_negative": 7,
+        "n_chromosomes": 20,
+        "minmargin": 0.047710
+      },
+      "continuation_minus_v1_original": {
+        "contrast_mean": -0.000222,
+        "interpretation": "approximately unchanged; not evidence of L2"
+      },
+      "restricted_existing_fields": [
+        "matched",
+        "cross",
+        "contrast",
+        "minmargin",
+        "orientation/count patterns"
+      ],
+      "withheld_existing_fields_until_fix": [
+        "absolute per-reference margin contribution shares",
+        "absolute per-reference margin interpretation"
+      ]
+    },
+    "025_native_preflight": {
+      "path": "test_res/025-20260913_135100-random-native-fullgrid-preflight/",
+      "status": "prepare_only",
+      "parent_confirmed_scope": "3 native bundles, count conservation, and 63 graph-swap checks passed; hk_fdg was not called.",
+      "native_fit_claim": false,
+      "graph_only_invariance": "Canonical graph/blob invariance does not assert native equivariance.",
+      "observed_bundle_manifest_states": [
+        "prepared_native_pending",
+        "native_not_called",
+        "native_attempt_started=false"
+      ]
+    }
+  },
+  "real_cohort_freeze": {
+    "sample": "P9016 one biological cell",
+    "biological_replicate_level": 1,
+    "training_input": "inputs/P9016.snpfree.pairs.gz",
+    "training_sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "raw_records": {
+      "total": 1703888,
+      "cis_total": 1135454,
+      "inter": 568434,
+      "same_bin_diagonal": 438774,
+      "cis_offdiag": 696680,
+      "structural": 1265114,
+      "conservation": "1703888 = 438774 + 696680 + 568434"
+    },
+    "observation_unit": "Aggregated unordered genomic bin-pair count C_ij",
+    "same_bin_policy": "Keep same-bin records as a separate per-bin saturated nuisance layer; do not use them as geometry terms.",
+    "grid": {
+      "resolution_bp": 1000000,
+      "origin_bp": 0,
+      "bin_rule": "bin = position // 1000000",
+      "terminal_partial_bin": true,
+      "n_chromosomes": 20,
+      "n_tracks": 40,
+      "n_loci_per_copy": 2645,
+      "n_physical_beads": 5290,
+      "eligible_unordered_pairs": 3496690,
+      "real_zero_eligible_pairs": 3009436,
+      "include_all_eligible_pairs": true,
+      "include_zero_count_pairs": true,
+      "legacy_3mb_offset": false
+    },
+    "likelihood_groups": {
+      "cis_offdiag_raw_total": 696680,
+      "inter_raw_total": 568434,
+      "diagonal_nuisance_bins": 2645,
+      "structural_raw_total": 1265114,
+      "all_normalizers_retained": true
+    },
+    "repulsion_and_scale": {
+      "l0_formula": "(2*N_loci)^(-1/3)",
+      "l0": 0.05739157051286577,
+      "r0_formula": "2*l0",
+      "r0": 0.11478314102573153,
+      "epsilon": 0.000001,
+      "repulsion_threshold_formula": "0.7*l0",
+      "repulsion_threshold": 0.04017409936
+    }
+  },
+  "model_freeze": {
+    "fit_scope": "1Mb-only full-grid joint fit; no multi-resolution warm start",
+    "joint_geometry": "40 tracks in one shared excluded-volume model",
+    "inter_contact_role": "Use inter contacts for spatial placement and shared-volume geometry, not for maternal/paternal label accuracy.",
+    "exposure": {
+      "observed_endpoint_formula": "e_i = sqrt(endpoint_count_i + 10) / mean_full_grid(sqrt(endpoint_count + 10))",
+      "observed_endpoint_inputs": "All raw endpoints, including same-bin records; computed without phase or reference.",
+      "uniform_fullgrid": "e_i = 1 for every full-grid locus",
+      "optimized": false,
+      "generation_exposure_is_hidden_from_worker": true
+    },
+    "kernel": {
+      "formula": "K(d) = epsilon + (1-epsilon)*(1 + d^2/r0^2)^(-2)",
+      "epsilon": 0.000001,
+      "r0": "2*l0",
+      "tail_exponent": 4
+    },
+    "count_model": {
+      "cis_rate": "e_i*e_j*[p/2*(K(X_i,X_j)+K(Y_i,Y_j)) + (1-p)/2*(K(X_i,Y_j)+K(Y_i,X_j))]",
+      "inter_rate": "e_i*e_j/4*[K(X_i,X_j)+K(X_i,Y_j)+K(Y_i,X_j)+K(Y_i,Y_j)]",
+      "p_floor": 0.0001,
+      "p_prior_strength": 0.0001,
+      "p_init": 0.75,
+      "p_parameterization": "p = p_floor + (1-2*p_floor)*logistic(q)",
+      "p_init_q": "q_from_p(0.75)",
+      "group_total_profiled": true,
+      "diagonal_profile": "Per-bin saturated nuisance; no coordinate or p gradient.",
+      "zero_pairs_in_rate_normalizer": true
+    },
+    "weights": {
+      "count": 1.0,
+      "bond": 1.0,
+      "repulsion": 1.0,
+      "bend": 0.01,
+      "p_prior": 1.0,
+      "bend_in_C1": 0.0,
+      "all_other_weights_fixed": true
+    },
+    "variants": [
+      {
+        "variant_id": "C0",
+        "label": "V1 original sphere / observed endpoint",
+        "only_change": "none relative to new 1Mb V1 model",
+        "parameterization": "current V1 sphere map",
+        "exposure": "observed_endpoint",
+        "bend_weight": 0.01,
+        "status": "planned_not_run",
+        "starting_point_note": "New 1Mb starts; not a replay of the 020 multi-resolution path."
+      },
+      {
+        "variant_id": "C1",
+        "label": "bend ablation",
+        "only_change": "bend weight 0.01 -> 0",
+        "parameterization": "same as C0",
+        "exposure": "observed_endpoint",
+        "bend_weight": 0.0,
+        "status": "planned_not_run"
+      },
+      {
+        "variant_id": "C2-map",
+        "label": "identity-core smooth sphere map",
+        "only_change": "replace C0 sphere map by fixed identity-core smooth map",
+        "parameterization": "identity_core_0.90_smooth_ball",
+        "exposure": "observed_endpoint",
+        "bend_weight": 0.01,
+        "physical_domain": "R < 1",
+        "status": "planned_not_run"
+      },
+      {
+        "variant_id": "C2-free",
+        "label": "direct Cartesian finite-only boundary sensitivity",
+        "only_change": "direct physical x variables with no hard sphere",
+        "parameterization": "direct_x_finite_only",
+        "exposure": "observed_endpoint",
+        "bend_weight": 0.01,
+        "hard_ball": false,
+        "clip": false,
+        "rescale": false,
+        "finite_only": true,
+        "status": "planned_not_run",
+        "interpretation": "Descriptive boundary/feasible-domain sensitivity; C0 -> C2-free changes parameterization and feasible domain together and cannot be attributed to boundary alone."
+      },
+      {
+        "variant_id": "C3",
+        "label": "full-grid uniform exposure",
+        "only_change": "set exposure to ones",
+        "parameterization": "same as C0",
+        "exposure": "fullgrid_ones",
+        "bend_weight": 0.01,
+        "endpoint_audit": true,
+        "all_normalizers_retained": true,
+        "status": "planned_not_run"
+      }
+    ],
+    "identity_core_map": {
+      "r": "||y||",
+      "if_r_le_0.90": "s = r",
+      "if_r_gt_0.90": "t = (r-0.90)/0.10; s = 0.90 + 0.10*t/sqrt(1+t^2)",
+      "coordinate": "x = s*y/r for r>0; x=0 for r=0",
+      "physical_radius": "R=||x||=s<1",
+      "no_clip_or_rescale": true
+    },
+    "excluded_searches": {
+      "no_bend_plus_free_combo": true,
+      "no_r0_search": true,
+      "no_prior_search": true,
+      "no_exposure_search": true,
+      "no_reference_selection": true,
+      "historical_020_consensus": "Retain as historical control; do not run a new consensus arm."
+    }
+  },
+  "native_initialization_freeze": {
+    "bundle_count": 3,
+    "bundles": [
+      {"bundle_id": "bundle1", "assignment_seed": 250101, "native_seed": 250201},
+      {"bundle_id": "bundle2", "assignment_seed": 250102, "native_seed": 250202},
+      {"bundle_id": "bundle3", "assignment_seed": 250103, "native_seed": 250203}
+    ],
+    "assignment": {
+      "algorithm": "genome.random_assignment",
+      "cis_rule": "Both endpoints use the same random copy.",
+      "inter_rule": "Endpoints use independent random copies.",
+      "phase_free": true,
+      "p_gen_free": true,
+      "no_014_seed_substitution": true
+    },
+    "native_bridge": {
+      "kind": "explicitfullgrid_NULL_source_native_bridge",
+      "n_iter": 1000,
+      "one_call_per_seed": true,
+      "cpu": 1,
+      "target_radius": 10,
+      "source": null,
+      "native_default_parameters": true,
+      "native_bend": 0.0,
+      "terminal_and_zero_contact_beads": "Included; no endpoint/grid bead is dropped."
+    },
+    "graph_canonicalization": {
+      "per_chromosome_primary": "Sort integer AA/BB cis offdiag edge signatures by numeric local-bin pair and count using fixed encoding.",
+      "primary_choice": "Use the smaller byte key as canonical copy A.",
+      "tie_break": "Use incidence signature sorted by other chromosome, self local bin, other local bin, and count while ignoring partner-copy labels.",
+      "remaining_tie": "Fail the preflight; retain the seed and do not silently swap or replace it.",
+      "audits_per_bundle": 21,
+      "audit_scopes": "20 single-chromosome swap vectors plus one all-chromosome swap vector",
+      "total_graph_swap_checks": 63,
+      "native_equivariance_claim": false
+    },
+    "x0_lock": {
+      "native_finalization": "Run native once over all 40 tracks, then one common all-track centering and uniform scale to max radius 0.8.",
+      "canonical_labels_saved": true,
+      "physical_x0_hash_before_models": true,
+      "same_bundle_all_variants_share_physical_x0": true,
+      "latent_inverse_is_variant_specific": true,
+      "no_per_variant_native_call": true,
+      "coordinate_hash_required": true
+    },
+    "future_artifact_path_pattern": "test_res/{NNN}-{YYYYMMDD_HHMMSS}-post020-allele-ablation-real/initialization/{bundle_id}/"
+  },
+  "real_fit_budget": {
+    "fit_count": 15,
+    "arithmetic": "5 variants x 3 paired starts",
+    "resolution": "1Mb only",
+    "optimizer": "SciPy L-BFGS-B",
+    "maxiter_accepted": 480,
+    "maxfun": 1470,
+    "maxls": 20,
+    "ftol": 1e-10,
+    "gtol": 1e-6,
+    "checkpoint_accepted_iterations": 20,
+    "records_required": [
+      "actual nfev",
+      "actual njev",
+      "all objective evaluations",
+      "line-search probe evaluations",
+      "checkpoint components",
+      "terminal reason",
+      "source hash",
+      "input and x0 hashes"
+    ],
+    "stopping": {
+      "r2_early_stop": false,
+      "r2_budget_extension": false,
+      "budget_not_converged_is_explicit": true,
+      "do_not_claim_sufficient_convergence": true
+    },
+    "selection": {
+      "within_variant_only": true,
+      "criterion": "final count_nll_normalized",
+      "tie_tolerance": 1e-12,
+      "tie_break": "bundle_id",
+      "all_15_outputs_evaluated": true,
+      "no_cross_exposure_or_prior_comparison_by_J": true
+    },
+    "failure_policy": {
+      "retain_statistical_failures": true,
+      "retain_numerical_failures": true,
+      "retain_rejected_or_not_converged": true,
+      "do_not_resample_seed_after_failure": true,
+      "do_not_rerun_for_unfavorable_reference_result": true,
+      "bug_retry": "Allowed only on the same frozen data, seed, budget, and variant; record original and new source hashes and label it a retry, not an independent repeat."
+    }
+  },
+  "synthetic_calibration_freeze": {
+    "status": "planned_not_run",
+    "purpose": "Numerical implementation and failure-mode calibration; not a claim that native real initialization is recovered or biologically matched.",
+    "grid": {
+      "same_as_real_header": true,
+      "resolution_bp": 1000000,
+      "n_chromosomes": 20,
+      "n_tracks": 40,
+      "n_loci_per_copy": 2645,
+      "n_points": 5290,
+      "eligible_unordered_pairs": 3496690,
+      "terminal_partial_bin": true
+    },
+    "fixtures": [
+      {
+        "fixture_id": "N1",
+        "class": "negative_same_internal_shape_spatially_separated",
+        "truth_seed": 260101,
+        "draw_seed": 260201,
+        "exposure_seed": 260301,
+        "initial_shape_seed": 260401,
+        "generating_exposure": "ones"
+      },
+      {
+        "fixture_id": "N2",
+        "class": "negative_same_internal_shape_spatially_separated",
+        "truth_seed": 260102,
+        "draw_seed": 260202,
+        "exposure_seed": 260302,
+        "initial_shape_seed": 260402,
+        "generating_exposure": "lognormal_sigma_0.4_mean_1_no_dropout"
+      },
+      {
+        "fixture_id": "P1",
+        "class": "positive_different_shape",
+        "truth_seed": 260103,
+        "draw_seed": 260203,
+        "exposure_seed": 260303,
+        "initial_shape_seed": 260403,
+        "generating_exposure": "ones"
+      },
+      {
+        "fixture_id": "P2",
+        "class": "positive_different_shape",
+        "truth_seed": 260104,
+        "draw_seed": 260204,
+        "exposure_seed": 260304,
+        "initial_shape_seed": 260404,
+        "generating_exposure": "lognormal_sigma_0.4_mean_1_no_dropout"
+      }
+    ],
+    "generator": {
+      "kernel": "same as V1",
+      "p_gen": 0.8,
+      "four_truths_independent": true,
+      "cross_fixture_exposure_effect_claim": false,
+      "lognormal_parameterization": "For N2/P2, draw np.exp(default_rng(seed).normal(0, sigma, N)) with sigma=0.4, then divide by the realized full-grid mean; do not substitute a population log mean.",
+      "dropout": false,
+      "record_totals": {
+        "raw_total": 1703888,
+        "diagonal_same_bin": 438774,
+        "cis_offdiag": 696680,
+        "inter": 568434,
+        "conservation": "1703888 = 438774 + 696680 + 568434"
+      },
+      "sampling": "Fixed-total integer multinomial within the declared count groups.",
+      "all_eligible_pairs_retained": true,
+      "zero_count_policy": "Record actual fixture zero count; never substitute realzeros=3009436."
+    },
+    "worker_inputs": {
+      "C0_C1_C2_map_C2_free_exposure": "Recompute observed-endpoint exposure from synthetic observed counts.",
+      "C3_exposure": "ones",
+      "generating_exposure": "Never supplied to the worker."
+    },
+    "initialization": {
+      "generator": "generate_truth(startseed, false)",
+      "purpose": "Independent random initial shape only",
+      "common_normalization": "One common normalization to max radius 0.8 per fixture",
+      "truth_not_used": true,
+      "truth_not_perturbed": true,
+      "same_x0_across_five_variants": true,
+      "p0": 0.75
+    },
+    "fit_count": 20,
+    "arithmetic": "4 fixtures x 5 variants",
+    "budget": {
+      "maxiter_accepted": 80,
+      "maxfun": 270,
+      "maxls": 20,
+      "ftol": 1e-10,
+      "gtol": 1e-6,
+      "checkpoint_accepted_iterations": 20,
+      "optimizer": "SciPy L-BFGS-B"
+    },
+    "ordering": "Write all fixture truth/observed-data freeze and prepare artifacts first; fit workers receive observed data only; hash all fit coordinates and endpoints before isolated truth evaluation.",
+    "truth_validation_gates": {
+      "N_per_chr_distance_consistency_rtol": 1e-10,
+      "N_centers_min_spacing": 1e-6,
+      "P_normalized_distance_difference_min": 1e-6,
+      "invalid_policy": "Mark fixture invalid and retain it; do not replace its seeds.",
+      "implementation_gates": [
+        "finite",
+        "gradient",
+        "grid",
+        "budget",
+        "code",
+        "truth-coordinate hash"
+      ],
+      "truth_R2_increase_is_not_a_gate": true,
+      "truth_never_selects_parameters": true
+    },
+    "metrics": {
+      "negative_N": {
+        "common_truth": "Mean of the two truth distance matrices per chromosome; use this common matrix for both candidate-copy comparisons.",
+        "scale_definition": {
+          "unit": "per chromosome",
+          "mask": "the same finite unordered off-diagonal mask for both candidate and truth",
+          "sC": "sqrt(mean of squared candidate distances from both candidate copies over the common mask)",
+          "sT": "sqrt(mean of squared truth distances from both truth copies over the common mask)); for N use the common-truth matrix duplicated for the two copies",
+          "relative_copy_scale_preserved": true,
+          "no_per_copy_rescaling": true
+        },
+        "candidate_shape_error": "For each candidate copy report RMS(Dc_copy/sC - Dt_copy/sT) against the common truth, with per-chromosome mean and max.",
+        "negative_only_diagnostic": "RMS((DcA-DcB)/sC) using the same common mask and sC",
+        "negative_only_is_not_positive_score": true,
+        "contrast_near_zero_interpretation": "Algebraic property of the same-shape construction; not proof that a method cannot fabricate a split."
+      },
+      "positive_P": {
+        "scale_definition": "Use the same per-chromosome sC/sT definition as N: both candidate copies and both own-truth copies share one scale on the same finite unordered off-diagonal mask; preserve relative copy scale and do not rescale copies separately.",
+        "report": [
+          "own-truth four rho",
+          "one-whole-chromosome orientation",
+          "matched",
+          "cross",
+          "contrast",
+          "fixed-reference margins",
+          "minmargin",
+          "shape error"
+        ],
+        "no_best_fixture_selection": true
+      }
+    }
+  },
+  "resources_and_schedule": {
+    "observed_readonly_snapshot": {
+      "logical_cpu": 192,
+      "mem_available_gb_approx": 335,
+      "active_fit_at_snapshot": false,
+      "single_worker_rss": "must be measured before production launch"
+    },
+    "concurrency": {
+      "native_preparation_max": 2,
+      "synthetic_fit_max": 4,
+      "real_fit_max": 6,
+      "global_single_thread_process_max": 6,
+      "blas_threads": 1,
+      "omp_threads": 1
+    },
+    "memory_gate": {
+      "minimum_mem_available_gib": 32,
+      "below_threshold": "Do not start a new worker; wait for already-running workers; do not change the optimization budget."
+    },
+    "runtime_estimate": {
+      "historical_real_fit_480_wall_minutes": "45-47",
+      "real_total_cpu_hours_approx": 11.4,
+      "wall_time": "Several hours; no linear speedup guarantee",
+      "estimate_is_not_completion_evidence": true
+    }
+  },
+  "real_r2_only_evaluation_freeze": {
+    "status": "planned_not_run",
+    "reference": {
+      "path": "data/P9016.1m.3dg.gz",
+      "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+      "read_only_after": "All 15 endpoints, within-variant selections, coordinate hashes, and fit source hashes are locked.",
+      "real_phase_pairs_read": false
+    },
+    "controls": [
+      "Softall seed124101",
+      "020 random",
+      "022 continuation",
+      "FDGfull rejected",
+      "random014",
+      "consensus014"
+    ],
+    "mask": {
+      "position_range": "range(3Mb, L, 1Mb)",
+      "finite": true,
+      "unordered": true,
+      "offdiag_only": true,
+      "common_per_chromosome_across_all_conditions": true,
+      "expected_total_common_pairs": 157529,
+      "expected_total_non_diagonal_pairs": 176201,
+      "actual_coverage_must_be_checked": true,
+      "coverage_failure_policy": "Record mismatch and mark affected arm n/a; never silently remove a failed arm or change denominators.",
+      "metric_validity": {
+        "minimum_common_pairs_per_chromosome": 20,
+        "constant_metric_input": "n/a",
+        "nonfinite_metric_input": "n/a",
+        "fewer_than_20_common_pairs": "n/a",
+        "no_local_copy_swap": true
+      }
+    },
+    "raw_and_derived_metrics": {
+      "raw_four_rho": [
+        "rho_A_mat",
+        "rho_A_pat",
+        "rho_B_mat",
+        "rho_B_pat"
+      ],
+      "derived": [
+        "matched",
+        "cross_matched",
+        "contrast",
+        "matched_ref1",
+        "matched_ref2",
+        "margin_ref1",
+        "margin_ref2",
+        "minmargin",
+        "both_positive_count",
+        "one_negative_count",
+        "both_negative_count",
+        "margin_tie_count",
+        "geometry_tie_count",
+        "missing_count"
+      ],
+      "not_a_score": [
+        "candidate copy separation",
+        "1-rho(candidate_copyA,candidate_copyB)",
+        "single best seed"
+      ]
+    },
+    "orientation_policy": {
+      "reference_columns_fixed": {
+        "ref1": "mat",
+        "ref2": "pat"
+      },
+      "direct_mapping": {
+        "a": "rho_A_mat",
+        "b": "rho_A_pat",
+        "c": "rho_B_mat",
+        "d": "rho_B_pat"
+      },
+      "cross_mapping": {
+        "a": "rho_B_mat",
+        "b": "rho_B_pat",
+        "c": "rho_A_mat",
+        "d": "rho_A_pat"
+      },
+      "direct_metrics": "matched=(a+d)/2; cross_matched=(b+c)/2; contrast=matched-cross_matched; margin_ref1=a-b; margin_ref2=d-c; minmargin=min(margin_ref1,margin_ref2)",
+      "selection": "Compare direct_original=(rho_A_mat+rho_B_pat)/2 and cross_original=(rho_A_pat+rho_B_mat)/2 once per chromosome; select the larger orientation with no local copy repair.",
+      "swapped_case": "Swap candidate rows A/B only; never swap reference mat/pat columns.",
+      "best_swap_bias": "The best-overall-swap selection bias is retained and reported, not corrected away.",
+      "tie_tolerance": 1e-12,
+      "tie_policy": "If abs(direct_original-cross_original)<=1e-12, fixed_orientation=unresolved_tie, retain raw four rho, set contrast=0, do not count both_positive, and set fixed-reference margins/minmargin n/a for that chromosome.",
+      "candidate_local_swap": false
+    },
+    "comparisons": [
+      "C1-C0",
+      "C2-map-C0",
+      "C2-free-C0",
+      "C2-free-C2-map",
+      "C3-C0"
+    ],
+    "reporting_order": {
+      "per_seed": "First pair each seed across the same 20 chromosomes and retain all 20 rows and statuses.",
+      "per_chromosome": "Then average the effect for each chromosome over all three seeds.",
+      "cross_seed_summary": "A primary three-seed summary requires all planned three seeds valid. If any comparison has a failed seed or no valid coordinates, report the main three-seed summary as n/a with planned_seed_count=3 and valid_seed_count; optionally provide an explicitly labelled available-seed description, never a silent two-seed primary result.",
+      "biological_replication": "The 20 chromosomes and three initialization seeds are not biological replicates; do not pool 60 chromosome rows as n=60."
+    },
+    "bootstrap": {
+      "index_matrix_seed": 9301,
+      "n_boot": 10000,
+      "matrix_shape": "10000 x 20",
+      "same_index_matrix_for_all_metrics_and_comparisons": true,
+      "interval": "Percentile interval over within-cell chromosome resampling.",
+      "interpretation": "Structural/technical variation within one cell, not biological replication and not a p-value.",
+      "not_best_seed_only": true,
+      "artifact_path_pattern": "test_res/{NNN}-{YYYYMMDD_HHMMSS}-post020-allele-ablation-real/evaluation-r2/bootstrap_index_matrix_seed9301.npy"
+    },
+    "scope_limits": {
+      "r1_added": false,
+      "r3_added": false,
+      "l2_status": "remains unestablished unless a separate predeclared long-range criterion is later satisfied; this R2-only protocol does not upgrade L2 by itself"
+    }
+  },
+  "artifact_layout": {
+    "real_run_pattern": "test_res/{NNN}-{YYYYMMDD_HHMMSS}-post020-allele-ablation-real/",
+    "synthetic_run_pattern": "test_res/{NNN}-{YYYYMMDD_HHMMSS}-post020-allele-ablation-synthetic/",
+    "required_run_contents": [
+      "README.md",
+      "config.json",
+      "freeze/POST020_ALLELE_ABLATION_FREEZE.json",
+      "logs/",
+      "coordinates/",
+      "plots/",
+      "source_manifest.json",
+      "input_manifest.json",
+      "selection.json",
+      "termination_audit.json",
+      "evaluation/"
+    ],
+    "append_only_registry_record_minimum": [
+      "record_id",
+      "run_id",
+      "scope",
+      "variant_id",
+      "bundle_or_fixture_id",
+      "status",
+      "path",
+      "sha256",
+      "source_hashes",
+      "timestamp"
+    ],
+    "no_guessing_existing_artifacts": true
+  },
+  "acceptance_and_claim_boundary": {
+    "protocol_checks_required_before_release": [
+      "JSON parses as strict JSON",
+      "5 variants x 3 bundles = 15 real fits",
+      "4 fixtures x 5 variants = 20 synthetic fits",
+      "real raw count conservation",
+      "real eligible-pair and zero-count totals retained",
+      "orientation mappings use fixed mat/pat reference columns",
+      "all 21 per-bundle and 63 aggregate graph-swap audits recorded",
+      "all seeds and budgets match this JSON",
+      "failed arms remain present with n/a status"
+    ],
+    "not_claimed_by_this_freeze": [
+      "synthetic calibration complete",
+      "real ablation complete",
+      "native equivariance",
+      "sufficient numerical convergence",
+      "allele recovery",
+      "L2 whole-chromosome copy identity"
+    ],
+    "claim_policy": {
+      "L1": "Historical chr1 signal remains separate from this not-yet-run ablation.",
+      "L2": "Not established by 020/022/023/024 or by this freeze.",
+      "L3": "Retracted for the solver class; this protocol tests only the registered variants."
+    }
+  },
+  "links": {
+    "historical_plan": "docs/PLAN-post020-allele-signal.md",
+    "stage_a_023": "test_res/023-20260913_212541-post020-allele-signal-diagnostics/README.md",
+    "r2_024": "test_res/024-20260913_133109-r2-allele-signal-derived/README.md",
+    "native_preflight_025_directory": "test_res/025-20260913_135100-random-native-fullgrid-preflight/"
+  }
+}

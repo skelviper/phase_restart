@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-09-15T16:38:53.737725+00:00",
+  "evidence": {
+    "canonical_vs_true_raw_gradient_diff": 9.992007221626409e-16,
+    "chromosome_isolation_max_abs": 0.0,
+    "dense_all_pass": true,
+    "dense_rows": [
+      {
+        "chromosome_index": 0,
+        "component": 0,
+        "max_abs_error": 7.105427357601002e-15,
+        "n_bins": 4
+      },
+      {
+        "chromosome_index": 0,
+        "component": 1,
+        "max_abs_error": 2.7755575615628914e-16,
+        "n_bins": 4
+      },
+      {
+        "chromosome_index": 0,
+        "component": 2,
+        "max_abs_error": 8.881784197001252e-16,
+        "n_bins": 4
+      },
+      {
+        "chromosome_index": 1,
+        "component": 0,
+        "max_abs_error": 7.549516567451064e-15,
+        "n_bins": 3
+      },
+      {
+        "chromosome_index": 1,
+        "component": 1,
+        "max_abs_error": 5.440092820663267e-15,
+        "n_bins": 3
+      },
+      {
+        "chromosome_index": 1,
+        "component": 2,
+        "max_abs_error": 1.0436096431476471e-14,
+        "n_bins": 3
+      }
+    ],
+    "identity_wrapper_gradient_diff": 7.216449660063518e-16,
+    "identity_wrapper_value_diff": 1.7763568394002505e-15,
+    "inverse_roundtrip_error": 6.661338147750939e-16,
+    "note": "canonical diff must be large enough to show P is not identity",
+    "optimizer_gradient_vs_canonical_diff": 0.2018761960211751,
+    "real_P_value_diff": 1.7763568394002505e-15,
+    "roundtrip_error": 8.881784197001252e-16,
+    "symbol_max": 3.0,
+    "symbol_min": 1.0112737355857875,
+    "symbol_positive": true,
+    "symmetry_residual": 8.881784197001252e-16
+  },
+  "gate": "gate5_preconditioner",
+  "status": "PASS"
+}

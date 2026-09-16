@@ -1,0 +1,63 @@
+{
+  "schema_version": "p9016-visibility-041-integration-formal-v2-schema-check-v1",
+  "status": "PASS",
+  "source_root": "test_res/041-20260914T173823Z-visibility-formal/integration_formal_check_v2",
+  "formal_release": false,
+  "training_run_formal_result": false,
+  "evaluation_run": false,
+  "r2_run": false,
+  "population_kl_run": false,
+  "coordinate_3dg_opened": false,
+  "reference_opened": false,
+  "truth_coordinate_opened": false,
+  "checked_files": "only integration_formal_check_v2/sidecars/**/*.visibility.npz and matching stages/**/*.json",
+  "checked_endpoint_count": 12,
+  "checked_stage_count": 24,
+  "stage_counts": {
+    "5Mb": 6,
+    "2Mb": 6,
+    "1Mb": 12
+  },
+  "sidecar_schema": {
+    "required_alignment_keys": ["numeric_position", "chromosome_index"],
+    "numeric_position_key": "numeric_position",
+    "numeric_position_dtype": "int64",
+    "chromosome_index_dtype": "int32",
+    "alignment_rule": "stage positions are the exact full-template order subsampled at the stage bin size",
+    "all_positions_order_pass": true,
+    "all_chromosome_index_order_pass": true,
+    "full_1Mb_locus_count": 2645,
+    "observed_locus_counts": {
+      "5Mb": 538,
+      "2Mb": 1329,
+      "1Mb": 2645
+    },
+    "common_npz_keys": ["eta", "e", "active_mask", "zero_mask", "numeric_position", "chromosome_index", "eta_inactive_placeholder"],
+    "v1_additional_npz_keys": ["degree", "predicted_degree"]
+  },
+  "degree_residual": {
+    "definition": "degree - predicted_degree",
+    "denominator": "max(1, degree)",
+    "tolerance": 1e-10,
+    "v1_stage_count": 8,
+    "non_profile_stage_count": 16,
+    "max_relative_residual": 1.7990942069445737e-11,
+    "max_relative_by_1Mb_case": {
+      "real-V1-consensus": 1.7990942069445737e-11,
+      "real-V1-random": 1.7763568394002505e-14,
+      "synthetic-P2-V1-profile-e": 1.1879260545979564e-12,
+      "synthetic-N2-V1-profile-e": 7.243545815956097e-15
+    },
+    "all_v1_stages_pass": true,
+    "non_profile_policy": "V0/VZ/known-e degree_status and predicted_degree_status are not_computed; residual is not_applicable"
+  },
+  "p_q": {
+    "source": "endpoint.p and endpoint.q in matching stage JSON",
+    "all_stage_records_terminal_consistent": true,
+    "all_p_bounded": true,
+    "all_p_from_q_abs_error_le_1e-12": true,
+    "max_p_from_q_abs_error": 0.0,
+    "q_is_raw_bounded_logistic_parameter": true
+  },
+  "interpretation": "This is the actual run_formal/stage_fit short integration check, with 24 stages and 48FG, not the formal 12-endpoint release. It is used only for read-only interface validation; the formal root/stages results remain pending and integration_formal_check_v2 is excluded from formal outputs."
+}

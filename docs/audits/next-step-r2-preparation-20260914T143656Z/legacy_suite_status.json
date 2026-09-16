@@ -1,0 +1,9 @@
+{
+  "assertion": "assertRaises(r2.PreparationError) did not raise because the historical 041826 release contract is no longer pending/rejected",
+  "command": "PYTHONPATH=. pytest -q tests/test_allele_calibration_evaluator.py docs/audits/multires-r2-preparation-20260914_041826/test_multires_r2.py",
+  "failed": 1,
+  "passed": 13,
+  "scope": "legacy 041826 expectation only; no next-step code or old files changed",
+  "status": "nonblocking_expected_failure",
+  "test": "FrozenContractTests.test_pending_release_is_rejected_before_payload_access"
+}

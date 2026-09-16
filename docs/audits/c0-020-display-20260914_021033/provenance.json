@@ -1,0 +1,291 @@
+{
+  "config": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/config.json",
+    "sha256": "804df49ef31584048fb1d74a0b921bdc352f63c9cdcd8e5f795146c7c20d74e8"
+  },
+  "input_records": {
+    "020_metrics": {
+      "expected_sha256": "4eac0661698043bc15442fabbec9bec67f262f0a682fd23640fa063e6dcd9f70",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/metrics/metrics.json",
+      "sha256": "4eac0661698043bc15442fabbec9bec67f262f0a682fd23640fa063e6dcd9f70",
+      "size_bytes": 1597431
+    },
+    "022_r2_per_chromosome": {
+      "expected_sha256": null,
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/evaluation-r2/results/r2_per_chromosome.tsv",
+      "sha256": "7bdb148fff340681dc59b40af0e8501e52079ccce4004d32f220e63a5d6b61db",
+      "size_bytes": 430978
+    },
+    "candidate:C0_bundle1": {
+      "expected_sha256": "629c8af30a5b924c3a661368874ca000e6f119c60f62f48af1278d4184288d5a",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "629c8af30a5b924c3a661368874ca000e6f119c60f62f48af1278d4184288d5a",
+      "size_bytes": 404795
+    },
+    "candidate:C0_bundle2": {
+      "expected_sha256": "6a8b249c1b6bde046183740d5591ae5ee185676991bafdba152827d1581db68f",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "6a8b249c1b6bde046183740d5591ae5ee185676991bafdba152827d1581db68f",
+      "size_bytes": 404770
+    },
+    "candidate:C0_bundle3": {
+      "expected_sha256": "65b27356b43d0271fbd8c3167f198a584822f08d99462ab47418437e2fc2c66f",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "65b27356b43d0271fbd8c3167f198a584822f08d99462ab47418437e2fc2c66f",
+      "size_bytes": 404761
+    },
+    "candidate:v1_continuation_022": {
+      "expected_sha256": "49501f5b38d699fb2c9c8849616edd02b70fccd5ae39e1efe6036e17f5f620e7",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/coords/random_joint/final-1m-continuation-61da99669694b822.3dg",
+      "sha256": "49501f5b38d699fb2c9c8849616edd02b70fccd5ae39e1efe6036e17f5f620e7",
+      "size_bytes": 404607
+    },
+    "candidate:v1_original_020": {
+      "expected_sha256": "afb2d52ae11e342e9b43b3c8042c5581760d177c5e563f2478646ab36b3e7078",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/020-20260913_071841-v1-p9016-joint/selected.3dg",
+      "sha256": "afb2d52ae11e342e9b43b3c8042c5581760d177c5e563f2478646ab36b3e7078",
+      "size_bytes": 404619
+    },
+    "evaluation_r2_config": {
+      "expected_sha256": "e3aa22d11be91d82a9f4a847ac9662f2cf7c834ae99e963bfd851c6698798b83",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/config.json",
+      "sha256": "e3aa22d11be91d82a9f4a847ac9662f2cf7c834ae99e963bfd851c6698798b83",
+      "size_bytes": 16913
+    },
+    "existing_mask_manifest": {
+      "expected_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+      "sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+      "size_bytes": 361131
+    },
+    "locked_r2": {
+      "expected_sha256": "ae29cf14b213c5652d10d90cf57fc5d3c8865902c7b78147fe7bfae8adaa4c16",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.json",
+      "sha256": "ae29cf14b213c5652d10d90cf57fc5d3c8865902c7b78147fe7bfae8adaa4c16",
+      "size_bytes": 5151814
+    },
+    "mask:C0-bundle1": {
+      "expected_sha256": "629c8af30a5b924c3a661368874ca000e6f119c60f62f48af1278d4184288d5a",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "629c8af30a5b924c3a661368874ca000e6f119c60f62f48af1278d4184288d5a",
+      "size_bytes": 404795
+    },
+    "mask:C0-bundle2": {
+      "expected_sha256": "6a8b249c1b6bde046183740d5591ae5ee185676991bafdba152827d1581db68f",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "6a8b249c1b6bde046183740d5591ae5ee185676991bafdba152827d1581db68f",
+      "size_bytes": 404770
+    },
+    "mask:C0-bundle3": {
+      "expected_sha256": "65b27356b43d0271fbd8c3167f198a584822f08d99462ab47418437e2fc2c66f",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C0-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "65b27356b43d0271fbd8c3167f198a584822f08d99462ab47418437e2fc2c66f",
+      "size_bytes": 404761
+    },
+    "mask:C1-bundle1": {
+      "expected_sha256": "dcd11e9be7b1b42b27436dd090cd10dcb2fa25b86e4cc5b1ea955e7aaba54b8d",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C1-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "dcd11e9be7b1b42b27436dd090cd10dcb2fa25b86e4cc5b1ea955e7aaba54b8d",
+      "size_bytes": 404774
+    },
+    "mask:C1-bundle2": {
+      "expected_sha256": "2566f617ed328988de7f800624c684a14ab387d2b5243badb339cac6f565e45a",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C1-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "2566f617ed328988de7f800624c684a14ab387d2b5243badb339cac6f565e45a",
+      "size_bytes": 404892
+    },
+    "mask:C1-bundle3": {
+      "expected_sha256": "d7b6521119deb8ed4541929f734af33ccb1843f347556fe490615230f76de9cf",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C1-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "d7b6521119deb8ed4541929f734af33ccb1843f347556fe490615230f76de9cf",
+      "size_bytes": 404794
+    },
+    "mask:C2-free-bundle1": {
+      "expected_sha256": "f9b7c7926699126e2b54cfc97ffa76a6910c1b8d268e66f4805713792a548d88",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-free-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "f9b7c7926699126e2b54cfc97ffa76a6910c1b8d268e66f4805713792a548d88",
+      "size_bytes": 404845
+    },
+    "mask:C2-free-bundle2": {
+      "expected_sha256": "0d80e90c9a2b8c5b5da70b435286687d09e3754bed9a30f50b2f2eb84229bb59",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-free-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "0d80e90c9a2b8c5b5da70b435286687d09e3754bed9a30f50b2f2eb84229bb59",
+      "size_bytes": 404748
+    },
+    "mask:C2-free-bundle3": {
+      "expected_sha256": "2e078ab27d1c68d27be9d0a7dd745a4cd943f30ca44cdd32793a771e2f828e16",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-free-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "2e078ab27d1c68d27be9d0a7dd745a4cd943f30ca44cdd32793a771e2f828e16",
+      "size_bytes": 404802
+    },
+    "mask:C2-map-bundle1": {
+      "expected_sha256": "f9b7c7926699126e2b54cfc97ffa76a6910c1b8d268e66f4805713792a548d88",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-map-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "f9b7c7926699126e2b54cfc97ffa76a6910c1b8d268e66f4805713792a548d88",
+      "size_bytes": 404845
+    },
+    "mask:C2-map-bundle2": {
+      "expected_sha256": "0d80e90c9a2b8c5b5da70b435286687d09e3754bed9a30f50b2f2eb84229bb59",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-map-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "0d80e90c9a2b8c5b5da70b435286687d09e3754bed9a30f50b2f2eb84229bb59",
+      "size_bytes": 404748
+    },
+    "mask:C2-map-bundle3": {
+      "expected_sha256": "2e078ab27d1c68d27be9d0a7dd745a4cd943f30ca44cdd32793a771e2f828e16",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C2-map-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "2e078ab27d1c68d27be9d0a7dd745a4cd943f30ca44cdd32793a771e2f828e16",
+      "size_bytes": 404802
+    },
+    "mask:C3-bundle1": {
+      "expected_sha256": "ba821744e1f9fd9270e56e5d340759d84bca67c7f2ec858efbb684abe30459a2",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C3-bundle1/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "ba821744e1f9fd9270e56e5d340759d84bca67c7f2ec858efbb684abe30459a2",
+      "size_bytes": 404866
+    },
+    "mask:C3-bundle2": {
+      "expected_sha256": "36fd1f989b93d7583b11774f6037a74b1644d650aa2a1e6913d5f120d2fe5dbc",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C3-bundle2/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "36fd1f989b93d7583b11774f6037a74b1644d650aa2a1e6913d5f120d2fe5dbc",
+      "size_bytes": 404825
+    },
+    "mask:C3-bundle3": {
+      "expected_sha256": "6d26a19553dab0ba82b9eb21e11edbb65f6a30c61fec09b1cb12e96860a0db60",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/jobs/C3-bundle3/attempts/attempt-001/final_coordinates.3dg",
+      "sha256": "6d26a19553dab0ba82b9eb21e11edbb65f6a30c61fec09b1cb12e96860a0db60",
+      "size_bytes": 404684
+    },
+    "mask:consensus014": {
+      "expected_sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/coords/consensus.3dg",
+      "sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "size_bytes": 112765
+    },
+    "mask:fdg_proposal": {
+      "expected_sha256": "44d8577de6faa034f002075b0b57e7e40de22a98468d05a822d89b22254361e5",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/fdg/mapped_proposal.3dg",
+      "sha256": "44d8577de6faa034f002075b0b57e7e40de22a98468d05a822d89b22254361e5",
+      "size_bytes": 415869
+    },
+    "mask:random014": {
+      "expected_sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/coords/random.3dg",
+      "sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+      "size_bytes": 221961
+    },
+    "mask:softall_seed124101": {
+      "expected_sha256": "b5366dcdcb5faaba25ad7ec1cf1ecd0de3e920982db233b1a4b20ee346605704",
+      "path": "/work/phase3/test_res/124-20260905_185119-p9016_step_policy_1m/native/fixed_seed124101/softall/p9016_full.coords.tsv",
+      "sha256": "b5366dcdcb5faaba25ad7ec1cf1ecd0de3e920982db233b1a4b20ee346605704",
+      "size_bytes": 371456
+    },
+    "mask:v1_continuation": {
+      "expected_sha256": "49501f5b38d699fb2c9c8849616edd02b70fccd5ae39e1efe6036e17f5f620e7",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/coords/random_joint/final-1m-continuation-61da99669694b822.3dg",
+      "sha256": "49501f5b38d699fb2c9c8849616edd02b70fccd5ae39e1efe6036e17f5f620e7",
+      "size_bytes": 404607
+    },
+    "mask:v1_original_random_joint": {
+      "expected_sha256": "afb2d52ae11e342e9b43b3c8042c5581760d177c5e563f2478646ab36b3e7078",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/020-20260913_071841-v1-p9016-joint/selected.3dg",
+      "sha256": "afb2d52ae11e342e9b43b3c8042c5581760d177c5e563f2478646ab36b3e7078",
+      "size_bytes": 404619
+    },
+    "old_020_npz": {
+      "expected_sha256": "ff8022d3cbfd9df663d78e0d09c0d4b941be3e8d1608cf822543f68a5f118d44",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/supplement-chr1-distance-matrices-20260913_091650/distance_matrices_chr1.npz",
+      "sha256": "ff8022d3cbfd9df663d78e0d09c0d4b941be3e8d1608cf822543f68a5f118d44",
+      "size_bytes": 2015984
+    },
+    "old_020_script": {
+      "expected_sha256": "92d3152e47d5f24cb93aa947398a010ee50161cf63d406660b2d3c8fc3961efe",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/020-20260913_071841-v1-p9016-joint/evaluation-20260913_080300-final/supplement-chr1-distance-matrices-20260913_091650/run_supplemental_chr1_distance_matrices.py",
+      "sha256": "92d3152e47d5f24cb93aa947398a010ee50161cf63d406660b2d3c8fc3961efe",
+      "size_bytes": 37894
+    },
+    "old_022_npz": {
+      "expected_sha256": "3290b0b9dba372ae90db69d6acb1d44b0923e7d1b95218ddfb794c9dff34eae6",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/supplement-chr1-distance-matrices-20260913_130101/distance_matrices_chr1_continuation.npz",
+      "sha256": "3290b0b9dba372ae90db69d6acb1d44b0923e7d1b95218ddfb794c9dff34eae6",
+      "size_bytes": 3053133
+    },
+    "old_022_script": {
+      "expected_sha256": "22f26e3cb978248c757d6270ace88c8e8fbc11e1b01025c6b6d8eccf00b8e6cd",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/022-20260913_111031-v1-continuation-fdg-r2/supplement-chr1-distance-matrices-20260913_130101/run_supplemental_chr1_distance_matrices_022.py",
+      "sha256": "22f26e3cb978248c757d6270ace88c8e8fbc11e1b01025c6b6d8eccf00b8e6cd",
+      "size_bytes": 54895
+    },
+    "old_029_C0_bundle2_npz": {
+      "expected_sha256": "43efe01866b53ee1d45d55a5597d060273da4ed3b4462bb48bad183280eff295",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/supplements/chr1-contrast-display-20260914_011528/C0_chr1_distance_matrices.npz",
+      "sha256": "43efe01866b53ee1d45d55a5597d060273da4ed3b4462bb48bad183280eff295",
+      "size_bytes": 3048842
+    },
+    "old_029_script": {
+      "expected_sha256": "bda82f5c065f4ca24efafcbf02559ca260fc8a515c6452fc7559a8edf4d60f0c",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/supplements/chr1-contrast-display-20260914_011528/run_chr1_contrast_display.py",
+      "sha256": "bda82f5c065f4ca24efafcbf02559ca260fc8a515c6452fc7559a8edf4d60f0c",
+      "size_bytes": 62774
+    },
+    "r2_per_chromosome": {
+      "expected_sha256": "ae29cf14b213c5652d10d90cf57fc5d3c8865902c7b78147fe7bfae8adaa4c16",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.json",
+      "sha256": "ae29cf14b213c5652d10d90cf57fc5d3c8865902c7b78147fe7bfae8adaa4c16",
+      "size_bytes": 5151814
+    },
+    "r2_summary": {
+      "expected_sha256": "877cbee683c3a31b007eefd8a363b8630e817ff6e9faafc7b28e7c30c46f4896",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_summary.json",
+      "sha256": "877cbee683c3a31b007eefd8a363b8630e817ff6e9faafc7b28e7c30c46f4896",
+      "size_bytes": 1139887
+    },
+    "reference": {
+      "expected_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+      "path": "/mnt/ssd/zliu/phase_restart/data/P9016.1m.3dg.gz",
+      "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+      "size_bytes": 155371
+    },
+    "release_manifest": {
+      "expected_sha256": "aa3b729e81f745b23b3267f2011fe556ed61c235ff722e78d28a6fc25f2da16b",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/release_manifest_r2.json",
+      "sha256": "aa3b729e81f745b23b3267f2011fe556ed61c235ff722e78d28a6fc25f2da16b",
+      "size_bytes": 37995
+    },
+    "x0:bundle1": {
+      "expected_sha256": "2c55a6d8d3eba202c6de138ca79264d281900a74a806be935bdfb7389ea9fdd4",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle1/x0_normalized.3dg",
+      "sha256": "2c55a6d8d3eba202c6de138ca79264d281900a74a806be935bdfb7389ea9fdd4",
+      "size_bytes": 407648
+    },
+    "x0:bundle2": {
+      "expected_sha256": "d74f97dbdd8e0fe7701906e12061ddcf0351c566c9648890e540b28feb620358",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle2/x0_normalized.3dg",
+      "sha256": "d74f97dbdd8e0fe7701906e12061ddcf0351c566c9648890e540b28feb620358",
+      "size_bytes": 407940
+    },
+    "x0:bundle3": {
+      "expected_sha256": "f3a951e28c41152c630208241b99a5f18094475842e1ab9a6c8591824ca99a94",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/025-20260913_135100-random-native-fullgrid-preflight/bundles/bundle3/x0_normalized.3dg",
+      "sha256": "f3a951e28c41152c630208241b99a5f18094475842e1ab9a6c8591824ca99a94",
+      "size_bytes": 407642
+    }
+  },
+  "original_evaluation_unchanged": true,
+  "reference_read_after_candidate_hashes": true,
+  "schema": "p9016-c0-020-independent-audit-provenance-v1",
+  "script": {
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/audit_c0_020_display.py",
+    "sha256": "2edbee7aeb8112aa3f5020490e300ad24884caf69e78147a71a2c17dd25a1644"
+  },
+  "status": "PASS",
+  "workflow": [
+    "Freeze config and all endpoint/x0/mask hashes before reference read.",
+    "Parse 5 endpoint coordinates, 3 025 x0 coordinates, and all 21 existing mask coordinates with an independent float64 text parser.",
+    "Hash and read the evaluation reference only after all coordinate locks pass.",
+    "Build one common mask from exactly the existing 21 conditions plus the two reference tracks; verify all per-chromosome pair counts.",
+    "Recompute four rho, fixed-reference margins, whole-chromosome orientation, and derived R2 metrics without project R2 helpers.",
+    "Compare independent endpoint results to locked 029 rows and compare old NPZ matrices to fresh matrices.",
+    "Render endpoint and posthoc x0 chr1 maps with one global norm, coolwarm_r, 300 dpi, 7 pt, 6x6 inch canvases.",
+    "Write only this fresh audit directory; no fit, selection, phase, or original artifact writes."
+  ],
+  "x0_diagnostic_posthoc": true
+}

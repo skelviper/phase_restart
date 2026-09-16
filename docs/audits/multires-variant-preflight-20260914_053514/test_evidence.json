@@ -1,0 +1,49 @@
+{
+  "schema": "multires-variant-test-evidence-v1",
+  "status": "passed",
+  "command": "source /mnt/ssd/zliu/miniforge3/etc/profile.d/conda.sh && conda activate analysis && OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python -m unittest -v tests.test_multires_variant_runner",
+  "runner_exit_code": 0,
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    "plan_is_exactly_24_remaining_attempts_with_frozen_budgets",
+    "transfer_matches_frozen_warm_start_and_free_has_no_clip",
+    "c0_path_parity_covers_solver_hooks_writer_and_selection",
+    "domain_probe_uses_correct_objective_and_free_writer",
+    "c2_free_three_layer_chain_carries_raw_q_and_never_clips",
+    "real_scipy_c2_free_helper_matches_original_when_endpoint_stays_bounded",
+    "real_scipy_c2_free_helper_preserves_a_translated_outside_domain"
+  ],
+  "real_scipy_checks": {
+    "bounded_endpoint": {
+      "maxiter": 3,
+      "maxfun": 20,
+      "checkpoint_every": 1,
+      "theta_max_abs": 0.0,
+      "coordinates_max_abs": 0.0,
+      "components_max_abs": 0.0,
+      "history_count": 4,
+      "checkpoint_count": 3,
+      "time_fields_ignored": true
+    },
+    "translated_outside_endpoint": {
+      "maxiter": 1,
+      "maxfun": 2,
+      "final_max_physical_radius": 1.7718339736278956,
+      "direct_physical_equals_raw": true,
+      "clip_applied": false
+    }
+  },
+  "other_probe_max_abs": {
+    "c0_path_parity": 0.0,
+    "archived_020_transfer": 0.0,
+    "archived_020_q_carry": 0.0,
+    "bounded_layer_transfer": 0.0,
+    "c2_map_gradient_abs": 5.268779856848482e-11
+  },
+  "reference_free": true,
+  "phase_free": true,
+  "native_fdg_started": false,
+  "real_p9016_variant_stages_launched": false
+}

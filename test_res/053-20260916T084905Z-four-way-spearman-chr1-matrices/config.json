@@ -1,0 +1,27 @@
+{
+  "schema": "p9016-round053-four-way-spearman-chr1-matrices-config-v1",
+  "purpose": "user 追加绘图请求：把既有 40 -> 10 -> 5 -> 2 -> 1 Mb 中间端点加入 Spearman boxplot，并展示该新链 200kb 与 1Mb 的 chr1 distance matrices",
+  "mode": "read-only reuse of existing endpoints; plotting + evaluation-only reuse; no refit / no new optimization / no extra experiments",
+  "dataset": {
+    "cell": "P9016 single cell",
+    "chromosomes": 20,
+    "copy_tracks": 40,
+    "observation_unit": "chromosome (20 correlated measurements in one cell), NOT a biological replicate",
+    "phase_columns_read": false,
+    "new_training": false
+  },
+  "candidates": {
+    "Baseline": {"npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz", "sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752", "own_budget_fg": 1502, "chain": "5 -> 2 -> 1 Mb"},
+    "Extra levels": {"npz": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.npz", "sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a", "own_budget_fg": 1902, "chain": "20 -> 10 -> 5 -> 2 -> 1 Mb (old 20Mb extra, not the new chain)"},
+    "New chain 1 Mb": {"npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/1Mb.npz", "own_budget_fg": 1902, "chain": "40 -> 10 -> 5 -> 2 -> 1 Mb (newly added endpoint)"},
+    "200 kb -> 1 Mb": {"npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/200kb-to-1Mb/coarsened1Mb.npz", "own_budget_fg": 2202, "chain": "40 -> 10 -> 5 -> 2 -> 1 Mb -> 500kb -> 200kb, arithmetic-mean coarsening to 1Mb"}
+  },
+  "chr1_matrix_only_candidate": {"npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/200kb.npz", "sha256": "c24ba8eabeac722f09ef5c6a4b6137a62984265e31523493fbb6d0c2954ad1b6", "own_budget_fg": 2202, "role": "native 200 kb grid display only; never scored directly against the 1 Mb reference"},
+  "frozen_support": {"snapshot": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz", "sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9", "n_valid_loci": 2447, "n_intra_pairs": 157529, "n_chromosomes": 20, "shared_by_all_four_versions": true},
+  "reference": {"path": "data/P9016.1m.3dg.gz", "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29", "use": "evaluation and display only; opened only after all candidate hashes were written", "one_mb_only": "no 200 kb reference exists; no interpolation is fabricated"},
+  "metric": {"name": "signed Spearman rho (average-tie ranks)", "distances": "euclidean on 1 Mb coarse coordinates", "swap_rule": "one whole-chromosome A/B swap per chromosome chosen from the four rho values by best matched pair sum", "same": "mean rho of the matched copies", "cross": "mean rho of the swapped copies", "na_policy": "NA kept explicit, never nan-meaned into n=20"},
+  "figures": {"four_way_same_cross_spearman.png": "4 versions x same/cross boxplot with 20 chromosome points each", "chr1_distance_matrices.png": "2 rows (matched to reference mat / pat) x 4 columns (Reference 1Mb / New chain 1Mb / New chain 200kb / 200kb->1Mb coarsened)"},
+  "style": {"panel_inches": 3.0, "dpi": 300, "font_pt": 7, "matrix_cmap": "coolwarm_r", "matrix_vmin": 0.0, "matrix_vmax": "shared finite maximum over all eight panels"},
+  "budget_limitation": "all four endpoints are budget_not_converged and do not share an equal FG budget (1502 / 1902 / 1902 / 2202); the comparison is not equal-cost",
+  "scope_limits": "one cell; no bootstrap, no significance test, no new null, no R1/R3, no new fitting; does not modify run 046 / 051 / 052"
+}

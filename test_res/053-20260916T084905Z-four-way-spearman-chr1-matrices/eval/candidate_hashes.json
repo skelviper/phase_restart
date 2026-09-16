@@ -1,0 +1,42 @@
+{
+  "200 kb -> 1 Mb": {
+    "frozen_expected_sha256": null,
+    "frozen_match": true,
+    "lineage": "014 random -> 40Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486 -> 500kb 200 -> 200kb 100, then arithmetic-mean coarsening to 1Mb",
+    "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/200kb-to-1Mb/coarsened1Mb.npz",
+    "npz_sha256": "ac7f9f47b8fc0c77c0eb86a178031d3e62d78c28bc95867978b68c5a29662b6a",
+    "own_budget_fg": 2202
+  },
+  "Baseline": {
+    "frozen_expected_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "frozen_match": true,
+    "lineage": "014 random -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+    "npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "own_budget_fg": 1502
+  },
+  "Extra levels": {
+    "frozen_expected_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+    "frozen_match": true,
+    "lineage": "014 random -> 20Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.npz",
+    "npz_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+    "own_budget_fg": 1902
+  },
+  "New chain 1 Mb": {
+    "frozen_expected_sha256": null,
+    "frozen_match": true,
+    "lineage": "014 random -> 40Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/1Mb.npz",
+    "npz_sha256": "1eee356d48a67a6a92733e621c98757a0e824245ba65ecb5393c36bc9b21c670",
+    "own_budget_fg": 1902
+  },
+  "__chr1_matrix_only__/New chain 200 kb": {
+    "frozen_expected_sha256": "c24ba8eabeac722f09ef5c6a4b6137a62984265e31523493fbb6d0c2954ad1b6",
+    "frozen_match": true,
+    "lineage": "new chain continuation to 500kb 200 -> 200kb 100 (native 200kb grid)",
+    "npz": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/200kb.npz",
+    "npz_sha256": "c24ba8eabeac722f09ef5c6a4b6137a62984265e31523493fbb6d0c2954ad1b6",
+    "own_budget_fg": 2202
+  }
+}

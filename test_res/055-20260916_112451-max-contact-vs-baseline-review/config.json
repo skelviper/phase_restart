@@ -1,0 +1,117 @@
+{
+  "schema": "p9016-round055-config-v1",
+  "run_id": "055-20260916_112451-max-contact-vs-baseline-review",
+  "run_dir": "test_res/055-20260916_112451-max-contact-vs-baseline-review",
+  "created_at_utc": "2026-09-16T11:24:51Z",
+  "purpose": "Descriptive comparison of the historical max-contact loss endpoints (049 loss B hard_observed, loss C max_rate) against the current working baseline (046 G-random base endpoint) and the reference structure, on one frozen common mask, 20 chromosomes, Pearson same/cross/contrast boxplots plus chr1 distance heatmaps. No refit, no resampling, no R1/R3, no L2 claim.",
+  "cohort_identity": {
+    "cells": 1,
+    "chromosomes": 20,
+    "tracks": 40,
+    "raw_records": 1703888,
+    "raw_records_breakdown": {
+      "diag_zero_distance": 438774,
+      "cis_offdiag": 696680,
+      "inter": 568434,
+      "offdiag_total": 1265114
+    },
+    "observation_unit": "chromosome (20 correlated measurements of one cell; not biological replicates)",
+    "phase_read": false
+  },
+  "datasets": {
+    "Reference": {
+      "role": "reference_structure_control",
+      "path": "data/P9016.1m.3dg.gz",
+      "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+      "note": "1Mb 40-track reference; self-comparison is degenerate (same = 1 by construction) and is used only as a structural contrast line, not as an independent fit"
+    },
+    "Baseline-046-G-random": {
+      "role": "current_work_baseline",
+      "path": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+      "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+      "sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b",
+      "lineage": "014 unlabeled random start (seed 2207) -> 5Mb 612FG -> 2Mb 404FG -> 1Mb 486FG = 1502FG; no second 1Mb extension",
+      "objective": "G marginal (loss A marginal_G), full-J, fixed_e",
+      "terminal": "budget_not_converged / fg_budget_exhausted (stages/real-G-random/1Mb.json, last_accepted_endpoint=true)"
+    },
+    "B-hard-observed": {
+      "role": "historical_max_contact_loss_B",
+      "path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-consensus/1Mb.3dg",
+      "npz": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-consensus/1Mb.npz",
+      "sha256": "4f00edc33fbf4e99066137e8afabf02daeb0736df6f7ead4d6865501bba7ed91",
+      "loss_spec": "Noff*log(Zsum) - sum_C C*log(r_max); normalizer = sum over the four copy states, observed term = max over the four copy states",
+      "lineage": "049 loss B hard_observed, solver raw, blind source consensus, 1502 FG full 1Mb grid",
+      "terminal": "budget_not_converged / fg_budget_exhausted (stages/B-raw-consensus/1Mb.json, last_accepted_endpoint=true)"
+    },
+    "C-max-rate": {
+      "role": "historical_max_contact_loss_C",
+      "path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-random/1Mb.3dg",
+      "npz": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-random/1Mb.npz",
+      "sha256": "5011c4e75d9ef80dfde36ff5d5628042cddad3d56954faf451866c557df9f801",
+      "loss_spec": "Noff*log(Zmax) - sum_C C*log(r_max); both normalizer and observed term use the max over the four copy states",
+      "lineage": "049 loss C max_rate, solver ms (multiscale preconditioner), blind source random, 1502 FG full 1Mb grid",
+      "terminal": "budget_not_converged / fg_budget_exhausted (stages/C-ms-random/1Mb.json, last_accepted_endpoint=true)"
+    }
+  },
+  "endpoint_selection": {
+    "rule": "049 display endpoint per loss = minimum own count objective over its four endpoints, frozen in results/selection_pre_reference.json at 2026-09-15T17:26:49Z, before the reference was first opened at 2026-09-15T17:30:15Z",
+    "not_reselected_here": true
+  },
+  "reference_open_gate": {
+    "rule": "every candidate 3DG hash is verified against its frozen record and written to eval/pre_reference_hash_gate.json before data/P9016.1m.3dg.gz is parsed",
+    "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+  },
+  "support": {
+    "mask_path": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "mask_sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "denominator": "per-chromosome frozen legacy mask common pairs, intersected with pair endpoints finite in all four datasets (both copies of Reference, Baseline, B, C); the intersection is shared by all groups, no group-specific denominator",
+    "mask_totals": {
+      "chromosomes": 20,
+      "positions_total": 2585,
+      "valid_bins_total": 2447,
+      "non_diagonal_pairs_total": 176201,
+      "common_pairs_total": 157529
+    },
+    "mapping": "mask positions are chromosome-local bp multiples of 1Mb and equal the 1Mb locus bp key in both candidate and reference 3DG files; index = mask position, no compressed index",
+    "zero_distance_rule": "the mask contains only i<j non-diagonal locus pairs; zero-distance (same-bin) pairs are never part of any structural metric"
+  },
+  "metric": {
+    "primary": "signed Pearson correlation between the candidate copy-to-copy distance vector and the reference mat/pat distance vector, computed on the shared support of one chromosome",
+    "distance": "Euclidean distance between 1Mb bead coordinates",
+    "direct": "(A_mat + B_pat) / 2",
+    "swapped": "(A_pat + B_mat) / 2",
+    "same": "max(direct, swapped)",
+    "cross": "min(direct, swapped)",
+    "contrast": "same - cross",
+    "orientation": "one whole-chromosome A/B swap chosen by comparing direct with swapped; not a per-bin label choice",
+    "tie_tolerance": 1e-12,
+    "tie_rule": "|direct - swapped| <= tie_tolerance is reported as unresolved_tie with same = cross = (direct + swapped)/2",
+    "secondary": "signed Spearman (average ranks) on the same support and the same orientation rule",
+    "reference_self_control": {
+      "same": 1.0,
+      "cross": "pearson(ref_mat_distance, ref_pat_distance) on the same support",
+      "note": "same is degenerate by construction; contrast = 1 - cross; not evidence of an independent fit"
+    }
+  },
+  "figures": {
+    "boxplot": "3 panels (same / cross / contrast), 4 groups (Reference control, Baseline-046-G-random, B-hard-observed, C-max-rate), 20 chromosome points per box, Pearson primary",
+    "chr1_heatmap": "4 rows (Reference, Baseline-046-G-random, B-hard-observed, C-max-rate) x 2 columns (copy mapped to reference mat / reference pat), chr1 mask bins shared by all panels, one raw distance median scale per dataset taken over that dataset's two chr1 copies on the shared common pairs (same convention as scripts/plot_3dg_comparison.py build_matrix), single unified color scale vmin=0 vmax=global max with no clipping, missing bins gray, diagonal 0, symmetric",
+    "style": "3-inch base panel, 300 dpi, 7 pt text, coolwarm_r, English labels"
+  },
+  "heatmap_scale_correction": {
+    "recorded_at_utc": "2026-09-16T11:40:00Z",
+    "status": "corrected before any figure was generated; no figure or evaluation artifact existed under the earlier wording",
+    "earlier_wording": "distance divided by that dataset's whole-cell Rg over both copies and all 20 chromosomes",
+    "corrected_wording": "each dataset's chr1 two copies are combined and one raw median over their shared-common-pair distances is used as that dataset's scale, matching the historical heatmap convention in scripts/plot_3dg_comparison.py build_matrix (lines 268-275); the whole-cell Rg is a scatter-plot readout, not the heatmap scale",
+    "scope": "display normalization only; same/cross/contrast Pearson values, support and all frozen-value regressions are unaffected",
+    "history_untouched": true
+  },
+  "constraints": {
+    "refit": false,
+    "modify_old_results": false,
+    "bootstrap": false,
+    "R1_R3": false,
+    "phase_data_read": false,
+    "note": "descriptive endpoint comparison only; all endpoints are budget_not_converged and the comparison is not an equal-cost comparison (1502 vs 1502 vs 1502 FG on different objectives)"
+  }
+}

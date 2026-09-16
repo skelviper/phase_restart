@@ -1,0 +1,32 @@
+{
+  "config_first_write_mtime_local": "2026-09-16 09:47:06.149387764 +0800",
+  "config_path": "config.json",
+  "config_sha256_after_timestamp_correction": "b7089d258cc15448fb731d4e45edee51ba1a7a9a1c95cab2b531c4119c317791",
+  "config_sha256_current": "985633e4d972b5930280b8596f69876a2a266e3e1ade1c216f1e3826a62f483d",
+  "config_sha256_first_written_bytes": "ccea8776dbcefaea29a43bcb91199bc5f8c6949af0aa1a18309dbeb9932cc77d",
+  "corrections": [
+    {
+      "at_utc": "2026-09-16T01:52:03.268393+00:00",
+      "change": "config.p2.checks wording clarified: 'global translational/rotational motion removed' split into 'global translation removed in probe coordinates' and 'proper global rotation accounted for in the aligned RMS readout'",
+      "from_sha256": "b7089d258cc15448fb731d4e45edee51ba1a7a9a1c95cab2b531c4119c317791",
+      "ordering": "recorded before any P2 probe was executed; P1 scientific fields (fg cap, target, weights, seeds, bases, comparison pairs, NA rules) were not touched",
+      "reason": "P2 method clarification requested by the coordinating side; the frozen amplitude rule and the probe construction are unchanged",
+      "to_sha256": "113a38ae60a2d8e5d9c26d8e3413b7d8b8ba14c6f6e9045bb96acddccbb38370"
+    },
+    {
+      "at_utc": "2026-09-16T02:01:34.368602+00:00",
+      "change": "syntax-only fix: a comma was missing after config.p2.checks_note, making the file invalid JSON",
+      "from_sha256": "113a38ae60a2d8e5d9c26d8e3413b7d8b8ba14c6f6e9045bb96acddccbb38370",
+      "ordering": "no P1 or P2 scientific field changed; no experiment reads config.json programmatically",
+      "reason": "reported by the coordinating side after the P2 executor hit JSONDecodeError at line 172",
+      "to_sha256": "985633e4d972b5930280b8596f69876a2a266e3e1ade1c216f1e3826a62f483d",
+      "validation": "re-parsed with the analysis environment's json.load; every numeric/definition field is byte-identical to the intended values, only the comma was added"
+    }
+  ],
+  "first_p1_fit_start_utc": "2026-09-16T01:47:50Z",
+  "first_p1_preflight_gate_utc": "2026-09-16T01:47:52Z",
+  "first_p2_probe": "no P2 probe was produced by this executor; P2 was delegated to another executor after this config was frozen, and p2/ was empty at that point",
+  "rule": "config.json is frozen from this point; any later edit must be recorded as a correction with the previous sha256",
+  "schema": "p9016-round050-config-lock-v1",
+  "verified_at_utc": "2026-09-16T01:50:53.127956+00:00"
+}

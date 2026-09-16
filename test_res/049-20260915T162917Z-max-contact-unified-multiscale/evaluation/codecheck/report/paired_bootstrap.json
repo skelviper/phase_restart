@@ -1,0 +1,56 @@
+{
+  "comparisons": [
+    {
+      "label": "endpoint-minus-baseline",
+      "left": "A-raw-consensus",
+      "metrics": {
+        "pearson:contrast": {
+          "ci95": [
+            -0.02,
+            0.02
+          ],
+          "defined_chromosomes": 20,
+          "left_wins": 10,
+          "mean": 0.0,
+          "right_wins": 10,
+          "ties": 0
+        },
+        "pearson:matched": {
+          "ci95": [
+            -0.01,
+            0.03
+          ],
+          "defined_chromosomes": 20,
+          "left_wins": 12,
+          "mean": 0.01,
+          "right_wins": 8,
+          "ties": 0
+        },
+        "spearman:contrast": {
+          "ci95": [
+            -0.02,
+            0.02
+          ],
+          "defined_chromosomes": 20,
+          "left_wins": 10,
+          "mean": 0.0,
+          "right_wins": 10,
+          "ties": 0
+        },
+        "spearman:matched": {
+          "ci95": [
+            -0.01,
+            0.03
+          ],
+          "defined_chromosomes": 20,
+          "left_wins": 12,
+          "mean": 0.01,
+          "right_wins": 8,
+          "ties": 0
+        }
+      },
+      "right": "baseline-046-real-extension-G-full-J"
+    }
+  ],
+  "indices": {}
+}

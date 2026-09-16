@@ -1,0 +1,34 @@
+{
+  "coordinates_payload_read": false,
+  "fixtures": {
+    "N2": {
+      "fixture_id": "N2",
+      "generation_exposure_array_sha256": "e2e903d8f9d8d4347897c7ac6bc01e4e65f24d5821ffb6e9e2739da3eb65b34c",
+      "generation_exposure_key_read": "exposure",
+      "truth_coordinate_payload_opened": false,
+      "truth_metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json",
+      "truth_metadata_sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9",
+      "truth_npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz",
+      "truth_npz_sha256_declared": "f5478f0fd918782ecea7cd53019c08542308bcfe2abadc22c645940358d8d561"
+    },
+    "P2": {
+      "fixture_id": "P2",
+      "generation_exposure_array_sha256": "12b34ae791e0face4fd2d69f36b61de7435f0f91eee584589f4f20cfb15c165f",
+      "generation_exposure_key_read": "exposure",
+      "truth_coordinate_payload_opened": false,
+      "truth_metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json",
+      "truth_metadata_sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9",
+      "truth_npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz",
+      "truth_npz_sha256_declared": "f92d2f2f03102778da384fc9f9f196700321cfcdb38ecfab439ec40250735d63"
+    }
+  },
+  "native_called": false,
+  "optimizer_started": false,
+  "real_candidate_payload_read": false,
+  "reference_payload_read": false,
+  "schema_version": "p9016-next-step-exposure-provenance-v1",
+  "source_run": "test_res/026-20260913_221709-allele-calibration-prepare",
+  "status": "prepared_only",
+  "truth_manifest_path": "test_res/026-20260913_221709-allele-calibration-prepare/provenance/truth_manifest.json",
+  "truth_manifest_sha256": "d7f23723ef7632e61caa3d22774934f1b43d666c0f1031a73eaee6f1eb70388e"
+}

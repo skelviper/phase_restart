@@ -1,0 +1,186 @@
+{
+  "schema": "p9016-round051-config-v1",
+  "run_dir": "test_res/051-20260916T064500-g-random-baseline-ext",
+  "created_at_utc": "2026-09-16T07:08:00Z",
+  "created_at_utc_note": "created after the C objective rewrite (v2); no back-filled timestamps",
+  "cohort_identity": {
+    "cells": 1,
+    "chromosomes": 20,
+    "tracks": 40,
+    "raw_records": 1703888,
+    "inputs_snpfree_sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "reference_3dg_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "observation_unit": "chromosome (20 correlated measurements of one cell; not biological replicates)",
+    "phase_read": false,
+    "R1_R3_run": false
+  },
+  "baseline": {
+    "id": "P9016-046-G-random-base-1Mb",
+    "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+    "npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "d3g": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+    "d3g_sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b",
+    "lineage": "014 unlabeled random start (seed 2207) -> 5Mb 612FG -> 2Mb 404FG -> 1Mb 486FG = 1502FG",
+    "status": "budget_not_converged",
+    "second_1Mb_extension": "not used; the user explicitly cancelled the extra 486FG second segment"
+  },
+  "conditions": {
+    "extra-levels": {
+      "fit_id": "A-extra-levels",
+      "stages": [
+        "20Mb",
+        "10Mb",
+        "5Mb",
+        "2Mb",
+        "1Mb"
+      ],
+      "fg_final_caps": {
+        "20Mb": 200,
+        "10Mb": 200,
+        "5Mb": 612,
+        "2Mb": 404,
+        "1Mb": 486
+      },
+      "total_cap_fg": 1902,
+      "extra_vs_baseline_fg": 400,
+      "start": "same 014 unlabeled random structure origin (seed 2207); 20Mb and 10Mb are freshly expanded full grids; the 5Mb start is the prolongation of A's own 10Mb endpoint (A's C branch is therefore not the same start as baseline) and 2Mb/1Mb are prolongations of A's previous layer",
+      "note": "not an equal-cost comparison; the new coarse layers are deliberately cheap"
+    },
+    "no-bend": {
+      "fit_id": "B-no-bend",
+      "stages": [
+        "5Mb",
+        "2Mb",
+        "1Mb"
+      ],
+      "fg_final_caps": {
+        "5Mb": 612,
+        "2Mb": 404,
+        "1Mb": 486
+      },
+      "total_cap_fg": 1502,
+      "bend_weight": 0.0,
+      "other_weights": {
+        "count": 1.0,
+        "bond": 1.0,
+        "repulsion": 1.0,
+        "p_prior": 1.0
+      },
+      "start": "same frozen 5Mb start as baseline; rerun from the start, not bend-off at the endpoint"
+    },
+    "reference-beads": {
+      "fit_id": "C-reference-beads",
+      "stages": [
+        "5Mb",
+        "2Mb",
+        "1Mb"
+      ],
+      "fg_final_caps": {
+        "5Mb": 612,
+        "2Mb": 404,
+        "1Mb": 486
+      },
+      "total_cap_fg": 1502,
+      "bend_weight": 0.01,
+      "support": "per-copy bead presence mask from reference tracks; missing copy bead truly exits count kernel/bond/bend/repulsion; locus union retained; gene indices/intervals not compressed",
+      "support_source_authorized": "reference chr/position/presence only; reference xyz values never used for initialization, target, or regularization",
+      "support_npz_sha256": {
+        "20Mb": "98529a22a368f2f2ee2f52e45440020bb0daf2c044e6d8f04cfcacbd950da1fa",
+        "10Mb": "8f292566eaa07bbff03aafff21edb820dd6f006f6fcae77a0be1f443819d9cb0",
+        "5Mb": "f1a016fa75c585d2bb1b347d0aa074875c5f055e57f094a77b954abf16e25983",
+        "2Mb": "5f7282a9f05a601a4fd990ff325afbcad3e69452cde48933f28093e9e69c58b4",
+        "1Mb": "64b62dca663069c604255bd1b8d9554b6ef3b1ef49da01e5331292b85b375925"
+      },
+      "exposure": "production e on the filtered data: endpoint counts from the eligible pairs (both endpoints in lane) plus 2*diag on lane, sqrt(endpoint+10), normalized to mean one over lane, zero outside lane; not the full-data e"
+    }
+  },
+  "objective": {
+    "model": "G (shared offdiag normalization)",
+    "full_J_weights": {
+      "count": 1.0,
+      "bond": 1.0,
+      "repulsion": 1.0,
+      "bend": 0.01,
+      "p_prior": 1.0
+    },
+    "exposure": "fixed production e",
+    "sphere": "frozen contact_model unit ball",
+    "optimizer": "L-BFGS-B via 045 frozen run_budgeted_lbfgs",
+    "ftol": 0.0,
+    "canonical_gtol": 1e-06,
+    "maxls": 20,
+    "pair_block": 262144,
+    "inner_cap": 80,
+    "cg_cap": 80,
+    "endpoint_rule": "last accepted endpoint",
+    "maxiter": "fg_cap + 1",
+    "l0": "(2*n_loci)^(-1/3) from frozen AggregatedContacts (no extra factor 2)",
+    "r0": "2*l0",
+    "repulsion_threshold": "0.7*l0"
+  },
+  "evaluation": {
+    "support": "046 frozen legacy 21-mask snapshot (2447 valid loci, 157529 intra pairs); C 1Mb support contains all of them (inputs/legacy_mask_containment.json), so the denominator is neither expanded nor shrunk",
+    "index_mapping": "global = offset + position // 1Mb using the real numeric position; no compressed index used as a genomic bin",
+    "metric": "per-chromosome signed Pearson of intra-chromosomal distance vectors; whole-chromosome best A/B swap (not per-bin relabeling); same = matched, cross = swapped; two copies averaged",
+    "undefined_values": "NA, never 0; chromosomes with NA are not dropped from the tables",
+    "bootstrap_or_significance": "none (not requested)",
+    "figure_scale_rule": "one optimal positive scale per condition on chr1, applied to both copies of that condition; reference scale fixed at 1; uniform scaling does not change Pearson",
+    "denominator": "shared support = frozen legacy 21-mask common pairs; all four conditions and the reference share the same 157529 intra pairs, dropped = 0; C's 1Mb support covers every legacy common pair so the denominator is neither expanded nor shrunk",
+    "units_note": "legacy mask positions are base pairs (all multiples of 1Mb)"
+  },
+  "figure_style": {
+    "base_panel_inches": 3,
+    "dpi": 300,
+    "font_pt": 7,
+    "colormap": "coolwarm_r",
+    "figure1": "chr1 distance matrices, reference mat/pat + 4 conditions x 2 copies (2 rows x 5 columns)",
+    "figure2": "same/cross Pearson boxplot with 20 chromosome points"
+  },
+  "artifacts": {
+    "prep_manifest": "inputs/prep_manifest.json",
+    "support_manifest": "inputs/reference_support_manifest.json",
+    "legacy_mask_containment": "inputs/legacy_mask_containment.json",
+    "base_start_5Mb_npz_sha256": "c2fdf8a4c6a52cf3acdcfc48485a38c71cc106c15b644423150fb9695e617a85"
+  },
+  "invalidated": {
+    "v1": {
+      "path": "invalid_C_v1/",
+      "reason": "first masked_objective used coordinate zeroing plus denominator rescaling; scientifically incorrect, not delivered"
+    },
+    "v2_intersection": {
+      "path": "invalid_C_v2_intersection_coords/",
+      "reason": "second C version filtered pairs by the two-copy intersection, which deletes contacts of single-sided loci; violated the frozen lane-union rule, results void"
+    },
+    "v2_intersection_stages": "invalid_C_v2_intersection_stages/"
+  },
+  "revision_utc": "2026-09-16T07:35:00Z",
+  "revision_note": "only the invalid/fixed entries below were revised; created_at_utc is the original first write time and is not back-filled",
+  "reference_beads": {
+    "1Mb": {
+      "copyA": 2460,
+      "copyB": 2487,
+      "both": 2447,
+      "onlyA": 13,
+      "onlyB": 40,
+      "union": 2500,
+      "note": "counts from np.count_nonzero on the support mask"
+    },
+    "2Mb": {
+      "copyA": 1263,
+      "copyB": 1268,
+      "both": 1260,
+      "onlyA": 3,
+      "onlyB": 8,
+      "union": 1271
+    },
+    "5Mb": {
+      "copyA": 525,
+      "copyB": 527,
+      "both": 525,
+      "onlyA": 0,
+      "onlyB": 2,
+      "union": 527
+    },
+    "export_rule": "3DG writes only real beads at their original bp (1Mb = 4947 rows, identical to the reference finite set); NPZ keeps the full grid with NaN at missing beads"
+  }
+}

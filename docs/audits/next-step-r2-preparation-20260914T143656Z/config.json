@@ -1,0 +1,158 @@
+{
+  "schema_version": "p9016-next-step-r2-config-v1",
+  "status": "prepared_only_pending_parent_release",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one linked cell; 20 chromosome measurements; not biological replicates",
+    "raw_contact_count": 1703888,
+    "chromosome_count": 20,
+    "track_count": 40,
+    "physical_beads_1mb": 5290,
+    "training_origin_bp": 0,
+    "metric_origin_bp": 3000000,
+    "metric_bin_size_bp": 1000000,
+    "real_endpoint_count": 8,
+    "real_selected_endpoint_count": 4,
+    "synthetic_endpoint_count": 6,
+    "r2_metrics": ["matched", "cross", "contrast", "minmargin"]
+  },
+  "runtime": {
+    "conda_environment": "analysis",
+    "python_required": true,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "evaluator_fit_called": false,
+    "evaluator_native_called": false
+  },
+  "training_release": {
+    "backend": "GPU",
+    "source_ids": ["consensus_joint_base1103", "random_joint_base2207"],
+    "source_order": ["consensus_joint_base1103", "random_joint_base2207"],
+    "method_ids": ["M0", "M1"],
+    "budget_ids": ["B1", "B2"],
+    "real_endpoint_id_template": "{method}-{budget}-{source}",
+    "real_endpoint_count": 8,
+    "real_endpoint_copies": 2,
+    "scale2": true,
+    "b1_nfev_by_layer": {"5mb": 306, "2mb": 202, "1mb": 243},
+    "b2_nfev_by_layer": {"5mb": 612, "2mb": 404, "1mb": 486},
+    "synthetic_1mb_fgcap": 243,
+    "accepted_callback_rule": "canonical C0 raw-y/q gradient inf <= 1e-6; otherwise FG cap or numerical stop is recorded",
+    "scipy_gtol": 0.0,
+    "common_ftol": 1e-10,
+    "common_maxls": 20,
+    "shared_ftol_or_maxls": true,
+    "real_selection": {
+      "criterion": "final count_nll_per_record",
+      "reported_alias": "final count_nll_per_record",
+      "scope": "within method x budget between the two sources only",
+      "tie_tolerance": 1e-9,
+      "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+      "reference_read": false,
+      "r2_read": false,
+      "phase_read": false
+    },
+    "M0": {
+      "parameterization": "raw-y/q",
+      "physical_target": "original C0 physical objective"
+    },
+    "M1": {
+      "parameterization": "a=(yA+yB)/sqrt(2), b=(yA-yB)/sqrt(2), optimize a,b/2,q; invert to yA,yB before physical evaluation",
+      "physical_target": "same original C0 physical objective after reversible transform",
+      "forced_separation": false
+    }
+  },
+  "synthetic": {
+    "source_run": "test_res/026-20260913_221709-allele-calibration-prepare",
+    "fixtures": ["P2", "N2"],
+    "arms_per_fixture": ["M0-production-e", "M1-production-e", "M0-known-e"],
+    "endpoint_ids": [
+      "P2-M0-production-e", "P2-M1-production-e", "P2-M0-known-e",
+      "N2-M0-production-e", "N2-M1-production-e", "N2-M0-known-e"
+    ],
+    "same_x0": true,
+    "same_p0": 0.75,
+    "same_fgcap": 243,
+    "known_e_input_manifest": "synthetic_inputs/known_e_worker_input_manifest.json",
+    "exposure_policy": {
+      "production-e": "reuse existing 026 C0 production-e layer/counts for M0 and M1",
+      "known-e": "use exported generation exposure only for M0; do not fix p or alter profiled-p rule"
+    },
+    "evaluation_truth_paths_are_evaluator_only": true
+  },
+  "synthetic_truth": {
+    "N2": {
+      "same_shape": true,
+      "npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz",
+      "npz_sha256": "f5478f0fd918782ecea7cd53019c08542308bcfe2abadc22c645940358d8d561",
+      "metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json",
+      "metadata_sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9",
+      "truth_seed": 260102
+    },
+    "P2": {
+      "same_shape": false,
+      "npz_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz",
+      "npz_sha256": "f92d2f2f03102778da384fc9f9f196700321cfcdb38ecfab439ec40250735d63",
+      "metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json",
+      "metadata_sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9",
+      "truth_seed": 260104
+    }
+  },
+  "mask_lock": {
+    "manifest_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+    "manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+    "lock_path": "docs/audits/multires-r2-preparation-20260914_041826/mask_lock.json",
+    "lock_sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+    "condition_count": 21,
+    "new_endpoint_inclusion": false,
+    "position_rule": "range(3000000, chromosome_length_bp, 1000000)",
+    "join": "numeric chromosome plus integer bp",
+    "pair_scope": "unordered upper-triangle off-diagonal",
+    "orientation_tie_tolerance": 1e-12,
+    "expected_pair_count_summary": "157529 common pairs / 176201 total non-diagonal pairs"
+  },
+  "reference": {
+    "path": "data/P9016.1m.3dg.gz",
+    "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "role": "evaluation_only",
+    "read_after": "all 14 candidate coordinate hashes, 21 historical mask input hashes, source/terminal/selection/code hashes"
+  },
+  "historical_anchor": {
+    "id": "historical_036_C0_anchor",
+    "display_name": "036 C0 historical anchor",
+    "condition_id": "C0-random_joint_base2207",
+    "source_id": "random_joint_base2207",
+    "n_copies": 2,
+    "format": "3dg",
+    "path": "test_res/036-20260914T064651Z-gpu-multires/coords/C0/random_joint/final-1m.3dg",
+    "sha256": "18c06860f78525e55045e911db05981dd431a86c3bf9ee3ebb5046845b0ccc55"
+  },
+  "dependencies": {
+    "synthetic_evaluator_path": "pr/allele_calibration_evaluator.py",
+    "synthetic_evaluator_sha256": "5d52e40e36731a8b06cf694fd27c6f98374be1d56da574ab580901b76f5a21e4",
+    "r2comparison_path": "pr/r2comparison.py",
+    "r2comparison_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+    "real_mask_adapter_path": "docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py",
+    "real_mask_adapter_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+    "legacy_coordinate_parser_path": "pr/allele_r2.py",
+    "legacy_coordinate_parser_sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672",
+    "published_r2_table_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.tsv",
+    "published_r2_table_sha256": "5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1"
+  },
+  "outputs": {
+    "preparation_validation": "preparation_validation.json",
+    "terminal_evidence": "preparation_terminal_evidence.json",
+    "release_contract": "release_contract.json",
+    "evaluation_output_template": "release/evaluation-r2-<UTC>",
+    "real_full_tsv": "r2_real_8endpoint_x20chr.tsv",
+    "real_paired_summary": "r2_real_paired_summaries.tsv",
+    "synthetic_full_tsv": "r2_synthetic_6endpoint_x20chr.tsv",
+    "synthetic_n_only": "synthetic_N2_n_only_diagnostic.tsv",
+    "plot_arrays": "plots/plot_arrays.npz",
+    "plot_metadata": "plots/plot_arrays_metadata.json",
+    "main_png": "plots/real_r2_main_four_panel.png",
+    "main_pdf": "plots/real_r2_main_four_panel.pdf"
+  }
+}

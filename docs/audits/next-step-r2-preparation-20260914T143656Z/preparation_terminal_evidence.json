@@ -1,0 +1,16 @@
+{
+  "candidate_coordinates_opened": 0,
+  "exit_code": 0,
+  "exposure_key_only": true,
+  "exposure_source_members_listed_without_coordinates_payload_read": true,
+  "fit_called": false,
+  "native_called": false,
+  "reference_opened": false,
+  "schema_version": "p9016-next-step-r2-preparation-terminal-v1",
+  "source_hashes_path": "preparation_source_hashes.json",
+  "source_hashes_sha256": "3353fdb5fa386d7f3c4c64ba79c53354ce019a9c91772284399fc81a603f0419",
+  "status": "prepared_only",
+  "synthetic_truth_coordinates_opened": false,
+  "validation_path": "preparation_validation.json",
+  "validation_sha256": "2288c0bf2ca546637e3b7e435e8b6315e6f13cf641be454288996f548366b382"
+}

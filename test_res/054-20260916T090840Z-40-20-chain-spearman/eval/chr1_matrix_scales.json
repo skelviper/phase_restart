@@ -1,0 +1,94 @@
+{
+  "chr1_length_bp": 195471971,
+  "chromosome": "chr1",
+  "color": {
+    "cmap": "coolwarm_r",
+    "note": "single shared colour scale over all eight panels; no per-panel scaling",
+    "vmax": 4.574844073314861,
+    "vmin": 0.0
+  },
+  "column_order": [
+    "Reference",
+    "Extra 20→10→5→2→1 Mb",
+    "Shared chain 40→20→10→5→2→1 Mb",
+    "Full chain 200 kb → 1 Mb"
+  ],
+  "display_scales": {
+    "chain_1Mb": {
+      "chr1_best_swap": "direct",
+      "chr1_cross": 0.558673,
+      "chr1_same": 0.602788,
+      "displayed_copies": [
+        "copyA",
+        "copyB"
+      ],
+      "n_common_pairs_two_copies": 35156,
+      "rule": "raw distance / pooled median over both copies on frozen common pairs",
+      "s_pooled_median_raw_distance": 0.2635006686805746
+    },
+    "chain_coarse_1Mb": {
+      "chr1_best_swap": "direct",
+      "chr1_cross": 0.52592,
+      "chr1_same": 0.584482,
+      "displayed_copies": [
+        "copyA",
+        "copyB"
+      ],
+      "n_common_pairs_two_copies": 35156,
+      "rule": "raw distance / pooled median over both copies on frozen common pairs",
+      "s_pooled_median_raw_distance": 0.2730134597721881
+    },
+    "extra_levels": {
+      "chr1_best_swap": "swapped",
+      "chr1_cross": 0.41834,
+      "chr1_same": 0.819465,
+      "displayed_copies": [
+        "copyB",
+        "copyA"
+      ],
+      "n_common_pairs_two_copies": 35156,
+      "rule": "raw distance / pooled median over both copies on frozen common pairs",
+      "s_pooled_median_raw_distance": 0.2699874035796291
+    },
+    "reference": {
+      "displayed_copies": [
+        "reference mat",
+        "reference pat"
+      ],
+      "n_common_pairs_two_copies": 35156,
+      "rule": "raw distance / pooled median over both copies on frozen common pairs",
+      "s_pooled_median_raw_distance": 1.421527990617571
+    }
+  },
+  "dpi": 300,
+  "font_pt": 7,
+  "grid": {
+    "bin_bp": 1000000,
+    "n_common_pairs": 17578,
+    "n_pairs_total": 18528,
+    "n_positions": 193,
+    "positions_first_last": [
+      3000000,
+      195000000
+    ],
+    "rule": "axis = frozen chr1 common-loci positions; only common pairs drawn; other cells grey; diagonal 0 where a bin has valid common pairs",
+    "source_mask": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz"
+  },
+  "panel_size_inches": 3.0,
+  "panel_top_annotation": {
+    "cross_definition": "rho(displayed copy, the other reference copy) read from the same chr1 four rhos",
+    "not_used": [
+      "20-chromosome macro mean pasted onto chr1",
+      "two-copy average presented as a single copy"
+    ],
+    "rule": "each candidate panel states Spearman R same / cross at the top for the copy shown in that row",
+    "same_definition": "rho(displayed copy, its matched reference copy) read from the same chr1 four rhos",
+    "two_copy_means_in": "test_res/054-20260916T090840Z-40-20-chain-spearman/eval/panel_annotations.tsv"
+  },
+  "roles": "display / evaluation only; no fitting, no re-optimization, no new candidate",
+  "row_order": [
+    "matched to reference mat",
+    "matched to reference pat"
+  ],
+  "schema": "p9016-round054-chr1-matrix-scales-v1"
+}

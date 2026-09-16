@@ -1,0 +1,105 @@
+{
+  "chr1_length_bp": 195471971,
+  "chromosome": "chr1",
+  "color": {
+    "cmap": "coolwarm_r",
+    "note": "single shared colour scale over all eight panels; no per-panel scaling",
+    "vmax": 4.1920512068308415,
+    "vmin": 0.0
+  },
+  "column_order": [
+    "Reference 1 Mb",
+    "New chain 1 Mb",
+    "New chain 200 kb",
+    "200 kb -> 1 Mb"
+  ],
+  "display_scales": {
+    "200 kb -> 1 Mb": {
+      "n_pairs_pooled_two_copies": 35156,
+      "pearson_r_of_pooled_d_r": 0.35180455126486115,
+      "residual_rms_reference_units": 0.8342554121639832,
+      "s": 2.96896637735198,
+      "sum_d_dot_d": 6842.686190401013,
+      "sum_d_dot_r": 20315.705230071315
+    },
+    "New chain 1 Mb": {
+      "n_pairs_pooled_two_copies": 35156,
+      "pearson_r_of_pooled_d_r": 0.37142400782851914,
+      "residual_rms_reference_units": 0.8380888622158772,
+      "s": 2.9667535014002535,
+      "sum_d_dot_d": 6827.291192701566,
+      "sum_d_dot_r": 20254.890051026483
+    },
+    "New chain 200 kb": {
+      "s": 2.96896637735198,
+      "shared_with": "200 kb -> 1 Mb"
+    },
+    "frozen_support": {
+      "n_pairs_common_used": 17578,
+      "n_pairs_total": 18528,
+      "n_positions": 193,
+      "positions": "[3000000]...[195000000]",
+      "source": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz"
+    },
+    "reference": {
+      "s": 1.0
+    },
+    "rule": "s = (d . r) / (d . d) pooling both copies on the frozen chr1 common pairs; plotted value = s * d; reference scale = 1"
+  },
+  "dpi": 300,
+  "font_pt": 7,
+  "grids": {
+    "1Mb": {
+      "bin_bp": 1000000,
+      "edge_rule": "edges = min(arange(n+1)*1e6, chr1_length)",
+      "last_bin_bp": 471971,
+      "n_bins": 196
+    },
+    "200kb": {
+      "bin_bp": 200000,
+      "edge_rule": "edges = min(arange(n+1)*2e5, chr1_length)",
+      "last_bin_bp": 71971,
+      "n_bins": 978,
+      "native_endpoint": "test_res/052-20260916T080116Z-200kb-coarsened-1mb-chain/coords/new-chain/200kb.npz"
+    }
+  },
+  "mapping": {
+    "200 kb -> 1 Mb": {
+      "chr1_best_swap": "swapped",
+      "chr1_cross": 0.431604,
+      "chr1_same": 0.639549,
+      "mat_copy_index": 1,
+      "pat_copy_index": 0,
+      "shared_with": "New chain 200 kb"
+    },
+    "New chain 1 Mb": {
+      "chr1_best_swap": "swapped",
+      "chr1_cross": 0.476723,
+      "chr1_same": 0.653795,
+      "mat_copy_index": 1,
+      "pat_copy_index": 0
+    },
+    "New chain 200 kb": {
+      "chr1_best_swap": "swapped",
+      "chr1_cross": 0.431604,
+      "chr1_same": 0.639549,
+      "mat_copy_index": 1,
+      "pat_copy_index": 0,
+      "shared_with": "200 kb -> 1 Mb"
+    }
+  },
+  "no_new_spearman_for_200kb": "the 200 kb layer has no 200 kb reference; it is never scored directly against the 1 Mb reference",
+  "panel_size_inches": 3.0,
+  "reference": {
+    "missing_bins_are_nan": true,
+    "n_bins_with_coordinates_mat": 189,
+    "n_bins_with_coordinates_pat": 190,
+    "path": "data/P9016.1m.3dg.gz"
+  },
+  "roles": "display / evaluation only; no fitting, no re-optimization, no new candidate",
+  "row_order": [
+    "matched to reference mat",
+    "matched to reference pat"
+  ],
+  "schema": "p9016-round053-chr1-matrix-scales-v1"
+}

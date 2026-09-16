@@ -1,0 +1,417 @@
+{
+  "blind_start_sources": {
+    "consensus": {
+      "lineage": "014 approved blind root (coords/consensus.3dg sha256 e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02) plus zero-optimization 5Mb->2Mb->1Mb prolongation seeds 1103/1103",
+      "no_optimization": true,
+      "path": "test_res/045-20260915T073310Z-shared-capture-round/coords/initial/real_consensus_1Mb.npz",
+      "raw_y_sha256": "a3f11b6830ae8c147e5d23d01b42616235be44b52ae05f4c58d450fd63468e3c",
+      "sha256": "3b3e30925f33459804d95b3ba3636b24f85978eb62ba3e8143a6c763ec4b2c81"
+    },
+    "p_init": 0.75,
+    "q_init": "q_from_p(0.75)",
+    "random": {
+      "lineage": "014 approved blind root (coords/random.3dg sha256 9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7) plus zero-optimization 5Mb->2Mb->1Mb prolongation seeds 2207/2207",
+      "no_optimization": true,
+      "path": "test_res/045-20260915T073310Z-shared-capture-round/coords/initial/real_random_1Mb.npz",
+      "raw_y_sha256": "d9a9b480d5a34ccc786ef538051931c8c0d0524292681f7fdc428de1f8942c08",
+      "sha256": "524e6df323899a0549e9e07a6d4a202c09c2d2778a6a4d283dcca11a2c38cc7d"
+    },
+    "sharing_rule": "all 6 fits of one source share elementwise identical raw_y and q; raw_y array hash verified per fit"
+  },
+  "corrections_and_clarifications": {
+    "analysis_layer_corrections": [
+      "regularization_total now uses the weighted 1*bond + 1*repulsion + 0.01*bend + 1*p_prior and raw/weighted values are reported separately",
+      "probe data_count_nll_delta now includes the normalizer and is asserted equal to count_A(probe) - count_A(base)",
+      "posterior includes the true final endpoint and splits expected distance by all/intra/inter; the unauthorized pseudo-structure Rg was removed",
+      "cross-resolution chr-pair table splits 20 cis + 190 inter rows with per-row KL contributions that sum to the total KL",
+      "all 15 manifest records use the field name fit_id"
+    ],
+    "fg_accounting": {
+      "excluded_from_that_number": [
+        "engineering gates (9 gates incl. the 12-cell x 2-FG full-grid short integration)",
+        "the discarded launch-1 attempt",
+        "no-reference diagnostics: posterior scan over iter0 + every 10-accepted checkpoint + the true final endpoint, endpoint rescores (3 objectives x 15 records), cross-resolution closure, 8 observability probes"
+      ],
+      "formal_matrix_fg": "18,024 = 12 fits x 1502 FG, upper bound equal to the actual value if every fit exhausts its cap",
+      "statement": "18,024 is the formal matrix budget, NOT the total compute of this round"
+    },
+    "plan_seed_text_correction": {
+      "actual_source_of_truth": {
+        "1Mb_layer": "metadata.mode=multiresolution_warm_start, inner seed 4405 (consensus) / 5509 (random), candidate_base_seed 1103 / 2207",
+        "2Mb_layer": "metadata.mode=multiresolution_warm_start, inner seed 4406 (consensus) / 5510 (random), candidate_base_seed 1103 / 2207",
+        "5Mb_layer": "metadata.mode=approved_014_blind_initialization, inner seed 1103 (consensus) / 2207 (random)",
+        "prolongation_argument": "045/source/prepare_inputs.py:274-276 passes 1103 for consensus and 2207 for random to warm_start_from_layer at BOTH the 5Mb->2Mb and the 2Mb->1Mb steps"
+      },
+      "frozen_plan_text": "PLAN.md section 2 wrote the 1Mb prolongation seeds as consensus 5509 / random 4405",
+      "issues": [
+        "the frozen PLAN text swapped consensus/random",
+        "the frozen PLAN text attributed the layer-internal perturbation seeds to the prolongation argument"
+      ],
+      "resolution": "PLAN.md is not edited; this correction is the authoritative record. Start-point identity is established by the frozen 045 file SHA256 plus the elementwise raw_y/prolongation reproduction; the 12 fit initial states are unchanged.",
+      "verification": "gate8 re-ran the zero-optimization 5Mb->2Mb->1Mb prolongation from the frozen 045 5Mb file with the 1103/2207 argument and reproduced both frozen 1Mb files elementwise with error 0.000e+00"
+    },
+    "probe_scope_caveat": "smooth_common_mode uses per-chromosome DCT modes 1-3 with zero per-chromosome mean, so the 20 chromosome centres stay fixed and it probes internal smooth deformation; local_independent_copies is dominated by per-bead perturbations with only a small random centre drift. KL>0 on these 8 probes therefore does NOT show that chromosome centre placement is identifiable; no weak-direction search over centre placement was performed. Real placement is answered by the unified 190-centre / 760-copy-centre readings."
+  },
+  "deliverables": {
+    "config": "config.json",
+    "directories": [
+      "source",
+      "logs",
+      "coords",
+      "results",
+      "plots",
+      "gates",
+      "diagnostics"
+    ],
+    "plan": "PLAN.md",
+    "plot_spec": {
+      "annotation_language": "English",
+      "base_panel_inches": 3,
+      "dpi": 300,
+      "font_pt": 7
+    },
+    "plots_max": 2,
+    "readme": "README.md (Chinese internal)",
+    "readme_table": "all 12 fits plus baseline, initial, selection and count rescores, R2/inter/centroid, budget and actual terminal"
+  },
+  "engineered_gates": [
+    "loss A value/gradient parity versus 045 SharedCaptureObjective(model_id=G) at the 046 baseline fixed point",
+    "finite differences for all three losses (directional, multiple p, multiple coordinates, unique max point)",
+    "exact-tie subgradient and gauge checks",
+    "whole-chromosome A/B swap and global rotation invariance of the physical value",
+    "P inverse/roundtrip, chain versus identity fixture parity, P symmetry, gradient_z = P gradient_y finite-difference check",
+    "non-identity P: runner-reported canonical raw_y/q gradient equals independently computed true raw_y/q gradient; checkpoint.y maps back to the sphere coordinates",
+    "12 cells x 2 FG short integration through the same formal entry on a scratch fixture",
+    "shared-start phase isolation, diag+offdiag denominator completeness, 3DG export readback, last-accepted / FG cap / gradient stop state checks",
+    "old 045/046 source, native and existing experiments unchanged byte-for-byte"
+  ],
+  "evaluation": {
+    "bootstrap": {
+      "draws": 10000,
+      "seed": 450301,
+      "unit": "paired chromosome"
+    },
+    "errata": [
+      {
+        "authoritative_value": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+        "frozen_plan_not_rewritten": true,
+        "item": "mask snapshot sha256 transcription",
+        "recorded_snapshot_value": "9c551c6a4586a9221541f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+        "resolution": "the effective field evaluation.mask.sha256 carries the authoritative value; it matches the mask file hash and the 046 creation record frozen_legacy_mask_worker.output_sha256; the mask file, its frozen counts (176201/157529/2447/2835152) and all evaluation values are unaffected"
+      },
+      {
+        "detail": "keys, dtypes/shapes and chr0-chr2 positions values were read before the gate; chr*_common, pair values, reference coordinates and phase columns were not; the mask payload itself was loaded only after the gate",
+        "impact": "no effect on any evaluation value; disclosed as an operational deviation",
+        "item": "pre-gate read of frozen mask snapshot metadata"
+      },
+      {
+        "cause": "the evaluation-side constant reused the config.json mask sha256 that had a one-character transcription error (...1541f55f... instead of the file's actual ...1547f55f...), so load_real_masks raised 'RuntimeError: frozen mask snapshot hash mismatch' after the reference had already been opened",
+        "first_reference_opened_utc_preserved": "2026-09-15T17:30:15.548703+00:00",
+        "fix": "cross-checked the 046 creation record (mask_validation.json -> frozen_legacy_mask_worker.output_sha256), corrected the constant and added two cross-checks; attempt 2 then completed all 15 datasets with exit code 0",
+        "item": "evaluation attempt 1 failed with exit 1, attempt 2 completed with exit 0",
+        "open_attempt_count": 2,
+        "reference": "evaluation/logs/EVALUATION_ATTEMPTS.md",
+        "reference_still_valid": "the reference SHA check passed and all 40 tracks parsed before the failure",
+        "stderr_note": "attempt 1's stderr was written to logs/evaluate_formal.log and was overwritten by the attempt 2 rerun (not appended); the original traceback text is NOT reconstructed; the exception message and first-open time persist in evaluation/gates/reference_open.json, results/validation.json deviations and REPORT.md"
+      },
+      {
+        "cause": "rel() was applied to an already repo-relative manifest npz_path without resolve_path first",
+        "detail": "12+12+12 = 36 path fields (evaluation.datasets[*].npz_path, terminal.datasets[*].npz_path, endpoint_common_g[*].npz_path) had been written with a wrong CWD-relative prefix (evaluation/test_res/049-.../coords/...); the repair only rewrote path fields from the saved JSON and the frozen manifest",
+        "invariance": "strip_paths deep comparison asserted 0 changes in numeric and all other fields; numeric_or_other_fields_changed=0, recomputed_metrics=false; before/after sha256 in results/validation.json -> path_repair",
+        "item": "post-attempt-2 repair of derived output path metadata (separate from the attempt 1 -> attempt 2 rerun)",
+        "path_check": "348 records checked, 0 missing (results/path_check.json PASS)"
+      },
+      {
+        "detail": "the limitation bullet now reads 'budget exhausted but still not converged' (previously mis-stated)",
+        "item": "budget wording in the report"
+      }
+    ],
+    "mask": {
+      "inter_denominator": 11340608,
+      "inter_locus_pairs": 2835152,
+      "offset_bp": 3000000,
+      "path": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+      "sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+      "total_pairs": 176201,
+      "valid_bins": 2447,
+      "within_pairs": 157529
+    },
+    "not_reported_this_round": [
+      "R1",
+      "R3",
+      "L2 claims",
+      "phase columns"
+    ],
+    "nulls": {
+      "applies_to": "6 selected loss x solver endpoints, baseline, 2 initial controls",
+      "baseline_reuse": "046 existing same-hash nulls",
+      "kinds": [
+        "u_zero",
+        "random_u"
+      ],
+      "random_u_seeds": [
+        450500,
+        450501,
+        450502,
+        450503,
+        450504,
+        450505,
+        450506,
+        450507,
+        450508,
+        450509,
+        450510,
+        450511,
+        450512,
+        450513,
+        450514,
+        450515
+      ]
+    },
+    "primary": [
+      "R2 per chromosome four Pearson/Spearman",
+      "whole-chromosome direct/swapped/tie matched/cross/contrast/minmargin",
+      "inter sorted four-distance order statistics"
+    ],
+    "results": {
+      "baseline_regression_checked_values": 166,
+      "baseline_regression_mismatches": 0,
+      "bootstrap_index_matrix_matches_046": true,
+      "comparisons": 28,
+      "datasets": 15,
+      "evaluation_terminal": "complete",
+      "figures": [
+        "evaluation/plots/049_figure1_core_metrics.png",
+        "evaluation/plots/049_figure2_whole_genome.png"
+      ],
+      "headline": {
+        "best_new_endpoint_by_R2_matched": "A-ms-random 0.562316 vs baseline 0.602331 (-0.040015, CI [-0.0944, +0.0105], 9/20 wins)",
+        "best_new_endpoint_by_common_G_count": "A-ms-random 9.563901 vs baseline 9.529135 (no improvement on this objective)",
+        "main_proposal_B_raw_consensus": {
+          "baseline_contrast": 0.237621,
+          "baseline_inter_pearson": 0.695058,
+          "baseline_matched": 0.602331,
+          "contrast": 0.098575,
+          "inter_pearson": 0.665608,
+          "matched": 0.452346
+        },
+        "sum_verdict": "no method found that fully replaces the baseline; this is not a claim that every metric failed to improve"
+      },
+      "nulls": 153,
+      "reference_first_opened_utc": "2026-09-15T17:30:15.548703+00:00",
+      "report": "evaluation/REPORT.md",
+      "terminal_json": "evaluation/results/terminal.json",
+      "validation_json": "evaluation/results/validation.json",
+      "validation_status": "PASS"
+    },
+    "spatial": {
+      "center_distances": 190,
+      "copy_center_cross_chr_distances": 760,
+      "label_permutation_null_draws": 9999,
+      "label_permutation_seed": 461100,
+      "merged_chr_centers": 20
+    }
+  },
+  "expected_wall": {
+    "diagnostics_evaluation_plots": "30-60 min",
+    "formal_12_fits": "40-135 min depending on concurrency",
+    "gates": "20-40 min"
+  },
+  "fit_matrix": {
+    "canonical_gtol": 1e-06,
+    "checkpoint_every_accepted": 10,
+    "exit_code_zero_is_not_scientific_success": true,
+    "factors": {
+      "loss": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solver": [
+        "raw",
+        "ms"
+      ],
+      "source": [
+        "consensus",
+        "random"
+      ]
+    },
+    "fit_id_pattern": "{loss}-{solver}-{source}",
+    "fits": 12,
+    "ftol": 0.0,
+    "maxiter": 1503,
+    "maxls": 20,
+    "no_default_extension": true,
+    "save_iter0": true,
+    "save_last_accepted": true,
+    "stage": {
+      "bin_size_bp": 1000000,
+      "fg_cap": 1502,
+      "stage": "1Mb"
+    },
+    "terminal_states": [
+      "converged",
+      "budget_not_converged",
+      "not_converged",
+      "failure"
+    ],
+    "total_outer_fg": 18024
+  },
+  "frozen_baseline": {
+    "3dg": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.3dg",
+      "sha256": "4301d4df6e89c1417690599d6687a9e83b18fa37596de5d6c11a911d867d69ea"
+    },
+    "baseline_id": "P9016-046-G-random-full-J-1Mb",
+    "cost_note": "1988 FG include 5Mb/2Mb stages; this round uses 1502 all-1Mb-full-grid FG per fit, cost is NOT equal",
+    "cumulative_fg_lineage": "612+404+486+486=1988",
+    "npz": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.npz",
+      "sha256": "116e906e790493afa956445c527b38da11b2fdcaed482fd225f578f188df699d"
+    },
+    "role": "post-hoc adopted working comparison, NOT a training start for this round",
+    "terminal": "budget_not_converged"
+  },
+  "frozen_utc": "2026-09-15T16:29:17Z",
+  "inputs": {
+    "aggregate_1Mb": {
+      "cis_pairs_same_chromosome_offdiag": 184016,
+      "counts_cis_offdiag": 696680,
+      "counts_inter": 568434,
+      "counts_offdiag_total": 1265114,
+      "diag_counts_total": 438774,
+      "n_loci": 2645,
+      "n_pairs": 3496690,
+      "path": "test_res/045-20260915T073310Z-shared-capture-round/inputs/real_1000000_aggregate.npz",
+      "raw_records": 1703888,
+      "sha256": "80984d804f8ae0552f6bab34a77a03e778073ac87f3b3ec6f04f96de74137420"
+    },
+    "reference": {
+      "gate": "only after every endpoint/initial/baseline/null artifact is written and hashed",
+      "opened": false,
+      "path": "data/P9016.1m.3dg.gz",
+      "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+    },
+    "snpfree_pairs_gz": {
+      "columns": 7,
+      "path": "inputs/P9016.snpfree.pairs.gz",
+      "phase_columns_rejected": true,
+      "sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa"
+    }
+  },
+  "losses": {
+    "A": {
+      "definition": "Noff*log(Zsum) - sum_C C*log(r_sum)",
+      "name": "marginal_G",
+      "normalizer_aggregation": "sum",
+      "observed_aggregation": "sum"
+    },
+    "B": {
+      "definition": "Noff*log(Zsum) - sum_C C*log(r_max)",
+      "name": "hard_observed",
+      "normalizer_aggregation": "sum",
+      "observed_aggregation": "max",
+      "semantics": "classification/MAP-state objective, not a normalized generative marginal likelihood, not a 4-loss average"
+    },
+    "C": {
+      "definition": "Noff*log(Zmax) - sum_C C*log(r_max)",
+      "name": "max_rate",
+      "normalizer_aggregation": "max",
+      "observed_aggregation": "max",
+      "semantics": "changed rate model: max also enters the full-grid normalizer"
+    }
+  },
+  "no_reference_diagnostics": [
+    "posterior attribution (gamma = t/sum t) on iter0/checkpoints/final with all/intra/inter entropy, max posterior, fraction gamma_max >= 0.9, MAP switch versus iter0, expected distance and whole-cell Rg over 5290 beads",
+    "cross-resolution closure on the frozen 046 baseline coordinates at 2Mb and 5Mb, including fine pairs mapping into coarse diag",
+    "local observability probe: seed 461001 low-frequency and high-frequency directions, +/-0.01 and +/-0.05 baseline whole-cell Rg, fixed e and p, no fitting"
+  ],
+  "notes": [
+    "no HTML, no large audit framework, no 40-trajectory rigid optimization",
+    "old frozen source/native/existing experiments are read-only and byte-identical",
+    "CURRENT_BASELINE.md is not updated until the parent accepts this round"
+  ],
+  "rate_definition": {
+    "Noff": 1265114,
+    "Nraw": 1703888,
+    "cis_weight_rule": "[0.5p, 0.5(1-p), 0.5(1-p), 0.5p]",
+    "cis_weights": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "diag_layer": "separate saturated nuisance, excluded from structural normalization",
+    "epsilon": 1e-06,
+    "inter_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "kernel": "K = eps + (1-eps)*(1 + d^2/r0^2)^-2",
+    "max_tie_rule": "exact ties over the 4 states share the subgradient equally (no first-argmax)",
+    "r0": "2*(2*n_loci)^(-1/3)",
+    "r_max": "e_i*e_j*max_s t_s",
+    "r_sum": "e_i*e_j*sum_s t_s",
+    "states": [
+      "AA",
+      "AB",
+      "BA",
+      "BB"
+    ],
+    "t_s": "w_s * K_s",
+    "zero_pairs_retained": true
+  },
+  "run_dir": "test_res/049-20260915T162917Z-max-contact-unified-multiscale",
+  "run_id": "049-20260915T162917Z-max-contact-unified-multiscale",
+  "schema": "p9016-max-contact-unified-multiscale-config-v1",
+  "scope": {
+    "biological_replicate_n": 1,
+    "cell": "P9016",
+    "chromosome_role": "associated technical/structural measurements within one cell",
+    "chromosomes": 20,
+    "copy_tracks": 40,
+    "phase_opened": false,
+    "raw_records": 1703888,
+    "reference_opened": false,
+    "synthetic_fits": 0
+  },
+  "selection_rules_pre_reference": {
+    "cross_loss_comparison": "not valid by raw value; every endpoint additionally rescored with common original-G count and fullJ value-only",
+    "display_endpoint_per_loss": "own count objective over its 4 endpoints, frozen before reference is opened",
+    "source_within_loss_solver": "minimum own final count objective; consensus on <=1e-9 tie"
+  },
+  "shared_terms": {
+    "candidate_independent_constant_raw": "696680*log(696680/1265114) + 568434*log(568434/1265114)",
+    "diag_nll": "same for all three losses (integer mode adds sum lgamma(count+1))",
+    "p_prior_internal_strength": 0.0001,
+    "p_q_optimized_per_arm": true,
+    "penalty_weights": {
+      "bend": 0.01,
+      "bond": 1.0,
+      "count": 1.0,
+      "p_prior": 1.0,
+      "repulsion": 1.0
+    }
+  },
+  "solvers": {
+    "ms": {
+      "L": "path-graph Neumann discrete Laplacian of the 1Mb chain, length = all bins of that chromosome",
+      "P": "I + (I + 25L)^-1 + (I + 400L)^-1",
+      "eigen": "DCT-II norm=ortho, lambda_k = 4*sin^2(pi*k/(2n)), p_k = 1 + 1/(1+25*lambda_k) + 1/(1+400*lambda_k) > 0",
+      "frozen_internal_shape": false,
+      "gradient_z": "P @ gradient_y (P symmetric)",
+      "intra_inter_split": false,
+      "parameterization": "z = P^-1 * raw_y, q unchanged",
+      "rigid_then_bead": false,
+      "roundtrip_tolerance": 1e-12,
+      "stop_rule": "canonical raw_y/q gradient, never the preconditioned gradient"
+    },
+    "raw": {
+      "canonical_gradient": "dF/d(raw_y) and dF/dq",
+      "parameterization": "raw_y/q with sphere_forward(y)=y/sqrt(1+|y|^2)"
+    }
+  },
+  "status": "FROZEN_PRE_IMPLEMENTATION"
+}

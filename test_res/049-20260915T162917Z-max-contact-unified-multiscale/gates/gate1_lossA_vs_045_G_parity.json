@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-09-15T16:38:52.317481+00:00",
+  "evidence": {
+    "baseline_npz": "test_res/046-UTC-real-cell-shared-capture/coords/real-extension-G-full-J/1Mb.npz",
+    "baseline_sha256": "116e906e790493afa956445c527b38da11b2fdcaed482fd225f578f188df699d",
+    "count_nll_abs_diff": 0.0,
+    "gradient_max_abs_diff": 7.129899833513073e-18,
+    "gradient_tolerance": 1e-12,
+    "n_loci": 2645,
+    "n_pairs": 3496690,
+    "note": "gradient residual is GPU atomic index_add ordering noise, not an algebraic difference",
+    "value_045_G": 9.542018998907452,
+    "value_abs_diff": 0.0,
+    "value_lossA": 9.542018998907452,
+    "value_tolerance": 1e-09
+  },
+  "gate": "gate1_lossA_vs_045_G_parity",
+  "status": "PASS"
+}

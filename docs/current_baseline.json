@@ -1,0 +1,69 @@
+{
+  "schema": "p9016-current-baseline-review-v1",
+  "note": "Review-snapshot copy. This file was rebuilt for the external review snapshot because the workspace copy at docs/current_baseline.json was stale: it still described the historical 1Mb extension endpoint (candidate_id real-extension-G-full-J, 3DG SHA 4301d4df...) while docs/CURRENT_BASELINE.md (2026-09-16) registers the reduced base endpoint (real-G-random, 3DG SHA ee5eb154...) as the current working baseline. Every field below is copied from a cited source file; nothing is inferred or newly computed. The original workspace file was NOT modified.",
+  "field_provenance": {
+    "identity_fields": "docs/CURRENT_BASELINE.md (baseline id, candidate path, 3DG/NPZ SHA256, lineage, terminal status, sanity value)",
+    "cross_check": "test_res/051-20260916T064500-g-random-baseline-ext/config.json -> baseline.{id,npz,npz_sha256,d3g_sha256} agrees on id and both hashes",
+    "metrics": "test_res/055-20260916_112451-max-contact-vs-baseline-review/eval/summary.json (mean same/cross/contrast over 20 chromosomes) and eval/per_chromosome.tsv (per-chromosome rows)",
+    "denominators": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/gates/gate8_lineage_and_denominators.json"
+  },
+  "baseline_id": "P9016-046-G-random-base-1Mb",
+  "baseline_kind": "user_authorized_reduced_working_baseline",
+  "run_dir": "test_res/046-UTC-real-cell-shared-capture",
+  "candidate_id": "real-G-random",
+  "candidate_location": "base_remaining",
+  "model": "G",
+  "objective": "full-J",
+  "gauge": "fixed_e",
+  "status": "budget_not_converged",
+  "status_reason": "fg_budget_exhausted",
+  "l2_proven": false,
+  "cumulative_fg_lineage": "612+404+486=1502",
+  "lineage_note": "014 label-free random start (seed 2207) -> 5Mb 612 FG -> 2Mb 404 FG -> 1Mb 486 FG; terminal state budget_not_converged (fg_budget_exhausted).",
+  "candidate_3dg": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+  "candidate_sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b",
+  "candidate_npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+  "candidate_npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+  "artifacts_included_in_review_snapshot": false,
+  "artifacts_inclusion_note": "No coordinate file (3DG), NPZ, HDF5, checkpoint, reference structure or raw contact file is included in this review snapshot. The paths and hashes above identify the artifacts inside the original workspace so a reviewer can refer to them unambiguously; they are not resolvable inside the snapshot.",
+  "reference_3dg": "data/P9016.1m.3dg.gz",
+  "reference_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+  "reference_usage": "Post-hoc evaluation and reporting only. The reference structure is never used for source selection, fitting, hyperparameter choice or stopping.",
+  "source_selection": {
+    "selected_source": "random",
+    "criterion": "User-specified simplified working baseline adopted after evaluation; this is not a blind G-model source selection.",
+    "reference_used_for_source_fit_stop": false
+  },
+  "evaluation_support": {
+    "mask": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "mask_sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "metric": "signed Pearson of pairwise Euclidean distances; direct=(A_mat+B_pat)/2, swapped=(A_pat+B_mat)/2, same=max(direct,swapped), cross=min(direct,swapped), contrast=same-cross; one whole-chromosome A/B swap per chromosome",
+    "chromosomes": 20,
+    "common_pairs": 157529,
+    "pairs_dropped": 0
+  },
+  "headline_metrics_20chr": {
+    "same_mean": 0.6023605799695413,
+    "same_median": 0.6175250694202874,
+    "cross_mean": 0.3656172546788986,
+    "cross_median": 0.3487830411253543,
+    "contrast_mean": 0.23674332529064257,
+    "contrast_median": 0.25747530425544063,
+    "published_same_mean": 0.6023605799695414,
+    "published_vs_recomputed_note": "055 recomputed the mean as ...5413 while the 051/052 published value is ...5414; the difference is 1e-16 from floating-point summation order and was recorded as a PASS regression check in 055 eval/validation.json.",
+    "source": "test_res/055-20260916_112451-max-contact-vs-baseline-review/eval/summary.json"
+  },
+  "not_applicable_fields": {
+    "validation_block": "The previous workspace JSON carried a validation block (matrix_common_pairs, orientation, published_pearson_max_abs_error, scatter point counts, wall time) that belonged to the historical 047 extension-endpoint figure run. It is not applicable to this baseline and is deliberately omitted rather than carried over.",
+    "candidate_finite_scatter_points": "Not restated here; see test_res/055-20260916_112451-max-contact-vs-baseline-review/eval/summary.json -> bead_counts for the current reference/candidate bead counts."
+  },
+  "plot_entrypoint": "scripts/plot_3dg_comparison.py",
+  "plot_entrypoint_note": "Requires data/P9016.1m.3dg.gz and the frozen mask NPZ, neither of which is present in this snapshot.",
+  "scientific_boundary": {
+    "l2_proven": false,
+    "new_fit_in_this_snapshot": false,
+    "evaluation_rerun": false,
+    "biological_replicates": 1,
+    "replicate_note": "One P9016 cell. The 20 chromosomes are associated measurements within that single cell, not biological replicates."
+  }
+}

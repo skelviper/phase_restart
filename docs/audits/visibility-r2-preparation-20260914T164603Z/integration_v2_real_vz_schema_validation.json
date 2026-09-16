@@ -1,0 +1,38 @@
+{
+  "schema_version": "p9016-visibility-041-integration-formal-v2-real-vz-schema-check-v1",
+  "status": "PASS",
+  "source_root": "test_res/041-20260914T173823Z-visibility-formal/integration_formal_check_v2",
+  "checked_case_ids": ["real-VZ-consensus", "real-VZ-random"],
+  "checked_stage_count": 6,
+  "formal_release": false,
+  "evaluation_run": false,
+  "r2_run": false,
+  "population_kl_run": false,
+  "coordinate_3dg_opened": false,
+  "reference_opened": false,
+  "truth_coordinate_opened": false,
+  "schema_checks": {
+    "npz_keys": ["eta", "e", "active_mask", "zero_mask", "numeric_position", "chromosome_index", "eta_inactive_placeholder"],
+    "numeric_position_key": "numeric_position",
+    "chromosome_index_key": "chromosome_index",
+    "all_stage_positions_and_chromosome_order_match_template": true,
+    "backend_mode": "VZ-zero-degree-fixed-e",
+    "gauge": "fixed_e",
+    "e_support_equals_active_mask": true,
+    "degree_status": "not_computed",
+    "predicted_degree_status": "not_computed",
+    "free_dimension": null,
+    "all_p_bounded": true,
+    "all_p_from_q_abs_error_le_1e-12": true,
+    "max_p_from_q_abs_error": 0.0
+  },
+  "rows": [
+    {"case_id": "real-VZ-consensus", "stage": "5Mb", "loci": 538, "e_zero_count": 1, "active_count": 537, "p": 0.7502074878318802, "q": 1.0999863038468107},
+    {"case_id": "real-VZ-consensus", "stage": "2Mb", "loci": 1329, "e_zero_count": 23, "active_count": 1306, "p": 0.7512898390140904, "q": 1.1057723503906673},
+    {"case_id": "real-VZ-consensus", "stage": "1Mb", "loci": 2645, "e_zero_count": 64, "active_count": 2581, "p": 0.7540029515479407, "q": 1.1203507021405794},
+    {"case_id": "real-VZ-random", "stage": "5Mb", "loci": 538, "e_zero_count": 1, "active_count": 537, "p": 0.7501381937737853, "q": 1.0996164416770293},
+    {"case_id": "real-VZ-random", "stage": "2Mb", "loci": 1329, "e_zero_count": 23, "active_count": 1306, "p": 0.7510387273427512, "q": 1.104428457060427},
+    {"case_id": "real-VZ-random", "stage": "1Mb", "loci": 2645, "e_zero_count": 64, "active_count": 2581, "p": 0.7533540233642108, "q": 1.1168540254532422}
+  ],
+  "interpretation": "Only the two real-VZ cases in the old short run_formal/stage_fit integration check were read for sidecar/parameter interface validation. This is not a formal endpoint release and integration_formal_check_v2 remains excluded from formal results."
+}

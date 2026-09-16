@@ -1,0 +1,175 @@
+{
+  "schema": "p9016-round055-validation-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "regression_049_r2_pearson_B-hard-observed",
+      "status": "PASS",
+      "evidence": {
+        "frozen_table": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/results/r2_per_chromosome.tsv",
+        "max_abs_diff": 3.3306690738754696e-16,
+        "worst_key": "chr1:rho_B_pat",
+        "n_pairs_or_row_mismatch": 0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "check": "regression_049_r2_pearson_C-max-rate",
+      "status": "PASS",
+      "evidence": {
+        "frozen_table": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/results/r2_per_chromosome.tsv",
+        "max_abs_diff": 6.661338147750939e-16,
+        "worst_key": "chr3:rho_B_mat",
+        "n_pairs_or_row_mismatch": 0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "check": "regression_051_baseline_pearson",
+      "status": "PASS",
+      "evidence": {
+        "frozen_table": "test_res/051-20260916T064500-g-random-baseline-ext/evaluation/per_chromosome.tsv",
+        "max_abs_diff": 4.964084698855231e-13,
+        "worst_key": "chr17:A_pat",
+        "n_pairs_or_row_mismatch": 0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "check": "regression_051_baseline_same_mean",
+      "status": "PASS",
+      "evidence": {
+        "observed": 0.6023605799695413,
+        "published": 0.6023605799695414,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "check": "regression_053_baseline_spearman",
+      "status": "PASS",
+      "evidence": {
+        "frozen_table": "test_res/053-20260916T084905Z-four-way-spearman-chr1-matrices/eval/summary.json",
+        "frozen_candidate_npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+        "abs_diff": {
+          "same": 0.0,
+          "cross": 0.0,
+          "contrast": 5.551115123125783e-17
+        },
+        "observed": {
+          "same": 0.6048764784390889,
+          "cross": 0.3776082995623037,
+          "contrast": 0.2272681788767852
+        },
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "check": "copy_swap_invariance",
+      "status": "PASS",
+      "evidence": {
+        "max_abs_diff": 0.0,
+        "rule": "swapping candidate copy labels leaves same/cross/contrast unchanged"
+      }
+    },
+    {
+      "check": "support_matches_frozen_mask",
+      "status": "PASS",
+      "evidence": {
+        "shared_total": 157529,
+        "mask_common_total": 157529,
+        "dropped_total": 0
+      }
+    },
+    {
+      "check": "all_20_chromosomes_defined",
+      "status": "PASS",
+      "evidence": {
+        "n_chromosomes": 20,
+        "n_rows": 80
+      }
+    },
+    {
+      "check": "reference_self_same_is_one",
+      "status": "PASS",
+      "evidence": {
+        "note": "reference same is degenerate by construction; cross is the mat/pat distance correlation on the same support",
+        "cross_mean": 0.2617840692368945
+      }
+    },
+    {
+      "check": "chr1_matrix_symmetry_and_zero_diagonal",
+      "status": "PASS",
+      "evidence": {
+        "max_symmetry_error": 0.0,
+        "max_abs_diagonal": 0.0,
+        "missing_diagonal_entries": 7,
+        "nan_counts": {
+          "Reference": [
+            1528,
+            1149
+          ],
+          "Baseline-046-G-random": [
+            0,
+            0
+          ],
+          "B-hard-observed": [
+            0,
+            0
+          ],
+          "C-max-rate": [
+            0,
+            0
+          ]
+        },
+        "unified_vmax": 5.492822844213373
+      }
+    },
+    {
+      "check": "candidate_position_full_coverage",
+      "status": "PASS",
+      "evidence": {
+        "positions_total": 2585,
+        "coverage_per_copy": {
+          "Baseline-046-G-random": [
+            2585,
+            2585
+          ],
+          "B-hard-observed": [
+            2585,
+            2585
+          ],
+          "C-max-rate": [
+            2585,
+            2585
+          ]
+        },
+        "reference_coverage_per_copy": [
+          2460,
+          2487
+        ],
+        "note": "mask positions map numerically onto 1Mb locus bp keys; no string comparison and no compressed index are used"
+      }
+    },
+    {
+      "check": "chr1_panel_scale_positive",
+      "status": "PASS",
+      "evidence": {
+        "panel_scale_raw_median": {
+          "Reference": 1.421527990617571,
+          "Baseline-046-G-random": 0.2785023201415906,
+          "B-hard-observed": 0.2809912673173043,
+          "C-max-rate": 0.25096521346976997
+        },
+        "historical_convention": "scripts/plot_3dg_comparison.py build_matrix lines 268-275 (combined median of the two copies' common-pair distances)",
+        "note": "display normalization only; it does not enter same/cross/contrast"
+      }
+    }
+  ],
+  "deviations": [],
+  "reference_first_opened_utc": "2026-09-16T11:28:35Z",
+  "notes": [
+    "reference was parsed only after eval/pre_reference_hash_gate.json was written",
+    "epoch time of this run is recorded in logs/terminal.json",
+    "heatmap scale corrected before any figure existed: per-dataset chr1 two-copy combined raw median replaces the whole-cell Rg wording recorded earlier in config.json (see config.json heatmap_scale_correction); same/cross/contrast are unaffected"
+  ]
+}

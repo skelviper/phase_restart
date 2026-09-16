@@ -1,0 +1,25 @@
+{
+  "canonical_gradient_max_abs": 0.0903,
+  "coordinate_array_sha256": "7fcc0f8f0014b7b10e0a9de303eb81e1278420a5889607206b9dc21b69d95696",
+  "coords_npz_path": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/codecheck/coords/A-ms-random/1Mb.npz",
+  "coords_npz_sha256": "9bee2ab89446f3c4e2cdf5f841bc2fcfd0269160c6e5b0038c78427ff501aaf0",
+  "count_nll_by_loss": {
+    "A": 99.0,
+    "B": 96.0,
+    "C": 87.0
+  },
+  "fit_id": "A-ms-random",
+  "fit_wall_seconds": 1003.0,
+  "fullJ_value": 913.0,
+  "kind": "code_fixture",
+  "loss_id": "A",
+  "outer_fg_actual": 1502,
+  "p": 0.75,
+  "q": 0.0,
+  "solver_id": "ms",
+  "source_id": "random",
+  "status": "budget_not_converged",
+  "terminal": "budget_not_converged",
+  "three_dg_path": "/mnt/ssd/zliu/phase_restart/test_res/049-20260915T162917Z-max-contact-unified-multiscale/evaluation/codecheck/coords/A-ms-random/1Mb.3dg",
+  "three_dg_sha256": "ceff5ed8843c5c35dcf4ef085ba0bf4dd415c0048747fb1d9810f79ba2fcf971"
+}

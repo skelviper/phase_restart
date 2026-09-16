@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-09-15T16:38:53.664532+00:00",
+  "evidence": {
+    "global_rotation_matrix": [
+      [
+        -0.0799153752464068,
+        -0.9186821170490629,
+        0.38682903279546926
+      ],
+      [
+        0.3300004482733034,
+        -0.3905702279757865,
+        -0.8593919950513625
+      ],
+      [
+        0.9405919609153828,
+        0.0589751204593455,
+        0.3343780767756176
+      ]
+    ],
+    "rotation_det": 1.0000000000000002,
+    "rows": [
+      {
+        "loss": "A",
+        "rotation_abs_diff": 8.881784197001252e-16,
+        "swap_abs_diff": 0.0,
+        "value": 4.6442865790261,
+        "value_chr1_AB_swapped": 4.6442865790261,
+        "value_globally_rotated": 4.644286579026101
+      },
+      {
+        "loss": "B",
+        "rotation_abs_diff": 8.881784197001252e-16,
+        "swap_abs_diff": 0.0,
+        "value": 5.343916767539102,
+        "value_chr1_AB_swapped": 5.343916767539102,
+        "value_globally_rotated": 5.343916767539103
+      },
+      {
+        "loss": "C",
+        "rotation_abs_diff": 0.0,
+        "swap_abs_diff": 0.0,
+        "value": 4.649569903492681,
+        "value_chr1_AB_swapped": 4.649569903492681,
+        "value_globally_rotated": 4.649569903492681
+      }
+    ]
+  },
+  "gate": "gate4_ab_swap_and_rotation_invariance",
+  "status": "PASS"
+}

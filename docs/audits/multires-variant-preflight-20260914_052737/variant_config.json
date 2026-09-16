@@ -1,0 +1,284 @@
+{
+  "candidate_order": [
+    "consensus_joint",
+    "random_joint"
+  ],
+  "cohort": {
+    "biological_samples": 1,
+    "inter_contacts": 568434,
+    "intra_contacts": 1135454,
+    "raw_contacts": 1703888,
+    "sample_id": "P9016",
+    "snpfree_sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa"
+  },
+  "coordinate_grid": {
+    "final_bin_size_bp": 1000000,
+    "full_grid": true,
+    "n_loci": 2645,
+    "n_physical_beads": 5290,
+    "n_tracks": 40,
+    "origin_bp": 0
+  },
+  "formal_output_path": "/mnt/ssd/zliu/phase_restart/test_res/034-20260914_052737-multires-variants",
+  "input": {
+    "path": "/mnt/ssd/zliu/phase_restart/inputs/P9016.snpfree.pairs.gz",
+    "raw_source_sha256": "071a6cc76bfad543ea1ace6ee1ce3022b30ac1b1e50a9f0c3a3a1967b9649505",
+    "sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "training_columns": [
+      "readID",
+      "chr1",
+      "pos1",
+      "chr2",
+      "pos2",
+      "strand1",
+      "strand2"
+    ],
+    "uses_all_1703888_records": true
+  },
+  "models": {
+    "C1": {
+      "definition": {
+        "model": {
+          "coordinate_parameterization": "sphere_forward_unit_ball",
+          "description": "V1 objective with bend weight set to zero",
+          "exposure_change": "none_preserve_input",
+          "finite_kernel": {
+            "epsilon": 1e-06,
+            "radius": "2*l0"
+          },
+          "model_id": "C1",
+          "objective_weights": {
+            "bend": 0.0,
+            "bond": 1.0,
+            "count": 1.0,
+            "p_prior": 1.0,
+            "repulsion": 1.0
+          },
+          "p_floor": 0.0001,
+          "p_init": 0.75,
+          "p_prior_strength": 0.0001,
+          "physical_domain": "strict_unit_ball",
+          "repulsion_threshold": "0.7*l0"
+        },
+        "model_id": "C1",
+        "parameter_dimension": 15871,
+        "selection_includes_diagonal_profile": true,
+        "selection_metric": "count_nll_per_record",
+        "selection_uses_priors": false,
+        "source_hashes": {
+          "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+          "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+          "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+          "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+          "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e"
+        }
+      },
+      "model_signature": "e7150eccdece2e0ffed9adac3e19be265b8dde332be5c8d8f12a0e9f1f1e67ff",
+      "parameter_dimension": 15871,
+      "prior_config_sha256": "5f80157f039533e120a082cdd12ea0b38c6d2266047f3340627e06ea8a7fd795"
+    },
+    "C2-free": {
+      "definition": {
+        "model": {
+          "coordinate_parameterization": "direct_physical_unbounded",
+          "description": "Direct physical coordinates without a hard ball",
+          "exposure_change": "none_preserve_input",
+          "finite_kernel": {
+            "epsilon": 1e-06,
+            "radius": "2*l0"
+          },
+          "model_id": "C2-free",
+          "objective_weights": {
+            "bend": 0.01,
+            "bond": 1.0,
+            "count": 1.0,
+            "p_prior": 1.0,
+            "repulsion": 1.0
+          },
+          "p_floor": 0.0001,
+          "p_init": 0.75,
+          "p_prior_strength": 0.0001,
+          "physical_domain": "finite_unbounded",
+          "repulsion_threshold": "0.7*l0"
+        },
+        "model_id": "C2-free",
+        "parameter_dimension": 15871,
+        "selection_includes_diagonal_profile": true,
+        "selection_metric": "count_nll_per_record",
+        "selection_uses_priors": false,
+        "source_hashes": {
+          "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+          "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+          "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+          "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+          "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e"
+        }
+      },
+      "model_signature": "299fc7d1945f3e1f9621f20c3e69cd2eca9dc3dc08def604897c446a4d9589db",
+      "parameter_dimension": 15871,
+      "prior_config_sha256": "f3e1493b1d9070f16cb1c97048a87eb0adf3998b955772f23cd5ba4d844aa184"
+    },
+    "C2-map": {
+      "definition": {
+        "model": {
+          "coordinate_parameterization": "identity_interior_smooth_ball",
+          "description": "Smooth identity-interior unit-ball parameterization",
+          "exposure_change": "none_preserve_input",
+          "finite_kernel": {
+            "epsilon": 1e-06,
+            "radius": "2*l0"
+          },
+          "model_id": "C2-map",
+          "objective_weights": {
+            "bend": 0.01,
+            "bond": 1.0,
+            "count": 1.0,
+            "p_prior": 1.0,
+            "repulsion": 1.0
+          },
+          "p_floor": 0.0001,
+          "p_init": 0.75,
+          "p_prior_strength": 0.0001,
+          "physical_domain": "strict_unit_ball",
+          "repulsion_threshold": "0.7*l0"
+        },
+        "model_id": "C2-map",
+        "parameter_dimension": 15871,
+        "selection_includes_diagonal_profile": true,
+        "selection_metric": "count_nll_per_record",
+        "selection_uses_priors": false,
+        "source_hashes": {
+          "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+          "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+          "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+          "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+          "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e"
+        }
+      },
+      "model_signature": "e575494fec71afc14a1e3f278df9b72eb57104439b27d5b2b96cf42e0be372cf",
+      "parameter_dimension": 15871,
+      "prior_config_sha256": "f3e1493b1d9070f16cb1c97048a87eb0adf3998b955772f23cd5ba4d844aa184"
+    },
+    "C3": {
+      "definition": {
+        "model": {
+          "coordinate_parameterization": "sphere_forward_unit_ball",
+          "description": "V1 objective with uniform full-grid exposure",
+          "exposure_change": "uniform_full_grid",
+          "finite_kernel": {
+            "epsilon": 1e-06,
+            "radius": "2*l0"
+          },
+          "model_id": "C3",
+          "objective_weights": {
+            "bend": 0.01,
+            "bond": 1.0,
+            "count": 1.0,
+            "p_prior": 1.0,
+            "repulsion": 1.0
+          },
+          "p_floor": 0.0001,
+          "p_init": 0.75,
+          "p_prior_strength": 0.0001,
+          "physical_domain": "strict_unit_ball",
+          "repulsion_threshold": "0.7*l0"
+        },
+        "model_id": "C3",
+        "parameter_dimension": 15871,
+        "selection_includes_diagonal_profile": true,
+        "selection_metric": "count_nll_per_record",
+        "selection_uses_priors": false,
+        "source_hashes": {
+          "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+          "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+          "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+          "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+          "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e"
+        }
+      },
+      "model_signature": "77edfafcaa017f2b27dc6da1833c480ab27690647f6fb1c93c5a7cecab77bf73",
+      "parameter_dimension": 15871,
+      "prior_config_sha256": "f3e1493b1d9070f16cb1c97048a87eb0adf3998b955772f23cd5ba4d844aa184"
+    }
+  },
+  "optimization": {
+    "budget_not_convergence": true,
+    "carry_raw_q_between_layers": true,
+    "independent_chain_per_variant_source": true,
+    "p_init_first_layer": 0.75,
+    "schedule": [
+      {
+        "bin_size_bp": 5000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "5m",
+        "maxfun": 930,
+        "maxiter": 300,
+        "maxls": 20
+      },
+      {
+        "bin_size_bp": 2000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "2m",
+        "maxfun": 630,
+        "maxiter": 200,
+        "maxls": 20
+      },
+      {
+        "bin_size_bp": 1000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "1m",
+        "maxfun": 750,
+        "maxiter": 240,
+        "maxls": 20
+      }
+    ]
+  },
+  "preflight_sha256": "e2b70c08f8872f851f51da570201469707adb4813b25bc97c02edd77f42e9ae3",
+  "prepared_not_launched": true,
+  "protocol_sha256": "0ffd6e7a32cd190dc5d942fa88696563be7de488e011a08310e9d2b0ef3e4d4d",
+  "purpose": "formal_phase_free_variant_training_only",
+  "runtime": {
+    "candidate_workers": 4,
+    "thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "schema": "multires-variant-config-v1",
+  "selection": {
+    "criterion": "count_nll_per_record",
+    "direction": "minimize",
+    "includes_candidate_invariant_diagonal_layer": true,
+    "includes_priors": false,
+    "order": [
+      "consensus_joint",
+      "random_joint"
+    ],
+    "phase_used": false,
+    "reference_used": false,
+    "tie_break": "preregistered_order",
+    "tie_tolerance_per_record": 1e-09,
+    "within_each_variant_only": true
+  },
+  "training_boundary": {
+    "evaluation_outputs_opened": false,
+    "native_fdg_started": false,
+    "oracle_coordinates_opened": false,
+    "phase_used": false,
+    "reference_used": false
+  },
+  "variants": [
+    "C1",
+    "C2-map",
+    "C2-free",
+    "C3"
+  ]
+}

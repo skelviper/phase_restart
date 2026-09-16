@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "check": "terminals_complete",
+      "evidence": "stages=10Mb,1Mb,200kb,20Mb,2Mb,500kb,5Mb",
+      "passed": true
+    },
+    {
+      "check": "chain_linkage_and_fg",
+      "evidence": "20Mb<-40Mb(reused_frozen_prefix) fg=200/200 lineage=400 | 10Mb<-20Mb(new_chain_endpoint) fg=200/200 lineage=600 | 5Mb<-10Mb(new_chain_endpoint) fg=612/612 lineage=1212 | 2Mb<-5Mb(new_chain_endpoint) fg=404/404 lineage=1616 | 1Mb<-2Mb(new_chain_endpoint) fg=486/486 lineage=2102 | 500kb<-1Mb(new_chain_endpoint) fg=200/200 lineage=2302 | 200kb<-500kb(new_chain_endpoint) fg=100/100 lineage=2402",
+      "passed": true
+    },
+    {
+      "check": "lineage_contains_20Mb",
+      "evidence": "20Mb is prolonged from the reused 40Mb prefix, not from 051's optimized 20Mb",
+      "passed": true
+    },
+    {
+      "check": "previous_endpoint_hash_linkage",
+      "evidence": "20Mb<-40Mb.npz:same 10Mb<-20Mb.npz:same 5Mb<-10Mb.npz:same 2Mb<-5Mb.npz:same 1Mb<-2Mb.npz:same 500kb<-1Mb.npz:same 200kb<-500kb.npz:same",
+      "passed": true
+    },
+    {
+      "check": "group3_fg",
+      "evidence": "1Mb lineage FG=2102 (expected 2102)",
+      "passed": true
+    },
+    {
+      "check": "group4_fg",
+      "evidence": "200kb lineage FG=2402 (expected 2402)",
+      "passed": true
+    },
+    {
+      "check": "group3_and_group4_share_prefix",
+      "evidence": "group 4 continues from the same coords/new-chain/1Mb.npz that is group 3's endpoint",
+      "passed": true
+    },
+    {
+      "check": "chain_exit_codes_recorded",
+      "evidence": "test_res/054-20260916T090840Z-40-20-chain-spearman/logs/chain_resume_exit.out",
+      "passed": true
+    },
+    {
+      "check": "coarsening_is_bin_mean",
+      "evidence": "max |recomputed - saved| = 0.000e+00",
+      "passed": true
+    },
+    {
+      "check": "coarsening_counts",
+      "evidence": "beads=26362 five=5256 partial=34 loci=2645",
+      "passed": true
+    },
+    {
+      "check": "coarsened_raw_y_not_zero",
+      "evidence": "raw_y finite, non-zero, coords inside the unit ball",
+      "passed": true
+    },
+    {
+      "check": "coarsening_contributing_beads",
+      "evidence": "contributing beads total=26362",
+      "passed": true
+    },
+    {
+      "check": "shared_denominator",
+      "evidence": "chromosomes=20 loci=2447 pairs=157529",
+      "passed": true
+    },
+    {
+      "check": "all_groups_20_defined",
+      "evidence": "{'baseline': 20, 'chain_1Mb': 20, 'chain_coarse_1Mb': 20, 'extra_levels': 20}",
+      "passed": true
+    },
+    {
+      "check": "existing_groups_unchanged",
+      "evidence": "{\"baseline\": {\"bitwise_equal_within_1e-12\": true, \"expected\": {\"cross\": 0.3776082995623037, \"same\": 0.6048764784390889}, \"observed\": {\"cross\": 0.3776082995623037, \"same\": 0.6048764",
+      "passed": true
+    },
+    {
+      "check": "baseline_extra_shas",
+      "evidence": "046/051 candidates byte-identical",
+      "passed": true
+    },
+    {
+      "check": "reused_40mb_prefix_sha",
+      "evidence": "052 40Mb prefix byte-identical",
+      "passed": true
+    },
+    {
+      "check": "old_052_053_endpoints_untouched",
+      "evidence": "200 kb -> 1 Mb=same; Baseline=same; Extra levels=same; New chain 1 Mb=same",
+      "passed": true
+    },
+    {
+      "check": "panel_annotation_matches_tsv",
+      "evidence": "column order ok=True | extra_levels row1 copyB same=0.770546/0.770546 cross=0.446602/0.446602; chain_1Mb row1 copyA same=0.574769/0.574769 cross=0.655707/0.655707; chain_coarse_1Mb row1 copyA same=0.547184/0.547184 cross=0.612185/0.612185; extra_levels row2 copyA same=0.868384/0.868384 cross=0.390077/0.390077; chain_1Mb row2 copyB same=0.630806/0.630806 cross=0.461639/0.461639; chain_coarse_1Mb row2 copyB same=0.621781/0.621781 cross=0.439655/0.439655",
+      "passed": true
+    },
+    {
+      "check": "matrix_column_order",
+      "evidence": "Reference | Extra 20→10→5→2→1 Mb | Shared chain 40→20→10→5→2→1 Mb | Full chain 200 kb → 1 Mb",
+      "passed": true
+    },
+    {
+      "check": "figure/four_group_same_cross_spearman.png",
+      "evidence": "179318 bytes",
+      "passed": true
+    },
+    {
+      "check": "figure/chr1_distance_matrices.png",
+      "evidence": "1219211 bytes",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "n_checks": 22,
+  "n_passed": 22,
+  "schema": "p9016-round054-acceptance-v1"
+}

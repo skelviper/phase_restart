@@ -1,0 +1,35 @@
+{
+  "schema": "p9016-round055-pre-reference-hash-gate-v1",
+  "status": "PASS",
+  "reference_opened": false,
+  "phase_opened": false,
+  "write_order": "this file is written before data/P9016.1m.3dg.gz is parsed",
+  "mask": {
+    "path": "test_res/046-UTC-real-cell-shared-capture/evaluation_final/results/frozen_legacy_mask_snapshot.npz",
+    "sha256": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9"
+  },
+  "datasets": {
+    "Reference": {
+      "path": "data/P9016.1m.3dg.gz",
+      "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+      "role": "reference_structure_control"
+    },
+    "Baseline-046-G-random": {
+      "path": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.3dg",
+      "sha256": "ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b",
+      "role": "current_work_baseline"
+    },
+    "B-hard-observed": {
+      "path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/B-raw-consensus/1Mb.3dg",
+      "sha256": "4f00edc33fbf4e99066137e8afabf02daeb0736df6f7ead4d6865501bba7ed91",
+      "role": "historical_max_contact_loss_B"
+    },
+    "C-max-rate": {
+      "path": "test_res/049-20260915T162917Z-max-contact-unified-multiscale/coords/C-ms-random/1Mb.3dg",
+      "sha256": "5011c4e75d9ef80dfde36ff5d5628042cddad3d56954faf451866c557df9f801",
+      "role": "historical_max_contact_loss_C"
+    }
+  },
+  "reference_expected_sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+  "deviations": []
+}

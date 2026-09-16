@@ -1,0 +1,116 @@
+{
+  "arm_plan": [
+    {
+      "arm_id": "P2-M0-known-e",
+      "exposure_policy": "known-e",
+      "fixture_id": "P2",
+      "model_id": "M0"
+    },
+    {
+      "arm_id": "N2-M0-known-e",
+      "exposure_policy": "known-e",
+      "fixture_id": "N2",
+      "model_id": "M0"
+    }
+  ],
+  "fixtures": {
+    "N2": {
+      "cohort": {
+        "bin_size_bp": 1000000,
+        "count_snapshot_is_unlabeled": true,
+        "n_loci_1mb": 2645,
+        "physical_beads": 5290,
+        "sample_id": "synthetic_N2",
+        "tracks": 40
+      },
+      "coordinate_or_truth_payload_in_manifest": false,
+      "count_snapshot": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/N2_counts_snapshot.npz",
+        "sha256": "0f07359a95c6c4a5d3eb5ad66e5c70b674ff8e7ada2be4ef8e4c093802cf804e"
+      },
+      "fixture_id": "N2",
+      "known_e_exposure": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.npz",
+        "sha256": "ca77e1b4f2f7957bc2c3898b9bdd8fbd99a884c62166918a3bd82777ff99c7c9"
+      },
+      "known_e_exposure_json": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.json",
+        "sha256": "66942ed3b356a2479d814215e33a679cebf7d7b2d4c3d36d85af04285e7b215d"
+      },
+      "known_e_exposure_npy": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/N2_generation_exposure.npy",
+        "sha256": "bc98c739d7bbeff9ffe355700df4e2a31b3b55300e2bbe84e0d89937fb7cc172"
+      },
+      "production_e_layer": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/N2_C0_1mb_layer.npz",
+        "sha256": "3f62158eedeaaf9f287fa58e4112cc78405e2dbe989289d2d9db897e26c3cdd5"
+      },
+      "shared_start": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/N2_shared_start.npz",
+        "sha256": "e7837d5abb2ed951393464304fa923d65946e269644a1c4a4337fb4c8cb18640"
+      }
+    },
+    "P2": {
+      "cohort": {
+        "bin_size_bp": 1000000,
+        "count_snapshot_is_unlabeled": true,
+        "n_loci_1mb": 2645,
+        "physical_beads": 5290,
+        "sample_id": "synthetic_P2",
+        "tracks": 40
+      },
+      "coordinate_or_truth_payload_in_manifest": false,
+      "count_snapshot": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/P2_counts_snapshot.npz",
+        "sha256": "d3baff0a8059059d458c58fe29d4bd06e067baef4fb84485279fae00dee7ea0d"
+      },
+      "fixture_id": "P2",
+      "known_e_exposure": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.npz",
+        "sha256": "cd2443191826008385911e9008a0b43deae46fde5322fa13f5d5582c927c73b6"
+      },
+      "known_e_exposure_json": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.json",
+        "sha256": "fe79c8e606cda6805206bb4637172b2d57ad576855a3042e3307e24f8debedba"
+      },
+      "known_e_exposure_npy": {
+        "path": "docs/audits/next-step-r2-preparation-20260914T143656Z/synthetic_inputs/P2_generation_exposure.npy",
+        "sha256": "66fcf1f86bca8f7d09295f156be7ba7fee26eaed694393968423b124ba660279"
+      },
+      "production_e_layer": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/P2_C0_1mb_layer.npz",
+        "sha256": "6c3a394445671b67183a57c7a817734b80cc10fa158f26c5b8cdd5a80f15a431"
+      },
+      "shared_start": {
+        "path": "test_res/026-20260913_221709-allele-calibration-prepare/work/P2_shared_start.npz",
+        "sha256": "dac6f2818c91da3af35fe877b3e559214a87715a7b27d7ec21244a823011eb75"
+      }
+    }
+  },
+  "native_called": false,
+  "optimizer_started": false,
+  "production_reuse_plan": [
+    {
+      "arm_ids": [
+        "P2-M0-production-e",
+        "P2-M1-production-e"
+      ],
+      "exposure_policy": "production-e",
+      "fixture_id": "P2",
+      "layer_reuse": "production_e_layer"
+    },
+    {
+      "arm_ids": [
+        "N2-M0-production-e",
+        "N2-M1-production-e"
+      ],
+      "exposure_policy": "production-e",
+      "fixture_id": "N2",
+      "layer_reuse": "production_e_layer"
+    }
+  ],
+  "schema_version": "p9016-next-step-known-e-worker-input-v1",
+  "scope": "P2/N2 only; M0/known-e arms; no training executed here",
+  "status": "ready_for_parent_training_release",
+  "truth_coordinates_exposed": false
+}

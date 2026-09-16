@@ -1,0 +1,109 @@
+{
+  "base": "v1_original_random_joint",
+  "common_pairs": 17578,
+  "comparisons": [
+    {
+      "base_condition": "v1_original_random_joint",
+      "pairing_basis": "candidate panels aligned to fixed reference mat/pat display columns; no local swap",
+      "records": [
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.0455217164604067,
+          "panel": "candidate_to_ref_mat",
+          "pearson": 0.9941986290944544,
+          "spearman": 0.9942956103797564,
+          "target_candidate_scale": 0.3792290104928485
+        },
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.048074156776033085,
+          "panel": "candidate_to_ref_pat",
+          "pearson": 0.9929388511309657,
+          "spearman": 0.9918028371340984,
+          "target_candidate_scale": 0.3792290104928485
+        }
+      ],
+      "target_condition": "v1_continuation"
+    },
+    {
+      "base_condition": "v1_original_random_joint",
+      "pairing_basis": "candidate panels aligned to fixed reference mat/pat display columns; no local swap",
+      "records": [
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.33667608432029983,
+          "panel": "candidate_to_ref_mat",
+          "pearson": 0.6735331815672162,
+          "spearman": 0.6760242702651785,
+          "target_candidate_scale": 0.3004858440264506
+        },
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.4666780323126261,
+          "panel": "candidate_to_ref_pat",
+          "pearson": 0.6367302793160358,
+          "spearman": 0.632134872195832,
+          "target_candidate_scale": 0.3004858440264506
+        }
+      ],
+      "target_condition": "C0-bundle1"
+    },
+    {
+      "base_condition": "v1_original_random_joint",
+      "pairing_basis": "candidate panels aligned to fixed reference mat/pat display columns; no local swap",
+      "records": [
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.44321352511715745,
+          "panel": "candidate_to_ref_mat",
+          "pearson": 0.3821605534930184,
+          "spearman": 0.36735340854686044,
+          "target_candidate_scale": 0.29429223676417016
+        },
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.5284196508988731,
+          "panel": "candidate_to_ref_pat",
+          "pearson": 0.5706142570787065,
+          "spearman": 0.6280666079003616,
+          "target_candidate_scale": 0.29429223676417016
+        }
+      ],
+      "target_condition": "C0-bundle2"
+    },
+    {
+      "base_condition": "v1_original_random_joint",
+      "pairing_basis": "candidate panels aligned to fixed reference mat/pat display columns; no local swap",
+      "records": [
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.39647929590281805,
+          "panel": "candidate_to_ref_mat",
+          "pearson": 0.4950576438688671,
+          "spearman": 0.47747310955582245,
+          "target_candidate_scale": 0.28957909472830273
+        },
+        {
+          "base_candidate_scale": 0.3766542938839421,
+          "n_pairs": 17578,
+          "normalized_rms_difference_over_base_rms": 0.45115078177984747,
+          "panel": "candidate_to_ref_pat",
+          "pearson": 0.6323042400315589,
+          "spearman": 0.6552731362033091,
+          "target_candidate_scale": 0.28957909472830273
+        }
+      ],
+      "target_condition": "C0-bundle3"
+    }
+  ],
+  "generated_before_render": true,
+  "normalization": "each candidate pooled RMS; rank comparison is scale-invariant",
+  "schema": "p9016-chr1-shape-comparison-v1"
+}

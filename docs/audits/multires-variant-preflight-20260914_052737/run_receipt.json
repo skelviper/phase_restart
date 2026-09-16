@@ -1,0 +1,59 @@
+{
+  "artifact_root": "/mnt/ssd/zliu/phase_restart/docs/audits/multires-variant-preflight-20260914_052737",
+  "c0_gate_required": "test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json",
+  "config": {
+    "path": "variant_config.json",
+    "sha256": "8bb02a6930321d1f5496546107f2ce49706f73d498e1d6110885de788030fb90"
+  },
+  "ended_at_utc": "2026-09-14T05:28:03+00:00",
+  "executed_stage_attempt_count": 0,
+  "formal_output_path": "/mnt/ssd/zliu/phase_restart/test_res/034-20260914_052737-multires-variants",
+  "launch_command": "launch_command.txt",
+  "planned_stage_attempt_count": 24,
+  "preflight": {
+    "path": "preflight.json",
+    "sha256": "e2b70c08f8872f851f51da570201469707adb4813b25bc97c02edd77f42e9ae3"
+  },
+  "protocol": {
+    "path": "variant_protocol.json",
+    "sha256": "0ffd6e7a32cd190dc5d942fa88696563be7de488e011a08310e9d2b0ef3e4d4d"
+  },
+  "remaining_blocked_stage_attempt_count": 24,
+  "runner_exit_code": 0,
+  "schema": "multires-variant-prepared-receipt-v1",
+  "selection": {
+    "criterion": "count_nll_per_record",
+    "order": [
+      "consensus_joint",
+      "random_joint"
+    ],
+    "phase_used": false,
+    "reference_used": false,
+    "tie_tolerance_per_record": 1e-09
+  },
+  "source_hashes": {
+    "path": "source_hashes.json",
+    "sha256": "f0658bd0c72ba78ed14934a094ff553dbb8994f58c4c13e8749e69e06f0fb8fa"
+  },
+  "test_evidence": {
+    "path": "test_evidence.json",
+    "sha256": "f649a81a1ddc703506b252059e79a1eda684cf29eff066bcfd84b9a6a3db62c5",
+    "runner_exit_code": 0,
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "started_at_utc": "2026-09-14T05:27:53+00:00",
+  "status": "prepared_not_launched",
+  "terminal": {
+    "path": "terminal_evidence.json",
+    "sha256": "d13dcbf8955c6ae2d10d0179286df64cccbcb7d12a455edf61c28713742b9c35"
+  },
+  "training_boundary": {
+    "evaluation_outputs_opened": false,
+    "native_fdg_started": false,
+    "oracle_coordinates_opened": false,
+    "phase_used": false,
+    "reference_used": false
+  }
+}

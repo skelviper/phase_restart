@@ -1,0 +1,248 @@
+{
+  "chromosomes": [
+    {
+      "chr": "chr1",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 17578,
+      "n_pairs_shared_support": 17578
+    },
+    {
+      "chr": "chr2",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 14878,
+      "n_pairs_shared_support": 14878
+    },
+    {
+      "chr": "chr3",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 12090,
+      "n_pairs_shared_support": 12090
+    },
+    {
+      "chr": "chr4",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 10731,
+      "n_pairs_shared_support": 10731
+    },
+    {
+      "chr": "chr5",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 10296,
+      "n_pairs_shared_support": 10296
+    },
+    {
+      "chr": "chr6",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 10585,
+      "n_pairs_shared_support": 10585
+    },
+    {
+      "chr": "chr7",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 8128,
+      "n_pairs_shared_support": 8128
+    },
+    {
+      "chr": "chr8",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 7503,
+      "n_pairs_shared_support": 7503
+    },
+    {
+      "chr": "chr9",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 7021,
+      "n_pairs_shared_support": 7021
+    },
+    {
+      "chr": "chr10",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 7875,
+      "n_pairs_shared_support": 7875
+    },
+    {
+      "chr": "chr11",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 7021,
+      "n_pairs_shared_support": 7021
+    },
+    {
+      "chr": "chr12",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 5995,
+      "n_pairs_shared_support": 5995
+    },
+    {
+      "chr": "chr13",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 6328,
+      "n_pairs_shared_support": 6328
+    },
+    {
+      "chr": "chr14",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 5778,
+      "n_pairs_shared_support": 5778
+    },
+    {
+      "chr": "chr15",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 4753,
+      "n_pairs_shared_support": 4753
+    },
+    {
+      "chr": "chr16",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 4278,
+      "n_pairs_shared_support": 4278
+    },
+    {
+      "chr": "chr17",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 3916,
+      "n_pairs_shared_support": 3916
+    },
+    {
+      "chr": "chr18",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 3741,
+      "n_pairs_shared_support": 3741
+    },
+    {
+      "chr": "chr19",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 1653,
+      "n_pairs_shared_support": 1653
+    },
+    {
+      "chr": "chrX",
+      "dropped_by_condition_first_seen": {
+        "baseline": 0,
+        "extra-levels": 0,
+        "no-bend": 0,
+        "reference-beads": 0
+      },
+      "n_pairs_dropped": 0,
+      "n_pairs_legacy_common": 7381,
+      "n_pairs_shared_support": 7381
+    }
+  ],
+  "rule": "per-chromosome shared support = frozen legacy 21-mask common pairs intersected with the beads all four conditions and the reference keep; dropped pairs are reported, never silently removed",
+  "schema": "p9016-round051-shared-support-v1",
+  "total_pairs_legacy_common": 157529,
+  "total_pairs_shared_support": 157529
+}

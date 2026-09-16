@@ -1,0 +1,227 @@
+{
+  "schema_version": "p9016-visibility-r2-protocol-v1",
+  "status": "frozen_preparation_pending_parent_release",
+  "purpose": "Independent evaluation protocol for visibility-only V0/VZ/V1; no multiresolution change",
+  "scope": {
+    "sample_id": "P9016",
+    "biological_samples": 1,
+    "observation_unit": "one linked cell; 20 chromosome rows are not biological replicates",
+    "real": {
+      "methods": ["V0", "VZ", "V1"],
+      "sources": ["consensus_joint_base1103", "random_joint_base2207"],
+      "endpoints": 6,
+      "rows": 120
+    },
+    "synthetic": {
+      "fixtures": ["P2", "N2"],
+      "arms": ["V0-production", "V1-profile", "V0-known-generating-e"],
+      "endpoints": 6,
+      "rows": 120
+    },
+    "total_endpoints": 12,
+    "total_r2_rows": 240
+  },
+  "training_protocol": {
+    "raw_contact_count": 1703888,
+    "contacts_include_inter": true,
+    "chromosomes": 20,
+    "tracks": 40,
+    "physical_beads_1mb": 5290,
+    "real_schedule": "5 Mb -> 2 Mb -> 1 Mb",
+    "real_start": "independent original 014 start for each endpoint",
+    "B1_historical_reference_only": {"FG_by_layer": {"5mb": 306, "2mb": 202, "1mb": 243}},
+    "B2_required": {"FG_by_layer": {"5mb": 612, "2mb": 404, "1mb": 486}, "from_scratch": true},
+    "real_budget_id": "B2",
+    "maximum_total_outer_fg": 10470,
+    "early_stop_allowed": true,
+    "actual_outer_fg_must_be_reported": true,
+    "v1_inner_profile_must_converge": true,
+    "synthetic_1mb_FG_cap": 243,
+    "K_p_priors_sphere": "frozen original settings",
+    "same_bin": "saturated nuisance layer; excluded from eta profiling",
+    "method_definitions": {
+      "V0": {
+        "description": "Original C0 raw-y/q count objective with fixed exposure",
+        "parameterization": "raw-y/q",
+        "exposure": "e=sqrt(endpoint_count+10), normalized to full-grid mean one",
+        "target": "original physical count objective"
+      },
+      "VZ": {
+        "description": "V0 boundary control with zero exposure only at observed offdiag degree-zero bins",
+        "parameterization": "raw-y/q",
+        "exposure": "V0 e on degree-positive bins; e=0 on observed offdiag degree-zero bins",
+        "active_mask": "offdiag_degree > 0",
+        "interpretation": "boundary-effect control, not known true invisibility",
+        "synthetic_precheck": "P2/N2 have zero offdiag zero-degree bins, so synthetic VZ is V0-equivalent and no extra fit is allowed"
+      },
+      "V1": {
+        "description": "Per-genomic-bin visibility profile shared by the two copies",
+        "parameterization": "raw-y/q plus eta; e=exp(eta), one shared e per genomic bin",
+        "likelihood": "profile group-total Poisson/multinomial likelihood conditional on geometry",
+        "eta_denominator": "offdiag pair groups only; same-bin nuisance excluded",
+        "e_vector_length": 2645,
+        "eta_active_count_real": 2581,
+        "eta_free_dimension_real": 2580,
+        "eta_active_count_synthetic": 2645,
+        "eta_free_dimension_synthetic": 2644,
+        "eta_gauge": "active-bin mean-zero gauge; one active scale degree removed",
+        "zero_degree_policy": "zero-degree bins are outside eta active set and have e=0; sidecar must bind this explicitly",
+        "parameter_count_warning": "full e vector length is not the number of independent eta parameters"
+      }
+    }
+  },
+  "selection_protocol": {
+    "real": {
+      "criterion": "final count_nll_per_record",
+      "scope": "within each model V0/VZ/V1 compare only the two source endpoints",
+      "tie_tolerance": 1e-9,
+      "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+      "no_cross_model_selection": true,
+      "profile_nll_is_not_model_proof": true,
+      "V1_fixed_e_rescore_is_auxiliary": true,
+      "reference_read": false,
+      "r2_read": false,
+      "phase_read": false
+    },
+    "synthetic": {
+      "source_selection": "not applicable",
+      "same_x0": true,
+      "same_p0": 0.75,
+      "p_policy": "jointly optimize p under the original prior in every arm",
+      "known_e": "synthetic only; not a real endpoint"
+    }
+  },
+  "r2_protocol": {
+    "metric_scope": "R2 only; Spearman-derived structural agreement, not regression R-squared",
+    "grid": "existing frozen grid and numeric chromosome/bp joins",
+    "pair_scope": "unordered upper-triangle off-diagonal pairs",
+    "real_mask": {
+      "source": "frozen old21condition mask",
+      "new_endpoint_inclusion": false,
+      "expected_common_pairs": 157529,
+      "expected_total_non_diagonal_pairs": 176201,
+      "orientation_tie_tolerance": 1e-12
+    },
+    "two_copy_policy": {
+      "reference_columns": ["mat", "pat"],
+      "candidate_action": "for each chromosome compare candidate A/B direct and one global A/B swap; choose the geometry-best orientation",
+      "raw_rhos": ["rho_A_mat", "rho_A_pat", "rho_B_mat", "rho_B_pat"],
+      "no_local_repair": true,
+      "tie_action": "contrast=0 and named margins n/a"
+    },
+    "derived_metrics": {
+      "matched": "mean of same-copy rho after the best whole-chromosome candidate A/B orientation",
+      "cross": "mean of cross-copy rho under that same orientation",
+      "contrast": "matched - cross",
+      "minmargin": "minimum of the two same-copy-minus-cross margins"
+    },
+    "prohibited": ["R1", "R3", "p-values", "confidence intervals", "biological replicate claims"],
+    "historical_reference": {
+      "new_v0_same_torch_backend": true,
+      "primary_causal_comparison": "same-backend V0/VZ/V1 within this visibility round",
+      "old_038_m0_b2_same_source_r2": "historical reference only",
+      "old_038_table_recomputed": false,
+      "old_038_used_for_selection": false,
+      "interpretation": "long nonconvex paths may make new V0 differ from old 038 fused M0/B2; beating new V0 does not by itself beat old 038 C0"
+    },
+    "failed_attempts": {
+      "excluded_from_release_matrix": true,
+      "known_040_visibility_formal": "failed after only V0-consensus first 5 Mb at 612 FG; not an endpoint and not included in 10470 maximum accounting",
+      "failed_attempts_are_not_rescored": true
+    }
+  },
+  "population_predictive_kl": {
+    "scope": "synthetic-only observational model check; calculated only after all endpoint and source hashes pass",
+    "purpose": "synthetic-only population predictive check; separate from training NLL on the current sampled counts",
+    "not_current_sampled_counts_training_nll": true,
+    "eta_improvement_and_zero_coverage_are_separate": true,
+    "true_distribution": "for each g in {cis_offdiag, inter}, r_true is exact v1 generation_rates(truth_geometry, generating_e, p_gen=0.8, kernel=v1); pi_true_i=r_true_i/sum_{j in E_g} r_true_j",
+    "fit_distribution": "for each candidate, r_fit is the same exact kernel evaluated at locked candidate X, locked p, and its model final e sidecar; pi_fit is normalized within the same E_g",
+    "kl_per_group": "KL_g=sum_{i in E_g} pi_true_i*log(pi_true_i/pi_fit_i)",
+    "weighted_metric": "(Mc*KL_cis + Mt*KL_inter)/(Mc+Mt)",
+    "group_weights": {"Mc_cis_offdiag": 696680, "Mt_inter": 568434, "denominator": 1265114},
+    "eligible_pair_denominators": {"cis_offdiag": 184016, "inter": 3312674},
+    "zero_observed_pairs": "all eligible pairs remain in E_g, including count-zero observations",
+    "same_bin": "excluded from both groups; diagonal nuisance does not enter eta or KL",
+    "no_refit": true,
+    "no_new_sampling": true,
+    "support_rule": "if pi_true_i>0 and pi_fit_i=0, report KL=+inf; never clip it away",
+    "excess_nll": "report weighted KL in nats per observed offdiag record; optional total excess NLL is denominator times weighted KL",
+    "feasibility_result": "exactly supported by the existing v1 generation_rates kernel and group normalization; no approximation is needed"
+  },
+  "n2_policy": {
+    "truth": "duplicated common truth matrix across reference columns",
+    "contrast": "algebraically zero; not evidence that no false difference exists",
+    "n_only": "report same-x0 initial, each final, signed arm deltas and two-arm differences; diagnostic only",
+    "rms_limit": "relative copy-scale differences are included and cannot identify a unique prior or optimizer cause"
+  },
+  "plot_protocol": {
+    "main": "one PNG only",
+    "conditions": ["selected V0", "selected VZ", "selected V1"],
+    "metrics": ["matched", "cross", "contrast", "minmargin"],
+    "layout": "2x2",
+    "base_panel_inches": 3.0,
+    "dpi": 300,
+    "font_size_pt": 7,
+    "source_comparison": "tables only; no duplicate source figures, PDF, or HTML"
+  },
+  "release_gate": {
+    "status_before_parent_release": "blocked",
+    "required_endpoint_count": 12,
+    "required_real_count": 6,
+    "required_synthetic_count": 6,
+    "required_real_selected_count": 3,
+    "required_endpoint_metadata": ["final_3dg_sha256", "p_sha256", "q_sha256", "final_e_sha256", "active_mask_sha256", "actual_outer_fg_total", "maximum_outer_fg_total"],
+    "sidecar_alignment": {
+      "schema": "p9016-visibility-profile-sidecars-v1",
+      "required_arrays": ["numeric_position", "chromosome_index"],
+      "required_order": "exact full-template locus order: numeric_position=template.locus_bin*bin_size and chromosome_index=template.locus_chromosome",
+      "final_e_values": ["e"],
+      "active_mask_values": ["active_mask"],
+      "degree_values": ["degree"],
+      "predicted_degree_values": ["predicted_degree"],
+      "degree_residual": "computed as degree-predicted_degree only for V1; max(abs(r)/max(1,d)) <= 1e-10",
+      "non_profile_degree_policy": "V0/VZ/known-e may report degree prediction as NA or omit it; no finite-zero placeholder is required",
+      "p_q_consistency": "sidecar p/q must equal terminal record p/q and p_from_q(q) within 1e-12; p is strictly bounded"
+    },
+    "v1_dimension_fields": ["e_vector_length", "eta_active_count", "eta_free_dimension", "eta_gauge", "zero_degree_count"],
+    "v1_degree_sidecar_fields": ["degree_path", "degree_sha256", "predicted_degree_path", "predicted_degree_sha256"],
+    "required_real_source_selection": "two source records per V0/VZ/V1 and explicit tie result",
+    "required_synthetic_metadata": ["same_x0", "p0", "final_p", "final_e_sha256", "active_mask_sha256"],
+    "historical_regression_gate": {
+      "gate_id": "old038-m0-b2-random-r2-regression-v1",
+      "status_before_parent_release": "registered_pending_12_endpoint_hashes",
+      "fixed_historical_condition_id": "v1_original_random_joint",
+      "fixed_historical_label": "old 038 M0/B2 random",
+      "published_table_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.tsv",
+      "published_table_sha256": "5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1",
+      "compare_chromosomes": 20,
+      "compare_numeric_atol": 1e-12,
+      "require_exact_frozen_mask_fields": ["positions", "pair_i", "pair_j", "common"],
+      "run_after": ["all_12_endpoint_hashes", "all_terminal_hashes", "all_source_selection_hashes", "all_21_frozen_mask_hashes"],
+      "reference_read_phase": "after_all_required_hashes_and_before_new_metric_interpretation",
+      "new_science_metric": false,
+      "selection_input": false,
+      "failure_policy": "pause_new_metric_interpretation_and_diagnose",
+      "runtime_provenance": {
+        "r2comparison_artifact_type": "CPython pyc",
+        "r2comparison_path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+        "r2comparison_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+        "python_version": "3.13.12",
+        "source_provenance_path": "pr/r2comparison.py",
+        "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+        "source_equivalence_claim": false
+      }
+    },
+    "required_parent_terminal": "all 12 fits terminal, 24 stages, actual outer-FG totals reported and no greater than 10470 maximum, no active jobs",
+    "required_hash_order": ["release metadata", "all 12 coordinate/sidecar/terminal hashes", "parent source and selection evidence", "frozen mask input hashes", "historical regression gate", "reference/truth open", "R2 and synthetic KL"],
+    "source_snapshot": {
+      "entity_directory": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr",
+      "synthetic_import_package": "visibility_frozen_pr",
+      "mutable_pr_dependencies_are_snapshot_imports": true,
+      "old_frozen_helpers_keep_original_paths": true,
+      "absolute_release_contract_path": true
+    },
+    "reference_and_truth": "evaluation-only; not opened by preparation or preflight"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "status": "budget_complete_convergence_not_established_evaluated",
+  "experiment_id": "052-20260916_071047-hickit-impute-control",
+  "question": "Single native Hickit phase-imputation and thresholded split control against frozen 014 oracle fit; SNP-assisted diagnostic, not blind training.",
+  "cohort": {
+    "cell": "P9016",
+    "observation_unit": "one P9016 cell; 20 linked chromosomes are technical/structural measurements, not biological replicates",
+    "chromosomes": 20,
+    "copy_trajectories": 40,
+    "full_genome_joint_fit": true
+  },
+  "raw_input": {
+    "path": "data/P9016.pairs.gz",
+    "sha256": "071a6cc76bfad543ea1ace6ee1ce3022b30ac1b1e50a9f0c3a3a1967b9649505",
+    "header_columns_observed": ["readID", "chr1", "pos1", "chr2", "pos2", "strand1", "strand2", "phase0", "phase1"],
+    "phase_probability_columns_present_before_imputation": false,
+    "contact_records": 1703888,
+    "physical_cis_records": 1135454,
+    "physical_inter_records": 568434,
+    "input_filters_disabled_before_read": {
+      "min_leg_dist": 0,
+      "dup_dist": 0
+    }
+  },
+  "authorization": {
+    "phase_labels": "authorized only for this SNP-assisted diagnostic",
+    "reference_coordinates": "forbidden until candidate coordinate write and SHA256 record complete"
+  },
+  "native": {
+    "binary": "native/hickit/hickit",
+    "version": "r291",
+    "imputation": {
+      "action": "-u",
+      "iterations": 1000,
+      "radius_bp": 10000000,
+      "min_radius_bp": 50000,
+      "max_neighbors": 50,
+      "pseudo_count": 0.4,
+      "spatial_cis_adjustment": true,
+      "writes_probabilities_for_existing_pairs_only": true,
+      "does_not_create_contacts": true
+    },
+    "split": {
+      "action": "-S",
+      "probability_threshold": 0.75,
+      "retains_only_max_probability_at_least_threshold": true,
+      "must_precede_P1": true
+    },
+    "fdg": {
+      "ploidy_after_split": 1,
+      "seed": 1,
+      "iterations": 1000,
+      "bin_size": "1m",
+      "stages": 1,
+      "terminal_interpretation": "budget_complete/convergence_not_established unless native evidence establishes convergence",
+      "coordinate_return": "best_x at lowest per-iteration RMS force, not necessarily final logged state"
+    }
+  },
+  "planned_artifacts": {
+    "imputed_pairs": "work/imputed.pairs",
+    "split_pairs": "work/split-p075.pairs",
+    "candidate_coordinates": "coords/hickit-impute-p075.3dg",
+    "candidate_sha256_record": "coords/hickit-impute-p075.3dg.sha256",
+    "command_log": "logs/commands.planned.txt"
+  },
+  "pre_fit_gate": {
+    "imputed_records_expected": 1703888,
+    "report_imputed_physical_cis_inter": true,
+    "report_split_retained_excluded_by_physical_cis_inter": true,
+    "report_split_tracks_expected": 40,
+    "block_fdg_on_gate_failure": true
+  },
+  "frozen_014_comparator": {
+    "coordinate_path": "test_res/014-20260912_153000-s0-genome-wide-fixed/coords/oracle.3dg",
+    "fully_labelled_records": 496021,
+    "fully_labelled_physical_cis": 349025,
+    "fully_labelled_physical_inter": 146996,
+    "r2_macro_matched": 0.4207228869428888,
+    "r2_macro_swapped": 0.13499897152940124,
+    "r2_macro_contrast": 0.2857239154134875
+  },
+  "evaluation": {
+    "grid_bp": 1000000,
+    "metric_origin_bp": 3000000,
+    "conditions": ["hickit_impute_p075", "frozen_014_oracle", "reference"],
+    "common_support": "per-chromosome common finite support across candidate, 014 oracle, and reference two-copy tracks",
+    "copy_policy": "per-chromosome whole-copy best swap; report direct, swapped, matched, and matched-minus-swapped distance-Spearman",
+    "comparison": "paired new-minus-014 values on the same chromosome supports",
+    "bootstrap": {
+      "seed": 37,
+      "draws": 10000,
+      "interpretation": "within-cell technical/structural chromosome bootstrap; not biological replication"
+    },
+    "global_diagnostics": ["normalized copy Rg", "homolog centroid separation / mean homolog Rg", "interchromosome copy-centroid separation / mean copy Rg"],
+    "plot": "optional single English three-panel 3in 300dpi 7pt global-rigid-aligned scatter; no local alignment or HTML"
+  },
+  "not_planned": ["reference-driven tuning", "seed selection", "random or consensus rerun", "multiscale second arm", "R1", "R3", "blind-recovery claim"]
+}

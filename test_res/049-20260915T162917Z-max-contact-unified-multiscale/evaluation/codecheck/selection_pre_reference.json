@@ -1,0 +1,91 @@
+{
+  "kind": "code_fixture",
+  "per_loss": {
+    "A": {
+      "display_endpoint": {
+        "coordsSHA": "7fcc0f8f0014b7b10e0a9de303eb81e1278420a5889607206b9dc21b69d95696",
+        "count": 99.0,
+        "solver": "ms",
+        "source": "random"
+      },
+      "source_selection": {
+        "ms": {
+          "candidates": {
+            "consensus": 101.0,
+            "random": 99.0
+          },
+          "margin": 2.0,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "random"
+        },
+        "raw": {
+          "candidates": {
+            "consensus": 100.0,
+            "random": 100.0000000001
+          },
+          "margin": 1.000017846308765e-10,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "consensus"
+        }
+      }
+    },
+    "B": {
+      "display_endpoint": {
+        "coordsSHA": "b6ac3bec12c4e0d2b55726c3f6867cc75fc16066885a220e317b323264aceca6",
+        "count": 94.0,
+        "solver": "ms",
+        "source": "consensus"
+      },
+      "source_selection": {
+        "ms": {
+          "candidates": {
+            "consensus": 94.0,
+            "random": 96.0
+          },
+          "margin": 2.0,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "consensus"
+        },
+        "raw": {
+          "candidates": {
+            "consensus": 95.0,
+            "random": 97.0
+          },
+          "margin": 2.0,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "consensus"
+        }
+      }
+    },
+    "C": {
+      "display_endpoint": {
+        "coordsSHA": "2a1795205a7888ce9e6af02277503e0749d437c2ceb0897db69a99ec16d7999b",
+        "count": 87.0,
+        "solver": "ms",
+        "source": "random"
+      },
+      "source_selection": {
+        "ms": {
+          "candidates": {
+            "consensus": 89.0,
+            "random": 87.0
+          },
+          "margin": 2.0,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "random"
+        },
+        "raw": {
+          "candidates": {
+            "consensus": 90.0,
+            "random": 88.0
+          },
+          "margin": 2.0,
+          "rule": "min own count; consensus on <=1e-9 tie",
+          "selected_source": "random"
+        }
+      }
+    }
+  },
+  "reference_opened": false,
+  "schema": "p9016-049-selection-pre-reference-code-fixture"
+}

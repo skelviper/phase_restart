@@ -1,0 +1,164 @@
+{
+  "schema_version": "p9016-visibility-r2-release-v1",
+  "status": "pending_parent_release",
+  "release_authorized": false,
+  "preparation_directory": "docs/audits/visibility-r2-preparation-20260914T164603Z",
+  "scope": {
+    "real_endpoint_ids": [
+      "V0-consensus_joint_base1103",
+      "V0-random_joint_base2207",
+      "VZ-consensus_joint_base1103",
+      "VZ-random_joint_base2207",
+      "V1-consensus_joint_base1103",
+      "V1-random_joint_base2207"
+    ],
+    "synthetic_endpoint_ids": [
+      "P2-V0-production",
+      "P2-V1-profile",
+      "P2-V0-known-generating-e",
+      "N2-V0-production",
+      "N2-V1-profile",
+      "N2-V0-known-generating-e"
+    ],
+    "required_endpoint_count": 12
+  },
+  "endpoint_record_schema": {
+    "required_common": [
+      "endpoint_id", "kind", "method_id", "endpoint_status", "final_3dg_path", "final_3dg_sha256",
+      "terminal_record_path", "terminal_record_sha256", "p_path", "p_sha256", "q_path", "q_sha256",
+      "final_e_path", "final_e_sha256", "active_mask_path", "active_mask_sha256",
+      "count_nll_per_record",
+      "actual_outer_fg_total", "maximum_outer_fg_total", "sidecar_schema"
+    ],
+    "real_required": ["source_id", "start_014_path", "start_014_sha256", "budget_id", "budget_nfev_by_layer", "all_contacts_used", "includes_inter"],
+    "synthetic_required": ["fixture_id", "exposure_policy", "same_x0", "p0", "final_p", "one_mb_fg_cap"],
+    "V0_required": ["e_policy", "e_formula", "e_vector_length"],
+    "VZ_required": ["zero_degree_count", "active_degree_positive_count", "zero_degree_rule", "vz_equivalent_to_v0", "e_vector_length"],
+    "V1_required": ["e_vector_length", "eta_active_count", "eta_free_dimension", "eta_gauge", "profile_likelihood", "same_bin_policy", "zero_degree_count", "zero_degree_policy", "inner_profile_converged", "degree_path", "degree_sha256", "predicted_degree_path", "predicted_degree_sha256"],
+    "aligned_sidecar_schema": {
+      "schema": "p9016-visibility-profile-sidecars-v1",
+      "arrays": ["numeric_position", "chromosome_index"],
+      "accepted_numeric_position_aliases": ["numeric_position", "positions", "numeric_positions", "position_bp"],
+      "order": "exact full-template locus order",
+      "final_e_value": "e",
+      "active_mask_value": "active_mask",
+      "degree_values": ["degree"],
+      "predicted_degree_values": ["predicted_degree"],
+      "degree_residual_definition": "degree - predicted_degree",
+      "degree_residual_tolerance": "max(abs(residual)/max(1,degree)) <= 1e-10; V0/VZ/known-e status is not_applicable",
+      "p_q_terminal_tolerance": 1e-12
+    }
+  },
+  "outer_fg_accounting": {
+    "maximum_total_outer_fg": 10470,
+    "early_stop_allowed": true,
+    "actual_total_outer_fg_required": true,
+    "actual_total_outer_fg_is_not_required_to_equal_maximum": true
+  },
+  "endpoint_records": [],
+  "real_source_selection": {
+    "criterion": "final count_nll_per_record",
+    "scope": "within each model V0/VZ/V1 compare the two source endpoints only",
+    "tie_tolerance": 1e-9,
+    "tie_order": ["consensus_joint_base1103", "random_joint_base2207"],
+    "cross_model_selection": false,
+    "selection_evidence_path": null,
+    "selection_evidence_sha256": null,
+    "selected_endpoint_by_method": {}
+  },
+  "parent_evidence": {
+    "terminal_evidence_path": null,
+    "terminal_evidence_sha256": null,
+    "source_manifest_path": null,
+    "source_manifest_sha256": null,
+    "run_receipt_path": null,
+    "run_receipt_sha256": null,
+    "preflight_path": null,
+    "preflight_sha256": null
+  },
+  "source_lock": {
+    "source_snapshot_path": "source_snapshot.json",
+    "source_snapshot_sha256": null,
+    "entry_path": "visibility_r2_entry.py",
+    "entry_sha256": null,
+    "protocol_path": "visibility_protocol.json",
+    "protocol_sha256": null,
+    "config_path": "config.json",
+    "config_sha256": null
+  },
+  "mask_lock": {
+    "manifest_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+    "manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+    "lock_path": "docs/audits/multires-r2-preparation-20260914_041826/mask_lock.json",
+    "lock_sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+    "condition_count": 21,
+    "new_endpoint_inclusion": false,
+    "expected_common_pairs": 157529,
+    "expected_total_non_diagonal_pairs": 176201,
+    "rebuild_and_exact_compare": true
+  },
+  "historical_regression_gate": {
+    "gate_id": "old038-m0-b2-random-r2-regression-v1",
+    "status": "registered_pending_12_endpoint_hashes",
+    "required_before_new_metric_interpretation": true,
+    "fixed_historical_condition_id": "v1_original_random_joint",
+    "fixed_historical_label": "old 038 M0/B2 random",
+    "historical_coordinate_source": "frozen mask row for fixed_historical_condition_id",
+    "published_table_path": "test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/r2_per_chromosome.tsv",
+    "published_table_sha256": "5e578b5ef8876f57866f9dfa325a8738adab70ebc4913498c570cc2b07883ed1",
+    "compare_chromosomes": 20,
+    "compare_numeric_atol": 1e-12,
+    "require_exact_frozen_mask_fields": ["positions", "pair_i", "pair_j", "common"],
+    "run_after": ["all_12_endpoint_hashes", "all_terminal_hashes", "all_source_selection_hashes", "all_21_frozen_mask_hashes"],
+    "reference_read_phase": "after_all_required_hashes_and_before_new_metric_interpretation",
+    "new_science_metric": false,
+    "selection_input": false,
+    "failure_policy": "pause_new_metric_interpretation_and_diagnose",
+    "executed": false,
+    "passed": null,
+    "evidence_path": null,
+    "evidence_sha256": null,
+    "runtime_provenance": {
+      "r2comparison_artifact_type": "CPython pyc",
+      "r2comparison_path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+      "r2comparison_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+      "python_version": "3.13.12",
+      "source_provenance_path": "pr/r2comparison.py",
+      "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+      "source_equivalence_claim": false
+    }
+  },
+  "reference": {
+    "path": "data/P9016.1m.3dg.gz",
+    "sha256": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29",
+    "role": "evaluation_only",
+    "read_after_candidate_and_mask_hash_gate": true
+  },
+  "synthetic_truth": {
+    "P2": {"metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json", "metadata_sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9", "coordinate_path": null, "coordinate_sha256": null, "opened_after_hash_gate": true},
+    "N2": {"metadata_path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json", "metadata_sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9", "coordinate_path": null, "coordinate_sha256": null, "opened_after_hash_gate": true}
+  },
+  "population_predictive_kl": {
+    "enabled": true,
+    "synthetic_only": true,
+    "source_truth_generation": "026 exact v1 generation_rates with generating e and p_gen=0.8",
+    "not_current_sampled_counts_training_nll": true,
+    "eta_improvement_and_zero_coverage_are_separate": true,
+    "no_sampling": true,
+    "no_refit": true,
+    "same_bin_excluded": true,
+    "include_all_eligible_zero_observed_pairs": true,
+    "group_weights": {"cis_offdiag": 696680, "inter": 568434, "denominator": 1265114},
+    "support_zero_rule": "pi_true>0 and pi_fit=0 gives +inf; never clip",
+    "used_for_selection": false
+  },
+  "release_flags": {
+    "all_12_endpoint_paths_locked": false,
+    "all_12_endpoint_hashes_locked": false,
+    "all_source_hashes_locked": false,
+    "all_terminal_hashes_locked": false,
+    "all_selection_hashes_locked": false,
+    "reference_read_allowed": false,
+    "prepared_only": true
+  }
+}

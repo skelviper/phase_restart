@@ -1,0 +1,146 @@
+{
+  "access_order": [
+    "preflight JSON/source metadata only",
+    "parent release contract",
+    "all 12 candidate/required-sidecar (56)/terminal hashes",
+    "parent source/selection and frozen old21 mask hashes",
+    "registered old038 historical regression gate (execution deferred)",
+    "reference/truth hash and payload access",
+    "R2 and synthetic population KL"
+  ],
+  "candidate_coordinate_payloads_opened": 0,
+  "config_sha256": "abde826163aa72bbccd8109bf953d7f8a8b71e033984332344ffcde4b747f11a",
+  "contract_template_sha256": "1b8cb0b1f5afb3292f1fbdf38770b3461ce836fa6b81e99c634343fd09bb1e81",
+  "endpoint_count": 12,
+  "entry_sha256": "1599f71730e37d4464ef6816afbc81f40bc46863a65695f32949511d251e2175",
+  "evaluation_not_run": true,
+  "frozen_pr_directory": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr",
+  "historical_regression_gate": {
+    "exact_frozen_mask_required": [
+      "positions",
+      "pair_i",
+      "pair_j",
+      "common"
+    ],
+    "executed": false,
+    "failure_policy": "pause_new_metric_interpretation_and_diagnose",
+    "fixed_historical_condition_id": "v1_original_random_joint",
+    "fixed_historical_label": "old 038 M0/B2 random",
+    "gate_id": "old038-m0-b2-random-r2-regression-v1",
+    "historical_coordinate_opened": false,
+    "new_science_metric": false,
+    "note": "Registration only; execute after all 12 endpoint/terminal/source/selection/mask hashes and before interpreting new R2/KL metrics.",
+    "passed": null,
+    "published_table_opened": false,
+    "reference_opened": false,
+    "run_after_hash_gate": true,
+    "runtime_provenance": {
+      "artifact_type": "CPython pyc",
+      "bytecode_path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+      "bytecode_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+      "python_version": "3.13.12",
+      "source_equivalence_claim": false,
+      "source_provenance_path": "pr/r2comparison.py",
+      "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e"
+    },
+    "schema_version": "p9016-old038-r2-regression-gate-registration-v1",
+    "selection_input": false,
+    "status": "registered_pending_12_endpoint_hashes"
+  },
+  "integration_schema_check": {
+    "formal_release": false,
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/integration_schema_validation.json",
+    "sha256": "be8876267699d7e90a0443db659c88799e4e1b4127a60932bf7a869cb4940ebf",
+    "status": "PASS"
+  },
+  "integration_v2_real_vz_schema_check": {
+    "formal_release": false,
+    "path": "/mnt/ssd/zliu/phase_restart/docs/audits/visibility-r2-preparation-20260914T164603Z/integration_v2_real_vz_schema_validation.json",
+    "sha256": "dfa341eb22ffeb4efca3caf178ee554f5891a7631a7fcf8b67b67158fe78c011",
+    "status": "PASS"
+  },
+  "mask": {
+    "common_pairs": 157529,
+    "condition_count": 21,
+    "condition_ids": [
+      "C0-bundle1",
+      "C0-bundle2",
+      "C0-bundle3",
+      "C1-bundle1",
+      "C1-bundle2",
+      "C1-bundle3",
+      "C2-map-bundle1",
+      "C2-map-bundle2",
+      "C2-map-bundle3",
+      "C2-free-bundle1",
+      "C2-free-bundle2",
+      "C2-free-bundle3",
+      "C3-bundle1",
+      "C3-bundle2",
+      "C3-bundle3",
+      "softall_seed124101",
+      "v1_original_random_joint",
+      "v1_continuation",
+      "fdg_proposal",
+      "random014",
+      "consensus014"
+    ],
+    "lock_path": "/mnt/ssd/zliu/phase_restart/docs/audits/multires-r2-preparation-20260914_041826/mask_lock.json",
+    "lock_sha256": "d0c325dea1289374152a327557605f8bbd52267b025cd7b57689be3e3666c49e",
+    "manifest_path": "/mnt/ssd/zliu/phase_restart/test_res/029-20260913_161713-post020-allele-ablation-real/evaluation-r2/evaluation_manifest.json",
+    "manifest_sha256": "fa1b26c834c173604c21f954d494cece8e053dd970e7cb6111f561b349574acb",
+    "total_non_diagonal_pairs": 176201
+  },
+  "native_called": false,
+  "optimizer_called": false,
+  "phase_payload_opened": false,
+  "population_kl": {
+    "eligible_pair_denominators": {
+      "cis_offdiag": 184016,
+      "inter": 3312674
+    },
+    "exact": true,
+    "status": "FEASIBLE_EXACT_GENERATION_RATES",
+    "weighted_denominator": 1265114
+  },
+  "prepared_only": true,
+  "protocol_sha256": "9ca4d1dbbdebb436101eb02e2830cb82dd46f46375e9f22fcf1aba8a4da03ff0",
+  "real_endpoint_count": 6,
+  "reference_opened": false,
+  "schema_version": "p9016-visibility-preparation-validation-v1",
+  "source_compatibility": {
+    "all_three_old_038_hashes_match": true,
+    "old_026_manifest_genome_score_hashes_are_not_reused": true,
+    "old_038_r2comparison_runtime": {
+      "artifact_type": "CPython pyc",
+      "magic_number_hex": "f30d0d0a",
+      "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+      "python_version": "3.13.12",
+      "sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+      "source_equivalence_claim": false,
+      "source_provenance_path": "pr/r2comparison.py",
+      "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e"
+    },
+    "old_038_r2comparison_runtime_bytecode_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+    "old_038_r2comparison_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+    "old_038_r2comparison_source_sha256_preserved_as_provenance": true,
+    "old_038_real_mask_adapter_runtime_source_sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3",
+    "old_038_real_mask_adapter_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+    "old_038_real_mask_adapter_source_drift": {
+      "machine_check": "semantic code object bytecode/name/arity comparison against the preserved pyc passed; source differs in localized docstrings only",
+      "original_source_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+      "python_version": "3.13.12",
+      "runtime_bytecode_sha256": "ca3983b8b46434ddedaf3ddf380b0b6e688d76ccdba9579c19df3a544c87c9ab",
+      "runtime_source_sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3",
+      "source_equivalence_claim": false
+    },
+    "old_038_synthetic_evaluator_sha256": "5d52e40e36731a8b06cf694fd27c6f98374be1d56da574ab580901b76f5a21e4",
+    "old_frozen_helper_bytes_preserved": true,
+    "reason": "old real mask adapter bytes remain on their frozen path; its legacy pr aliases resolve to frozen_pr snapshots, including the pre-edit r2comparison bytecode, so mutable live pr cannot change the parity implementation"
+  },
+  "source_snapshot_sha256": "cf0575476334b87b346405864e3d19ba4b9ff742790446627468ee1a009f280e",
+  "status": "PASS",
+  "synthetic_endpoint_count": 6,
+  "synthetic_import_package": "visibility_frozen_pr",
+  "synthetic_truth_coordinate_payloads_opened": false
+}

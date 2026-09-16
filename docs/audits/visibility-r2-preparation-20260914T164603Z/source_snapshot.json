@@ -1,0 +1,75 @@
+{
+  "schema_version": "p9016-visibility-r2-source-snapshot-v1",
+  "snapshot_status": "entity_bytes_frozen_before_parent_release",
+  "purpose": "记录正式 evaluator 实际加载的最小实体源码；可变 pr 依赖从 frozen_pr 导入，旧冻结 helper 保留原路径与原 hash",
+  "frozen_pr_directory": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr",
+  "import_policy": {
+    "synthetic_modules": "visibility_frozen_pr.allele_calibration and visibility_frozen_pr.allele_calibration_evaluator",
+    "population_generation": "visibility_frozen_pr.v1_calibration",
+    "live_pr_imports_for_formal_evaluation": false,
+    "real_old_helpers": "frozen multires_r2.py remains original path; its legacy pr aliases resolve to frozen_pr snapshots",
+    "snapshot_loader_virtual_file": "module __file__ is mapped to ROOT/pr/<module>.py so paths.py and ROOT defaults remain project-root based",
+    "input_contract_path_policy": "formal CLI accepts the release contract as an absolute path; all contract payload paths are resolved against that absolute contract path or repository root"
+  },
+  "files": [
+    {"role": "visibility_entry", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/visibility_r2_entry.py", "sha256": "1599f71730e37d4464ef6816afbc81f40bc46863a65695f32949511d251e2175", "original_path": null, "loaded_phase": "preflight_and_release_gate"},
+    {"role": "frozen_r2comparison_bytecode", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc", "sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9", "original_path": "pr/r2comparison.py", "original_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e", "loaded_phase": "after_candidate_mask_hash_gate"},
+    {"role": "frozen_real_mask_adapter", "path": "docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py", "sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3", "original_path": "docs/audits/multires-r2-preparation-20260914_041826/multires_r2.py", "original_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18", "loaded_phase": "after_candidate_mask_hash_gate"},
+    {"role": "frozen_real_coordinate_parser", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/allele_r2.py", "sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672", "original_path": "pr/allele_r2.py", "original_sha256": "56dacfe9a3edc13db4804fa7d5ce7c40b9401a1d1dd62ddbaa66d0d6ad5b1672", "loaded_phase": "after_candidate_mask_hash_gate"},
+    {"role": "frozen_legacy_gate", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/gate.py", "sha256": "a3b071c0ed0a2da14fcaca000545b893ec0a1ebaf669f79976676c93961bad95", "original_path": "pr/gate.py", "loaded_phase": "after_candidate_mask_hash_gate"},
+    {"role": "snapshot_synthetic_r2_evaluator", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/allele_calibration_evaluator.py", "sha256": "5d52e40e36731a8b06cf694fd27c6f98374be1d56da574ab580901b76f5a21e4", "original_path": "pr/allele_calibration_evaluator.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_synthetic_generation_wrapper", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/allele_calibration.py", "sha256": "fa13fc62eedd9047bb0ad2563cec68f2808effb166ca0eff174264b6c40dc992", "original_path": "pr/allele_calibration.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_synthetic_generation_model", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/v1_calibration.py", "sha256": "b3fa8a7a7edbab04f582d39e10a6b5bf6031cef707c2654c6f8bb468bb828374", "original_path": "pr/v1_calibration.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_contact_template_and_objective_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/contact_model.py", "sha256": "d8cd4ecbe434c4d6cff1727960c22b5a7966434710b6a4f67f073a265b1ee7d0", "original_path": "pr/contact_model.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_genome_grid_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/genome.py", "sha256": "a6dc363135bfbb6c9b7f3e2c6734c64c22d8bab33ec2991305baeab3e2babd8a", "original_path": "pr/genome.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_spearman_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/score.py", "sha256": "bf9858f4c00a501642a250ebd388c1bc3e6cbde9d9237e8d319a56ab4810a015", "original_path": "pr/score.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_model_parameter_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/allele_models.py", "sha256": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8", "original_path": "pr/allele_models.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_paired_runner_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/paired_run.py", "sha256": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1", "original_path": "pr/paired_run.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_joint_fit_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/joint_fit.py", "sha256": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458", "original_path": "pr/joint_fit.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_initialization_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/reconstruction_init.py", "sha256": "05f221b706d7dff13075acfc6fb7018ac5577703569da6e69e47059735859623", "original_path": "pr/reconstruction_init.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_project_paths_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/paths.py", "sha256": "32954aecdb20dcc2b2a132c76a6351641e3cfdd185b97f314c1640022391a869", "original_path": "pr/paths.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_pairs_reader_dependency", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/pairs7.py", "sha256": "ec6ef85f2935837f952a741cb8d1516c48dc062891fd2aa4acc88e9eaf506d0a", "original_path": "pr/pairs7.py", "loaded_phase": "after_candidate_truth_hash_gate"},
+    {"role": "snapshot_package_entry", "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/__init__.py", "sha256": "c51da14eacfc3be3f9f99f14a98981f1b7071e83673421b8eb2cf63cf1c1ea58", "original_path": "pr/__init__.py", "loaded_phase": "after_candidate_truth_hash_gate"}
+  ],
+  "frozen_compatibility": {
+    "old_038_r2comparison_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+    "old_038_real_mask_adapter_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+    "old_038_real_mask_adapter_runtime_source_sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3",
+    "old_038_real_mask_adapter_source_drift": {
+      "source_equivalence_claim": false,
+      "original_source_sha256": "3d2413738f104f412b583e63933185a2fb1524c9dd3257ae3f3dc71a9d186b18",
+      "runtime_source_sha256": "652ce6e6e3be112254a5c17ea05c7bcf0e0ab711f5f6923bd6c786be00822ba3",
+      "runtime_bytecode_sha256": "ca3983b8b46434ddedaf3ddf380b0b6e688d76ccdba9579c19df3a544c87c9ab",
+      "python_version": "3.13.12",
+      "machine_check": "semantic code object bytecode/name/arity comparison against the preserved pyc passed; source differs in localized docstrings only"
+    },
+    "old_038_synthetic_evaluator_sha256": "5d52e40e36731a8b06cf694fd27c6f98374be1d56da574ab580901b76f5a21e4",
+    "all_three_old_038_hashes_match": true,
+    "old_frozen_helper_bytes_preserved": true,
+    "old_038_r2comparison_runtime_bytecode_sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+    "old_038_r2comparison_runtime": {
+      "artifact_type": "CPython pyc",
+      "path": "docs/audits/visibility-r2-preparation-20260914T164603Z/frozen_pr/r2comparison.pyc",
+      "sha256": "a76d71b75df123348edff9690d58469946c1e63cedf98bcc79330732046525a9",
+      "python_version": "3.13.12",
+      "magic_number_hex": "f30d0d0a",
+      "source_provenance_path": "pr/r2comparison.py",
+      "source_provenance_sha256": "2979118aed25ac571d8f476eec4f6ec7687649f5a3e0fc43618194a293b4ed6e",
+      "source_equivalence_claim": false
+    },
+    "old_038_r2comparison_source_sha256_preserved_as_provenance": true,
+    "old_026_manifest_genome_score_hashes_are_not_reused": true,
+    "reason": "old real mask adapter bytes remain on their frozen path; its legacy pr aliases resolve to frozen_pr snapshots, including the pre-edit r2comparison bytecode, so mutable live pr cannot change the parity implementation"
+  },
+  "generation_metadata": {
+    "source_manifest_path": "test_res/026-20260913_221709-allele-calibration-prepare/provenance/source_manifest.json",
+    "source_manifest_sha256": "c6ae5085dd2a31cfe068a6b0c575893a8a99e4f3682c74cc42354cd0cba51702",
+    "config_path": "test_res/026-20260913_221709-allele-calibration-prepare/config.json",
+    "config_sha256": "4ec29faf1e32511b7338aaf76e946da703ce9c521148ad44f72eee3d3f141f58",
+    "truth_metadata_only": {
+      "P2": {"path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/P2_truth_1mb.npz.json", "sha256": "88887f397829fc8f9abbd8e5615bebed48ee3bbc7076fc99cbd3a4ddfcff04b9"},
+      "N2": {"path": "test_res/026-20260913_221709-allele-calibration-prepare/eval_truth/N2_truth_1mb.npz.json", "sha256": "35c2bda6c8004d29cefa4ff101a5c2fbb921ba485f01a199c0fa4cc2fa1b05c9"}
+    },
+    "coordinate_payloads_opened_during_preparation": false
+  }
+}

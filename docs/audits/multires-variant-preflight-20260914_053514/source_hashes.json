@@ -1,0 +1,66 @@
+{
+  "020_comparator": [
+    {
+      "bytes": 9418,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/config.json",
+      "sha256": "0db603983253d1406de60ffbeaae44fab5a12e53285045afca8a5d3232cb960b"
+    },
+    {
+      "bytes": 22306,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/selection.json",
+      "sha256": "5ee6376527d6139eb4fe55ac057b40ca94a6e731289a463989f2343a815252a6"
+    },
+    {
+      "bytes": 7093,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/termination_audit.json",
+      "sha256": "411691252003ff810292c4819586d49467a325a49caf325c8f238b7fc3b46c69"
+    },
+    {
+      "bytes": 333902,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/5m.json",
+      "sha256": "260feb29b354995dbfb29f98feb13de764cbce6f438220c88b4b4db17a33622e"
+    },
+    {
+      "bytes": 227653,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/2m.json",
+      "sha256": "c4b99c78d218f11a03ba56a261176da1e445dbc4c623fc412ca777881784cc62"
+    },
+    {
+      "bytes": 267795,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/1m.json",
+      "sha256": "54f29e41e852b54aeaca5c7441ddbb76b34231a8b5c4bc22e5a86015d96070e2"
+    },
+    {
+      "bytes": 328669,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/5m.json",
+      "sha256": "8e67c02ea0e20d47633627db4ccf06ca0921a01da9fba8e69669f3af9a52b2bc"
+    },
+    {
+      "bytes": 227588,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/2m.json",
+      "sha256": "283e2fd52b0a1b6fd4971f478033e0fec197e8a2f75f6734dcdd15e89aeb3cb5"
+    },
+    {
+      "bytes": 267621,
+      "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/1m.json",
+      "sha256": "6b6615271aff563cc8c1c0116d7557286ec8ecb9a529c609f31ae421091e24a0"
+    }
+  ],
+  "033_c0_preflight_sha256": "e9abcc7b56a2cdf45ac7120cc9ad87709cb624acc80145cd9ff37e184ff72d92",
+  "033_c0_protocol_sha256": "7ab6a02a7f2ced7388e4db0fa42cfa8ff800cb0d1d7274cdfecfdd34c0a60f0a",
+  "schema": "multires-source-hashes-v1",
+  "source_code_sha256": {
+    "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+    "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+    "pr/gate.py": "c95cc614849bc0d2f0e812e33bea59ad8ed180e7bc62c56074fff536b3552430",
+    "pr/genome.py": "61afd0707a1891a0773c5fe56733906fb81b670b1f566e3cd6e9c77354a0ea6a",
+    "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+    "pr/multires_variant_runner.py": "20974e14b03ac39e7be2f6b7d9c8a63d361464a06926af903c42d3b5c7ba2ac9",
+    "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+    "pr/pairs7.py": "9abbb64e2c9129ccd1d0ba2f9e7829aa245f35aa98757f46569bc5e3af7a1f1a",
+    "pr/paths.py": "e51947d4c0fa887773924cb0d716893ba0d36e8fb7d215ece26453cdd19118e6",
+    "pr/reconstruct.py": "a1470840905fdcd45f466e37ae6e52110734a0d68d39e915434380271e4743eb",
+    "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e",
+    "pr/reconstruction_report.py": "b49f8125fe8e418adfcac6f433440687d14e51c9afd2b5de8ca00e9a09b0ada9"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "bundles": {
+    "bundle1": {
+      "fixed_endpoint_direction_endpoint_minus_x0": {
+        "contrast": 0.10714030983605154,
+        "cross": 0.18221297653377622,
+        "margin_mat": 0.05877081194156832,
+        "margin_pat": 0.15550980773053474,
+        "matched": 0.2893532863698277,
+        "matched_ref1": 0.2532028471159776,
+        "matched_ref2": 0.32550372562367785,
+        "minmargin": 0.07555550812623885
+      },
+      "n_chromosomes": 20,
+      "orientation_different_from_endpoint": 10,
+      "orientation_same_as_endpoint": 10,
+      "orientation_ties": 0,
+      "standard_endpoint_minus_x0": {
+        "contrast": 0.08666839200461572,
+        "cross": 0.1924489354494941,
+        "margin_mat": 0.03829889411013251,
+        "margin_pat": 0.13503788989909896,
+        "matched": 0.27911732745410983,
+        "matched_ref1": 0.24138994197300784,
+        "matched_ref2": 0.3168447129352118,
+        "minmargin": 0.05508359029480303
+      },
+      "standard_wins": {
+        "contrast": 19,
+        "matched": 20
+      }
+    },
+    "bundle2": {
+      "fixed_endpoint_direction_endpoint_minus_x0": {
+        "contrast": 0.10697608722752194,
+        "cross": 0.16641616544699395,
+        "margin_mat": 0.054374436218314226,
+        "margin_pat": 0.15957773823672966,
+        "matched": 0.27339225267451595,
+        "matched_ref1": 0.24126566812687972,
+        "matched_ref2": 0.3055188372221521,
+        "minmargin": 0.08505846483237531
+      },
+      "n_chromosomes": 20,
+      "orientation_different_from_endpoint": 9,
+      "orientation_same_as_endpoint": 11,
+      "orientation_ties": 0,
+      "standard_endpoint_minus_x0": {
+        "contrast": 0.0831960712395769,
+        "cross": 0.1783061734409665,
+        "margin_mat": 0.03059442023036918,
+        "margin_pat": 0.13579772224878459,
+        "matched": 0.2615022446805434,
+        "matched_ref1": 0.22993319745689184,
+        "matched_ref2": 0.2930712919041949,
+        "minmargin": 0.061278448844430254
+      },
+      "standard_wins": {
+        "contrast": 15,
+        "matched": 20
+      }
+    },
+    "bundle3": {
+      "fixed_endpoint_direction_endpoint_minus_x0": {
+        "contrast": 0.08844903485075681,
+        "cross": 0.1539309349208215,
+        "margin_mat": 0.03624797267138445,
+        "margin_pat": 0.14065009703012915,
+        "matched": 0.24237996977157827,
+        "matched_ref1": 0.21489735344537456,
+        "matched_ref2": 0.269862586097782,
+        "minmargin": 0.06820517637583917
+      },
+      "n_chromosomes": 20,
+      "orientation_different_from_endpoint": 7,
+      "orientation_same_as_endpoint": 13,
+      "orientation_ties": 0,
+      "standard_endpoint_minus_x0": {
+        "contrast": 0.06722237277729798,
+        "cross": 0.1645442659575509,
+        "margin_mat": 0.015021310597925627,
+        "margin_pat": 0.11942343495667034,
+        "matched": 0.23176663873484887,
+        "matched_ref1": 0.19430099557733455,
+        "matched_ref2": 0.26923228189236326,
+        "minmargin": 0.04697851430238034
+      },
+      "standard_wins": {
+        "contrast": 16,
+        "matched": 20
+      }
+    }
+  },
+  "common_mask_changed": false,
+  "coordinates_reopened": false,
+  "fixed_endpoint_secondary_table": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/c0_seed_and_x0_fixed_endpoint_direction.tsv",
+  "interpretation": "standard x0 metrics use x0's own per-chromosome best swap with fixed reference columns; fixed-endpoint-direction values are secondary trajectory-aligned diagnostics",
+  "rho_recomputed": false,
+  "rows": 60,
+  "schema": "p9016-posthoc-x0-independent-best-swap-v1",
+  "source_table": "/mnt/ssd/zliu/phase_restart/docs/audits/c0-020-display-20260914_021033/c0_seed_and_x0_diagnostic.tsv",
+  "status": "PASS",
+  "tie_tolerance": 1e-12
+}

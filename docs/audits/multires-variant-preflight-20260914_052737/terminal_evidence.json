@@ -1,0 +1,32 @@
+{
+  "ended_at_utc": "2026-09-14T05:28:03+00:00",
+  "executed_stage_attempt_count": 0,
+  "planned_stage_attempt_count": 24,
+  "preflight_sha256": "e2b70c08f8872f851f51da570201469707adb4813b25bc97c02edd77f42e9ae3",
+  "test_evidence": {
+    "path": "test_evidence.json",
+    "sha256": "f649a81a1ddc703506b252059e79a1eda684cf29eff066bcfd84b9a6a3db62c5",
+    "runner_exit_code": 0,
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "preflight_tests_executed": true,
+  "protocol_sha256": "0ffd6e7a32cd190dc5d942fa88696563be7de488e011a08310e9d2b0ef3e4d4d",
+  "release": {
+    "gate": "test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json",
+    "status": "blocked_pending_c0_gate"
+  },
+  "remaining_blocked_stage_attempt_count": 24,
+  "runner_exit_code": 0,
+  "schema": "multires-variant-terminal-evidence-v1",
+  "started_at_utc": "2026-09-14T05:27:53+00:00",
+  "status": "prepared_not_launched",
+  "training_boundary": {
+    "evaluation_outputs_opened": false,
+    "native_fdg_started": false,
+    "oracle_coordinates_opened": false,
+    "phase_used": false,
+    "reference_used": false
+  }
+}

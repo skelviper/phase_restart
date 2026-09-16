@@ -1,0 +1,30 @@
+{
+  "Baseline": {
+    "frozen_expected_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "lineage": "014 random -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/046-UTC-real-cell-shared-capture/base_remaining/coords/real-G-random/1Mb.npz",
+    "npz_sha256": "6bb93bf570cf688fd8b02dccf14ca0867c1f831d5e123036ced626856f8d8752",
+    "own_budget_fg": 1502
+  },
+  "Chain 40\u219220\u219210\u21925\u21922\u21921 Mb": {
+    "frozen_expected_sha256": null,
+    "lineage": "014 random -> 40Mb 200 (reused frozen prefix) -> 20Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/054-20260916T090840Z-40-20-chain-spearman/coords/new-chain/1Mb.npz",
+    "npz_sha256": "3aebdc69fccd92a61cda417e0be2a0413fe3b0b192e6af5562225f4c5d184f21",
+    "own_budget_fg": 2102
+  },
+  "Extra levels": {
+    "frozen_expected_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+    "lineage": "014 random -> 20Mb 200 -> 10Mb 200 -> 5Mb 612 -> 2Mb 404 -> 1Mb 486",
+    "npz": "test_res/051-20260916T064500-g-random-baseline-ext/coords/A-extra-levels/1Mb.npz",
+    "npz_sha256": "60711facfa41e60b7d5283e18f5aa221e227561d007c4a82729c06a36c02757a",
+    "own_budget_fg": 1902
+  },
+  "Full chain 200 kb \u2192 1 Mb": {
+    "frozen_expected_sha256": null,
+    "lineage": "same shared chain -> 500kb 200 -> 200kb 100, then arithmetic-mean coarsening to 1Mb",
+    "npz": "test_res/054-20260916T090840Z-40-20-chain-spearman/coords/200kb-to-1Mb/coarsened1Mb.npz",
+    "npz_sha256": "8032ab5d8612dc54dc6e0757b54f35c6082c7a3e60c538a8c8247f61263018bd",
+    "own_budget_fg": 2402
+  }
+}

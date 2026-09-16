@@ -1,0 +1,640 @@
+{
+  "020_comparator": {
+    "files": [
+      {
+        "bytes": 9418,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/config.json",
+        "sha256": "0db603983253d1406de60ffbeaae44fab5a12e53285045afca8a5d3232cb960b"
+      },
+      {
+        "bytes": 22306,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/selection.json",
+        "sha256": "5ee6376527d6139eb4fe55ac057b40ca94a6e731289a463989f2343a815252a6"
+      },
+      {
+        "bytes": 7093,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/termination_audit.json",
+        "sha256": "411691252003ff810292c4819586d49467a325a49caf325c8f238b7fc3b46c69"
+      },
+      {
+        "bytes": 333902,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/5m.json",
+        "sha256": "260feb29b354995dbfb29f98feb13de764cbce6f438220c88b4b4db17a33622e"
+      },
+      {
+        "bytes": 227653,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/2m.json",
+        "sha256": "c4b99c78d218f11a03ba56a261176da1e445dbc4c623fc412ca777881784cc62"
+      },
+      {
+        "bytes": 267795,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/consensus_joint/1m.json",
+        "sha256": "54f29e41e852b54aeaca5c7441ddbb76b34231a8b5c4bc22e5a86015d96070e2"
+      },
+      {
+        "bytes": 328669,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/5m.json",
+        "sha256": "8e67c02ea0e20d47633627db4ccf06ca0921a01da9fba8e69669f3af9a52b2bc"
+      },
+      {
+        "bytes": 227588,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/2m.json",
+        "sha256": "283e2fd52b0a1b6fd4971f478033e0fec197e8a2f75f6734dcdd15e89aeb3cb5"
+      },
+      {
+        "bytes": 267621,
+        "path": "test_res/020-20260913_071841-v1-p9016-joint/stages/random_joint/1m.json",
+        "sha256": "6b6615271aff563cc8c1c0116d7557286ec8ecb9a529c609f31ae421091e24a0"
+      }
+    ],
+    "run": "test_res/020-20260913_071841-v1-p9016-joint"
+  },
+  "033_c0_inputs": {
+    "gate_path": "test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json",
+    "gate_required_before_launch": true,
+    "preflight_path": "test_res/033-20260914_044246-c0-controlled-reproduction/preflight.json",
+    "preflight_sha256": "e9abcc7b56a2cdf45ac7120cc9ad87709cb624acc80145cd9ff37e184ff72d92",
+    "protocol_path": "test_res/033-20260914_044246-c0-controlled-reproduction/controlled_protocol.json",
+    "protocol_sha256": "7ab6a02a7f2ced7388e4db0fa42cfa8ff800cb0d1d7274cdfecfdd34c0a60f0a"
+  },
+  "attempt_plan": {
+    "blocked_until_c0_gate": 24,
+    "combined_with_033_c0_attempts": 30,
+    "executed_at_prepare": 0,
+    "planned_attempt_count": 24,
+    "planned_attempts": [
+      {
+        "attempt_id": "C1-consensus_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C1-consensus_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C1-consensus_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C1-random_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "random_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C1-random_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "random_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C1-random_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "random_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C1"
+      },
+      {
+        "attempt_id": "C2-map-consensus_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-map-consensus_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-map-consensus_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-map-random_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "random_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-map-random_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "random_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-map-random_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "random_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C2-map"
+      },
+      {
+        "attempt_id": "C2-free-consensus_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C2-free-consensus_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C2-free-consensus_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C2-free-random_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "random_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C2-free-random_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "random_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C2-free-random_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "random_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C2-free"
+      },
+      {
+        "attempt_id": "C3-consensus_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C3"
+      },
+      {
+        "attempt_id": "C3-consensus_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C3"
+      },
+      {
+        "attempt_id": "C3-consensus_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "consensus_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C3"
+      },
+      {
+        "attempt_id": "C3-random_joint-5m",
+        "bin_size_bp": 5000000,
+        "candidate_id": "random_joint",
+        "maxfun": 930,
+        "maxiter": 300,
+        "stage": "5m",
+        "variant": "C3"
+      },
+      {
+        "attempt_id": "C3-random_joint-2m",
+        "bin_size_bp": 2000000,
+        "candidate_id": "random_joint",
+        "maxfun": 630,
+        "maxiter": 200,
+        "stage": "2m",
+        "variant": "C3"
+      },
+      {
+        "attempt_id": "C3-random_joint-1m",
+        "bin_size_bp": 1000000,
+        "candidate_id": "random_joint",
+        "maxfun": 750,
+        "maxiter": 240,
+        "stage": "1m",
+        "variant": "C3"
+      }
+    ],
+    "planned_candidate_count": 2,
+    "planned_stage_count": 3,
+    "planned_variant_count": 4
+  },
+  "boundary": {
+    "evaluation_outputs_opened": false,
+    "oracle_coordinates_opened": false,
+    "phase_used": false,
+    "reference_used": false
+  },
+  "cohort": {
+    "biological_samples": 1,
+    "inter_contacts": 568434,
+    "intra_contacts": 1135454,
+    "raw_contacts": 1703888,
+    "sample_id": "P9016",
+    "snpfree_sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa"
+  },
+  "created_at_utc": "2026-09-14T05:35:44+00:00",
+  "domain_contract": {
+    "C1": "sphere_forward_unit_ball, bend weight 0",
+    "C2-free": "direct Cartesian physical coordinates; no sphere inverse/clip/rescale",
+    "C2-map": "identity-core radius <=0.9 with smooth outer ball, physical radius <1",
+    "C3": "sphere_forward_unit_ball, exposure ones",
+    "initial_common_center_scale": "shared initialization only, not a free optimization constraint"
+  },
+  "grid": {
+    "final_bin_size_bp": 1000000,
+    "full_grid": true,
+    "n_loci": 2645,
+    "n_physical_beads": 5290,
+    "n_tracks": 40,
+    "origin_bp": 0
+  },
+  "initialization_contract": {
+    "C2_free_warm_clip": "forbidden; direct physical coordinates retained",
+    "between_layer_frame": "preserve previous physical frame; no center/rescale",
+    "bounded_warm_clip": "radial clip to 1-1e-6",
+    "consensus": "cXXa shared Z plus seed-1103 smooth half-difference",
+    "first_layer_common_center_uniform_scale_maxR": 0.8,
+    "full_grid_origin_bp": 0,
+    "interpolation": "numeric genomic sorting; bracket linear interpolation; nearest endpoint fill",
+    "jitter": "0.025*l0 on new/interpolated/endpoint-filled/repeated loci",
+    "random": "retain both source copies with base seed 2207",
+    "source_sha256": {
+      "consensus": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "random": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7"
+    },
+    "target_radius": 0.8,
+    "warm_seed": "3301 + bin_size//1e6 + candidate_base_seed"
+  },
+  "input": {
+    "path": "/mnt/ssd/zliu/phase_restart/inputs/P9016.snpfree.pairs.gz",
+    "raw_source_sha256": "071a6cc76bfad543ea1ace6ee1ce3022b30ac1b1e50a9f0c3a3a1967b9649505",
+    "sha256": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "training_columns": [
+      "readID",
+      "chr1",
+      "pos1",
+      "chr2",
+      "pos2",
+      "strand1",
+      "strand2"
+    ],
+    "uses_all_1703888_records": true
+  },
+  "layer_budgets": {
+    "1m": {
+      "bin_size_bp": 1000000,
+      "n_eligible_pairs": 3496690,
+      "n_loci": 2645,
+      "n_zero_eligible_pairs": 3009436,
+      "raw_cis_offdiag": 696680,
+      "raw_inter": 568434,
+      "raw_same_bin": 438774
+    },
+    "2m": {
+      "bin_size_bp": 2000000,
+      "n_eligible_pairs": 882456,
+      "n_loci": 1329,
+      "n_zero_eligible_pairs": 534496,
+      "raw_cis_offdiag": 619408,
+      "raw_inter": 568434,
+      "raw_same_bin": 516046
+    },
+    "5m": {
+      "bin_size_bp": 5000000,
+      "n_eligible_pairs": 144453,
+      "n_loci": 538,
+      "n_zero_eligible_pairs": 22184,
+      "raw_cis_offdiag": 527902,
+      "raw_inter": 568434,
+      "raw_same_bin": 607552
+    }
+  },
+  "mapping_diagnostics": {
+    "fields": [
+      "objective_eval_count",
+      "nonidentity_map_eval_count",
+      "nonidentity_bead_eval_count",
+      "max_raw_radius_seen",
+      "max_physical_radius_seen",
+      "ever_physical_radius_gt1"
+    ],
+    "record_all_objective_calls": true,
+    "record_trial_and_accepted_when_available": true,
+    "selection_or_budget_use": false
+  },
+  "objective_contract": {
+    "epsilon": 1e-06,
+    "exposure": "sqrt(endpoint_count + 10) / fullgrid mean; C3 all ones",
+    "l0": "(2*N_loci)^(-1/3)",
+    "p_floor": 0.0001,
+    "p_prior_strength": 0.0001,
+    "r0": "2*l0",
+    "repulsion_threshold": "0.7*l0",
+    "same_bin": "per-layer per-bin saturated Poisson nuisance",
+    "weights": {
+      "bend": 0.01,
+      "bond": 1.0,
+      "count": 1.0,
+      "p_prior": 1.0,
+      "repulsion": 1.0
+    }
+  },
+  "optimization": {
+    "budget_not_convergence": true,
+    "carry_raw_q_between_layers": true,
+    "independent_chain_per_variant_source": true,
+    "p_init_first_layer": 0.75,
+    "schedule": [
+      {
+        "bin_size_bp": 5000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "5m",
+        "maxfun": 930,
+        "maxiter": 300,
+        "maxls": 20
+      },
+      {
+        "bin_size_bp": 2000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "2m",
+        "maxfun": 630,
+        "maxiter": 200,
+        "maxls": 20
+      },
+      {
+        "bin_size_bp": 1000000,
+        "checkpoint_every_accepted": 10,
+        "ftol": 1e-10,
+        "gtol": 1e-06,
+        "label": "1m",
+        "maxfun": 750,
+        "maxiter": 240,
+        "maxls": 20
+      }
+    ]
+  },
+  "preflight": {
+    "artifact_root": "/mnt/ssd/zliu/phase_restart/docs/audits/multires-variant-preflight-20260914_053514",
+    "path": "preflight.json",
+    "sha256": "55615bbc7e1c18c0b94c578947c7b8525909caa562bfb29c8399ae31714b2037"
+  },
+  "release": {
+    "release_action": "parent sends explicit release after C0_gate.json status=passed",
+    "required_gate": "test_res/033-20260914_044246-c0-controlled-reproduction/C0_gate.json",
+    "status": "blocked_pending_c0_gate"
+  },
+  "remaining_variants": [
+    "C1",
+    "C2-map",
+    "C2-free",
+    "C3"
+  ],
+  "runtime": {
+    "max_candidate_workers": 4,
+    "native_fdg_started": false,
+    "recommended_candidate_workers": 4,
+    "thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "threads": 1
+  },
+  "schema": "multires-variant-protocol-v1",
+  "scope": "phase-free/reference-free post-020 variant training; C0 held by 033",
+  "selection": {
+    "criterion": "count_nll_per_record",
+    "direction": "minimize",
+    "includes_candidate_invariant_diagonal_layer": true,
+    "includes_priors": false,
+    "order": [
+      "consensus_joint",
+      "random_joint"
+    ],
+    "phase_used": false,
+    "reference_used": false,
+    "tie_break": "preregistered_order",
+    "tie_tolerance_per_record": 1e-09,
+    "within_each_variant_only": true
+  },
+  "source_code_sha256": {
+    "pr/allele_models.py": "586025c9466809808d1fd806f23bfdc682aea4a788744a408484b4976d158ae8",
+    "pr/contact_model.py": "cf19833febc97e346bbaa24f3520c385fdcfb18180957a23b59838f7402e8ace",
+    "pr/gate.py": "c95cc614849bc0d2f0e812e33bea59ad8ed180e7bc62c56074fff536b3552430",
+    "pr/genome.py": "61afd0707a1891a0773c5fe56733906fb81b670b1f566e3cd6e9c77354a0ea6a",
+    "pr/joint_fit.py": "2748240e253923ad5478752c1384e3e8a1055662d96771a5dab1087671337458",
+    "pr/multires_variant_runner.py": "20974e14b03ac39e7be2f6b7d9c8a63d361464a06926af903c42d3b5c7ba2ac9",
+    "pr/paired_run.py": "34c615d518f0146e3dfdf28cd824e4d326eb33c480e607ac5c8ee397db3d98c1",
+    "pr/pairs7.py": "9abbb64e2c9129ccd1d0ba2f9e7829aa245f35aa98757f46569bc5e3af7a1f1a",
+    "pr/paths.py": "e51947d4c0fa887773924cb0d716893ba0d36e8fb7d215ece26453cdd19118e6",
+    "pr/reconstruct.py": "a1470840905fdcd45f466e37ae6e52110734a0d68d39e915434380271e4743eb",
+    "pr/reconstruction_init.py": "64ddf1d1aaa2d867e521d1fed8a818b184051d26fb30f0d41dcaa67d51786b8e",
+    "pr/reconstruction_report.py": "b49f8125fe8e418adfcac6f433440687d14e51c9afd2b5de8ca00e9a09b0ada9"
+  },
+  "sources": [
+    {
+      "base_seed": 1103,
+      "candidate_id": "consensus_joint",
+      "gate_path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/gate.json",
+      "gate_sha256": "cef694b899039aed36cc26b169f1ba2b9df170b40249742ddd2f28b38cd35f19",
+      "initialization": "consensus",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/coords/consensus.3dg",
+      "sha256": "e76655732deb6b8386b1b77bc76ff45d7dba1384f6931337fee80d8f4aaa8e02",
+      "stage": "blind"
+    },
+    {
+      "base_seed": 2207,
+      "candidate_id": "random_joint",
+      "gate_path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/gate.json",
+      "gate_sha256": "cef694b899039aed36cc26b169f1ba2b9df170b40249742ddd2f28b38cd35f19",
+      "initialization": "random",
+      "path": "/mnt/ssd/zliu/phase_restart/test_res/014-20260912_153000-s0-genome-wide-fixed/coords/random.3dg",
+      "sha256": "9a48d73e1401e18349d11758e679da4c76da0904dbc467979079cb54bcd567d7",
+      "stage": "blind"
+    }
+  ],
+  "status": "frozen",
+  "variants": [
+    {
+      "coordinate_parameterization": "sphere_forward_unit_ball",
+      "description": "V1 baseline on the paired 1 Mb start",
+      "exposure_change": "none_preserve_input",
+      "finite_kernel": {
+        "epsilon": 1e-06,
+        "radius": "2*l0"
+      },
+      "model_id": "C0",
+      "objective_weights": {
+        "bend": 0.01,
+        "bond": 1.0,
+        "count": 1.0,
+        "p_prior": 1.0,
+        "repulsion": 1.0
+      },
+      "p_floor": 0.0001,
+      "p_init": 0.75,
+      "p_prior_strength": 0.0001,
+      "physical_domain": "strict_unit_ball",
+      "repulsion_threshold": "0.7*l0"
+    },
+    {
+      "coordinate_parameterization": "sphere_forward_unit_ball",
+      "description": "V1 objective with bend weight set to zero",
+      "exposure_change": "none_preserve_input",
+      "finite_kernel": {
+        "epsilon": 1e-06,
+        "radius": "2*l0"
+      },
+      "model_id": "C1",
+      "objective_weights": {
+        "bend": 0.0,
+        "bond": 1.0,
+        "count": 1.0,
+        "p_prior": 1.0,
+        "repulsion": 1.0
+      },
+      "p_floor": 0.0001,
+      "p_init": 0.75,
+      "p_prior_strength": 0.0001,
+      "physical_domain": "strict_unit_ball",
+      "repulsion_threshold": "0.7*l0"
+    },
+    {
+      "coordinate_parameterization": "identity_interior_smooth_ball",
+      "description": "Smooth identity-interior unit-ball parameterization",
+      "exposure_change": "none_preserve_input",
+      "finite_kernel": {
+        "epsilon": 1e-06,
+        "radius": "2*l0"
+      },
+      "model_id": "C2-map",
+      "objective_weights": {
+        "bend": 0.01,
+        "bond": 1.0,
+        "count": 1.0,
+        "p_prior": 1.0,
+        "repulsion": 1.0
+      },
+      "p_floor": 0.0001,
+      "p_init": 0.75,
+      "p_prior_strength": 0.0001,
+      "physical_domain": "strict_unit_ball",
+      "repulsion_threshold": "0.7*l0"
+    },
+    {
+      "coordinate_parameterization": "direct_physical_unbounded",
+      "description": "Direct physical coordinates without a hard ball",
+      "exposure_change": "none_preserve_input",
+      "finite_kernel": {
+        "epsilon": 1e-06,
+        "radius": "2*l0"
+      },
+      "model_id": "C2-free",
+      "objective_weights": {
+        "bend": 0.01,
+        "bond": 1.0,
+        "count": 1.0,
+        "p_prior": 1.0,
+        "repulsion": 1.0
+      },
+      "p_floor": 0.0001,
+      "p_init": 0.75,
+      "p_prior_strength": 0.0001,
+      "physical_domain": "finite_unbounded",
+      "repulsion_threshold": "0.7*l0"
+    },
+    {
+      "coordinate_parameterization": "sphere_forward_unit_ball",
+      "description": "V1 objective with uniform full-grid exposure",
+      "exposure_change": "uniform_full_grid",
+      "finite_kernel": {
+        "epsilon": 1e-06,
+        "radius": "2*l0"
+      },
+      "model_id": "C3",
+      "objective_weights": {
+        "bend": 0.01,
+        "bond": 1.0,
+        "count": 1.0,
+        "p_prior": 1.0,
+        "repulsion": 1.0
+      },
+      "p_floor": 0.0001,
+      "p_init": 0.75,
+      "p_prior_strength": 0.0001,
+      "physical_domain": "strict_unit_ball",
+      "repulsion_threshold": "0.7*l0"
+    }
+  ]
+}
