@@ -4,6 +4,9 @@ Reviewer-facing companion to this snapshot. It states exactly what was measured,
 denominator, under which controls, and what is *not* established — then gives a copy-paste prompt
 (§8) for a code-grounded review.
 
+- **Repository:** https://github.com/skelviper/phase_restart
+- **Snapshot entry point:** [`../README.md`](../README.md)
+
 Everything below is quoted from files in this snapshot. Where a number comes from a run readout, the
 file is named. This guide does not introduce new claims.
 
@@ -19,9 +22,11 @@ fitted jointly in one shared nuclear volume, genome-wide (intra- and inter-chrom
   that single cell**, not biological replicates. No result here supports a population claim.
 - **Training uses the full contact set** (no train/test split in the current Reconstruction V1);
   hyperparameters are chosen by label-free count likelihood only.
-- **The reference structure is used post-hoc only.** It is never used for source selection, fitting,
-  regularisation, hyperparameter choice, stopping, or candidate selection. It is only read after
-  candidate coordinates are written and hashed.
+- **Reference-structure usage is per-experiment, not repo-wide.** On the blind path the reference is
+  used post-hoc only: not for source selection, fitting, regularisation, hyperparameter choice,
+  stopping or candidate selection, and it is read only after candidate coordinates are written and
+  hashed. That applies to the current baseline and to the 049 losses A/B/C. **It does not apply to the
+  whole repository:** one condition, `051 C-reference-beads`, is deliberately *not* blind — see §4.1.
 - **Inter-chromosomal contacts are used for spatial placement but never as haplotype accuracy
   evidence.** Their same-/different-haplotype split is `70,558 / 76,438`, i.e. they carry **no
   maternal/paternal label signal**.
@@ -63,8 +68,10 @@ From `test_res/049-.../gates/gate8_lineage_and_denominators.json`:
 Conservation identity: `1,703,888 = 438,774 + 696,680 + 568,434`.
 
 The objective is evaluated on the **full grid including zero-count pairs**; the observed term is
-`C · log(r_obs)` with `C` unchanged. There is **no threshold screening of contacts anywhere** — no
-record is dropped by posterior probability or by any max-posterior rule.
+`C · log(r_obs)` with `C` unchanged. Within the 049 max-contact losses (B/C) there is **no posterior
+threshold screening**: no contact is dropped or reweighted by its posterior probability, and no
+per-contact max-posterior filter is applied. The max only changes which rate enters the likelihood —
+counts and support stay as they are.
 
 ## 3. The three losses actually implemented (049 round)
 
@@ -75,7 +82,7 @@ copy states:
 | Loss | Normaliser `Z` | Observed term | Semantics |
 | --- | --- | --- | --- |
 | **A** `marginal_G` | four-state sum (`r_sum`) | `r_sum` | the 045 original `G`, used as the parity reference |
-| **B** `hard_observed` | four-state **sum** (`r_sum`) | four-state **max** (`r_max`) | observed term scored by the single fastest state |
+| **B** `hard_observed` | four-state **sum** (`r_sum`) | four-state **max** (`r_max`) | observed term scored by the highest-rate state |
 | **C** `max_rate` | four-state **max** (`Zmax`) | four-state **max** | `max` enters both the normaliser and the observed term |
 
 Precise wording matters here:
@@ -137,6 +144,27 @@ Signed Spearman means: Reference `1.000000 / 0.251047`; Baseline `0.604876 / 0.3
 chr1 (`17,578` common pairs, 193 mask bins): Reference `same 1.000000 / contrast 0.658221`;
 Baseline `0.699845 / 0.303606` (orientation `swapped`); B `0.552730 / 0.121127` (`direct`);
 C `0.712885 / 0.225587` (`swapped`).
+
+### 4.1 Reference usage is per-experiment: the `051 C-reference-beads` exception
+
+Do not apply a repo-wide "reference is never used" rule. Two different things are going on:
+
+- **Blind path.** The current baseline, the 014/020 blind source selection and the 049 losses A/B/C do
+  not use the reference for selection, fitting, regularisation, hyperparameters, stopping or candidate
+  choice. Readouts such as 046 and 055 are evaluations of frozen endpoints, not selections.
+- **Working comparator.** Registering `P9016-046-G-random-base-1Mb` as the baseline was a
+  **post-evaluation user choice**, made to have a fixed comparison point. It is a legitimate working
+  comparator; it is **not** a blind source-selection claim and should not be reported as one.
+- **Explicitly non-blind and authorised: `051 C-reference-beads`.** This condition uses a
+  **reference-derived per-copy bead presence mask** as its support. `test_res/051-.../config.json` →
+  `conditions.reference-beads` records the authorisation verbatim:
+  `"reference chr/position/presence only; reference xyz values never used for initialization, target,
+  or regularization"`. So reference *presence* information shapes the support, while reference
+  *coordinates* never enter the fit. It is a **reference-informed support control**, it is declared as
+  such, and it must be labelled non-blind rather than read either as a blind method or as a blind
+  method that leaked.
+
+Report the blind/non-blind label per experiment, not for the repository as a whole.
 
 Reproduction status: `055/eval/validation.json` records **12/12 PASS**, including value-by-value
 agreement (max abs diff `< 1e-9`) with the frozen 049 `r2_per_chromosome.tsv`, the frozen 051
@@ -229,11 +257,20 @@ is not distributed here.
 > - Data: `N_raw = 1,703,888` records; same-bin/zero-distance `438,774` are a saturated nuisance
 >   layer excluded from structural metrics; `N_off = 1,265,114` (`cis_offdiag 696,680` +
 >   `inter 568,434`) enter the count objective; the full 1 Mb grid is `3,496,690 = C(2645,2)` pairs
->   including zero-count pairs. Counts are raw integers; **no contact is threshold-screened**.
+>   including zero-count pairs. Counts are raw integers; in the 049 max-contact losses (B/C) **no
+>   contact is threshold-screened by posterior probability and none is dropped**.
 > - Inter-chromosomal contacts split `70,558` same-haplotype / `76,438` different-haplotype, i.e. they
 >   carry **no parent-of-origin label signal**; they constrain spatial placement only.
-> - The reference structure is used **post-hoc only** (evaluation/reporting), never for source
->   selection, fitting, hyperparameters, stopping or candidate choice.
+> - **Reference usage is per-experiment, not repo-wide.** On the blind path (current baseline, 014/020
+>   blind source selection, 049 losses A/B/C) the reference is used post-hoc only — never for source
+>   selection, fitting, hyperparameters, stopping or candidate choice. Registering the current
+>   baseline was a **post-evaluation user choice** for a working comparator, not a blind selection.
+>   **One condition is deliberately non-blind and authorised:** `051 C-reference-beads` uses a
+>   reference-derived per-copy bead *presence* mask as support (`config.json` →
+>   `conditions.reference-beads.support_source_authorized`: "reference chr/position/presence only;
+>   reference xyz values never used for initialization, target, or regularization"). Treat that
+>   condition as a declared reference-informed support control — **do not** report it as a leak or as
+>   a protocol violation, and do not generalise it to the blind experiments.
 > - The whole study is **n = 1 cell**; the 20 chromosomes are associated measurements within that
 >   cell, not biological replicates.
 > - Current baseline `P9016-046-G-random-base-1Mb` (see `docs/CURRENT_BASELINE.md`,

@@ -5,8 +5,11 @@ prepared **by an assistant** for external review by GPT Pro. It is a curated rea
 larger private workspace, not a released software package.
 
 - **Snapshot id:** `github-review-20260916_203503`
+- **Repository:** https://github.com/skelviper/phase_restart
 - **Prepared:** 2026-09-16
 - **Source workspace:** `/mnt/ssd/zliu/phase_restart` (private; not included)
+- **Reviewer guide:** [`docs/GPT_PRO_REVIEW.md`](docs/GPT_PRO_REVIEW.md) — definitions, denominators,
+  limits, evidence map and a copy-paste review prompt. **Read it before the code.**
 - **Git history:** none. This snapshot starts from a single root commit and deliberately does **not**
   carry the upstream repository's 6-commit history, which contained the raw contact file.
 
@@ -20,11 +23,30 @@ evaluation definitions and the headline measurements.
 **It is not** a data-inclusive, one-click reproducible repository. The contact data, the reference
 structure, all fitted coordinates and all checkpoints are absent. **Do not assume that training or
 evaluation can be run directly from this snapshot.** See §4 for the external inputs that would be
-required and §7 for portability limits.
+required and §8 for portability limits.
+
+### Provenance of the files in this snapshot
 
 No file in the original workspace was modified, moved, or deleted while preparing this snapshot.
-The only file whose *content differs* from the workspace is `docs/current_baseline.json`, which is
-rebuilt here because the workspace copy was stale (see §5).
+Three groups of files must be distinguished:
+
+1. **Research source and protocol files — byte-identical.** Everything under `run.py`, `pr/`,
+   `scripts/`, `tests/`, `native/hickit/` (sources only), `docs/` and `test_res/` was copied
+   byte-for-byte and verified against source SHA256. The research code was **not** reformatted,
+   re-pathed, or otherwise touched, because frozen-hash checks in the code assert those exact bytes.
+2. **New organising files, added for this snapshot.** `README.md` (this file), `.gitignore` and
+   `docs/GPT_PRO_REVIEW.md` are written for the review; they do not exist in the workspace.
+   The two legacy copies `docs/legacy_workspace_README.md` and `docs/legacy_workspace_AGENTS.md` are
+   byte-identical copies of the workspace `README.md` and `AGENTS.md` under new paths, so that this
+   snapshot's `README.md` can be the English review entry point without destroying the original text.
+3. **One file rebuilt at its existing path.** `docs/current_baseline.json` was stale in the workspace
+   (it still named the historical extension endpoint); it is rebuilt here in place, with per-field
+   provenance, because reviewers would otherwise read the wrong baseline. Its workspace original is
+   untouched. Details in §5.
+
+The same distinction applies to the upstream `.gitignore` policy: this snapshot's `.gitignore` is a
+new file that protects against data by extension/size, whereas the workspace one excluded all of
+`test_res/` (which would also have dropped the research source).
 
 ## 2. Layout
 
@@ -43,21 +65,22 @@ docs/                        protocol, plans, measured facts, audits, Chinese re
 test_res/                    one directory per formal run; source, config, protocol and readouts only
 ```
 
-`test_res/` is where most of the scientific record lives. In the upstream workspace it also holds
-hundreds of gigabytes of coordinates and plots and is excluded wholesale by `.gitignore`; here the
-policy is inverted — **all research source under `test_res/` is included**, and only data by
-extension/size is excluded.
+`test_res/` is where most of the scientific record lives: **61 run directories totalling about
+4.8 GB** in the workspace, almost all of it coordinates, `.npz` arrays and plots. The workspace
+`.gitignore` excludes `test_res/` wholesale, which would also have dropped the research source that
+lives inside it; here the policy is inverted — **all research source under `test_res/` is included**,
+and only data is excluded, by extension and by size.
 
 ## 3. What is deliberately excluded
 
 | Category | Why |
 | --- | --- |
-| `data/P9016.pairs.gz` (raw contacts, 16.7 MB) | Redistribution status unclear; re-downloadable. Also the reason this snapshot has no upstream history. |
-| `data/P9016.1m.3dg.gz` (reference structure) | Reference is used only for post-hoc reporting; not redistributed here. |
+| `data/P9016.pairs.gz` (raw contacts, 16.7 MB) | Out of scope for this snapshot. The scope here is **source-code review**, so raw experimental data is not redistributed. No download source and no redistribution licence were verified or asserted; that question is left entirely to the data owner. It is also the reason this snapshot carries no upstream history — the file was committed in the workspace repository's first commit. |
+| `data/P9016.1m.3dg.gz` (reference structure) | Not redistributed here for the same scope reason. Where the reference may be used is a scientific-boundary question, not a redistribution one — see §5. |
 | `inputs/` (derived 7-column contact file) | Regenerated by `python run.py prepare` from the raw pairs. |
-| All `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, checkpoints | Coordinates and numeric arrays; hundreds of GB; not needed to read code. |
+| All `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, checkpoints | Coordinates and numeric arrays. They are the bulk of the ~4.8 GB of `test_res/`, and none of them is needed to read the code. |
 | `coords/`, `plots/`, `logs/`, `work/`, `stages/` payloads | Run products. Two figures are the only binary exceptions (below). |
-| `scratch/` | Temporary work products by project policy; contains duplicated/translated copies of modules. |
+| `scratch/` | Temporary work products by project policy; contains duplicated/translated copies of modules. One dependency-driven exception is included — see §9. |
 | `__pycache__/`, `.pytest_cache/` | Build detritus. |
 | `docs/audits/**/*.npz,*.png,*.pdf` (28 MB) | Audit binaries. The audit *text* and audit *code* are included. |
 
@@ -67,13 +90,17 @@ extension/size is excluded.
 
 ## 4. External inputs this code expects (not present here)
 
-The code resolves every input relative to the repository root (`pr/paths.py`):
+The **main entry points** resolve their inputs relative to the repository root — `pr/paths.py` defines
+`ROOT`, `PAIRS`, `REF3DG`, `SNPFREE` and `HICKIT` that way, and `run.py` uses them. This is **not**
+true of every file: historical and round-specific code still contains hard-coded absolute paths such
+as `/mnt/ssd/zliu/...` and `/work/phase3/...` (125 files). Those paths were kept byte-identical on
+purpose; see §8. The table below lists the inputs by their repository-relative identity.
 
 | Path | Role | Present? |
 | --- | --- | --- |
-| `data/P9016.pairs.gz` | Raw P9016 contact file, including phase columns; read only by `run.py prepare` | no |
-| `inputs/P9016.snpfree.pairs.gz` | Derived 7-column phase-free file, SHA256 `f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa` | no |
-| `data/P9016.1m.3dg.gz` | Reference diploid structure, SHA256 `1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29`; evaluation only | no |
+| `data/P9016.pairs.gz` | Raw P9016 contact file, **including the phase/haplotype columns**. `run.py prepare` reads it and writes the phase-free 7-column file; the phase columns are stripped there and are not part of the training input. Historical and evaluation code can also read phase columns, but only after candidate coordinates have been written and hashed. | no |
+| `inputs/P9016.snpfree.pairs.gz` | Derived 7-column phase-free file, SHA256 `f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa`. This is what the reconstruction training consumes; the loader rejects any file whose `#columns` header contains a phase field. | no |
+| `data/P9016.1m.3dg.gz` | Reference diploid structure, SHA256 `1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29`. Used for post-hoc evaluation and reporting, with one explicitly authorised, non-blind exception — see §5. | no |
 | `native/hickit/hickit` | Compiled FDG binary; build with `cd native/hickit && make hickit` (needs `cc`, `make`, `zlib`) | source yes, binary no |
 | `test_res/045-.../inputs/real_1000000_aggregate.npz` | 1 Mb aggregated contact counts used by the 045–055 chain | no |
 | `test_res/046-.../base_remaining/coords/real-G-random/1Mb.3dg` (+ `.npz`) | The registered current baseline candidate, SHA256 `ee5eb1545db9bfeeabcc24e704707f5f61a5793e6f245091347373442dc0032b` | no |
@@ -133,6 +160,30 @@ signed Pearson of pairwise Euclidean distances:
 reported together; `contrast` is the swap-invariant readout. The reference self-control has
 `same ≡ 1` by construction and is not evidence of fit quality.
 
+### Reference-structure usage: what is blind and what is not
+
+"Blind" means: no information derived from the reference structure influenced the result. That holds
+for the main line of work, but **not for the whole repository**, and the distinction matters:
+
+- **Blind (reference not used for selection, fitting, hyperparameters, stopping or candidate choice):**
+  the current baseline (a label-free random start under the same-model count likelihood), the 014/020
+  blind source selection, and the 049 losses A/B/C. The 046 and 055 readouts are evaluations, not
+  selections.
+- **Baseline as comparator — post-evaluation user choice.** Registering
+  `P9016-046-G-random-base-1Mb` as the working baseline was a decision taken *after* evaluation, to
+  have a fixed comparison point. It is **not** a blind source-selection claim, and it should not be
+  read as one.
+- **Explicitly not blind, and authorised: `051 C-reference-beads`.** This condition uses a
+  **reference-derived per-copy bead presence mask** as its support: reference chromosome / position /
+  presence only. The recorded authorisation is that **reference xyz values are never used for
+  initialization, target, or regularization** — only which loci are present per copy. It is a
+  *reference-informed support control*, it is declared as such in
+  `test_res/051-.../config.json` (`conditions.reference-beads.support_source_authorized`), and it must
+  **not** be read as a blind method, nor as a blind method that leaked.
+
+When reading the code or the review response, apply the blind/non-blind label per experiment rather
+than repo-wide.
+
 Note the extension endpoint `real-extension-G-full-J` (3DG SHA `4301d4df...`, matched `0.602331`) is
 **historical** and is not the current baseline; the workspace JSON that still listed it was stale and
 is corrected in this snapshot.
@@ -146,7 +197,7 @@ their opening framing as historical, not as present state.
 
 | Document | What it is | What it is not |
 | --- | --- | --- |
-| `docs/REVIEW-s2-observation-model.md` | A stage-2-era review that opens by stating there is no S2 and that the latest run is 017 | **Not** a statement about today. S2 work, round 045 and 049 exist. |
+| `docs/REVIEW-s2-observation-model.md` | A stage-2-era review that opens by stating there is no S2 and that the latest run is 017 | **Not** a statement about today. Later reconstruction and shared-capture implementations exist (rounds 045 and 049). Do not read this as claiming that the originally planned S2/S3 programme was completed — only that the work moved on. |
 | `docs/PROJECT_CONTEXT.md` | Stage history whose coverage runs mainly to round 022 | **Not** the current index; rounds 045/046/049/051/055 are not in it |
 | `docs/legacy_workspace_README.md`, `docs/legacy_workspace_AGENTS.md` | The original workspace README and rules at snapshot time (Chinese) | Partially stale: the legacy README still names the extension endpoint as the working baseline |
 | `docs/MEASURED_FACTS.md`, `docs/POST020_*`, `docs/PLAN-*`, `docs/RECONSTRUCTION_V1_*` | Evidence log and stage plans, each anchored to its own round | Not a description of the latest state |
@@ -173,11 +224,13 @@ most recent evidence. Where an old document and a current round disagree, the cu
 
 ## 8. Portability limits (intentional, do not "fix" blindly)
 
-- **Absolute paths.** Several files contain `/mnt/ssd/zliu/...` or `/work/phase3/...`
+- **Absolute paths.** 125 files contain `/mnt/ssd/zliu/...` or `/work/phase3/...`
   (e.g. `pr/allele_r2.py`, `pr/multires_variant_runner.py`, `tests/test_allele_r2.py`). These were
   left byte-identical on purpose: some are frozen snapshots whose SHA256 is asserted by other code,
   and rewriting them would break frozen-hash checks and the project's byte-identity requirements.
-  Treat them as provenance, not as runnable configuration.
+  Treat them as provenance, not as runnable configuration. Main entry points are unaffected because
+  `pr/paths.py` derives its paths from the repository root; the hard-coded paths belong to historical
+  and round-specific scripts.
 - **Environment.** Python commands and tests assume a conda environment named `analysis`
   (numpy, scipy, matplotlib). The native engine needs only `cc`, `make`, `zlib`.
 - **Frozen copies.** `test_res/*/source/frozen_*/` are deliberate byte-frozen copies of earlier
@@ -185,7 +238,10 @@ most recent evidence. Where an old document and a current round disagree, the cu
   They duplicate `pr/` on purpose. Do not deduplicate them.
 - **Hash-locked documents.** `docs/RECONSTRUCTION_V1_PROTOCOL.md` is locked by hash from
   `pr/reconstruct.py` and `pr/continuation.py`; its path and bytes are intentionally unchanged.
-- **Reference 3DG** may only be opened after candidate coordinates have been written and hashed.
+- **Reference-structure ordering.** On the blind path, the reference 3DG may only be opened after
+  candidate coordinates have been written and hashed; this ordering is enforced by pre-reference hash
+  gates (for example `test_res/055-.../eval/pre_reference_hash_gate.json`). It is a rule of the blind
+  protocol, not a claim that the reference is absent from the whole repository — see §5.
 
 ## 9. Snapshot integrity
 
