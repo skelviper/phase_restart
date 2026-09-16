@@ -232,7 +232,7 @@ From `test_res/055-.../README.md` §7 and `test_res/049-.../README.md` §6.4:
 
 | Check | Result |
 | --- | --- |
-| Byte identity of copied sources | 754 copied files checked against source SHA256; 753 byte-identical, 1 (`docs/current_baseline.json`) intentionally rebuilt, 0 mismatches, 0 missing, 0 unexpected |
+| Byte identity of copied sources | manifest lists **754 copied files**; **753 hash-verified byte-identical** to their workspace originals; **1 excluded from the byte check because it was rebuilt at an existing path** (`docs/current_baseline.json`). `mismatch = 0`, `missing = 0`, `unexpected = 0`. The two renamed legacy copies are additionally verified byte-identical to the workspace `README.md` / `AGENTS.md`, outside the manifest count. |
 | Forbidden data files | no `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, `*.gz`, `*.pairs*`, checkpoint or raw-data file present; no file exceeds 1.2 MB |
 | Binary exceptions | exactly 2 PNG figures, both from round 055 |
 | Credential scan | 0 hits: no `ghp_`/`gho_`/`ghs_`/`github_pat_`, no private keys, no cloud keys, no `.env`/`.netrc`/`*.pem`, no secret assignments; no credential value was printed at any point |
@@ -268,9 +268,14 @@ is not distributed here.
 >   **One condition is deliberately non-blind and authorised:** `051 C-reference-beads` uses a
 >   reference-derived per-copy bead *presence* mask as support (`config.json` →
 >   `conditions.reference-beads.support_source_authorized`: "reference chr/position/presence only;
->   reference xyz values never used for initialization, target, or regularization"). Treat that
->   condition as a declared reference-informed support control — **do not** report it as a leak or as
->   a protocol violation, and do not generalise it to the blind experiments.
+>   reference xyz values never used for initialization, target, or regularization").
+>   Using a **declared** presence-only mask is therefore not by itself an unauthorised leak — do not
+>   report it as a protocol violation on that basis alone, and do not generalise it to the blind
+>   experiments. **But do not take the declaration on trust either: independently verify in the code
+>   that the implementation actually respects this boundary** (that no reference xyz, distance or
+>   ordering information reaches initialization, target, regularisation or stopping), and **report any
+>   use beyond the declared boundary as a concrete finding with `path:line` evidence.** Where a file's
+>   declared scope and the code's actual behaviour disagree, the code is the evidence.
 > - The whole study is **n = 1 cell**; the 20 chromosomes are associated measurements within that
 >   cell, not biological replicates.
 > - Current baseline `P9016-046-G-random-base-1Mb` (see `docs/CURRENT_BASELINE.md`,
@@ -322,6 +327,17 @@ is not distributed here.
 > on the same data with no held-out or reference-independent criterion. Prefer deleting or replacing
 > a component over adding one. Keep the answer concrete and prioritised; depth on two or three items
 > beats a broad list.
+>
+> **You may — and should — question the project's methodological assumptions**, not only its
+> implementation: the objective design, the choice of denominators and support sets, the definitions
+> of `same`/`cross`/`contrast` and R1/R2/R3, the blind/non-blind framing, and the way L1/L2 are posed.
+> If you think an assumption is wrong, say so and give the evidence or the experiment that would
+> settle it.
+>
+> **Distinguish declarations from code.** A docstring, a `config.json` field, a README paragraph or a
+> validation flag is a *claim*; it is not by itself evidence that the implementation does what it
+> says. Verify against the code and the recorded numbers, and flag any place where the two diverge.
+> Conversely, do not assume a declaration is false without showing where the code contradicts it.
 
 ## 9. Read order (concrete files)
 

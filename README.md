@@ -181,6 +181,11 @@ for the main line of work, but **not for the whole repository**, and the distinc
   `test_res/051-.../config.json` (`conditions.reference-beads.support_source_authorized`), and it must
   **not** be read as a blind method, nor as a blind method that leaked.
 
+  That declaration is a claim about the implementation, not a substitute for checking it: a reviewer
+  should verify in the code that no reference xyz, distance or ordering information reaches
+  initialization, target, regularisation or stopping, and should report any use beyond the declared
+  boundary. Where a declared scope and the code's actual behaviour disagree, the code is the evidence.
+
 When reading the code or the review response, apply the blind/non-blind label per experiment rather
 than repo-wide.
 
