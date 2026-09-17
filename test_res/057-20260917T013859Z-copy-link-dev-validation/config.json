@@ -1,0 +1,67 @@
+{
+  "schema": "p9016-copy-link-dev-validation-a-v1",
+  "scope": "experiment_A_only",
+  "source_run": "test_res/056-20260916T152353Z-pro-review-experiments",
+  "condition": "G-original",
+  "seeds": [560101, 560102],
+  "bin_size_bp": 1000000,
+  "chromosomes": 20,
+  "copies": 40,
+  "n_loci": 2645,
+  "eligible_pairs": 3496690,
+  "development_validation": {
+    "record_fold": "056 fixed 20% record-level fold",
+    "records": 340715,
+    "offdiag_records": 253067,
+    "molecule_isolation": false,
+    "input_read_id": ".",
+    "name": "development validation, not a fresh test"
+  },
+  "primary_metric": "log(Z_full) - sum(Cdev * log(rate)) / 253067",
+  "primary_details": {
+    "K0": false,
+    "regularizers": false,
+    "zero_count_pairs_in_Z_full": true,
+    "dev_exposure_recomputed": false,
+    "train_exposure_fixed": true,
+    "endpoint_p_fixed": true,
+    "training": false
+  },
+  "splices": {
+    "chr1": [65, 130],
+    "chr8": [43, 86],
+    "chr19": [20, 41],
+    "chrX": [57, 114]
+  },
+  "gate": {
+    "per_seed_min_positive_of_8": 7,
+    "per_seed_min_median_delta_nat_per_contact": 0.001,
+    "delta": "splice - original"
+  },
+  "formal_fullgrid_calls": 18,
+  "random_u_calls": 0,
+  "training_fg_calls": 0,
+  "reference_access": false,
+  "phase_access": false,
+  "experiment_B": "not_started",
+  "source_hashes": {
+    "inputs/P9016.snpfree.pairs.gz": "f37ed9cc022a7b37653dddb3e3302be7406204d3848971a333a902afb9a3c9aa",
+    "test_res/056-20260916T152353Z-pro-review-experiments/inputs/test_contacts.npz": "917fc0ad6716b03d99c16ac7b05b766eb363e089fc6ff514a830edcacf131a96",
+    "test_res/056-20260916T152353Z-pro-review-experiments/inputs/G-original_1000000_aggregate.npz": "517c000e8a1e53d73c17b13d4726d8209557c9123cee0a360be91baa74172f48",
+    "test_res/056-20260916T152353Z-pro-review-experiments/results/experiment3_nonreference.json": "7ece8a741ea0ab027b5c86f5fe7264c7e89b1e7b2dd961081b369f069427e46d",
+    "test_res/056-20260916T152353Z-pro-review-experiments/states/experiment3_splices/manifest.json": "9c218a0d5185c3ac115f3bdadc42cafcd54597597d6ea7a11e461a7b9eaf346d",
+    "test_res/056-20260916T152353Z-pro-review-experiments/code/nonref_core.py": "4cf01e5e8da54258a239a389419a472f10a3ac97200bbb122ca43dfcfb6cfb1d",
+    "test_res/056-20260916T152353Z-pro-review-experiments/code/score_experiment3.py": "7b8421e0fa401ac840b341225693dc678456f726e26f9268be1a1bba24240fd2",
+    "test_res/045-20260915T073310Z-shared-capture-round/source/shared_capture_objective.py": "c707bfd15d316506b99371b5c407c6ae7581812e8aeb68fc3da8b6f594d885dc",
+    "test_res/045-20260915T073310Z-shared-capture-round/source/visibility_profile_base.py": "677b06fd56ff2b9ea973c54eaef03c969e1320a6df0ab9038843a2f9fd46b70c",
+    "test_res/045-20260915T073310Z-shared-capture-round/source/gpu_variant_backend.py": "0dc2d279c4fc5c7f3fd24a0b22780a838e3a9a15844a21eea12117f26ece932d",
+    "pr/solver_state.py": "deaf000881c1ea7dbac353653f4568ab04bc5506e7a8c35d843f854e56694425",
+    "scratch/github-review-20260916_203503/docs/PRO_REVIEW_RESULTS_056.md": "c969d099ed1236a4986a24f9c93f2626545d8e68ccd318d58f205b5e33e6a305",
+    "docs/CURRENT_BASELINE.md": "61750365a8509c458aace59584332effe3f9aab8415c0fe7fab81cb6a0692263"
+  },
+  "endpoint_solver_hashes": {
+    "560101": "c54021db76793e0751ecfef63c1e4204a39003521e33f84e30bbd41af9d8413e",
+    "560102": "2440641f208f0460bb6e12a757aec2c8ea1d71be694ca963b21d0179d9e6983b"
+  },
+  "frozen_baseline_046_unchanged": true
+}

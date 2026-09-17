@@ -1,0 +1,25 @@
+{
+  "by_seed": {
+    "560101": {
+      "count": 1992,
+      "path": "test_res/057-20260917T013859Z-copy-link-dev-validation/candidates_seed560101.json",
+      "sampling": {
+        "original_count": 1992,
+        "sampled": false,
+        "selected_count": 1992
+      },
+      "sha256": "89d881e9daec9f14df3385786a9e74c72e4051acebf38b9bb3a0577dea23c636"
+    },
+    "560102": {
+      "count": 1992,
+      "path": "test_res/057-20260917T013859Z-copy-link-dev-validation/candidates_seed560102.json",
+      "sampling": {
+        "original_count": 1992,
+        "sampled": false,
+        "selected_count": 1992
+      },
+      "sha256": "50d7f4ec188c36af1d6fd4cf5d04015221789b2ed771da0323f60a5786aabddd"
+    }
+  },
+  "status": "frozen_before_scan"
+}

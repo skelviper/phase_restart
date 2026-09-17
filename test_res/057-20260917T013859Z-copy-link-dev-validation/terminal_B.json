@@ -1,0 +1,20 @@
+{
+  "adoption_recommended": false,
+  "completed_at_utc": "2026-09-17T02:02:09.584074+00:00",
+  "development_opened": false,
+  "experiment_A": "PASS",
+  "experiment_B": "completed_first_round_all_no_op",
+  "fixture": "PASS",
+  "formal_logical_fullgrid_calls": 6,
+  "formal_physical_fullgrid_sweeps": 12,
+  "l2_supported": false,
+  "l3_claimed": false,
+  "new_development_evaluation": "not_run",
+  "new_reference_evaluation": "not_run",
+  "paired_training": "not_started_by_frozen_branch_rule",
+  "reference_opened": false,
+  "round1": "both_seeds_no_op",
+  "schema": "p9016-057-B-terminal-v1",
+  "status": "complete",
+  "training_fg": 0
+}

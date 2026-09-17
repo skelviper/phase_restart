@@ -5,7 +5,8 @@ denominator, under which controls, and what is *not* established — then gives 
 (§8) for a code-grounded review.
 
 - **Repository:** https://github.com/skelviper/phase_restart
-- **Latest round-056 report:** [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md)
+- **Latest round-057 report:** [`PRO_REVIEW_RESULTS_057.md`](PRO_REVIEW_RESULTS_057.md)
+- **Preceding round-056 report:** [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md)
 - **Snapshot entry point:** [`../README.md`](../README.md)
 
 Everything below is quoted from files in this snapshot. Where a number comes from a run readout, the
@@ -21,8 +22,8 @@ fitted jointly in one shared nuclear volume, genome-wide (intra- and inter-chrom
 
 - **Cohort / replicate level:** one cell. The 20 chromosomes are **associated measurements within
   that single cell**, not biological replicates. No result here supports a population claim.
-- **The registered Reconstruction V1 baseline uses the full contact set.** Round 056 is a later,
-  separate preregistered comparison using one fixed 80/20 record split; it does not replace that baseline.
+- **The registered Reconstruction V1 baseline uses the full contact set.** Rounds 056 and 057 are
+  later, separate record-split validation and candidate-search studies; neither replaces that baseline.
 - **Reference-structure usage is per-experiment, not repo-wide.** On the blind path the reference is
   used post-hoc only: not for source selection, fitting, regularisation, hyperparameter choice,
   stopping or candidate selection, and it is read only after candidate coordinates are written and
@@ -44,11 +45,13 @@ the round they were written for. **Their wording is not the current state of the
 | `docs/legacy_workspace_README.md` | The workspace README at snapshot time; names the `real-extension-G-full-J` endpoint as the working baseline | **Stale baseline.** The registered baseline is `P9016-046-G-random-base-1Mb` (`docs/CURRENT_BASELINE.md`). |
 | `docs/legacy_workspace_AGENTS.md`, `docs/MEASURED_FACTS.md`, `docs/POST020_*`, `docs/PLAN-*`, `docs/RECONSTRUCTION_V1_*` | Round-anchored rules, evidence logs and plans | Historical context; where they conflict with a current round's `config.json`, the round wins. |
 
-**The latest result is round 056** (`docs/PRO_REVIEW_RESULTS_056.md`), a frozen exposure-definition
-comparison that leaves the registered baseline unchanged. Rounds 045 / 046 / 049 remain the relevant
-fit/evaluation implementations, and 051 / 055 remain historical baseline readouts and comparisons in
-their original time scope. The registered baseline is in `docs/CURRENT_BASELINE.md` and
-`docs/current_baseline.json`.
+**The latest result is round 057** (`docs/PRO_REVIEW_RESULTS_057.md`), a development-validation check
+of fixed copy-link splices followed by a complete frozen training-only candidate scan. Round 056
+(`docs/PRO_REVIEW_RESULTS_056.md`) remains the preceding exposure-definition comparison and source of
+the fitted endpoints. Both leave the registered baseline unchanged. Rounds 045 / 046 / 049 remain the
+relevant fit/evaluation implementations, and 051 / 055 remain historical baseline readouts and
+comparisons in their original time scope. The registered baseline is in `docs/CURRENT_BASELINE.md`
+and `docs/current_baseline.json`.
 
 This snapshot is provided **for reading only**. Neither the reference structure nor any baseline
 coordinate file is included, and none is needed to review the code, the objective definitions or the
@@ -182,6 +185,20 @@ be isolated because every read identifier is `.`, and the two seeds are optimiza
 not biological replicates. Read [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md) before the
 round-056 code and machine results.
 
+### 4.3 Latest result: round 057 copy-link validation and search
+
+Round 057 first supplies the development-validation score omitted from the round-056 fixed-splice
+readout: both `G-original` seeds reject all `8/8` fixed copy-link disruptions, with median increases of
+`0.00904292036645149` and `0.00929004905928732` nat per development off-diagonal contact. The
+round-056 values `0.00916178115686872` and `0.00948635806784548` are training medians, not development
+medians. This is the same previously viewed 20% record fold, not a fresh test.
+
+The subsequent frozen training-only scan retained all 1,992 candidates per seed. Both global argmins
+failed exact full-G acceptance and became no-ops, so the preregistered Control/Swap continuation was
+not triggered. Paired gains and structural differences are therefore `NA`, not zero, and no claim of
+inferiority to continued optimization is supported. Read
+[`PRO_REVIEW_RESULTS_057.md`](PRO_REVIEW_RESULTS_057.md) before the round-057 source and evidence.
+
 Reproduction status: `055/eval/validation.json` records **12/12 PASS**, including value-by-value
 agreement (max abs diff `< 1e-9`) with the frozen 049 `r2_per_chromosome.tsv`, the frozen 051
 `per_chromosome.tsv`, and the 053 Spearman table, using a **independently written evaluation script**
@@ -248,12 +265,12 @@ From `test_res/055-.../README.md` §7 and `test_res/049-.../README.md` §6.4:
 
 | Check | Result |
 | --- | --- |
-| Byte identity of copied sources | Original snapshot: 754 workspace-derived files (753 byte-identical, one rebuilt review record). Round 056 adds **42 byte-identical workspace files**, verified after the final annotation revision; mismatch = 0. |
+| Byte identity of copied sources | Original snapshot: 754 workspace-derived files (753 byte-identical, one rebuilt review record). Round 056 adds **42 byte-identical workspace files** and round 057 adds **25 byte-identical workspace files**; mismatch = 0 for both additions. Both round-057 1,992-row scan TSV files are complete and hash-match their manifests. |
 | Forbidden data files | no `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, `*.gz`, `*.pairs*`, checkpoint or raw-data file present; no file exceeds 1.2 MB |
 | Binary exceptions | exactly 5 PNG figures: two from round 055 and three from round 056 |
 | Credential scan | 0 hits: no `ghp_`/`gho_`/`ghs_`/`github_pat_`, no private keys, no cloud keys, no `.env`/`.netrc`/`*.pem`, no secret assignments; no credential value was printed at any point |
-| Python syntax | 507 files parsed with `ast.parse`; three lightweight CPU fixture modules passed — **no training, fitting or scientific evaluation was executed** |
-| Import closure | 507 files parsed; **0 unresolved local imports** after accounting for the declared `frozen_037` and retained `scratch` dynamic roots. Every other import is stdlib, a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`, `threadpoolctl`), or resolves inside the snapshot. |
+| Python syntax | 513 files parsed with `ast.parse`; the six new round-057 modules also imported with `PYTHONDONTWRITEBYTECODE=1`. Three previously published lightweight CPU fixture modules passed — **no training, fitting or scientific evaluation was executed for this publication**. |
+| Import closure | The previous 507-file closure had **0 unresolved local imports** after accounting for the declared dynamic roots; all six new round-057 modules resolve and import against that closure. Every other import is stdlib, a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`, `threadpoolctl`), or resolves inside the snapshot. |
 | Dynamic `sys.path` chain | `049/source/frozen_imports.py` present, and all 12 modules it injects (`045/source/frozen_035`, `frozen_037`, `frozen_pr`, root `pr`) are present |
 | Absolute paths | 128 files contain `/mnt/ssd/zliu/...` or `/work/phase...`; retained deliberately (see README §8) — provenance, not runnable configuration |
 

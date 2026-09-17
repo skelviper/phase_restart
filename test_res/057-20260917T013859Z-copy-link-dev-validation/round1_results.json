@@ -1,0 +1,220 @@
+{
+  "decision_logic_correction": {
+    "acceptance_gate_basis": "stored exact full-G checked best deltas",
+    "additional_gpu_calls": 0,
+    "candidate_argmin_basis": "cached_exact_incremental_full_J",
+    "formal_scan_values_changed": false,
+    "status": "applied_without_rescan"
+  },
+  "development_opened": false,
+  "paired_training_triggered": false,
+  "reference_opened": false,
+  "results": [
+    {
+      "accepted": false,
+      "base": {
+        "K0": -696329.173116701,
+        "Ncis": 557120.0,
+        "Ninter": 454927.0,
+        "Noff": 1012047.0,
+        "Nraw": 1363173.0,
+        "Zall": 7756.670400536574,
+        "Zcis": 4274.088989597443,
+        "Zinter": 3482.581410939131,
+        "conditional_no_K0_raw": 13641426.860407481,
+        "conditional_with_K0_raw": 12945097.68729078,
+        "count_nll_per_raw_record": 9.502585623537106,
+        "count_nll_raw": 12953668.152193947,
+        "diag_profiled_nll_raw": 8570.464903166332,
+        "objective_fg_calls": 1,
+        "observed_log_rate_offdiag": -4577221.763518643,
+        "offdiag_data_nat_per_contact": 12.791004456602094,
+        "offdiag_data_no_K0_nat_per_contact": 13.479044807610201,
+        "p": 0.24035967246787707,
+        "pair_kernel_forward_passes": 1,
+        "penalties_raw": {
+          "bend": 1.0600433124663755,
+          "bond": 0.0017929227951488204,
+          "p_prior": 0.00017005290531591362,
+          "repulsion": 0.00013718222835888545
+        },
+        "penalties_weighted": {
+          "bend": 0.010600433124663756,
+          "bond": 0.0017929227951488204,
+          "p_prior": 0.00017005290531591362,
+          "repulsion": 0.00013718222835888545
+        },
+        "regularizer_full_pair_passes": 1,
+        "total_normalized": 9.515286214590594
+      },
+      "best": {
+        "bead_count": 22,
+        "bead_end": 152,
+        "bead_start": 130,
+        "candidate_id": "chr5:130-152:suffix",
+        "candidate_order": 642,
+        "chromosome": "chr5",
+        "chromosome_index": 4,
+        "delta_Zall": 69.12378737187106,
+        "delta_bend": 0.132825398158602,
+        "delta_bond": 0.057285263286397714,
+        "delta_count_Nraw": 0.0035478624511810918,
+        "delta_full_J": 0.06216137971916483,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0,
+        "delta_sum_C_log_rate": 4142.586261371591,
+        "end_bp": 151834684,
+        "rank_full_J": 1,
+        "start_bp": 130000000,
+        "type": "suffix",
+        "updated_cis_pairs": 2860
+      },
+      "best_full_verification_abs_errors": {
+        "delta_bend": 1.6653345369377348e-16,
+        "delta_bond": 1.3877787807814457e-17,
+        "delta_count_Nraw": 6.795779217139142e-16,
+        "delta_full_J": 1.1934897514720433e-15,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0
+      },
+      "best_full_verification_actual": {
+        "delta_bend": 0.13282539815860184,
+        "delta_bond": 0.05728526328639773,
+        "delta_count_Nraw": 0.0035478624511817713,
+        "delta_full_J": 0.06216137971916602,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0
+      },
+      "candidate_count": 1992,
+      "candidate_manifest_sha256": "89d881e9daec9f14df3385786a9e74c72e4051acebf38b9bb3a0577dea23c636",
+      "candidate_scan_cpu_wall_seconds": 0.14991418551653624,
+      "decision_basis": "exact_full_G_checked",
+      "decision_reason": "no_op_best_full_J_gate",
+      "partial_kernel_pairs": 184016,
+      "scan_tsv": "test_res/057-20260917T013859Z-copy-link-dev-validation/scan_round1_seed560101.tsv",
+      "scan_tsv_sha256": "fef76c510dfd06e4b2d9f32881b55810d43473474ffa1b88e76f0df41d760bb3",
+      "seed": 560101,
+      "source_component_errors": {
+        "bend": 0.0,
+        "bond": 0.0,
+        "count": 1.7763568394002505e-15,
+        "p_prior": 0.0,
+        "repulsion": 1.3552527156068805e-19,
+        "total": 1.7763568394002505e-15
+      },
+      "whole_chr_errors": {
+        "Zall": 0.0,
+        "count_nll_per_raw_record": 0.0,
+        "penalty_bend": 0.0,
+        "penalty_bond": 0.0,
+        "penalty_p_prior": 0.0,
+        "penalty_repulsion": 0.0,
+        "total_normalized": 0.0
+      }
+    },
+    {
+      "accepted": false,
+      "base": {
+        "K0": -696329.173116701,
+        "Ncis": 557120.0,
+        "Ninter": 454927.0,
+        "Noff": 1012047.0,
+        "Nraw": 1363173.0,
+        "Zall": 7932.5095412869405,
+        "Zcis": 4383.746704508315,
+        "Zinter": 3548.7628367786256,
+        "conditional_no_K0_raw": 13656965.936638568,
+        "conditional_with_K0_raw": 12960636.763521867,
+        "count_nll_per_raw_record": 9.513984819553375,
+        "count_nll_raw": 12969207.228425033,
+        "diag_profiled_nll_raw": 8570.464903166332,
+        "objective_fg_calls": 1,
+        "observed_log_rate_offdiag": -4570074.513595036,
+        "offdiag_data_nat_per_contact": 12.80635856192634,
+        "offdiag_data_no_K0_nat_per_contact": 13.494398912934447,
+        "p": 0.243843226710218,
+        "pair_kernel_forward_passes": 1,
+        "penalties_raw": {
+          "bend": 1.0580488899695655,
+          "bond": 0.001804408764517189,
+          "p_prior": 0.00016907363258966836,
+          "repulsion": 0.000124359839217324
+        },
+        "penalties_weighted": {
+          "bend": 0.010580488899695656,
+          "bond": 0.001804408764517189,
+          "p_prior": 0.00016907363258966836,
+          "repulsion": 0.000124359839217324
+        },
+        "regularizer_full_pair_passes": 1,
+        "total_normalized": 9.526663150689394
+      },
+      "best": {
+        "bead_count": 123,
+        "bead_end": 183,
+        "bead_start": 60,
+        "candidate_id": "chr2:60-183:suffix",
+        "candidate_order": 202,
+        "chromosome": "chr2",
+        "chromosome_index": 1,
+        "delta_Zall": 91.15616787670311,
+        "delta_bend": 0.03793272223966615,
+        "delta_bond": 0.01123723697773285,
+        "delta_count_Nraw": 0.004579903299605638,
+        "delta_full_J": 0.01619646749973515,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0,
+        "delta_sum_C_log_rate": 5320.388929526098,
+        "end_bp": 182113224,
+        "rank_full_J": 1,
+        "start_bp": 60000000,
+        "type": "suffix",
+        "updated_cis_pairs": 7380
+      },
+      "best_full_verification_abs_errors": {
+        "delta_bend": 2.220446049250313e-16,
+        "delta_bond": 1.734723475976807e-18,
+        "delta_count_Nraw": 1.58640461878079e-15,
+        "delta_full_J": 2.3141211169530607e-15,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0
+      },
+      "best_full_verification_actual": {
+        "delta_bend": 0.03793272223966593,
+        "delta_bond": 0.011237236977732852,
+        "delta_count_Nraw": 0.004579903299607224,
+        "delta_full_J": 0.016196467499737466,
+        "delta_p_prior": 0.0,
+        "delta_repulsion": 0.0
+      },
+      "candidate_count": 1992,
+      "candidate_manifest_sha256": "50d7f4ec188c36af1d6fd4cf5d04015221789b2ed771da0323f60a5786aabddd",
+      "candidate_scan_cpu_wall_seconds": 0.09520479291677475,
+      "decision_basis": "exact_full_G_checked",
+      "decision_reason": "no_op_best_full_J_gate",
+      "partial_kernel_pairs": 184016,
+      "scan_tsv": "test_res/057-20260917T013859Z-copy-link-dev-validation/scan_round1_seed560102.tsv",
+      "scan_tsv_sha256": "ec378d4ea69c21cb1aa5a4a7b164b2652ecdf86ff88e4ff46d46f3232dd7eac4",
+      "seed": 560102,
+      "source_component_errors": {
+        "bend": 2.220446049250313e-16,
+        "bond": 2.168404344971009e-19,
+        "count": 0.0,
+        "p_prior": 0.0,
+        "repulsion": 1.0842021724855044e-19,
+        "total": 0.0
+      },
+      "whole_chr_errors": {
+        "Zall": 0.0,
+        "count_nll_per_raw_record": 0.0,
+        "penalty_bend": 0.0,
+        "penalty_bond": 0.0,
+        "penalty_p_prior": 0.0,
+        "penalty_repulsion": 2.710505431213761e-20,
+        "total_normalized": 0.0
+      }
+    }
+  ],
+  "schema": "p9016-057-B-round1-v1",
+  "status": "complete"
+}

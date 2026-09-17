@@ -8,10 +8,11 @@ larger private workspace, not a released software package.
 - **Repository:** https://github.com/skelviper/phase_restart
 - **Prepared:** 2026-09-16
 - **Source workspace:** `/mnt/ssd/zliu/phase_restart` (private; not included)
-- **Latest results:** [`docs/PRO_REVIEW_RESULTS_056.md`](docs/PRO_REVIEW_RESULTS_056.md) — the
-  preregistered exposure comparison, four endpoint table, adoption decision, and limitations.
+- **Latest results:** [`docs/PRO_REVIEW_RESULTS_057.md`](docs/PRO_REVIEW_RESULTS_057.md) — the
+  copy-link development validation, complete frozen candidate scan, no-op decision, and limitations.
 - **Reviewer guide:** [`docs/GPT_PRO_REVIEW.md`](docs/GPT_PRO_REVIEW.md) — definitions, denominators,
-  limits, evidence map and a copy-paste review prompt. Read the 056 report first, then this guide.
+  limits, evidence map and a copy-paste review prompt. Read the 057 report first, then this guide;
+  the 056 report remains the preceding optimization comparison.
 - **Git history:** none. This snapshot starts from a single root commit and deliberately does **not**
   carry the upstream repository's 6-commit history, which contained the raw contact file.
 
@@ -37,7 +38,8 @@ Three groups of files must be distinguished:
    byte-for-byte and verified against source SHA256. The research code was **not** reformatted,
    re-pathed, or otherwise touched, because frozen-hash checks in the code assert those exact bytes.
 2. **New organising files, added for this snapshot.** `README.md` (this file), `.gitignore`,
-   `docs/GPT_PRO_REVIEW.md`, and `docs/PRO_REVIEW_RESULTS_056.md` are written for external review; they
+   `docs/GPT_PRO_REVIEW.md`, `docs/PRO_REVIEW_RESULTS_056.md`, and
+   `docs/PRO_REVIEW_RESULTS_057.md` are written for external review; they
    do not replace frozen workspace documents. The two legacy copies `docs/legacy_workspace_README.md` and `docs/legacy_workspace_AGENTS.md` are
    byte-identical copies of the workspace `README.md` and `AGENTS.md` under new paths, so that this
    snapshot's `README.md` can be the English review entry point without destroying the original text.
@@ -62,7 +64,8 @@ docs/                        protocol, plans, measured facts, audits, Chinese re
   CURRENT_BASELINE.md        the registered current working baseline
   current_baseline.json      machine-readable baseline record (rebuilt for this snapshot)
   GPT_PRO_REVIEW.md          reviewer guide: definitions, metrics, read order, review prompt
-  PRO_REVIEW_RESULTS_056.md  latest preregistered exposure comparison and decision
+  PRO_REVIEW_RESULTS_057.md  latest copy-link development validation and candidate scan
+  PRO_REVIEW_RESULTS_056.md  preceding preregistered exposure comparison and decision
   legacy_workspace_README.md the original Chinese workspace README, kept as historical record
   legacy_workspace_AGENTS.md the original Chinese workspace rules, kept as historical record
 test_res/                    one directory per formal run; source, config, protocol and readouts only
@@ -210,24 +213,26 @@ their opening framing as historical, not as present state.
 | `docs/legacy_workspace_README.md`, `docs/legacy_workspace_AGENTS.md` | The original workspace README and rules at snapshot time (Chinese) | Partially stale: the legacy README still names the extension endpoint as the working baseline |
 | `docs/MEASURED_FACTS.md`, `docs/POST020_*`, `docs/PLAN-*`, `docs/RECONSTRUCTION_V1_*` | Evidence log and stage plans, each anchored to its own round | Not a description of the latest state |
 
-**The latest result is round 056**, documented in `docs/PRO_REVIEW_RESULTS_056.md`. It is a frozen
-80/20 record-split comparison of two exposure definitions and does **not** replace the registered
-full-data baseline. The baseline remains `P9016-046-G-random-base-1Mb`; rounds 045 / 046 / 049 are
-fit/evaluation implementations, while 051 / 055 remain historical baseline readouts and comparison
-records in their original time scope.
+**The latest result is round 057**, documented in `docs/PRO_REVIEW_RESULTS_057.md`. It adds
+development-validation scoring of the round-056 `G-original` copy-link splices and a complete frozen
+training-only candidate scan; it does **not** replace the registered full-data baseline. Round 056
+remains the preceding 80/20 record-split exposure comparison. The baseline remains
+`P9016-046-G-random-base-1Mb`; rounds 045 / 046 / 049 are fit/evaluation implementations, while 051 /
+055 remain historical baseline readouts and comparison records in their original time scope.
 
 ## 7. Read order
 
-1. `docs/PRO_REVIEW_RESULTS_056.md` — latest preregistered comparison, endpoint table, decision, and limits.
+1. `docs/PRO_REVIEW_RESULTS_057.md` — latest copy-link development validation, complete candidate scan, decision, and limits.
 2. `docs/GPT_PRO_REVIEW.md` — definitions, evidence map, limits, and the review prompt.
-3. `docs/CURRENT_BASELINE.md`, `docs/current_baseline.json` — the unchanged registered baseline.
-4. `docs/PROJECT_CONTEXT.md` — stage history and applicable scope (**historical context only**).
-5. `docs/MEASURED_FACTS.md` — evidence log and protocol corrections.
-6. `docs/legacy_workspace_AGENTS.md` — original project rules: scientific boundaries and reporting floor (Chinese, partly stale).
-7. Round 056 code: `test_res/056-.../code/`, plus `pr/solver_state.py` and `tests/test_solver_state.py`.
-8. Earlier chain: `test_res/049-.../source/max_contact_objective.py`, `test_res/045-.../source/*`,
+3. `docs/PRO_REVIEW_RESULTS_056.md` — preceding exposure comparison and source endpoint context.
+4. `docs/CURRENT_BASELINE.md`, `docs/current_baseline.json` — the unchanged registered baseline.
+5. `docs/PROJECT_CONTEXT.md` — stage history and applicable scope (**historical context only**).
+6. `docs/MEASURED_FACTS.md` — evidence log and protocol corrections.
+7. `docs/legacy_workspace_AGENTS.md` — original project rules: scientific boundaries and reporting floor (Chinese, partly stale).
+8. Round 057 code: `test_res/057-.../code/`; round 056 code: `test_res/056-.../code/`, plus `pr/solver_state.py` and `tests/test_solver_state.py`.
+9. Earlier chain: `test_res/049-.../source/max_contact_objective.py`, `test_res/045-.../source/*`,
    and `test_res/055-.../source/evaluate_review.py`.
-9. Readouts: round 056 `results/` and `reference_eval/`, then historical round 055 `eval/`.
+10. Readouts: round 057 selected text evidence, round 056 `results/` and `reference_eval/`, then historical round 055 `eval/`.
 
 ## 8. Portability limits (intentional, do not "fix" blindly)
 
@@ -252,14 +257,16 @@ records in their original time scope.
 
 ## 9. Snapshot integrity
 
-- **802 files, ~17.5 MiB** of content (excluding `.git`).
+- **829 files, ~19.5 MiB** of content (excluding `.git`, including the round-057 publication receipt).
 - The original snapshot inventory contained 754 workspace-derived files (753 byte-identical and one
   rebuilt review record, `docs/current_baseline.json`). Round 056 adds 42 byte-identical workspace
-  files. Six organising files are review-only: `README.md`, `.gitignore`,
-  `docs/GPT_PRO_REVIEW.md`, `docs/PRO_REVIEW_RESULTS_056.md`, and the two renamed legacy copies.
+  files, and round 057 adds 25 byte-identical workspace files. Eight organising files are review-only:
+  `README.md`, `.gitignore`, `docs/GPT_PRO_REVIEW.md`, `docs/PRO_REVIEW_RESULTS_056.md`,
+  `docs/PRO_REVIEW_RESULTS_057.md`, the round-057 publication receipt, and the two renamed legacy copies.
 - Byte identity of the 42 round-056 additions was verified against source SHA256 after the final plot
-  annotation revision: 0 mismatches.
-- **Dependency closure:** all 507 Python files parse; every import that is neither standard library
+  annotation revision: 0 mismatches. Byte identity of all 25 selected round-057 source files was also
+  verified: 0 mismatches. Both 1,992-row candidate scans are complete and hash-match their manifests.
+- **Dependency closure:** all 513 Python files parse; every import that is neither standard library
   nor a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`,
   `threadpoolctl`) resolves inside the snapshot after accounting for the two declared dynamic roots
   (`frozen_037` and the one retained `scratch` dependency) — 0 unresolved local imports.
@@ -271,7 +278,9 @@ records in their original time scope.
 - Credential scan: no tokens, keys, `.env` files or secret assignments were found in the copied set.
   The only sensitive content is local absolute paths, reported in §8. No credential value was ever
   printed during preparation.
-- No file exceeds 1.2 MB; the only binaries are the five intentionally included PNG figures.
+- No file exceeds 1.2 MB. The largest round-057 files are the complete candidate JSON files (574,200
+  bytes each) and scan TSV files (384,676 / 384,725 bytes); they are text evidence, not truncated data
+  payloads. The only binaries are the five intentionally included PNG figures.
 - No root `LICENSE` file is added: the research code's licensing is the owner's decision, and no
   authorship claim is implied. Vendored third-party headers retain their original notices
   (klib `khash.h`/`ksort.h`/`kseq.h`/`klist.h`/`kavl.h`: MIT, Attractive Chaos;

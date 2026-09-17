@@ -1,0 +1,16 @@
+{
+  "completed_at_utc": "2026-09-17T01:42:46.943005+00:00",
+  "experiment_A": "PASS",
+  "experiment_A_scientific_status": "threshold_passed",
+  "experiment_B": "not_started",
+  "formal_contact_fullgrid_forwards": 18,
+  "host_wall_seconds": 2.475594189018011,
+  "l2_supported": false,
+  "l3_claimed": false,
+  "phase_opened": false,
+  "reference_opened": false,
+  "schema": "p9016-copy-link-dev-validation-a-terminal-v1",
+  "started_at_utc": "2026-09-17T01:42:44.467071+00:00",
+  "status": "complete",
+  "training_fg_calls": 0
+}

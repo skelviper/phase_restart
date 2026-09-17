@@ -1,0 +1,96 @@
+{
+  "candidate_generation_count": 1992,
+  "candidate_manifests": {
+    "560101": {
+      "count": 1992,
+      "path": "test_res/057-20260917T013859Z-copy-link-dev-validation/candidates_seed560101.json",
+      "sampling": {
+        "original_count": 1992,
+        "sampled": false,
+        "selected_count": 1992
+      },
+      "sha256": "89d881e9daec9f14df3385786a9e74c72e4051acebf38b9bb3a0577dea23c636"
+    },
+    "560102": {
+      "count": 1992,
+      "path": "test_res/057-20260917T013859Z-copy-link-dev-validation/candidates_seed560102.json",
+      "sampling": {
+        "original_count": 1992,
+        "sampled": false,
+        "selected_count": 1992
+      },
+      "sha256": "50d7f4ec188c36af1d6fd4cf5d04015221789b2ed771da0323f60a5786aabddd"
+    }
+  },
+  "checks": [
+    {
+      "delta_full_cached": -0.0029477516517145592,
+      "delta_full_direct": -0.002947751651715347,
+      "incremental_full_G_abs_error": 7.875644580934704e-16,
+      "inter_rate_max_abs_error": 1.1102230246251565e-16,
+      "p": 0.24,
+      "unordered_pointsets": true,
+      "whole_chromosome_full_J_abs_error": 0.0
+    },
+    {
+      "delta_full_cached": -0.0030967995782861767,
+      "delta_full_direct": -0.0030967995782860136,
+      "incremental_full_G_abs_error": 1.6306400674181987e-16,
+      "inter_rate_max_abs_error": 1.1102230246251565e-16,
+      "p": 0.8,
+      "unordered_pointsets": true,
+      "whole_chromosome_full_J_abs_error": 0.0
+    }
+  ],
+  "development_opened": false,
+  "export": {
+    "bin_size": 1000000,
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/057-20260917T013859Z-copy-link-dev-validation/fixtures/state/export.3dg",
+    "rows": 14,
+    "sha256": "2e4af467e0586b4edadb87a7aab75b454c642dc06ed684427c32e67bedc32a2a",
+    "track_count": 4
+  },
+  "mask": {
+    "absent": 0,
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/057-20260917T013859Z-copy-link-dev-validation/fixtures/state/presence_mask.npz",
+    "present": 14,
+    "sha256": "61178b6fcaa0e02b9416abfc82ccbde578cf47086e8675287869349d8895f3b3",
+    "shape": [
+      2,
+      7
+    ]
+  },
+  "reference_opened": false,
+  "schema": "p9016-057-B-fixture-v1",
+  "solver_sha_unchanged_after_export": true,
+  "sphere_max_radius": 0.3057829605457565,
+  "state": {
+    "consistency_atol": 1e-12,
+    "finite": true,
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/057-20260917T013859Z-copy-link-dev-validation/fixtures/state/solver_state.npz",
+    "q_p_abs": 2.7755575615628914e-17,
+    "readback": {
+      "consistency_atol": 1e-12,
+      "finite": true,
+      "q_p_abs": 2.7755575615628914e-17,
+      "shape": [
+        2,
+        7,
+        3
+      ],
+      "sphere_coordinate_max_abs": 0.0,
+      "theta_q_abs": 0.0,
+      "theta_raw_y_max_abs": 0.0
+    },
+    "sha256": "de0452c97451e7db5961bf4fdc25adf4ce26872790e4d7b99a3f84f301b1e7a4",
+    "shape": [
+      2,
+      7,
+      3
+    ],
+    "sphere_coordinate_max_abs": 0.0,
+    "theta_q_abs": 0.0,
+    "theta_raw_y_max_abs": 0.0
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,97 @@
+{
+  "candidate_rows_scored": 3984,
+  "entries": [
+    {
+      "gpu_event_seconds": 0.5535748901367188,
+      "host_wall_seconds": 0.7022462822496891,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "round1_base_full_G",
+      "seed": 560101
+    },
+    {
+      "gpu_event_seconds": 0.2838270568847656,
+      "host_wall_seconds": 0.2838598219677806,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "initial_whole_chr_full_G",
+      "seed": 560101
+    },
+    {
+      "gpu_event_seconds": 0.18452978515625,
+      "host_wall_seconds": 0.1845565838739276,
+      "logical_fullgrid": 0,
+      "partial_kernel_pairs": 184016,
+      "physical_sweeps": 0,
+      "role": "round1_partial_cis_cache",
+      "seed": 560101
+    },
+    {
+      "gpu_event_seconds": 0.28038290405273436,
+      "host_wall_seconds": 0.28048105724155903,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "round1_best_full_G",
+      "seed": 560101
+    },
+    {
+      "gpu_event_seconds": 0.280559326171875,
+      "host_wall_seconds": 0.2805976867675781,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "round1_base_full_G",
+      "seed": 560102
+    },
+    {
+      "gpu_event_seconds": 0.278764404296875,
+      "host_wall_seconds": 0.2787962416186929,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "initial_whole_chr_full_G",
+      "seed": 560102
+    },
+    {
+      "gpu_event_seconds": 0.18622006225585938,
+      "host_wall_seconds": 0.1862465664744377,
+      "logical_fullgrid": 0,
+      "partial_kernel_pairs": 184016,
+      "physical_sweeps": 0,
+      "role": "round1_partial_cis_cache",
+      "seed": 560102
+    },
+    {
+      "gpu_event_seconds": 0.28658868408203125,
+      "host_wall_seconds": 0.28665101528167725,
+      "logical_fullgrid": 1,
+      "physical_sweeps": 2,
+      "role": "round1_best_full_G",
+      "seed": 560102
+    }
+  ],
+  "fixture_cpu_not_1Mb_fullgrid": true,
+  "gpu_event_seconds_sum": 2.3344471130371094,
+  "host_wall_seconds_sum": 2.4834352554753423,
+  "jobs": [
+    {
+      "exit_code": 0,
+      "job_id": "bash-124",
+      "role": "fixture_and_candidates",
+      "status": "completed"
+    },
+    {
+      "exit_code": 0,
+      "job_id": "bash-125",
+      "role": "round1_scan",
+      "status": "completed"
+    }
+  ],
+  "logical_1Mb_fullgrid_calls": 6,
+  "paired_training_fg_cap_unused": 1200,
+  "partial_cis_kernel_pairs": 368032,
+  "physical_1Mb_fullgrid_cap": 32,
+  "physical_1Mb_fullgrid_sweeps": 12,
+  "schema": "p9016-057-B-ledger-v1",
+  "status": "complete",
+  "timing_note": "CUDA event and host wall are measured separately; CPU candidate scan wall is stored per seed in round1_results.json",
+  "training_fg": 0
+}

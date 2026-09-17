@@ -1,0 +1,121 @@
+{
+  "schema": "p9016-057-copy-link-search-b-v1",
+  "scope": "experiment_B_then_paired_if_triggered",
+  "source_run": "test_res/056-20260916T152353Z-pro-review-experiments",
+  "condition": "G-original",
+  "seeds": [560101, 560102],
+  "bin_size_bp": 1000000,
+  "candidate_generation": {
+    "coordinate_basis": "full header grid and true chromosome lengths",
+    "start_step_bp": 5000000,
+    "types": ["suffix", "5M", "10M", "20M"],
+    "length_bp": {"5M": 5000000, "10M": 10000000, "20M": 20000000},
+    "interval": "half-open genomic [start,end), selected by searchsorted over actual locus bp",
+    "exclude": ["empty bead interval", "whole-chromosome gauge"],
+    "deduplicate_key": ["chromosome", "bead_start", "bead_end"],
+    "deduplicate_type_priority": ["suffix", "5M", "10M", "20M"],
+    "sort": ["header chromosome index", "start_bp", "end_bp", "type priority"],
+    "candidate_cap": 2000,
+    "if_over_cap": "80 chromosome-by-type strata, round-robin balanced quota, within-stratum BLAKE2b ordering",
+    "sampling_seed_by_initialization": {"560101": 570201, "560102": 570202},
+    "same_candidate_list_across_rounds": true,
+    "score_or_reference_driven_sampling": false
+  },
+  "cache": {
+    "model": "G",
+    "delta_count_normalized": "(Noff_train*log1p(deltaZ/Zall_base)-delta_sum_C_log_rate)/Nraw_train",
+    "normalizer": "Zall=Zcis+Zinter",
+    "affected_pairs": "cis pairs with exactly one endpoint in interval",
+    "includes_zero_count_cis_pairs": true,
+    "implementation": "per-chromosome upper-triangle original/single-endpoint-swapped rate delta matrices with 2D prefix sums",
+    "p_assumption": "none",
+    "rebuild_after_optimization": true
+  },
+  "regularizers": {
+    "weights": {"count": 1.0, "bond": 1.0, "repulsion": 1.0, "bend": 0.01, "p_prior": 1.0},
+    "bond": "028 hinge squared outside distance/l0 [0.75,1.25], global two-copy adjacent-edge denominator",
+    "bend": "028 squared second difference/l0^2, global two-copy triple denominator",
+    "repulsion_delta": 0.0,
+    "p_prior_delta": 0.0,
+    "local_recompute": "candidate chromosome raw bond/bend numerator; denominator remains whole genome"
+  },
+  "selection": {
+    "rank": "minimum delta_full_J over all candidates, exact ties by frozen candidate order",
+    "accept_after_rank": {"delta_full_J_le": -1e-8, "delta_count_Nraw_le": 1e-10},
+    "no_secondary_candidate": true,
+    "no_op_on_gate_failure": true,
+    "training_only": true
+  },
+  "fixture": {
+    "device": "CPU",
+    "two_chromosomes": true,
+    "nonuniform_exposure": true,
+    "includes_cis_inter_diag": true,
+    "p_values": [0.24, 0.8],
+    "incremental_vs_original_full_G_abs_tol": 1e-9,
+    "checks": ["whole-chromosome full-J invariance", "local unordered pointsets", "inter rates invariant", "solver raw/theta/q/x consistency", "sphere domain", "export leaves solver SHA unchanged"]
+  },
+  "fullgrid_budget": {
+    "physical_sweeps_cap": 32,
+    "logical_calls_are_separate": true,
+    "cache_base_full_G": {"max_logical": 4, "physical_per_call": 2},
+    "round_best_full_G": {"max_logical": 4, "physical_per_call": 2},
+    "initial_whole_chromosome_full_G": {"logical": 2, "physical_per_call": 2},
+    "final_train_full_G": {"max_logical": 4, "physical_per_call": 2},
+    "final_dev_count_only": {"max_logical": 4, "physical_per_call": 1},
+    "partial_cis_kernel_pairwork_separate": true,
+    "fixture_not_counted_as_1Mb": true
+  },
+  "paired_training": {
+    "trigger": "at least one seed accepts first-round swap",
+    "arms": ["control", "swap"],
+    "segments_per_arm": 2,
+    "fg_cap_per_segment": 150,
+    "total_fg_cap": 1200,
+    "optimizer": "056 run_budgeted_lbfgs_no_extra SciPy L-BFGS-B",
+    "gtol": 1e-6,
+    "ftol": 0.0,
+    "maxls": 20,
+    "fixed_train_exposure": true,
+    "last_accepted_finite_endpoint": true,
+    "control": "two consecutive 150-FG restarts",
+    "swap": "round1 selected/no-op, 150 FG, round2 cache scan selected/no-op, 150 FG"
+  },
+  "final_adoption_gate": {
+    "per_seed_dev_gain_control_minus_swap_min": 0.001,
+    "modified_chromosome_macro_min_margin_delta": ">1e-10 for each seed; empty set is not_met",
+    "all20_macro_same_delta_min": -0.02,
+    "optimization_imbalance": "one converged and other not, or canonical gradient ratio >10 (floor 1e-12) with either >1e-6",
+    "optimization_imbalance_effect": "not recommended / unclear",
+    "no_l2_or_l3_claim": true
+  },
+  "final_evaluation": {
+    "only_if_paired_training": true,
+    "hash_all_four_state_mask_exports_before_dev_or_reference": true,
+    "development_validation_Noff": 253067,
+    "development_exposure": "train-fixed",
+    "reference_mask": "frozen 055 legacy support",
+    "reference_pairs": 157529,
+    "chromosomes_equal_weight": 20,
+    "mapping": "one endpoint-specific best whole-chromosome mapping per chromosome",
+    "metrics": ["A_mat", "A_pat", "B_mat", "B_pat", "same", "cross", "contrast", "margin_A", "margin_B", "min_margin"]
+  },
+  "frozen_hashes": {
+    "train_aggregate": "517c000e8a1e53d73c17b13d4726d8209557c9123cee0a360be91baa74172f48",
+    "dev_contacts": "917fc0ad6716b03d99c16ac7b05b766eb363e089fc6ff514a830edcacf131a96",
+    "endpoint_560101": "c54021db76793e0751ecfef63c1e4204a39003521e33f84e30bbd41af9d8413e",
+    "endpoint_560102": "2440641f208f0460bb6e12a757aec2c8ea1d71be694ca963b21d0179d9e6983b",
+    "nonref_core": "4cf01e5e8da54258a239a389419a472f10a3ac97200bbb122ca43dfcfb6cfb1d",
+    "shared_capture_objective": "c707bfd15d316506b99371b5c407c6ae7581812e8aeb68fc3da8b6f594d885dc",
+    "visibility_profile_base": "677b06fd56ff2b9ea973c54eaef03c969e1320a6df0ab9038843a2f9fd46b70c",
+    "gpu_variant_backend": "0dc2d279c4fc5c7f3fd24a0b22780a838e3a9a15844a21eea12117f26ece932d",
+    "gpu_backend_028": "67d5231a9a8b8b1609dab369304df4c973015b90039a4aeb88ee2b047fea1c6f",
+    "budget_runner": "a13af757b58b2eeda4878a4c67f7a261c8a0a28aa366435ccc8ec406a7524bea",
+    "solver_state": "deaf000881c1ea7dbac353653f4568ab04bc5506e7a8c35d843f854e56694425",
+    "mask": "9c551c6a4586a9221547f55f7a47211fa6a57a77e1a3b5771667cac271ef28d9",
+    "reference": "1ca82ef4785bc800d9b7ca5fadafa8de9ff028d5f5e0df41183ad087217cea29"
+  },
+  "reference_opened_during_selection": false,
+  "development_opened_during_selection": false,
+  "historical_runs_modified": false
+}

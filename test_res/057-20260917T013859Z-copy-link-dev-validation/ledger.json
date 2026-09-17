@@ -1,0 +1,194 @@
+{
+  "calls": [
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 1,
+      "gpu_event_seconds": 0.2838932189941406,
+      "host_wall_seconds": 0.42097656335681677,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "original",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 2,
+      "gpu_event_seconds": 0.10127500915527343,
+      "host_wall_seconds": 0.10130527801811695,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr1-065",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 3,
+      "gpu_event_seconds": 0.10041951751708984,
+      "host_wall_seconds": 0.10044528637081385,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr1-130",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 4,
+      "gpu_event_seconds": 0.10525084686279297,
+      "host_wall_seconds": 0.10527634155005217,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr8-043",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 5,
+      "gpu_event_seconds": 0.10376873779296875,
+      "host_wall_seconds": 0.10379503201693296,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr8-086",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 6,
+      "gpu_event_seconds": 0.1036464614868164,
+      "host_wall_seconds": 0.10367253888398409,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr19-020",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 7,
+      "gpu_event_seconds": 0.10059766387939453,
+      "host_wall_seconds": 0.10062533896416426,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chr19-041",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 8,
+      "gpu_event_seconds": 0.11163645172119141,
+      "host_wall_seconds": 0.11166243348270655,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chrX-057",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 9,
+      "gpu_event_seconds": 0.10256175994873047,
+      "host_wall_seconds": 0.10258746147155762,
+      "regularizer_fullgrid": 0,
+      "seed": 560101,
+      "state_id": "splice-chrX-114",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 10,
+      "gpu_event_seconds": 0.09993145751953125,
+      "host_wall_seconds": 0.09995538741350174,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "original",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 11,
+      "gpu_event_seconds": 0.10270243072509766,
+      "host_wall_seconds": 0.10272787511348724,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr1-065",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 12,
+      "gpu_event_seconds": 0.10390707397460938,
+      "host_wall_seconds": 0.10393276065587997,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr1-130",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 13,
+      "gpu_event_seconds": 0.10427279663085938,
+      "host_wall_seconds": 0.10429857391864061,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr8-043",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 14,
+      "gpu_event_seconds": 0.10091270446777344,
+      "host_wall_seconds": 0.10093990340828896,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr8-086",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 15,
+      "gpu_event_seconds": 0.11126668548583984,
+      "host_wall_seconds": 0.1112938029691577,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr19-020",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 16,
+      "gpu_event_seconds": 0.10259078216552735,
+      "host_wall_seconds": 0.10261680465191603,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chr19-041",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 17,
+      "gpu_event_seconds": 0.10180313873291015,
+      "host_wall_seconds": 0.10182733740657568,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chrX-057",
+      "training_fg": 0
+    },
+    {
+      "contact_fullgrid_forward": 1,
+      "formal_call": 18,
+      "gpu_event_seconds": 0.10251286315917969,
+      "host_wall_seconds": 0.10253744479268789,
+      "regularizer_fullgrid": 0,
+      "seed": 560102,
+      "state_id": "splice-chrX-114",
+      "training_fg": 0
+    }
+  ],
+  "cpu_preflight_fullgrid_calls": 0,
+  "expected_formal_contact_fullgrid_forwards": 18,
+  "formal_contact_fullgrid_forwards": 18,
+  "gpu_event_seconds_sum": 2.042949600219726,
+  "host_wall_seconds_sum": 2.180476164445281,
+  "random_u_calls": 0,
+  "regularizer_fullgrid_sweeps": 0,
+  "schema": "p9016-copy-link-dev-validation-a-ledger-v1",
+  "timing_note": "host wall and CUDA event elapsed are separately measured; neither is inferred",
+  "training_fg_calls": 0
+}
