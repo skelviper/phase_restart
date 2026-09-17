@@ -74,9 +74,9 @@ at 128 unique scalar calls.
 | 560101 | `0.24035967246787707` | `0.2403934067333627` | `1.7971419907780728e-9` | `1.2363274315418948e-7` | 47 |
 | 560102 | `0.243843226710218` | `0.24368279562818268` | `3.943964976826919e-8` | `-5.344776958793318e-7` | 46 |
 
-The development effects differ in direction and are far below `0.001`. The four published B endpoints
-are descriptive fixed-x Original/Profile states, not a completed strategy comparison; identical
-coordinates make their structural deltas exactly zero. `p < 0.5` is neither an error nor an accuracy
+The development effects differ in direction and are far below `0.001`. The four reported B endpoint
+summaries are descriptive fixed-x Original/Profile states, not a completed strategy comparison;
+identical coordinates make their structural deltas exactly zero. `p < 0.5` is neither an error nor an accuracy
 measure. The profile's bounded numerical stop is not a claim of global optimality.
 
 ## Development distance strata
@@ -94,8 +94,10 @@ Distances use actual 1 Mb genomic bin anchors, not raw-read distances or compres
 | `[20, infinity) Mb` | 59,129 | 137,561 |
 | inter-chromosomal | 113,507 | 3,312,674 |
 
-Each group's conditional NLL uses its own `Z_g / N_g`. The separate global-contribution decomposition
-uses `Z_all / Noff`; these are different quantities and their signs need not agree. All four A far-
+For group `g`, let `S_g = sum_{ij in g} Cdev_ij * log(rate_ij)`. The within-group score is
+`NLL_cond,g = log(Z_g) - S_g/N_g`. The separate contribution to the global score is
+`global_contribution_g = (N_g * log(Z_all) - S_g)/Noff`; the four group contributions sum to the
+global NLL. These are different quantities and their signs need not agree. All four A far-
 distance global contributions are negative, but that is not evidence that every within-group
 conditional gain is negative. For example, seed 560101 candidate 2 has far-distance conditional gain
 `+0.0013013725019881406` while its far global contribution gain is
@@ -129,7 +131,8 @@ with maximum error `1.7763568394002505e-15`.
 
 - Training FG: `800 / 1400` (A 800; B coordinate optimization 0).
 - Scalar calls: 93 total (47 + 46).
-- Extra full-grid equivalents: `14 / 64` (2 B caches + 12 development endpoint scores); 50 reserved.
+- Extra full-grid equivalents: `14 / 64` (2 B caches + 12 development endpoint scores); 50 unused
+  when this round stopped.
 - A optimizer segments: `163.6937117157504 s` total.
 - B cache builds: `0.5192612949758768 s` total.
 - Unified evaluation: `10.605994581244886 s` for mixed development + reference + phase work.
@@ -169,9 +172,9 @@ For the source endpoints and scan history, read
    needed for the original fixed-x objective? Given the measured gains and derivatives, is the bounded
    conclusion that current fixed-x `p` is not a material bottleneck justified, and what does it not
    rule out?
-3. Is the report's distinction between within-group conditional NLL (`Z_g / N_g`) and contribution to
-   global NLL (`Z_all / Noff`) correct? How should mixed signs, especially the seed-560101 candidate-2
-   far-distance example, be interpreted without substituting one metric for the other?
+3. Is the report's distinction between `NLL_cond,g = log(Z_g) - S_g/N_g` and
+   `global_contribution_g = (N_g * log(Z_all) - S_g)/Noff` correct? How should mixed signs,
+   especially the seed-560101 candidate-2 far-distance example, be interpreted without substituting one metric for the other?
 4. Does the missing independent direct/inferred provenance make `R1_direct=NA`, no identity veto and no
    bootstrap the correct choice? What can and cannot be inferred from the unverified hard-label counts?
 5. Based on the existing 056-058 evidence, propose **one** minimal falsifiable next experiment. It must

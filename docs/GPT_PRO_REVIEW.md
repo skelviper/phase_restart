@@ -173,7 +173,7 @@ Do not apply a repo-wide "reference is never used" rule. Two different things ar
 
 Report the blind/non-blind label per experiment, not for the repository as a whole.
 
-### 4.2 Latest preregistered comparison: round 056
+### 4.2 Preceding exposure comparison: round 056
 
 Round 056 compares the original all-training-endpoint exposure against an off-diagonal-training-
 endpoint exposure on one fixed 80/20 record split. All four fits used the same multiresolution FG
@@ -186,7 +186,7 @@ be isolated because every read identifier is `.`, and the two seeds are optimiza
 not biological replicates. Read [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md) before the
 round-056 code and machine results.
 
-### 4.3 Latest result: round 057 copy-link validation and search
+### 4.3 Preceding fixed-coordinate scan: round 057
 
 Round 057 first supplies the development-validation score omitted from the round-056 fixed-splice
 readout: both `G-original` seeds reject all `8/8` fixed copy-link disruptions, with median increases of
@@ -216,9 +216,12 @@ search, with the original `p` always retained. Training J gains are only
 triggered. This is a diagnostic that current fixed-x `p` is not a material bottleneck at these two
 endpoints, not a global-optimum or all-profile-strategies claim.
 
-Development distance strata use actual 1 Mb bin anchors. Group-conditional NLL (`Z_g / N_g`) and
-contribution to global NLL (`Z_all / Noff`) are both published and must not be substituted for each
-other. Phase-free columns align to all 1,703,888 raw rows, but direct-versus-inferred label provenance
+Development distance strata use actual 1 Mb bin anchors. For group `g`, let
+`S_g = sum_{ij in g} Cdev_ij * log(rate_ij)`. The conditional score is
+`NLL_cond,g = log(Z_g) - S_g/N_g`; the global contribution is
+`(N_g * log(Z_all) - S_g)/Noff`, and the four contributions sum to global NLL. These two quantities
+are both published and must not be substituted for each other. Phase-free columns align to all
+1,703,888 raw rows, but direct-versus-inferred label provenance
 is not independently established. Consequently `R1_direct`, identity veto and bootstrap are `NA`.
 Read [`PRO_REVIEW_RESULTS_058.md`](PRO_REVIEW_RESULTS_058.md) before the round-058 code and evidence.
 
@@ -295,7 +298,7 @@ From `test_res/055-.../README.md` §7 and `test_res/049-.../README.md` §6.4:
 | Python syntax | 522 files parse with `ast.parse`; this publication parsed all nine new round-058 modules with `PYTHONDONTWRITEBYTECODE=1`. Previously published fixtures were not rerun, and **no training, fitting or scientific evaluation was executed for this publication**. |
 | Import closure | The previous closure had **0 unresolved local imports** after accounting for declared dynamic roots. The nine round-058 modules use stdlib, declared packages (`numpy`, `scipy`, `torch`) and existing snapshot modules (`data_io`, `pr`, `shared_capture_objective`, `frozen_core`); no dependency upgrade was made. |
 | Dynamic `sys.path` chain | `049/source/frozen_imports.py` present, and all 12 modules it injects (`045/source/frozen_035`, `frozen_037`, `frozen_pr`, root `pr`) are present |
-| Absolute paths | 128 files contain `/mnt/ssd/zliu/...` or `/work/phase...`; retained deliberately (see README §8) — provenance, not runnable configuration |
+| Absolute paths | Retained deliberately where present (see README §8): provenance, not runnable configuration; this publication did not rewrite frozen paths |
 
 Reproducing any *number* from this snapshot additionally requires the data listed in README §4, which
 is not distributed here.
@@ -355,8 +358,10 @@ is not distributed here.
 >   round's frozen `config.json`, the round wins.
 > - Round 058's development set is the already viewed round-056 20% record fold, not a fresh test.
 >   It has `Noff=253,067`; exposure is train-fixed and the full normalizer contains all 3,496,690
->   eligible pairs. Distance groups use actual 1 Mb bin anchors. Group-conditional NLL uses `Z_g/N_g`,
->   while global contribution uses `Z_all/Noff`; do not substitute one for the other.
+>   eligible pairs. Distance groups use actual 1 Mb bin anchors. Let
+>   `S_g = sum_{ij in g} Cdev_ij * log(rate_ij)`: conditional NLL is
+>   `log(Z_g) - S_g/N_g`, while global contribution is `(N_g * log(Z_all) - S_g)/Noff`; the four
+>   contributions sum to global NLL. Do not substitute one quantity for the other.
 > - Raw phase and SNP-free rows align `1,703,888/1,703,888`, but no independent provenance separates
 >   direct SNP labels from inferred/imputed hard labels. The 40,939 hard same-copy records are therefore
 >   not verified direct-SNP truth. `R1_direct`, identity veto and bootstrap are `NA`.
