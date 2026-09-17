@@ -1,0 +1,24 @@
+{
+  "active_cache_exact_hit": true,
+  "active_cache_rejects_other": true,
+  "active_fd_max_abs_error": 1.9949447649381113e-10,
+  "active_inactive_freeze_max_abs_error": 0.0,
+  "p_components": {
+    "Zall": 6.904,
+    "Zcis": 4.204,
+    "Zinter": 2.7,
+    "count": 1.342872548248073,
+    "count_constant_raw": 1.7,
+    "dJ_dp": 0.06680955346043005,
+    "dJ_dq": 0.012181818627657465,
+    "dp_dq": 0.1823364772954591,
+    "p": 0.24,
+    "p_prior": 0.0001701553201341906,
+    "physical_constant": 0.03
+  },
+  "p_derivative_fd_abs_error": 9.566081260459214e-11,
+  "p_value": 1.3730427035682071,
+  "passed": true,
+  "swap_raw_y_exact": true,
+  "swap_xyz_exact": true
+}

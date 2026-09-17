@@ -1,0 +1,50 @@
+{
+  "R1_direct": null,
+  "R1_direct_reason": "no independent provenance distinguishes direct SNP calls from inferred/imputed hard labels",
+  "alignment": {
+    "dev_cis": 227208,
+    "dev_cis_offdiag": 139560,
+    "dev_cis_offdiag_cross_copy_known": 1055,
+    "dev_cis_offdiag_same_copy_known": 40939,
+    "dev_cis_offdiag_unknown_label": 97566,
+    "dev_far_same_copy_distinct_blocks": 10320,
+    "dev_inter": 113507,
+    "dev_rows": 340715,
+    "dev_same_copy_distance_groups": {
+      "cis_1_5Mb": 15239,
+      "cis_20Mb_inf": 16542,
+      "cis_5_20Mb": 9158
+    },
+    "raw_rows": 1703888,
+    "seven_column_identity_matches": 1703888
+  },
+  "bootstrap_performed": false,
+  "identity_regression_veto": null,
+  "identity_regression_veto_reason": "R1_direct unavailable; inferred/unqualified labels are not substituted",
+  "provenance": {
+    "direct_origin_established": false,
+    "label_type": "hard_phase0_phase1_fields_origin_unqualified",
+    "reason": "no independent provenance distinguishes direct SNP calls from inferred/imputed hard labels"
+  },
+  "random_copy_control_expectation": 0.5,
+  "raw_columns": [
+    "readID",
+    "chr1",
+    "pos1",
+    "chr2",
+    "pos2",
+    "strand1",
+    "strand2",
+    "phase0",
+    "phase1"
+  ],
+  "snpfree_columns": [
+    "readID",
+    "chr1",
+    "pos1",
+    "chr2",
+    "pos2",
+    "strand1",
+    "strand2"
+  ]
+}

@@ -5,8 +5,8 @@ denominator, under which controls, and what is *not* established — then gives 
 (§8) for a code-grounded review.
 
 - **Repository:** https://github.com/skelviper/phase_restart
-- **Latest round-057 report:** [`PRO_REVIEW_RESULTS_057.md`](PRO_REVIEW_RESULTS_057.md)
-- **Preceding round-056 report:** [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md)
+- **Latest round-058 report:** [`PRO_REVIEW_RESULTS_058.md`](PRO_REVIEW_RESULTS_058.md)
+- **History:** [`PRO_REVIEW_RESULTS_057.md`](PRO_REVIEW_RESULTS_057.md), then [`PRO_REVIEW_RESULTS_056.md`](PRO_REVIEW_RESULTS_056.md)
 - **Snapshot entry point:** [`../README.md`](../README.md)
 
 Everything below is quoted from files in this snapshot. Where a number comes from a run readout, the
@@ -22,8 +22,9 @@ fitted jointly in one shared nuclear volume, genome-wide (intra- and inter-chrom
 
 - **Cohort / replicate level:** one cell. The 20 chromosomes are **associated measurements within
   that single cell**, not biological replicates. No result here supports a population claim.
-- **The registered Reconstruction V1 baseline uses the full contact set.** Rounds 056 and 057 are
-  later, separate record-split validation and candidate-search studies; neither replaces that baseline.
+- **The registered Reconstruction V1 baseline uses the full contact set.** Rounds 056-058 are later,
+  separate record-split endpoint, candidate-search and restricted-optimization studies; none replaces
+  that baseline.
 - **Reference-structure usage is per-experiment, not repo-wide.** On the blind path the reference is
   used post-hoc only: not for source selection, fitting, regularisation, hyperparameter choice,
   stopping or candidate selection, and it is read only after candidate coordinates are written and
@@ -45,10 +46,10 @@ the round they were written for. **Their wording is not the current state of the
 | `docs/legacy_workspace_README.md` | The workspace README at snapshot time; names the `real-extension-G-full-J` endpoint as the working baseline | **Stale baseline.** The registered baseline is `P9016-046-G-random-base-1Mb` (`docs/CURRENT_BASELINE.md`). |
 | `docs/legacy_workspace_AGENTS.md`, `docs/MEASURED_FACTS.md`, `docs/POST020_*`, `docs/PLAN-*`, `docs/RECONSTRUCTION_V1_*` | Round-anchored rules, evidence logs and plans | Historical context; where they conflict with a current round's `config.json`, the round wins. |
 
-**The latest result is round 057** (`docs/PRO_REVIEW_RESULTS_057.md`), a development-validation check
-of fixed copy-link splices followed by a complete frozen training-only candidate scan. Round 056
-(`docs/PRO_REVIEW_RESULTS_056.md`) remains the preceding exposure-definition comparison and source of
-the fitted endpoints. Both leave the registered baseline unchanged. Rounds 045 / 046 / 049 remain the
+**The latest result is round 058** (`docs/PRO_REVIEW_RESULTS_058.md`), a paired restricted full-G test
+of four round-057 candidates plus a fixed-x `p` diagnostic. All A training/development gates failed,
+and B stopped without coordinate FG because both profile gains were below its trigger. Rounds 056 and
+057 remain the source-endpoint and candidate-scan history. All leave the registered baseline unchanged. Rounds 045 / 046 / 049 remain the
 relevant fit/evaluation implementations, and 051 / 055 remain historical baseline readouts and
 comparisons in their original time scope. The registered baseline is in `docs/CURRENT_BASELINE.md`
 and `docs/current_baseline.json`.
@@ -199,6 +200,28 @@ not triggered. Paired gains and structural differences are therefore `NA`, not z
 inferiority to continued optimization is supported. Read
 [`PRO_REVIEW_RESULTS_057.md`](PRO_REVIEW_RESULTS_057.md) before the round-057 source and evidence.
 
+### 4.4 Latest result: round 058 restricted optimization and fixed-x p profile
+
+Round 058 takes the two frozen candidates per round-056 `G-original` seed selected from the round-057
+training scan. In A, Control and Swap each receive 100 FG while all raw-y coordinates on the affected
+chromosome are active and all other coordinates, `p` and exposure are fixed. Every FG calls the
+original complete G objective, including inter-chromosomal and normalizer terms. All eight arms are
+finite `budget_not_converged` endpoints. The four Control-minus-Swap training J gains are
+`-0.005118326126122952`, `-0.002254213701426977`, `-0.0006250771850524472`, and
+`-0.0023815715204875687`; development gains are also negative. No candidate was selected.
+
+In B, coordinates and exposure are fixed while `p` is profiled from a 33-point grid and bounded scalar
+search, with the original `p` always retained. Training J gains are only
+`1.7971419907780728e-9` and `3.943964976826919e-8`, so the 3 x 50 FG strategy comparison was not
+triggered. This is a diagnostic that current fixed-x `p` is not a material bottleneck at these two
+endpoints, not a global-optimum or all-profile-strategies claim.
+
+Development distance strata use actual 1 Mb bin anchors. Group-conditional NLL (`Z_g / N_g`) and
+contribution to global NLL (`Z_all / Noff`) are both published and must not be substituted for each
+other. Phase-free columns align to all 1,703,888 raw rows, but direct-versus-inferred label provenance
+is not independently established. Consequently `R1_direct`, identity veto and bootstrap are `NA`.
+Read [`PRO_REVIEW_RESULTS_058.md`](PRO_REVIEW_RESULTS_058.md) before the round-058 code and evidence.
+
 Reproduction status: `055/eval/validation.json` records **12/12 PASS**, including value-by-value
 agreement (max abs diff `< 1e-9`) with the frozen 049 `r2_per_chromosome.tsv`, the frozen 051
 `per_chromosome.tsv`, and the 053 Spearman table, using a **independently written evaluation script**
@@ -265,12 +288,12 @@ From `test_res/055-.../README.md` §7 and `test_res/049-.../README.md` §6.4:
 
 | Check | Result |
 | --- | --- |
-| Byte identity of copied sources | Original snapshot: 754 workspace-derived files (753 byte-identical, one rebuilt review record). Round 056 adds **42 byte-identical workspace files** and round 057 adds **25 byte-identical workspace files**; mismatch = 0 for both additions. Both round-057 1,992-row scan TSV files are complete and hash-match their manifests. |
+| Byte identity of copied sources | Original snapshot: 754 workspace-derived files (753 byte-identical, one rebuilt review record). Rounds 056 / 057 / 058 add **42 / 25 / 39 byte-identical workspace files**; mismatch = 0 for every addition. Both round-057 1,992-row scans and all round-058 4 / 2 / 24-row TSVs are complete. |
 | Forbidden data files | no `*.3dg`, `*.npz`, `*.npy`, `*.h5`, `*.pkl`, `*.gz`, `*.pairs*`, checkpoint or raw-data file present; no file exceeds 1.2 MB |
 | Binary exceptions | exactly 5 PNG figures: two from round 055 and three from round 056 |
 | Credential scan | 0 hits: no `ghp_`/`gho_`/`ghs_`/`github_pat_`, no private keys, no cloud keys, no `.env`/`.netrc`/`*.pem`, no secret assignments; no credential value was printed at any point |
-| Python syntax | 513 files parsed with `ast.parse`; the six new round-057 modules also imported with `PYTHONDONTWRITEBYTECODE=1`. Three previously published lightweight CPU fixture modules passed — **no training, fitting or scientific evaluation was executed for this publication**. |
-| Import closure | The previous 507-file closure had **0 unresolved local imports** after accounting for the declared dynamic roots; all six new round-057 modules resolve and import against that closure. Every other import is stdlib, a declared external package (`numpy`, `scipy`, `matplotlib`, `plotly`, `PIL`, `torch`, `threadpoolctl`), or resolves inside the snapshot. |
+| Python syntax | 522 files parse with `ast.parse`; this publication parsed all nine new round-058 modules with `PYTHONDONTWRITEBYTECODE=1`. Previously published fixtures were not rerun, and **no training, fitting or scientific evaluation was executed for this publication**. |
+| Import closure | The previous closure had **0 unresolved local imports** after accounting for declared dynamic roots. The nine round-058 modules use stdlib, declared packages (`numpy`, `scipy`, `torch`) and existing snapshot modules (`data_io`, `pr`, `shared_capture_objective`, `frozen_core`); no dependency upgrade was made. |
 | Dynamic `sys.path` chain | `049/source/frozen_imports.py` present, and all 12 modules it injects (`045/source/frozen_035`, `frozen_037`, `frozen_pr`, root `pr`) are present |
 | Absolute paths | 128 files contain `/mnt/ssd/zliu/...` or `/work/phase...`; retained deliberately (see README §8) — provenance, not runnable configuration |
 
@@ -321,28 +344,40 @@ is not distributed here.
 > - **Documentation tense:** historical documents are frozen and some open with stale framing —
 >   `docs/REVIEW-s2-observation-model.md` says there is no S2 and the latest run is 017, and
 >   `docs/PROJECT_CONTEXT.md` covers mainly up to round 022. Do **not** treat those "current"
->   sentences as present state. The latest result is round **057**; read
->   `docs/PRO_REVIEW_RESULTS_057.md`. Round 056 is the preceding exposure comparison. In round 057,
->   Experiment A passed development validation, while both Experiment B first-scan argmins were no-op
->   and the paired Control/Swap continuation was not triggered. Neither round replaces the registered
->   046 baseline. Rounds **045 / 046 / 049** remain fit/evaluation implementations and **051 / 055**
+>   sentences as present state. The latest result is round **058**; read
+>   `docs/PRO_REVIEW_RESULTS_058.md` first. Rounds 056 and 057 are historical source-endpoint and
+>   candidate-scan context. In round 058, A ran four paired Control/Swap comparisons at 100 FG per arm;
+>   all endpoints were finite `budget_not_converged`, all training and development gains were negative,
+>   and no candidate was selected. B's fixed-x `p` gains were below `1e-5`, so coordinate FG was zero
+>   and the planned 3 x 50 FG strategy comparison did not run. No round replaces the registered 046
+>   baseline. Rounds **045 / 046 / 049** remain fit/evaluation implementations and **051 / 055**
 >   remain historical baseline readouts/comparisons. Where an old document conflicts with a current
 >   round's frozen `config.json`, the round wins.
+> - Round 058's development set is the already viewed round-056 20% record fold, not a fresh test.
+>   It has `Noff=253,067`; exposure is train-fixed and the full normalizer contains all 3,496,690
+>   eligible pairs. Distance groups use actual 1 Mb bin anchors. Group-conditional NLL uses `Z_g/N_g`,
+>   while global contribution uses `Z_all/Noff`; do not substitute one for the other.
+> - Raw phase and SNP-free rows align `1,703,888/1,703,888`, but no independent provenance separates
+>   direct SNP labels from inferred/imputed hard labels. The 40,939 hard same-copy records are therefore
+>   not verified direct-SNP truth. `R1_direct`, identity veto and bootstrap are `NA`.
 >
 > **Your task.**
-> A. Identify the **most consequential concrete problems** in the current approach, with evidence from
->    the code and from the recorded metrics. At minimum examine: the objective/normaliser definitions
->    in `test_res/049-.../source/max_contact_objective.py`; the shared-capture objective and
->    controller in `test_res/045-.../source/`; the fit driver and continuation logic in
->    `pr/reconstruct.py` and `pr/continuation.py`; the data path and folding in `pr/pairs7.py`,
->    `pr/genome.py`, `pr/contact_model.py`; the evaluation definitions in
->    `pr/reconstruction_evaluate.py`, `pr/allele_r2.py` and
->    `test_res/055-.../source/evaluate_review.py`. State, for each problem, what observation would
->    distinguish it from a competing explanation, and whether the existing recorded readouts already
->    do so.
-> B. Propose **2–3 minimal, falsifiable next experiments**, ordered by expected payoff. "Run more
->    iterations" or "tune hyperparameters" is not an acceptable answer on its own. For each one
->    specify exactly:
+> A. Audit `test_res/058-.../code/run_A.py`, `frozen_core.py`, and the original shared-capture objective.
+>    Is the restricted comparison fair: intended active/fixed coordinates, complete G on every FG,
+>    all inter and normalizer terms retained, identical budgets, and last-accepted rather than last-trial
+>    endpoints? Report any Control/Swap asymmetry with `path:line` evidence and its likely direction.
+> B. Audit `run_B.py` and its recorded profiles. Does the cache preserve the original p-dependent and
+>    constant terms, full `Z` including inter, original p prior, zero-count support and original p as a
+>    candidate? Do the measured gains justify only the statement that current fixed-x `p` is not a
+>    material bottleneck at these endpoints? State explicitly why `p<0.5` is not an error/accuracy and
+>    why this does not prove a global optimum or reject every profile strategy.
+> C. Audit `evaluate_all.py`, `dev_strata_pairs.tsv`, and `phase_traceability.json`. Explain the proper
+>    interpretation of conditional versus global distance-stratum gains, including the positive far
+>    conditional gain but negative far global contribution for seed 560101 candidate 2. Decide whether
+>    the provenance gap correctly forces `R1_direct=NA`, no identity veto and no bootstrap, and state
+>    what the unverified hard-label counts can and cannot support.
+> D. Propose **one minimal, falsifiable next experiment** based on the 056-058 evidence. Do not simply
+>    rerun completed round 056, 057 or 058, and do not assume L2. Specify exactly:
 >    - **Question / hypothesis** and the **falsifying outcome** (what result would kill it);
 >    - **cohort and unit**: which chromosomes / which bin size / which cell, and the observation unit;
 >    - **denominator**: the exact support set and the number of pairs or records;
@@ -355,7 +390,7 @@ is not distributed here.
 >      criteria; say explicitly how "not converged" will be reported;
 >    - **biological replicate level**: state whether the claim is within-cell (technical/structural
 >      variation only) or requires additional cells, and do not upgrade the former into the latter.
-> C. Say explicitly where the current code **cannot** answer the question even in principle, and what
+> E. Say explicitly where the current code **cannot** answer the question even in principle, and what
 >    minimal code change would be required.
 >
 > **Rules.** Do not present L3 as a conclusion. Do not report a local or oracle-level match as
@@ -379,16 +414,12 @@ is not distributed here.
 
 | Step | File | Why |
 | --- | --- | --- |
-| 1 | `docs/GPT_PRO_REVIEW.md` (this file) | definitions, denominators, limits |
-| 2 | `docs/CURRENT_BASELINE.md`, `docs/current_baseline.json` | what the baseline actually is |
-| 3 | `docs/PROJECT_CONTEXT.md` | stage history and applicable scope |
-| 4 | `docs/MEASURED_FACTS.md` | evidence log and protocol corrections |
-| 5 | `docs/legacy_workspace_AGENTS.md` | original project rules and reporting floor (Chinese) |
-| 6 | `run.py`, `pr/paths.py`, `pr/genome.py`, `pr/pairs7.py` | driver, constants, data path and folding |
-| 7 | `pr/contact_model.py`, `pr/allele_models.py` | the observation model |
-| 8 | `pr/reconstruct.py`, `pr/continuation.py` | the fit target, the solver loop, the multi-scale chain |
-| 9 | `test_res/045-.../source/shared_capture_objective.py`, `test_res/049-.../source/max_contact_objective.py` | loss variants A/B/C and the max-branch handling |
-| 10 | `pr/reconstruction_evaluate.py`, `pr/allele_r2.py`, `test_res/055-.../source/evaluate_review.py` | how `same`/`cross`/`contrast` and R1/R2/R3 are computed |
-| 11 | `test_res/055-.../eval/{summary.json,per_chromosome.tsv,validation.json}`, `test_res/049-.../evaluation/results/r2_per_chromosome.tsv` | the measurements |
-| 12 | `test_res/049-.../gates/gates_report.json` | 9/9 loss/gradient/gauge/denominator gates |
-| 13 | `test_res/051-.../evaluation/pearson_summary.json` | baseline readouts and shared-support audit |
+| 1 | `docs/PRO_REVIEW_RESULTS_058.md` | latest result, exact scope, limits, and targeted questions |
+| 2 | `test_res/058-.../{config.json,FINAL_RESULTS.json,budget_ledger.json}` | frozen method, results, and accounting |
+| 3 | `test_res/058-.../code/{run_A.py,run_B.py,frozen_core.py,evaluate_all.py}` | implementations under review |
+| 4 | `test_res/058-.../{paired_A.tsv,p_profile_B.tsv,dev_strata_pairs.tsv}` | complete paired scalar evidence |
+| 5 | `test_res/058-.../evaluation/{dev_results.json,structural_results.json,phase_traceability.json}` | development, per-chromosome, and provenance evidence |
+| 6 | `docs/PRO_REVIEW_RESULTS_057.md`, `docs/PRO_REVIEW_RESULTS_056.md` | candidate-scan and source-endpoint history |
+| 7 | `docs/CURRENT_BASELINE.md`, `docs/current_baseline.json` | unchanged registered baseline |
+| 8 | `test_res/045-.../source/shared_capture_objective.py`, `pr/contact_model.py`, `pr/solver_state.py` | inherited objective, parameter map, and state contract |
+| 9 | `docs/PROJECT_CONTEXT.md`, `docs/MEASURED_FACTS.md`, `docs/legacy_workspace_AGENTS.md` | historical scope and reporting rules |

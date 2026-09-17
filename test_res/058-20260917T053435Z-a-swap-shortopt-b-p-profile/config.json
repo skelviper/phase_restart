@@ -1,0 +1,236 @@
+{
+  "schema": "p9016-058-a-swap-shortopt-b-p-profile-preregistered-v1",
+  "status": "method_frozen_awaiting_parent_confirmation",
+  "formal_training_started": false,
+  "reference_opened": false,
+  "phase_body_opened": false,
+  "historical_runs_modified": false,
+  "scientific_identity": {
+    "sample": "P9016",
+    "observation_unit": "record",
+    "cell_count": 1,
+    "chromosomes": 20,
+    "copies": 40,
+    "bin_size_bp": 1000000,
+    "split": "056 BLAKE2b-64 canonical-contact 80% train / 20% development record fold",
+    "read_id_semantics": "all '.'; no molecule isolation",
+    "replicate_semantics": "560101 and 560102 are optimization initializations, not biological replicates",
+    "condition": "G-original",
+    "model": "G/full-J",
+    "train_Nraw": 1363173,
+    "train_Noff": 1012047,
+    "dev_Noff": 253067,
+    "eligible_pairs": 3496690,
+    "eligible_pairs_include_zero": true,
+    "fixed_from_056": ["train fold", "exposure", "kernel", "full-J weights", "sphere map", "record fold"],
+    "initialization": "056 finite 1Mb G-original solver states only; 046 is not an initializer"
+  },
+  "sources": {
+    "run_056": "test_res/056-20260916T152353Z-pro-review-experiments",
+    "run_057": "test_res/057-20260917T013859Z-copy-link-dev-validation",
+    "published_snapshot": "scratch/github-review-20260916_203503",
+    "review_056": "scratch/github-review-20260916_203503/docs/PRO_REVIEW_RESULTS_056.md",
+    "review_057": "scratch/github-review-20260916_203503/docs/PRO_REVIEW_RESULTS_057.md",
+    "review_note": "PRO_REVIEW_RESULTS_056.md and PRO_REVIEW_RESULTS_057.md are absent from main docs; snapshot publication copies were read",
+    "baseline_document": "docs/CURRENT_BASELINE.md",
+    "shared_capture_objective": "test_res/045-20260915T073310Z-shared-capture-round/source/shared_capture_objective.py",
+    "nonref_core": "test_res/056-20260916T152353Z-pro-review-experiments/code/nonref_core.py",
+    "budget_runner": "test_res/056-20260916T152353Z-pro-review-experiments/code/budget_runner.py",
+    "solver_state": "pr/solver_state.py",
+    "contact_model": "pr/contact_model.py",
+    "refeval_source_only": "pr/refeval.py"
+  },
+  "frozen_hashes": {
+    "train_aggregate": "517c000e8a1e53d73c17b13d4726d8209557c9123cee0a360be91baa74172f48",
+    "source_state_560101": "c54021db76793e0751ecfef63c1e4204a39003521e33f84e30bbd41af9d8413e",
+    "source_state_560102": "2440641f208f0460bb6e12a757aec2c8ea1d71be694ca963b21d0179d9e6983b",
+    "scan_560101": "fef76c510dfd06e4b2d9f32881b55810d43473474ffa1b88e76f0df41d760bb3",
+    "scan_560102": "ec378d4ea69c21cb1aa5a4a7b164b2652ecdf86ff88e4ff46d46f3232dd7eac4",
+    "round1_results": "391a138739b19cd27bb4fde9eb8deb72a5e97ea8c2f7ea6f3ea73228909bbc55",
+    "config_B_057": "aa699358713f70666c228275644b7e64e0fa0f98cd0dd8d55717dd77e1109a10",
+    "shared_capture_objective": "c707bfd15d316506b99371b5c407c6ae7581812e8aeb68fc3da8b6f594d885dc",
+    "nonref_core": "4cf01e5e8da54258a239a389419a472f10a3ac97200bbb122ca43dfcfb6cfb1d",
+    "budget_runner": "a13af757b58b2eeda4878a4c67f7a261c8a0a28aa366435ccc8ec406a7524bea",
+    "solver_state": "deaf000881c1ea7dbac353653f4568ab04bc5506e7a8c35d843f854e56694425"
+  },
+  "A": {
+    "selection": {
+      "candidate_1": "min(delta_full_J, candidate_order)",
+      "candidate_2": "after excluding candidate_1, min(delta_count_Nraw, candidate_order)",
+      "training_only": true,
+      "candidates": {
+        "560101": [
+          {"slot": 1, "candidate_order": 642, "candidate_id": "chr5:130-152:suffix", "chromosome": "chr5", "chromosome_index": 4, "start_bp": 130000000, "end_bp": 151834684, "bead_start": 130, "bead_end": 152, "global_locus_start": 827, "global_locus_end": 849, "source_delta_full_J": 0.06216137971916483, "source_delta_count_Nraw": 0.0035478624511810918},
+          {"slot": 2, "candidate_order": 415, "candidate_id": "chr3:160-161:suffix", "chromosome": "chr3", "chromosome_index": 2, "start_bp": 160000000, "end_bp": 160039680, "bead_start": 160, "bead_end": 161, "global_locus_start": 539, "global_locus_end": 540, "source_delta_full_J": 0.19305664021249758, "source_delta_count_Nraw": 0.000047075141552870695}
+        ],
+        "560102": [
+          {"slot": 1, "candidate_order": 202, "candidate_id": "chr2:60-183:suffix", "chromosome": "chr2", "chromosome_index": 1, "start_bp": 60000000, "end_bp": 182113224, "bead_start": 60, "bead_end": 183, "global_locus_start": 256, "global_locus_end": 379, "source_delta_full_J": 0.01619646749973515, "source_delta_count_Nraw": 0.004579903299605638},
+          {"slot": 2, "candidate_order": 415, "candidate_id": "chr3:160-161:suffix", "chromosome": "chr3", "chromosome_index": 2, "start_bp": 160000000, "end_bp": 160039680, "bead_start": 160, "bead_end": 161, "global_locus_start": 539, "global_locus_end": 540, "source_delta_full_J": 0.2936713750341466, "source_delta_count_Nraw": 0.00003622649867748154}
+        ]
+      }
+    },
+    "arms": ["Control", "Swap"],
+    "initial_states": {
+      "Control": "unaltered 056 source endpoint",
+      "Swap": "swap both copies' complete xyz and corresponding raw_y over the full half-open candidate interval",
+      "no_projection": true,
+      "per_locus_unordered_two_point_set_unchanged": true
+    },
+    "active_coordinates": "all raw_y coordinates of both copies on the candidate chromosome",
+    "fixed_coordinates": "all other chromosomes' raw_y plus q/p and exposure",
+    "objective_wrapper": "reassemble full theta for every FG, call original SharedCaptureObjective full G value+gradient, return active raw_y gradient only",
+    "cache_policy": "cache last accepted full theta, full gradient and full components; never substitute 057 candidate cache after coordinates move; never report last trial as endpoint",
+    "optimizer": {"algorithm": "small generic-vector SciPy L-BFGS-B runner preserving 056 budget and last-accepted semantics; do not call 056 raw-y+q adapter", "optimizer_vector": "active raw-y only", "frozen_q": "full q remains bitwise unchanged in immutable base_theta and is never present in optimizer vector", "fg_cap_per_arm": 100, "maxiter": 101, "maxls": 20, "ftol": 0.0, "active_gtol": 1e-6},
+    "fg_cap": {"arms": 8, "total": 800, "control_reuse": "none: within each seed the two candidates affect different chromosomes"},
+    "terminal_classification": {
+      "restricted_converged": "last-accepted active raw-y maxabs gradient <=1e-6",
+      "budget_not_converged": "100 FG exhausted with finite last-accepted active gradient >1e-6",
+      "not_global_converged": true,
+      "also_report_same_fg": ["full raw-y maxabs gradient", "q maxabs gradient"],
+      "hard_stop": ["nonfinite value/gradient/state", "state inconsistency", "sphere-domain failure"]
+    },
+    "training_gate": {
+      "candidate_pass": "J_control-J_swap >= 1e-5 and swap count_nll_normalized <= control count_nll_normalized",
+      "per_seed_selection": "among passing candidates maximize training J_control-J_swap; exact tie by original candidate_order",
+      "none_passing": "seed failure; do not use development score to choose"
+    }
+  },
+  "B": {
+    "independence": "each seed starts from its unaltered 056 endpoint; never consumes A",
+    "fixed_during_diagnostic": ["coordinates", "exposure"],
+    "profiled_parameter": "p only",
+    "legal_open_interval": [0.0001, 0.9999],
+    "numerical_closed_interval": [0.00010000000000000002, 0.9998999999999998],
+    "numerical_q_interval": [-45.74751389695373, 36.04365338911715],
+    "legal_interval_source": "contact_model.P_FLOOR and p_from_q; numerical bounds are interior floats satisfying p_from_q(q_from_p(p)) == p exactly",
+    "original_p_is_always_candidate": true,
+    "source_p": {"560101": 0.24035967246787707, "560102": 0.243843226710218},
+    "cache": {
+      "cis_a": "e_i*e_j/2*(Kaa+Kbb)",
+      "cis_b": "e_i*e_j/2*(Kab+Kba)",
+      "cis_rate": "b+p*(a-b)",
+      "inter": "p-invariant but retained in Zall and observed log rate",
+      "scalar_objective": "count_nll_normalized + original p_prior + fixed physical-regularizer constant; count_constant_raw=K0+diag_profiled_nll_raw",
+      "preaggregation": "at cache build aggregate Zinter, sum_Cinter_log_rate, Noff, sum_b_all_cis and sum_delta_all_cis; scalar calls retain only positive-count cis arrays and never rescan inter or zero-count cis",
+      "one_contact_kernel_forward_per_build": true,
+      "physical_constants": "reuse trusted source/last-accepted components; no separate repulsion sweep"
+    },
+    "search": {
+      "coarse_grid_points": 33,
+      "coarse_grid": "linear including exact p<->q roundtrip bounds 0.00010000000000000002 and 0.9998999999999998",
+      "bounded_interval": "two neighboring coarse-grid points around the lowest coarse-grid value, clipped to legal interval",
+      "solver": "scipy.optimize.minimize_scalar(method='bounded')",
+      "xatol": 1e-10,
+      "maxiter": 80,
+      "unique_scalar_evaluation_cap_per_profile": 128,
+      "scalar_call_accounting": "count every cache miss, including original/new-p diagnostic value and derivative requests; exact-p cache hits do not increment",
+      "candidate_union": ["original p", "all coarse grid points", "bounded solver returned p"],
+      "selection": "minimum scalar objective, exact tie favors original p then smaller p",
+      "stop_label": "bounded_profile_numeric_stop only when solver success and finite result; never claim mathematical global optimum",
+      "failure": "nonfinite cache/rate/objective or scalar cap exhaustion stops B for that seed"
+    },
+    "report": ["p_before", "p_after", "J_gain", "count_gain", "analytic dJ/dp at p_before and p_after", "analytic dJ/dq=(dJ/dp)*(dp/dq) at p_before and p_after", "search calls", "numeric stop"],
+    "branch": {
+      "no_coordinate_trigger": "both seeds J_gain <1e-5",
+      "no_coordinate_action": "finish with 0 coordinate FG; retain and evaluate actual original/profile fixed-x terminal states",
+      "coordinate_trigger": "otherwise both seeds run both Control and Profile arms",
+      "arms": ["Control", "Profile"],
+      "segments_per_arm": 3,
+      "fg_per_segment": 50,
+      "total_coordinate_fg_cap": 600,
+      "segment_restart": "same frozen segment boundaries; restart L-BFGS-B memory at each boundary",
+      "Control": "source x,p; joint coordinates+p optimization in every segment",
+      "Profile": "source x; before every segment rebuild fixed-x p cache, profile p, then joint coordinates+p optimization for 50 FG",
+      "segment1_reuse": "initial diagnostic cache/profile is reused as Profile segment 1; do not rebuild",
+      "after_segment3": "no free final reprofile"
+    }
+  },
+  "auxiliary_fullgrid_equivalent_budget": {
+    "cap": 64,
+    "training_fg_excluded": true,
+    "unit": "contact full-grid forward=1; full-G value/gradient contact+full-pair repulsion=2; count-only forward=1",
+    "worst_case": [
+      {"role": "A terminal development plus cis strata, one fused count-only forward per endpoint", "endpoints": 8, "equivalents": 8},
+      {"role": "B fixed-x p-cache builds, initial two reused for Profile segment1 plus segments2-3", "builds": 6, "equivalents": 6},
+      {"role": "B actual terminal development plus cis strata, one fused count-only forward per endpoint", "endpoints": 4, "equivalents": 4},
+      {"role": "reference/phase coordinate-only evaluation and hashes", "equivalents": 0},
+      {"role": "A train gates and gradients from last-accepted FG cache", "equivalents": 0},
+      {"role": "validation reserve, unavailable to extra optimization or repeated scoring", "equivalents": 46}
+    ],
+    "planned_nonreserve_worst_case": 18,
+    "reserved_validation": 46,
+    "no_B_trigger_nonreserve": 14,
+    "priority": "complete all A endpoints and their evaluation before spending B optional work; never reduce A controls for B"
+  },
+  "evaluation_gate": {
+    "precondition": "all finite terminal training/selection records and every state, presence mask and export are written and SHA256-frozen before opening raw phase body or reference",
+    "development": {
+      "primary": "full development NLL without K0, regularizers, or re-estimated exposure/p",
+      "Noff": 253067,
+      "exposure": "train-fixed",
+      "single_forward": "each endpoint collects global, three cis strata and inter in one contact forward",
+      "distance_definition": "bin_anchor_genomic_separation",
+      "distance_formula": "abs(pos_bin_j-pos_bin_i) on the 1Mb full-model grid using true genomic bin-anchor bp; not raw-read bp and not compressed index",
+      "cis_groups_bp": [[1000000, 5000000], [5000000, 20000000], [20000000, null]],
+      "partition_check": "three cis groups' record counts and eligible-pair counts must each sum exactly to all cis off-diagonal counts/pairs",
+      "inter_separate": true,
+      "group_mass_contribution": "(-sum_g C*log(rate)+N_g*log(Zall))/Noff; three cis plus inter must reconstruct global conditional no-K0 NLL",
+      "within_group_conditional_nll": "(-sum_g C*log(rate)+N_g*log(Z_g))/N_g; use each group's own Z_g and record denominator"
+    },
+    "reference": {
+      "support": "055 common support",
+      "pairs": 157529,
+      "denominator": "per chromosome",
+      "metric": "Pearson on frozen support",
+      "mapping": "for every endpoint and chromosome choose one whole-chromosome best geometric A/B mapping using all frozen-support distances; reuse it for same/cross/contrast/margin and every R1 distance group; no window or group truth flip",
+      "outputs": ["A_mat", "A_pat", "B_mat", "B_pat", "same", "cross", "contrast", "margin_A", "margin_B", "min_margin", "20chr_macro", "preregistered_A_candidate_chromosomes"],
+      "swap_return_geometry": "in the fixed whole-nucleus coordinate frame, compare affected-chromosome Control and Swap terminal coordinates; allow exactly one whole-chromosome A/B permutation choosing smaller RMSD; no window flip and no rigid/Kabsch/Procrustes alignment",
+      "swap_return_metrics": ["RMSD/l0", "maximum bead displacement/l0"],
+      "near_control": "RMSD/l0<=0.1 and maximum bead displacement/l0<=0.5",
+      "near_control_effect": "additional A gate/flag: a near_control Swap is classified as reversion and cannot count as a new switched-chain improvement; it does not alter training candidate selection and does not apply to B"
+    },
+    "phase_traceability": {
+      "source_review_before_gate": "source code and provenance only; no raw phase rows",
+      "post_gate_alignment": "load all raw records, require complete row count and exact seven-column SNP-free identity/coordinate order; apply numeric cis endpoint canonicalization with synchronous phase swap; only then apply the original development fold",
+      "coordinate_adapter": "explicitly validate raw genomic bp to zero-based 1Mb full-grid bin anchors; do not inherit pr.paths.OFF or old 3Mb grid assumptions",
+      "direct_label_rule": "R1_direct is available only if independent provenance explicitly establishes phase field type/origin as direct SNP calls; column names and unknown values alone are insufficient",
+      "unqualified_rule": "if direct versus inferred cannot be distinguished, report R1_direct=NA with reason and exclusion counts; separately report honest label_type",
+      "eligible_records": "same-copy cis off-diagonal with both endpoint labels known, using the same bin_anchor_genomic_separation groups",
+      "phase_convention": "phase0->pat and phase1->mat only after provenance qualification",
+      "random_copy_control": "analytic expectation 0.5 with exact eligible denominator; no Monte Carlo sampling",
+      "reference_coordinate_diagnostic": "same support and same one-time chromosome mapping; diagnostic, not a mathematical ceiling"
+    },
+    "reliable_long_distance_identity": {
+      "prechosen_group": "[20Mb,infinity) by bin_anchor_genomic_separation only",
+      "minimum_support": "at least 200 qualified direct records and at least 20 distinct canonical (chromosome,bin_i,bin_j) blocks on each evaluated support",
+      "effect": "within each canonical bin-pair block aggregate total records and paired candidate-minus-Control hit-score sum; report records-weighted delta",
+      "uncertainty": "1000 paired canonical-bin-pair block bootstrap resamples with replacement, seed 580201; both arms use the same sampled blocks; report percentile 95% interval",
+      "scope": "A uses each seed's preselected affected chromosome; B uses all 20 chromosomes together; no truth-driven window flip",
+      "reliable_degradation": "qualified direct labels, sufficient records/blocks, point estimate <= -0.02, and bootstrap upper 95% bound <0",
+      "sample_insufficient_NA": "unqualified label provenance, fewer than 200 records, or fewer than 20 distinct bin-pair blocks; do not infer safety",
+      "diagnostic_scope": "one-cell bin-pair resampling technical diagnostic; not molecule-level or biological replication and no claim that bin-pair blocks are independent",
+      "adoption_effect": "reliable degradation vetoes adoption; NA does not block non-identity evaluation but requires identity_unverified and forbids an identity-recovery claim"
+    }
+  },
+  "adoption": {
+    "float_tolerance": 1e-10,
+    "A": "both seeds selected; each dev gain>=0.001; affected-chromosome min_margin delta>=-1e-10; all20 macro same delta>=-0.02; selected Swap must not be near_control; no reliable long-distance direct-identity degradation",
+    "B": "both seeds dev gain>=0.001; min_margin delta>=-1e-10; all20 macro same delta>=-0.02; no reliable long-distance direct-identity degradation",
+    "cross_and_contrast": "always co-report; never substitute for gates",
+    "optimization_imbalance": "A compares active raw-y gradients; B compares full raw-y/q gradients. Flag when one paired arm reaches its relevant gtol and the other exhausts budget, or gradient ratio>10 with either>1e-6",
+    "imbalance_effect": "warning/classification only, not an extra veto on the frozen candidate gates; describe as fixed-budget optimization difference, not inherent structure or global optimality. Nonfinite/abnormal stop/mismatched budget makes the pair incomplete and ineligible for a success claim",
+    "failure_classes": ["training gate failed", "development gate failed", "structural gate failed", "reliable long-distance identity degradation", "sample-insufficient identity NA", "optimization imbalance", "nonconverged", "direction inconsistency", "predicted-structure conflict"],
+    "claim_limit": "training or p improvement alone does not adopt; no baseline replacement and no L2 claim"
+  },
+  "required_fixture_checks": {
+    "device": "CPU",
+    "active_fixed_coordinates_unchanged": true,
+    "active_gradient_finite_difference": true,
+    "source_and_swap_initial_G_reproduction": "use each arm's first budgeted FG, not an auxiliary call",
+    "p_cache_vs_original_G_abs_tol": 1e-9,
+    "state_consistency": true,
+    "sphere_domain": true,
+    "export_state_sha_unchanged": true
+  },
+  "runtime": {"conda_environment": "analysis", "PYTHONDONTWRITEBYTECODE": "1", "commit": false, "push": false}
+}

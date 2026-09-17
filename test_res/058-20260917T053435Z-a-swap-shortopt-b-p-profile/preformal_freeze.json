@@ -1,0 +1,14 @@
+{
+  "schema": "p9016-058-final-preformal-freeze-v1",
+  "status": "passed",
+  "config_sha256": "9f48b100186f9f38b035912ac8bc3f484dde453ff585777f876f949a0f57d04d",
+  "frozen_core_sha256": "874b9a3a9dd77841e4423a046c3a88d5202f9d975f00d80849d429660f60077d",
+  "original_g_fixture_code_sha256": "d716317cf20acd6ce77c829283bcfc20fea99ef7ee9091a9874122b3f81d99d3",
+  "original_g_fixture_results_sha256": "f4ff042712e07f87173e0b639842ea43ca4bfe9dc53c1fa69cce09ab7c7b5352",
+  "original_g_p_cache_max_abs_error": 0.0,
+  "original_g_active_fd_max_abs_error": 2.5809786252661837e-10,
+  "q_bitwise_frozen": true,
+  "formal_training_started": false,
+  "phase_body_opened": false,
+  "reference_opened": false
+}

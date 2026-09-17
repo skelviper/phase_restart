@@ -1,0 +1,227 @@
+{
+  "comparisons": [
+    {
+      "R1_direct": null,
+      "branch": "A",
+      "candidate": {
+        "bead_end": 152,
+        "bead_start": 130,
+        "candidate_id": "chr5:130-152:suffix",
+        "candidate_order": 642,
+        "chromosome": "chr5",
+        "chromosome_index": 4,
+        "end_bp": 151834684,
+        "global_locus_end": 849,
+        "global_locus_start": 827,
+        "slot": 1,
+        "source_delta_bend": 0.132825398158602,
+        "source_delta_bond": 0.057285263286397714,
+        "source_delta_count_Nraw": 0.0035478624511810918,
+        "source_delta_full_J": 0.06216137971916483,
+        "source_delta_p_prior": 0.0,
+        "source_delta_repulsion": 0.0,
+        "start_bp": 130000000
+      },
+      "candidate_endpoint": "A-seed560101-candidate1-Swap",
+      "contrast_delta": 0.0004350393188738144,
+      "control": "A-seed560101-candidate1-Control",
+      "cross_delta": -0.007407114186959607,
+      "dev_gain": -0.006709928265145493,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": -0.0020091874238281626,
+        "cis_20Mb_inf": -0.00019152032390135076,
+        "cis_5_20Mb": -0.002295880493199176,
+        "inter": -0.002213340024215249
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": -0.013195715775721317,
+      "return_to_control": {
+        "RMSD_over_l0": 5.670207072795124,
+        "max_bead_displacement_over_l0": 19.02751331783927,
+        "near_control": false,
+        "no_alignment": true,
+        "orientation": "direct"
+      },
+      "same_delta": -0.006972074868085709,
+      "seed": 560101
+    },
+    {
+      "R1_direct": null,
+      "branch": "A",
+      "candidate": {
+        "bead_end": 161,
+        "bead_start": 160,
+        "candidate_id": "chr3:160-161:suffix",
+        "candidate_order": 415,
+        "chromosome": "chr3",
+        "chromosome_index": 2,
+        "end_bp": 160039680,
+        "global_locus_end": 540,
+        "global_locus_start": 539,
+        "slot": 2,
+        "source_delta_bend": 0.2178519598903189,
+        "source_delta_bond": 0.19083104547204152,
+        "source_delta_count_Nraw": 4.7075141552870695e-05,
+        "source_delta_full_J": 0.19305664021249758,
+        "source_delta_p_prior": 0.0,
+        "source_delta_repulsion": 0.0,
+        "start_bp": 160000000
+      },
+      "candidate_endpoint": "A-seed560101-candidate2-Swap",
+      "contrast_delta": -0.001518874043249463,
+      "control": "A-seed560101-candidate2-Control",
+      "cross_delta": 0.0015508853925000343,
+      "dev_gain": -0.0024357897915283644,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": -0.0001510180074477674,
+        "cis_20Mb_inf": -0.00028677825133271995,
+        "cis_5_20Mb": -9.465877903136466e-05,
+        "inter": -0.0019033347537167344
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": -0.0006141862858549674,
+      "return_to_control": {
+        "RMSD_over_l0": 1.5471802464931455,
+        "max_bead_displacement_over_l0": 14.760332406915273,
+        "near_control": false,
+        "no_alignment": true,
+        "orientation": "direct"
+      },
+      "same_delta": 3.201134925046034e-05,
+      "seed": 560101
+    },
+    {
+      "R1_direct": null,
+      "branch": "A",
+      "candidate": {
+        "bead_end": 183,
+        "bead_start": 60,
+        "candidate_id": "chr2:60-183:suffix",
+        "candidate_order": 202,
+        "chromosome": "chr2",
+        "chromosome_index": 1,
+        "end_bp": 182113224,
+        "global_locus_end": 379,
+        "global_locus_start": 256,
+        "slot": 1,
+        "source_delta_bend": 0.03793272223966615,
+        "source_delta_bond": 0.01123723697773285,
+        "source_delta_count_Nraw": 0.004579903299605638,
+        "source_delta_full_J": 0.01619646749973515,
+        "source_delta_p_prior": 0.0,
+        "source_delta_repulsion": 0.0,
+        "start_bp": 60000000
+      },
+      "candidate_endpoint": "A-seed560102-candidate1-Swap",
+      "contrast_delta": -0.004309465658319883,
+      "control": "A-seed560102-candidate1-Control",
+      "cross_delta": -0.00022821191449862166,
+      "dev_gain": -0.0010445821337654593,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": 9.131113952642878e-05,
+        "cis_20Mb_inf": -0.0007228799550387244,
+        "cis_5_20Mb": 5.377735336997702e-05,
+        "inter": -0.00046679067162536114
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": -0.0066629757123681105,
+      "return_to_control": {
+        "RMSD_over_l0": 8.448012319528434,
+        "max_bead_displacement_over_l0": 23.061737055810937,
+        "near_control": false,
+        "no_alignment": true,
+        "orientation": "swapped"
+      },
+      "same_delta": -0.004537677572818644,
+      "seed": 560102
+    },
+    {
+      "R1_direct": null,
+      "branch": "A",
+      "candidate": {
+        "bead_end": 161,
+        "bead_start": 160,
+        "candidate_id": "chr3:160-161:suffix",
+        "candidate_order": 415,
+        "chromosome": "chr3",
+        "chromosome_index": 2,
+        "end_bp": 160039680,
+        "global_locus_end": 540,
+        "global_locus_start": 539,
+        "slot": 2,
+        "source_delta_bend": 0.3308080890164618,
+        "source_delta_bond": 0.2903270676453045,
+        "source_delta_count_Nraw": 3.622649867748154e-05,
+        "source_delta_full_J": 0.2936713750341466,
+        "source_delta_p_prior": 0.0,
+        "source_delta_repulsion": 0.0,
+        "start_bp": 160000000
+      },
+      "candidate_endpoint": "A-seed560102-candidate2-Swap",
+      "contrast_delta": 0.0008334216625361657,
+      "control": "A-seed560102-candidate2-Control",
+      "cross_delta": -0.0014642439504940485,
+      "dev_gain": -0.0029844823542077847,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": -0.0003408766435240018,
+        "cis_20Mb_inf": -0.0007444280188662056,
+        "cis_5_20Mb": -0.00016860215906189246,
+        "inter": -0.0017305755327541306
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": 0.005093068453898605,
+      "return_to_control": {
+        "RMSD_over_l0": 1.9475919742134928,
+        "max_bead_displacement_over_l0": 15.286079114362503,
+        "near_control": false,
+        "no_alignment": true,
+        "orientation": "direct"
+      },
+      "same_delta": -0.0006308222879578551,
+      "seed": 560102
+    },
+    {
+      "R1_direct": null,
+      "branch": "B",
+      "candidate": null,
+      "candidate_endpoint": "B-seed560101-Profile",
+      "contrast_delta": 0.0,
+      "control": "B-seed560101-Original",
+      "cross_delta": 0.0,
+      "dev_gain": 1.2363274315418948e-07,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": 1.2347521437305886e-05,
+        "cis_20Mb_inf": 1.459776841183924e-05,
+        "cis_5_20Mb": 7.71675135080585e-06,
+        "inter": -3.45384084603495e-05
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": 0.0,
+      "return_to_control": null,
+      "same_delta": 0.0,
+      "seed": 560101
+    },
+    {
+      "R1_direct": null,
+      "branch": "B",
+      "candidate": null,
+      "candidate_endpoint": "B-seed560102-Profile",
+      "contrast_delta": 0.0,
+      "control": "B-seed560102-Original",
+      "cross_delta": 0.0,
+      "dev_gain": -5.344776958793318e-07,
+      "dev_gain_contributions": {
+        "cis_1_5Mb": -5.8134014344179974e-05,
+        "cis_20Mb_inf": -6.741809697530243e-05,
+        "cis_5_20Mb": -3.615451789418245e-05,
+        "inter": 0.0001611721515191178
+      },
+      "identity_status": "identity_unverified",
+      "min_margin_delta": 0.0,
+      "return_to_control": null,
+      "same_delta": 0.0,
+      "seed": 560102
+    }
+  ],
+  "schema": "p9016-058-comparisons-v1"
+}

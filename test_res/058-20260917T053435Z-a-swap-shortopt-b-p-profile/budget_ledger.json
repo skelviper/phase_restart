@@ -1,0 +1,161 @@
+{
+  "schema": "p9016-058-budget-ledger-v1",
+  "source": "existing run JSON and terminal logs only; no recomputation",
+  "A_training": {
+    "arms": [
+      {
+        "arm_id": "A-seed560101-candidate1-Control",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 21.058070979081094
+      },
+      {
+        "arm_id": "A-seed560101-candidate1-Swap",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.49027913995087
+      },
+      {
+        "arm_id": "A-seed560101-candidate2-Control",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.3650828525424
+      },
+      {
+        "arm_id": "A-seed560101-candidate2-Swap",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.211880923248827
+      },
+      {
+        "arm_id": "A-seed560102-candidate1-Control",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.240389744751155
+      },
+      {
+        "arm_id": "A-seed560102-candidate1-Swap",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.54866911098361
+      },
+      {
+        "arm_id": "A-seed560102-candidate2-Control",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.478721326217055
+      },
+      {
+        "arm_id": "A-seed560102-candidate2-Swap",
+        "FG": 100,
+        "terminal": "budget_not_converged",
+        "wall_seconds": 20.300617638975382
+      }
+    ],
+    "FG_total": 800,
+    "optimizer_wall_seconds_total": 163.6937117157504,
+    "initial_training_check_accounting": "included in each arm's first budgeted FG; not charged again",
+    "terminal_train_readback_performed": false
+  },
+  "B_profile_diagnostic": {
+    "coordinate_FG": 0,
+    "cache_builds": [
+      {
+        "seed": 560101,
+        "full_grid_equivalents": 1,
+        "wall_seconds": 0.4003016799688339
+      },
+      {
+        "seed": 560102,
+        "full_grid_equivalents": 1,
+        "wall_seconds": 0.11895961500704288
+      }
+    ],
+    "cache_full_grid_equivalents_total": 2,
+    "cache_wall_seconds_total": 0.5192612949758768,
+    "scalar_profiles": [
+      {
+        "seed": 560101,
+        "scalar_unique_calls": 47
+      },
+      {
+        "seed": 560102,
+        "scalar_unique_calls": 46
+      }
+    ],
+    "scalar_unique_calls_total": 93,
+    "diagnostic_only": true
+  },
+  "evaluation": {
+    "dev_endpoints": [
+      {
+        "endpoint_id": "A-seed560101-candidate1-Control",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560101-candidate1-Swap",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560101-candidate2-Control",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560101-candidate2-Swap",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560102-candidate1-Control",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560102-candidate1-Swap",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560102-candidate2-Control",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "A-seed560102-candidate2-Swap",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "B-seed560101-Original",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "B-seed560101-Profile",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "B-seed560102-Original",
+        "full_grid_equivalents": 1
+      },
+      {
+        "endpoint_id": "B-seed560102-Profile",
+        "full_grid_equivalents": 1
+      }
+    ],
+    "dev_full_grid_equivalents_total": 12,
+    "reference_and_SNP_accounting": "CPU readouts; not charged as full-grid equivalents",
+    "R2_fixed_support_pairs": 157529,
+    "mixed_evaluation_wall_seconds": 10.605994581244886,
+    "mixed_evaluation_wall_scope": "dev + reference + phase/SNP readouts",
+    "reference_CPU_wall_seconds": null,
+    "SNP_CPU_wall_seconds": null,
+    "independent_CPU_timing_limitation": "independent reference/SNP CPU subtimings were not recorded; the mixed evaluation wall cannot be represented as either standalone CPU time"
+  },
+  "totals": {
+    "training_FG": 800,
+    "scalar_unique_calls": 93,
+    "auxiliary_full_grid_equivalents": 14
+  },
+  "accounting_scope": {
+    "CPU_fixture": "small CPU fixture; not a real 1Mb full-grid traversal",
+    "scalar_calls": "scalar profile calls; not real 1Mb full-grid traversals",
+    "auxiliary_full_grid_equivalents_breakdown": "2 B caches + 12 dev endpoints",
+    "reference_and_SNP": "CPU readouts outside the full-grid-equivalent count"
+  },
+  "decision": "stop this version of A and this run's B coordinate expansion; retain model G and baseline 046"
+}

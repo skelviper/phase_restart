@@ -1,0 +1,546 @@
+{
+  "auxiliary_equivalents_including_B_cache": 14,
+  "results": {
+    "A-seed560101-candidate1-Control": {
+      "Noff": 253067,
+      "Zall": 7758.373270364118,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 967.3308055372811,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1285346042068904,
+          "observed_C_log_rate": -95994.42873371109,
+          "records": 49424,
+          "within_group_conditional_nll": 8.816803981227126
+        },
+        "cis_20Mb_inf": {
+          "Z": 2170.058145491326,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8657825480193995,
+          "observed_C_log_rate": -195644.45026809315,
+          "records": 59129,
+          "within_group_conditional_nll": 10.991282436686925
+        },
+        "cis_5_20Mb": {
+          "Z": 1136.73344269843,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.449734976071142,
+          "observed_C_log_rate": -89165.01869975135,
+          "records": 31007,
+          "within_group_conditional_nll": 9.911555614501397
+        },
+        "inter": {
+          "Z": 3484.250876637081,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.045817887338135,
+          "observed_C_log_rate": -766435.3760150934,
+          "records": 113507,
+          "within_group_conditional_nll": 14.90832649151193
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.489870015635567
+    },
+    "A-seed560101-candidate1-Swap": {
+      "Noff": 253067,
+      "Zall": 7780.563043503593,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 962.1623368782552,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1305437916307186,
+          "observed_C_log_rate": -96361.73163287264,
+          "records": 49424,
+          "within_group_conditional_nll": 8.81887830622781
+        },
+        "cis_20Mb_inf": {
+          "Z": 2180.8211680880754,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.865974068343301,
+          "observed_C_log_rate": -195524.04389348405,
+          "records": 59129,
+          "within_group_conditional_nll": 10.994193629131855
+        },
+        "cis_5_20Mb": {
+          "Z": 1132.2878777395601,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4520308565643412,
+          "observed_C_log_rate": -89657.47354956501,
+          "records": 31007,
+          "within_group_conditional_nll": 9.923519176811071
+        },
+        "inter": {
+          "Z": 3505.291660797702,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.04803122736235,
+          "observed_C_log_rate": -766671.3206086173,
+          "records": 113507,
+          "within_group_conditional_nll": 14.916425835491134
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.496579943900713
+    },
+    "A-seed560101-candidate2-Control": {
+      "Noff": 253067,
+      "Zall": 7756.438861495337,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 967.305331608372,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1285139259785226,
+          "observed_C_log_rate": -96001.52026595031,
+          "records": 49424,
+          "within_group_conditional_nll": 8.816921130208385
+        },
+        "cis_20Mb_inf": {
+          "Z": 2170.618586378645,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8656946078817533,
+          "observed_C_log_rate": -195636.94009718837,
+          "records": 59129,
+          "within_group_conditional_nll": 10.991413650788038
+        },
+        "cis_5_20Mb": {
+          "Z": 1136.4512773220924,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4497171372267932,
+          "observed_C_log_rate": -89168.23627079297,
+          "records": 31007,
+          "within_group_conditional_nll": 9.911411128119527
+        },
+        "inter": {
+          "Z": 3482.0636661862277,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.045970730997192,
+          "observed_C_log_rate": -766502.3601302814,
+          "records": 113507,
+          "within_group_conditional_nll": 14.90828868446617
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.48989640208426
+    },
+    "A-seed560101-candidate2-Swap": {
+      "Noff": 253067,
+      "Zall": 7757.513090339523,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 966.8783862044859,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1286649439859704,
+          "observed_C_log_rate": -96032.89343173722,
+          "records": 49424,
+          "within_group_conditional_nll": 8.817114432660418
+        },
+        "cis_20Mb_inf": {
+          "Z": 2165.4364111089235,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.865981386133086,
+          "observed_C_log_rate": -195701.3256986501,
+          "records": 59129,
+          "within_group_conditional_nll": 10.99011227828605
+        },
+        "cis_5_20Mb": {
+          "Z": 1138.0339274142793,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4498117960058245,
+          "observed_C_log_rate": -89187.8972635304,
+          "records": 31007,
+          "within_group_conditional_nll": 9.91343686638569
+        },
+        "inter": {
+          "Z": 3487.1643656118345,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.047874065750909,
+          "observed_C_log_rate": -766968.3122705657,
+          "records": 113507,
+          "within_group_conditional_nll": 14.91385751420532
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.49233219187579
+    },
+    "A-seed560102-candidate1-Control": {
+      "Noff": 253067,
+      "Zall": 7931.714161882805,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 983.0893406925487,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1300741777450853,
+          "observed_C_log_rate": -95291.9469783411,
+          "records": 49424,
+          "within_group_conditional_nll": 8.818750078215109
+        },
+        "cis_20Mb_inf": {
+          "Z": 2235.396383944382,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.865273619144901,
+          "observed_C_log_rate": -194209.11369948823,
+          "records": 59129,
+          "within_group_conditional_nll": 10.996672376332283
+        },
+        "cis_5_20Mb": {
+          "Z": 1164.7157136666824,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4500559712745549,
+          "observed_C_log_rate": -88561.1060708747,
+          "records": 31007,
+          "within_group_conditional_nll": 9.916397246403063
+        },
+        "inter": {
+          "Z": 3548.5127235791915,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.059864449692067,
+          "observed_C_log_rate": -767481.9909127319,
+          "records": 113507,
+          "within_group_conditional_nll": 14.935822699446032
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.50526821785661
+    },
+    "A-seed560102-candidate1-Swap": {
+      "Noff": 253067,
+      "Zall": 7931.795487923833,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 983.5007963671803,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.129982866605559,
+          "observed_C_log_rate": -95268.33238696314,
+          "records": 49424,
+          "within_group_conditional_nll": 8.818690727966054
+        },
+        "cis_20Mb_inf": {
+          "Z": 2235.156292354108,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8659964990999396,
+          "observed_C_log_rate": -194391.44449832162,
+          "records": 59129,
+          "within_group_conditional_nll": 10.999648576473598
+        },
+        "cis_5_20Mb": {
+          "Z": 1165.3513732393337,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.450002193921185,
+          "observed_C_log_rate": -88547.17887574289,
+          "records": 31007,
+          "within_group_conditional_nll": 9.916493698306159
+        },
+        "inter": {
+          "Z": 3547.787025963211,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.060331240363692,
+          "observed_C_log_rate": -767598.956415188,
+          "records": 113507,
+          "within_group_conditional_nll": 14.9366486404973
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.506312799990376
+    },
+    "A-seed560102-candidate2-Control": {
+      "Noff": 253067,
+      "Zall": 7931.182682972063,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 982.8796057478363,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1300956345679682,
+          "observed_C_log_rate": -95300.68884796709,
+          "records": 49424,
+          "within_group_conditional_nll": 8.81871358773614
+        },
+        "cis_20Mb_inf": {
+          "Z": 2234.967373861938,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8652156387508403,
+          "observed_C_log_rate": -194198.4029538707,
+          "records": 59129,
+          "within_group_conditional_nll": 10.996299299125967
+        },
+        "cis_5_20Mb": {
+          "Z": 1164.581062331118,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4501663593782494,
+          "observed_C_log_rate": -88591.11940706597,
+          "records": 31007,
+          "within_group_conditional_nll": 9.917249584528198
+        },
+        "inter": {
+          "Z": 3548.7546410311706,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.0599263803964725,
+          "observed_C_log_rate": -767505.2695277878,
+          "records": 113507,
+          "within_group_conditional_nll": 14.936095956726676
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.505404013093528
+    },
+    "A-seed560102-candidate2-Swap": {
+      "Noff": 253067,
+      "Zall": 7939.285829602338,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 982.9875670740867,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1304365112114922,
+          "observed_C_log_rate": -95336.48364374183,
+          "records": 49424,
+          "within_group_conditional_nll": 8.81954766271671
+        },
+        "cis_20Mb_inf": {
+          "Z": 2234.283041881727,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8659600667697065,
+          "observed_C_log_rate": -194326.41292344272,
+          "records": 59129,
+          "within_group_conditional_nll": 10.998157985980741
+        },
+        "cis_5_20Mb": {
+          "Z": 1165.3806208013086,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4503349615373113,
+          "observed_C_log_rate": -88602.12392777395,
+          "records": 31007,
+          "within_group_conditional_nll": 9.918290816524491
+        },
+        "inter": {
+          "Z": 3556.6345998452152,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.061656955929227,
+          "observed_C_log_rate": -767827.3122276465,
+          "records": 113507,
+          "within_group_conditional_nll": 14.941151186391787
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.508388495447736
+    },
+    "B-seed560101-Original": {
+      "Noff": 253067,
+      "Zall": 7756.6704005365755,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 967.1599917417211,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.128522417337288,
+          "observed_C_log_rate": -96002.19380473708,
+          "records": 49424,
+          "within_group_conditional_nll": 8.816784494370685
+        },
+        "cis_20Mb_inf": {
+          "Z": 2170.174049520576,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.86572284004946,
+          "observed_C_log_rate": -195642.31968165745,
+          "records": 59129,
+          "within_group_conditional_nll": 10.991299812973718
+        },
+        "cis_5_20Mb": {
+          "Z": 1136.7549483351474,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.449721121832164,
+          "observed_C_log_rate": -89168.31906044278,
+          "records": 31007,
+          "within_group_conditional_nll": 9.911680972339461
+        },
+        "inter": {
+          "Z": 3482.581410939131,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.045922972877963,
+          "observed_C_log_rate": -766486.8858562456,
+          "records": 113507,
+          "within_group_conditional_nll": 14.908301033658933
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.489889352096878
+    },
+    "B-seed560101-Profile": {
+      "Noff": 253067,
+      "Zall": 7757.267720805086,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 967.2955875241942,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.128510069815851,
+          "observed_C_log_rate": -95995.2631921192,
+          "records": 49424,
+          "within_group_conditional_nll": 8.816784456818406
+        },
+        "cis_20Mb_inf": {
+          "Z": 2170.4767246673932,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8657082422810483,
+          "observed_C_log_rate": -195634.07227868645,
+          "records": 59129,
+          "within_group_conditional_nll": 10.991299792173614
+        },
+        "cis_5_20Mb": {
+          "Z": 1136.9139976743686,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4497134050808131,
+          "observed_C_log_rate": -89163.97853181469,
+          "records": 31007,
+          "within_group_conditional_nll": 9.911680892347402
+        },
+        "inter": {
+          "Z": 3482.581410939131,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.0459575112864234,
+          "observed_C_log_rate": -766486.8858562456,
+          "records": 113507,
+          "within_group_conditional_nll": 14.908301033658933
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.489889228464135
+    },
+    "B-seed560102-Original": {
+      "Noff": 253067,
+      "Zall": 7932.5095412869405,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 1.7763568394002505e-15,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 983.2114518679274,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1300657747779375,
+          "observed_C_log_rate": -95284.86455474758,
+          "records": 49424,
+          "within_group_conditional_nll": 8.81873098289863
+        },
+        "cis_20Mb_inf": {
+          "Z": 2235.6030469158313,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8652718982619843,
+          "observed_C_log_rate": -194202.74913807143,
+          "records": 59129,
+          "within_group_conditional_nll": 10.996657183739629
+        },
+        "cis_5_20Mb": {
+          "Z": 1164.9322057245565,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.450138490116801,
+          "observed_C_log_rate": -88578.87969105244,
+          "records": 31007,
+          "within_group_conditional_nll": 9.917156317731921
+        },
+        "inter": {
+          "Z": 3548.7628367786256,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.059957730699725,
+          "observed_C_log_rate": -767494.2155306896,
+          "records": 113507,
+          "within_group_conditional_nll": 14.936000880156707
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.505433893856447
+    },
+    "B-seed560102-Profile": {
+      "Noff": 253067,
+      "Zall": 7929.659603031232,
+      "cis_partition": {
+        "eligible_pairs": 184016,
+        "records": 139560
+      },
+      "contribution_reconstruction_abs_error": 0.0,
+      "equivalents": 1,
+      "groups": {
+        "cis_1_5Mb": {
+          "Z": 982.5660308401644,
+          "eligible_pairs": 10380,
+          "global_contribution": 2.1301239087922816,
+          "observed_C_log_rate": -95317.33626556523,
+          "records": 49424,
+          "within_group_conditional_nll": 8.818731328504697
+        },
+        "cis_20Mb_inf": {
+          "Z": 2234.1593417448166,
+          "eligible_pairs": 137561,
+          "global_contribution": 2.8653393163589596,
+          "observed_C_log_rate": -194241.05771693797,
+          "records": 59129,
+          "within_group_conditional_nll": 10.996659077674483
+        },
+        "cis_5_20Mb": {
+          "Z": 1164.1713936676258,
+          "eligible_pairs": 36075,
+          "global_contribution": 1.4501746446346953,
+          "observed_C_log_rate": -88599.17119283299,
+          "records": 31007,
+          "within_group_conditional_nll": 9.917157425609274
+        },
+        "inter": {
+          "Z": 3548.7628367786256,
+          "eligible_pairs": 3312674,
+          "global_contribution": 7.059796558548206,
+          "observed_C_log_rate": -767494.2155306896,
+          "records": 113507,
+          "within_group_conditional_nll": 14.936000880156707
+        }
+      },
+      "primary_no_K0_nll_per_offdiag": 13.505434428334143
+    }
+  },
+  "schema": "p9016-058-dev-v1"
+}

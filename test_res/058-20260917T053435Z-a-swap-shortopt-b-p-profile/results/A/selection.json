@@ -1,0 +1,61 @@
+{
+  "development_opened": false,
+  "reference_opened": false,
+  "schema": "p9016-058-A-selection-v1",
+  "selections": [
+    {
+      "candidates": [
+        {
+          "J_control_minus_swap": -0.005118326126122952,
+          "candidate_id": "chr5:130-152:suffix",
+          "candidate_order": 642,
+          "chromosome": "chr5",
+          "count_control_minus_swap": -0.004608133888119426,
+          "seed": 560101,
+          "slot": 1,
+          "training_gate_passed": false
+        },
+        {
+          "J_control_minus_swap": -0.002254213701426977,
+          "candidate_id": "chr3:160-161:suffix",
+          "candidate_order": 415,
+          "chromosome": "chr3",
+          "count_control_minus_swap": -0.0019245403796350757,
+          "seed": 560101,
+          "slot": 2,
+          "training_gate_passed": false
+        }
+      ],
+      "seed": 560101,
+      "selected": null,
+      "status": "training_gate_failed"
+    },
+    {
+      "candidates": [
+        {
+          "J_control_minus_swap": -0.0006250771850524472,
+          "candidate_id": "chr2:60-183:suffix",
+          "candidate_order": 202,
+          "chromosome": "chr2",
+          "count_control_minus_swap": -0.000653693545068279,
+          "seed": 560102,
+          "slot": 1,
+          "training_gate_passed": false
+        },
+        {
+          "J_control_minus_swap": -0.0023815715204875687,
+          "candidate_id": "chr3:160-161:suffix",
+          "candidate_order": 415,
+          "chromosome": "chr3",
+          "count_control_minus_swap": -0.002321552558100848,
+          "seed": 560102,
+          "slot": 2,
+          "training_gate_passed": false
+        }
+      ],
+      "seed": 560102,
+      "selected": null,
+      "status": "training_gate_failed"
+    }
+  ]
+}

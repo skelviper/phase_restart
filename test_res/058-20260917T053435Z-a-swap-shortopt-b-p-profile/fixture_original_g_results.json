@@ -1,0 +1,113 @@
+{
+  "active_full_value_abs_error": 0.0,
+  "active_gradient_fd_max_abs_error": 2.5809786252661837e-10,
+  "data": {
+    "aggregate_cis_offdiag": 5,
+    "aggregate_conserved": true,
+    "aggregate_inter": 6,
+    "aggregate_same_bin": 4,
+    "budget_unit": "raw_records",
+    "conditional_count_factorial_constant_omitted": -9.287301413112312,
+    "count_mode": "raw_integer",
+    "diag_count_factorial_sum_included": 0.0,
+    "diag_nuisance_parameters": 5,
+    "diag_profile": "per_bin_saturated_poisson",
+    "endpoint_conserved": true,
+    "endpoint_total": 30,
+    "exposure_mode": "observed_endpoint",
+    "factorial_constant_status": "integer_count_constants_recorded",
+    "n_chromosomes": 2,
+    "n_diag_bins": 5,
+    "n_eligible_cis_offdiag_pairs": 4,
+    "n_eligible_inter_pairs": 6,
+    "n_eligible_pairs": 10,
+    "n_loci": 5,
+    "n_zero_eligible_pairs": 2,
+    "raw_cis_offdiag": 5,
+    "raw_conserved": true,
+    "raw_inter": 6,
+    "raw_records": 15,
+    "raw_same_bin": 4
+  },
+  "export": {
+    "bin_size": 1000000,
+    "by_track": {
+      "c01a": 3,
+      "c01b": 3,
+      "c02a": 2,
+      "c02b": 2
+    },
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/058-20260917T053435Z-a-swap-shortopt-b-p-profile/fixture_original_g/coordinates.3dg",
+    "rows": 10,
+    "sha256": "42ee0ae76b9c5153372a8e557daeb7e8565db99d3b3bbac7344e1c697a72fc06",
+    "track_count": 4
+  },
+  "export_left_state_sha_unchanged": true,
+  "inactive_theta_max_abs_error": 0.0,
+  "mask": {
+    "absent": 0,
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/058-20260917T053435Z-a-swap-shortopt-b-p-profile/fixture_original_g/presence_mask.npz",
+    "present": 10,
+    "sha256": "ef6cd6dd3fa472ab9752d1ae249254a9a059ffaf498831d612b77ad560be472f",
+    "shape": [
+      2,
+      5
+    ]
+  },
+  "p_cache": {
+    "0.24": {
+      "cache_count": 1.4450708272595953,
+      "cache_value": 1.7296206737120672,
+      "count_abs_error": 0.0,
+      "dJ_dp": -0.007252122066569901,
+      "dJ_dq": -0.0013223263905350207,
+      "full_count": 1.4450708272595953,
+      "full_value": 1.7296206737120672,
+      "value_abs_error": 0.0
+    },
+    "0.61": {
+      "cache_count": 1.4430125289398164,
+      "cache_value": 1.7275358105583214,
+      "count_abs_error": 0.0,
+      "dJ_dp": -0.004045178716631009,
+      "dJ_dq": -0.0009621359664599331,
+      "full_count": 1.4430125289398164,
+      "full_value": 1.7275358105583214,
+      "value_abs_error": 0.0
+    }
+  },
+  "p_cache_max_count_abs_error": 0.0,
+  "p_cache_max_full_value_abs_error": 0.0,
+  "passed": true,
+  "q_bitwise_frozen": true,
+  "schema": "p9016-058-original-G-cpu-fixture-v1",
+  "state": {
+    "consistency_atol": 1e-12,
+    "finite": true,
+    "path": "/mnt/ssd/zliu/phase_restart/test_res/058-20260917T053435Z-a-swap-shortopt-b-p-profile/fixture_original_g/solver_state.npz",
+    "q_p_abs": 2.7755575615628914e-17,
+    "readback": {
+      "consistency_atol": 1e-12,
+      "finite": true,
+      "q_p_abs": 2.7755575615628914e-17,
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "sphere_coordinate_max_abs": 0.0,
+      "theta_q_abs": 0.0,
+      "theta_raw_y_max_abs": 0.0
+    },
+    "sha256": "b8671d51f7d09a59ef75f9e2da249a29720a197efed63b63a8b112afa2b39694",
+    "shape": [
+      2,
+      5,
+      3
+    ],
+    "sphere_coordinate_max_abs": 0.0,
+    "theta_q_abs": 0.0,
+    "theta_raw_y_max_abs": 0.0
+  },
+  "state_readback_sha256": "b8671d51f7d09a59ef75f9e2da249a29720a197efed63b63a8b112afa2b39694"
+}
