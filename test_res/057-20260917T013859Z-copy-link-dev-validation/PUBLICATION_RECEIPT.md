@@ -11,6 +11,7 @@
 - Pre-receipt archive check of the content commit: 1,050 ZIP entries, 6,547,061 bytes, SHA256 `aacb2f2c5c71bfd484e18e8c71c00c1ccdde2433cba29a838779f1fa64a9caf5`, zero `.git` entries
 - Final archive rule: regenerate the same path with `git archive HEAD` after this receipt is committed and pushed; the final archive SHA256 and size are verified in the publication response rather than self-embedded in its own commit
 - Formatting note: the three source TSV files retain their original CRLF bytes, which `git diff --check` reports as trailing whitespace; changing them would break the required source hashes
+- Prompt correction at `2026-09-17T02:53:31Z`: the copy-paste GPT Pro prompt now identifies round 057 as latest, directs the reviewer to `PRO_REVIEW_RESULTS_057.md`, and distinguishes round 056's preceding exposure comparison from round 057 A PASS / B first-scan no-op / paired-continuation-not-triggered status
 
 The final release commit is the commit containing this receipt. Its exact SHA is resolved with
 `git log -1 --format=%H -- test_res/057-20260917T013859Z-copy-link-dev-validation/PUBLICATION_RECEIPT.md`

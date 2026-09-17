@@ -321,11 +321,13 @@ is not distributed here.
 > - **Documentation tense:** historical documents are frozen and some open with stale framing —
 >   `docs/REVIEW-s2-observation-model.md` says there is no S2 and the latest run is 017, and
 >   `docs/PROJECT_CONTEXT.md` covers mainly up to round 022. Do **not** treat those "current"
->   sentences as present state. The latest result is round **056**; read
->   `docs/PRO_REVIEW_RESULTS_056.md`. It does not replace the registered 046 baseline. Rounds
->   **045 / 046 / 049** remain fit/evaluation implementations and **051 / 055** remain historical
->   baseline readouts/comparisons. Where an old document conflicts with a current round's frozen
->   `config.json`, the round wins.
+>   sentences as present state. The latest result is round **057**; read
+>   `docs/PRO_REVIEW_RESULTS_057.md`. Round 056 is the preceding exposure comparison. In round 057,
+>   Experiment A passed development validation, while both Experiment B first-scan argmins were no-op
+>   and the paired Control/Swap continuation was not triggered. Neither round replaces the registered
+>   046 baseline. Rounds **045 / 046 / 049** remain fit/evaluation implementations and **051 / 055**
+>   remain historical baseline readouts/comparisons. Where an old document conflicts with a current
+>   round's frozen `config.json`, the round wins.
 >
 > **Your task.**
 > A. Identify the **most consequential concrete problems** in the current approach, with evidence from
